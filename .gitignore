@@ -5,20 +5,6 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 
-# Datos y modelos (no versionar)
-data/raw/*
-data/processed/*
-data/augmented/*
-data/augmented_baseline/*.jsonl
-data/augmented_50/*.jsonl
-data/augmented_100/*.jsonl
-data/archive/
-models/*
-results/
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-!data/augmented/.gitkeep
-!models/.gitkeep
 
 # Checkpoints de entrenamiento
 checkpoints/
