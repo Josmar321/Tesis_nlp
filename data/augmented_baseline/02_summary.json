@@ -1,0 +1,423 @@
+{
+  "scenario": "baseline",
+  "rate": 0.0,
+  "seed": 42,
+  "augmented_splits": [
+    "train",
+    "dev",
+    "test"
+  ],
+  "splits": {
+    "train": {
+      "docs": 500,
+      "tokens_in": 251206,
+      "tokens_out": 251206,
+      "entities": 11333,
+      "replaced": 0,
+      "per_label": {
+        "CALLE": {
+          "seen": 862,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "CENTRO_SALUD": {
+          "seen": 6,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "CORREO_ELECTRONICO": {
+          "seen": 469,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "EDAD_SUJETO_ASISTENCIA": {
+          "seen": 1035,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "FAMILIARES_SUJETO_ASISTENCIA": {
+          "seen": 243,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "FECHAS": {
+          "seen": 1231,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "HOSPITAL": {
+          "seen": 255,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_ASEGURAMIENTO": {
+          "seen": 391,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_CONTACTO_ASISTENCIAL": {
+          "seen": 77,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_SUJETO_ASISTENCIA": {
+          "seen": 567,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_TITULACION_PERSONAL_SANITARIO": {
+          "seen": 471,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "INSTITUCION": {
+          "seen": 98,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NOMBRE_PERSONAL_SANITARIO": {
+          "seen": 1000,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NOMBRE_SUJETO_ASISTENCIA": {
+          "seen": 1009,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NUMERO_FAX": {
+          "seen": 15,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NUMERO_TELEFONO": {
+          "seen": 58,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "OTROS_SUJETO_ASISTENCIA": {
+          "seen": 9,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "PAIS": {
+          "seen": 713,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "PROFESION": {
+          "seen": 24,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "SEXO_SUJETO_ASISTENCIA": {
+          "seen": 925,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "TERRITORIO": {
+          "seen": 1875,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      }
+    },
+    "dev": {
+      "docs": 250,
+      "tokens_in": 132665,
+      "tokens_out": 132665,
+      "entities": 5801,
+      "replaced": 0,
+      "per_label": {
+        "CALLE": {
+          "seen": 434,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "CENTRO_SALUD": {
+          "seen": 2,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "CORREO_ELECTRONICO": {
+          "seen": 241,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "EDAD_SUJETO_ASISTENCIA": {
+          "seen": 521,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "FAMILIARES_SUJETO_ASISTENCIA": {
+          "seen": 92,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "FECHAS": {
+          "seen": 724,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "HOSPITAL": {
+          "seen": 140,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_ASEGURAMIENTO": {
+          "seen": 194,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_CONTACTO_ASISTENCIAL": {
+          "seen": 32,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_EMPLEO_PERSONAL_SANITARIO": {
+          "seen": 1,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_SUJETO_ASISTENCIA": {
+          "seen": 292,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_TITULACION_PERSONAL_SANITARIO": {
+          "seen": 226,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "INSTITUCION": {
+          "seen": 72,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NOMBRE_PERSONAL_SANITARIO": {
+          "seen": 497,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NOMBRE_SUJETO_ASISTENCIA": {
+          "seen": 503,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NUMERO_FAX": {
+          "seen": 6,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NUMERO_TELEFONO": {
+          "seen": 25,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "OTROS_SUJETO_ASISTENCIA": {
+          "seen": 6,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "PAIS": {
+          "seen": 347,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "PROFESION": {
+          "seen": 4,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "SEXO_SUJETO_ASISTENCIA": {
+          "seen": 455,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "TERRITORIO": {
+          "seen": 987,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      }
+    },
+    "test": {
+      "docs": 250,
+      "tokens_in": 126093,
+      "tokens_out": 126093,
+      "entities": 5661,
+      "replaced": 0,
+      "per_label": {
+        "CALLE": {
+          "seen": 413,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "CENTRO_SALUD": {
+          "seen": 6,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "CORREO_ELECTRONICO": {
+          "seen": 249,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "EDAD_SUJETO_ASISTENCIA": {
+          "seen": 518,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "FAMILIARES_SUJETO_ASISTENCIA": {
+          "seen": 81,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "FECHAS": {
+          "seen": 611,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "HOSPITAL": {
+          "seen": 130,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_ASEGURAMIENTO": {
+          "seen": 198,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_CONTACTO_ASISTENCIAL": {
+          "seen": 39,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_SUJETO_ASISTENCIA": {
+          "seen": 283,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "ID_TITULACION_PERSONAL_SANITARIO": {
+          "seen": 234,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "INSTITUCION": {
+          "seen": 67,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NOMBRE_PERSONAL_SANITARIO": {
+          "seen": 501,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NOMBRE_SUJETO_ASISTENCIA": {
+          "seen": 502,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NUMERO_FAX": {
+          "seen": 7,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "NUMERO_TELEFONO": {
+          "seen": 26,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "OTROS_SUJETO_ASISTENCIA": {
+          "seen": 7,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "PAIS": {
+          "seen": 363,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "PROFESION": {
+          "seen": 9,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "SEXO_SUJETO_ASISTENCIA": {
+          "seen": 461,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        "TERRITORIO": {
+          "seen": 956,
+          "replaced": 0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      }
+    }
+  }
+}
