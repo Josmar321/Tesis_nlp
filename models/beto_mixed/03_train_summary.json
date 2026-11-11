@@ -1,0 +1,36 @@
+{
+  "model_name": "dccuchile/bert-base-spanish-wwm-cased",
+  "scenario_data_dir": "data/augmented_50",
+  "output_dir": "models/beto_mixed",
+  "smoke_test": false,
+  "seed": 42,
+  "epochs": 5.0,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "weight_decay": 0.01,
+  "max_length": 512,
+  "stride": 128,
+  "train_docs": 500,
+  "train_windows": 1024,
+  "dev_docs": 250,
+  "dev_windows": 538,
+  "num_labels": 44,
+  "train_metrics": {
+    "train_runtime": 226.6604,
+    "train_samples_per_second": 22.589,
+    "train_steps_per_second": 1.412,
+    "total_flos": 1338347398103040.0,
+    "train_loss": 0.18043494261801243,
+    "epoch": 5.0
+  },
+  "dev_metrics": {
+    "eval_loss": 0.026034649461507797,
+    "eval_precision": 0.93194610267781,
+    "eval_recall": 0.9406093992081254,
+    "eval_f1": 0.9362577107607951,
+    "eval_runtime": 5.7085,
+    "eval_samples_per_second": 94.245,
+    "eval_steps_per_second": 5.956,
+    "epoch": 5.0
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "CALLE": {
+    "precision": 0.8419864559819413,
+    "recall": 0.9031476997578692,
+    "f1-score": 0.8714953271028038,
+    "support": 413
+  },
+  "CENTRO_SALUD": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 6
+  },
+  "CORREO_ELECTRONICO": {
+    "precision": 0.984,
+    "recall": 0.9879518072289156,
+    "f1-score": 0.9859719438877755,
+    "support": 249
+  },
+  "EDAD_SUJETO_ASISTENCIA": {
+    "precision": 0.9511278195488722,
+    "recall": 0.9768339768339769,
+    "f1-score": 0.9638095238095239,
+    "support": 518
+  },
+  "FAMILIARES_SUJETO_ASISTENCIA": {
+    "precision": 0.59375,
+    "recall": 0.7037037037037037,
+    "f1-score": 0.6440677966101694,
+    "support": 81
+  },
+  "FECHAS": {
+    "precision": 0.9495114006514658,
+    "recall": 0.9541734860883797,
+    "f1-score": 0.9518367346938775,
+    "support": 611
+  },
+  "HOSPITAL": {
+    "precision": 0.7115384615384616,
+    "recall": 0.8538461538461538,
+    "f1-score": 0.7762237762237763,
+    "support": 130
+  },
+  "ID_ASEGURAMIENTO": {
+    "precision": 0.9154228855721394,
+    "recall": 0.9292929292929293,
+    "f1-score": 0.9223057644110275,
+    "support": 198
+  },
+  "ID_CONTACTO_ASISTENCIAL": {
+    "precision": 1.0,
+    "recall": 0.9230769230769231,
+    "f1-score": 0.9600000000000001,
+    "support": 39
+  },
+  "ID_SUJETO_ASISTENCIA": {
+    "precision": 0.9850187265917603,
+    "recall": 0.9293286219081273,
+    "f1-score": 0.9563636363636364,
+    "support": 283
+  },
+  "ID_TITULACION_PERSONAL_SANITARIO": {
+    "precision": 0.9037656903765691,
+    "recall": 0.9230769230769231,
+    "f1-score": 0.9133192389006344,
+    "support": 234
+  },
+  "INSTITUCION": {
+    "precision": 0.30612244897959184,
+    "recall": 0.22388059701492538,
+    "f1-score": 0.25862068965517243,
+    "support": 67
+  },
+  "NOMBRE_PERSONAL_SANITARIO": {
+    "precision": 0.9802371541501976,
+    "recall": 0.9900199600798403,
+    "f1-score": 0.9851042701092353,
+    "support": 501
+  },
+  "NOMBRE_SUJETO_ASISTENCIA": {
+    "precision": 0.99800796812749,
+    "recall": 0.99800796812749,
+    "f1-score": 0.99800796812749,
+    "support": 502
+  },
+  "NUMERO_FAX": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 7
+  },
+  "NUMERO_TELEFONO": {
+    "precision": 0.7666666666666667,
+    "recall": 0.8846153846153846,
+    "f1-score": 0.8214285714285715,
+    "support": 26
+  },
+  "OTROS_SUJETO_ASISTENCIA": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 7
+  },
+  "PAIS": {
+    "precision": 0.9510869565217391,
+    "recall": 0.9641873278236914,
+    "f1-score": 0.957592339261286,
+    "support": 363
+  },
+  "PROFESION": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 9
+  },
+  "SEXO_SUJETO_ASISTENCIA": {
+    "precision": 0.9517819706498952,
+    "recall": 0.9848156182212582,
+    "f1-score": 0.9680170575692963,
+    "support": 461
+  },
+  "TERRITORIO": {
+    "precision": 0.9590336134453782,
+    "recall": 0.9550209205020921,
+    "f1-score": 0.9570230607966457,
+    "support": 956
+  },
+  "micro avg": {
+    "precision": 0.9316194473592165,
+    "recall": 0.9409998233527646,
+    "f1-score": 0.9362861411371826,
+    "support": 5661
+  },
+  "macro avg": {
+    "precision": 0.702336105657246,
+    "recall": 0.7183323810094563,
+    "f1-score": 0.7091041761405201,
+    "support": 5661
+  },
+  "weighted avg": {
+    "precision": 0.927411336326932,
+    "recall": 0.9409998233527646,
+    "f1-score": 0.933715031679211,
+    "support": 5661
+  }
+}

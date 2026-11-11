@@ -1,0 +1,27 @@
+                                  precision    recall  f1-score   support
+
+                           CALLE     0.8604    0.9249    0.8915       413
+                    CENTRO_SALUD     0.0000    0.0000    0.0000         6
+              CORREO_ELECTRONICO     0.9762    0.9880    0.9820       249
+          EDAD_SUJETO_ASISTENCIA     0.9372    0.9788    0.9575       518
+    FAMILIARES_SUJETO_ASISTENCIA     0.5918    0.7160    0.6480        81
+                          FECHAS     0.9449    0.9542    0.9495       611
+                        HOSPITAL     0.7025    0.8538    0.7708       130
+                ID_ASEGURAMIENTO     0.9154    0.9293    0.9223       198
+         ID_CONTACTO_ASISTENCIAL     1.0000    0.9231    0.9600        39
+            ID_SUJETO_ASISTENCIA     0.9707    0.9364    0.9532       283
+ID_TITULACION_PERSONAL_SANITARIO     0.9079    0.9274    0.9175       234
+                     INSTITUCION     0.4068    0.3582    0.3810        67
+       NOMBRE_PERSONAL_SANITARIO     0.9783    0.9880    0.9831       501
+        NOMBRE_SUJETO_ASISTENCIA     0.9960    0.9980    0.9970       502
+                      NUMERO_FAX     0.0000    0.0000    0.0000         7
+                 NUMERO_TELEFONO     0.7931    0.8846    0.8364        26
+         OTROS_SUJETO_ASISTENCIA     0.0000    0.0000    0.0000         7
+                            PAIS     0.9643    0.9669    0.9656       363
+                       PROFESION     0.0000    0.0000    0.0000         9
+          SEXO_SUJETO_ASISTENCIA     0.9477    0.9826    0.9649       461
+                      TERRITORIO     0.9632    0.9592    0.9612       956
+
+                       micro avg     0.9310    0.9456    0.9382      5661
+                       macro avg     0.7074    0.7271    0.7163      5661
+                    weighted avg     0.9280    0.9456    0.9363      5661

@@ -1,0 +1,504 @@
+﻿doc_id,error_type,true_label,pred_label,true_text,pred_text,true_start,pred_start,context
+S0004-06142006000500011-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,Enfermo,-1,133,de interés . Historia Actual : Enfermo varón de 59 años Presenta antecedentes
+S0004-06142006000500011-1,type_confusion,TERRITORIO,CORREO_ELECTRONICO,Alicante,Alicante,579,579,A - 6 03570 Villajoyosa . Alicante . jacanovas@hotmail.com
+S0004-06142006000600014-1,false_positive,O,CALLE,,1F,-1,307,Pérez Calle Manuel Gomez 35 . 1F 38750 El Paso . La Palma
+S0004-06142006000600014-1,boundary_error,CALLE,CALLE,Calle Manuel Gomez 35 . 1F,Calle Manuel Gomez 35,302,302,por : José A. Hermida Pérez Calle Manuel Gomez 35 . 1F 38750 El Paso . La Palma
+S0004-06142006000700013-1,false_positive,O,ID_SUJETO_ASISTENCIA,,nhc,-1,11,: Campos Vicente . CIPA : nhc 963852 . NASS : 95-16275568-30 .
+S0004-06142006000700013-1,type_confusion,OTROS_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,mestizo,mestizo,99,99,"de 63 años de edad , mestizo , diabético y fumador inveterado ."
+S0004-06142006000700013-1,boundary_error,CALLE,CALLE,Calle 114 No,Calle 114 No .,477,477,clinico : Tomás Rodríguez Collar . Calle 114 No . 29005 Marianao . Ciudad de la
+S0004-06142006000900006-1,false_negative,TERRITORIO,O,CP:28016,,37,-1,. Localidad/ Provincia : Madrid . CP:28016 . NHC : 6326226 . Datos
+S0004-06142006000900006-1,false_negative,CORREO_ELECTRONICO,O,E-mail:pgabad@hotmail.com,,331,-1,E-28006 Madrid . ( España ) E-mail:pgabad@hotmail.com
+S0004-06142006000900014-1,false_positive,O,CALLE,,AV,-1,559,por : Dr. Alberto Palacios Torres AV . Eduardo Torres 579 2 °
+S0004-06142006000900014-1,false_positive,O,CALLE,,esquerdo,-1,567,Eduardo Torres 579 2 ° Frente esquerdo . 4450-117 Matosinhos . Porto (
+S0004-06142006000900014-1,false_negative,ID_SUJETO_ASISTENCIA,O,NHC:178945,,32,-1,LISBOA . CP : 1269-052 . NHC:178945 . Datos asistenciales . Fecha de
+S0004-06142006000900014-1,boundary_error,CALLE,CALLE,AV . Eduardo Torres 579 2 ° Frente esquerdo,. Eduardo Torres 579 2 °,559,560,por : Dr. Alberto Palacios Torres AV . Eduardo Torres 579 2 ° Frente esquerdo . 4450-117 Matosinhos . Porto (
+S0004-06142006000900015-1,false_negative,ID_SUJETO_ASISTENCIA,O,NHC:231213,,35,-1,Getafe . CP : 45002 . NHC:231213 . Datos asistenciales . Fecha de
+S0004-06142006000900015-1,false_negative,FECHAS,O,nacimiento:23/10/1970,,42,-1,. Datos asistenciales . Fecha de nacimiento:23/10/1970 . País : España . Edad
+S0004-06142007000600014-1,false_negative,INSTITUCION,O,Master Diagnostic,,395,-1,actina de músculo liso específica ( Master Diagnostic . Granada . España ) .
+S0004-06142007000600016-2,false_positive,O,ID_SUJETO_ASISTENCIA,,NHC,-1,37,Madrid . CP : 28024 . NHC : 643185 . Datos asistenciales .
+S0004-06142007000600016-2,boundary_error,HOSPITAL,HOSPITAL,Hospital de la Princesa,Hospital de la Princesa Diego de León,299,299,"Pablo Garrido Abad Servicio de Urología Hospital de la Princesa Diego de León , 28006 Madrid . ( España"
+S0004-06142007000600016-2,boundary_error,CALLE,HOSPITAL,Diego de León,Hospital de la Princesa Diego de León,303,299,"Pablo Garrido Abad Servicio de Urología Hospital de la Princesa Diego de León , 28006 Madrid . ( España"
+S0004-06142007000900010-1,type_confusion,TERRITORIO,PAIS,España,España,52,52,nacimiento : 15/03/1954 . País : España . Edad : 59 Sexo :
+S0004-06142007000900013-1,false_positive,O,ID_SUJETO_ASISTENCIA,,NHC,-1,35,Real . CP : 13005 . NHC : 16256424 . Datos asistenciales .
+S0004-06142007000900013-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,madre,-1,85,. Número de teléfono de la madre : 630 304 365 . Motivo
+S0004-06142007000900013-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,nacido,-1,104,"izquierdo . Historia Actual : Recién nacido de tres días de vida ,"
+S0004-06142007000900013-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,dos años,-1,297,evolucionando favorablemente y encontrándose a los dos años bien y con el teste derecho
+S0004-06142007000900013-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:01 13 28065,13 28065,76,77,. Médico : Manuel Fernandez Arjona NºCol:01 13 28065 . Número de teléfono de la
+S0004-06142007000900013-1,type_confusion,NUMERO_TELEFONO,ID_TITULACION_PERSONAL_SANITARIO,630 304 365,630 304 365,87,87,de teléfono de la madre : 630 304 365 . Motivo de ingreso : aumento
+S0004-06142007000900013-1,boundary_error,OTROS_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,Recién nacido,Recién,103,103,"hemiescroto izquierdo . Historia Actual : Recién nacido de tres días de vida ,"
+S0004-06142007000900013-1,false_negative,FAMILIARES_SUJETO_ASISTENCIA,O,Remedios,,118,-1,acude a urgencias con su madre Remedios por descubrir un aumento del hemiescroto
+S0004-06142007000900013-1,false_negative,NOMBRE_SUJETO_ASISTENCIA,O,Jesús,,135,-1,un color violáceo del mismo ; Jesús se encontraba bien al nacimiento según
+S0004-06142008000300015-1,boundary_error,EDAD_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,Edad:23 años,años,55,56,15/03/1995 . País : España . Edad:23 años Sexo : H. Fecha de Ingreso
+S0004-06142008000600011-1,false_negative,ID_SUJETO_ASISTENCIA,O,NHC:346798,,37,-1,Alicante . CP : 03001 . NHC:346798 . Datos asistenciales . Fecha de
+S0004-06142008000600014-1,false_positive,O,TERRITORIO,,1D,-1,528,"Calle Ginzo de limia 56 , 1D Albacete . ( España ) ."
+S0004-06142008000600014-1,boundary_error,CALLE,CALLE,"Calle Ginzo de limia 56 , 1D",Calle Ginzo de limia 56,522,522,"clínico : Pedro Carrión López . Calle Ginzo de limia 56 , 1D Albacete . ( España ) ."
+S0004-06142008000700003-1,false_positive,O,CALLE,,"ICA , Esc.2º,5ºC",-1,486,"Pz . de Pontevedra,2 Ed . ICA , Esc.2º,5ºC 30009 Murcia . ( España )"
+S0004-06142008000700003-1,boundary_error,CALLE,CALLE,"Pz . de Pontevedra,2 Ed . ICA , Esc.2º,5ºC","Pz . de Pontevedra,2 Ed",480,480,"por : Dr. Pablo Guzmán Martínez-Valls Pz . de Pontevedra,2 Ed . ICA , Esc.2º,5ºC 30009 Murcia . ( España )"
+S0004-06142009000100010-3,false_positive,O,CALLE,,AV,-1,272,"dr . Jorge Subirá Ríos . AV . San Francisco 7 , 3D"
+S0004-06142009000100010-3,boundary_error,CALLE,CALLE,"AV . San Francisco 7 , 3D",". San Francisco 7 , 3D",272,273,"dr . Jorge Subirá Ríos . AV . San Francisco 7 , 3D 50006 Zaragoza . ( España )"
+S0004-06142009000200013-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:24 76078256 01,76078256 01,17,18,Paez . NHC : 4026560 . NASS:24 76078256 01 . Domicilio : AV . Conde
+S0004-06142009000300014-1,false_negative,FECHAS,O,nacimiento:15/09/1975,,46,-1,. Datos asistenciales . Fecha de nacimiento:15/09/1975 . País : España . Edad
+S0004-06142009000300014-1,type_confusion,NUMERO_FAX,NUMERO_TELEFONO,967 21 63 20,967 21 63 20,338,338,CP 02080 Albacete . FAX : 967 21 63 20 EMAIL : pedrocarrion1980@hotmail.com
+S0004-06142009000500011-1,false_positive,O,CALLE,,11,-1,470,García Servicio de Urología - planta 11 Hospital Juan Canalejo Xubias de Arriba
+S0004-06142009000900011-1,false_positive,O,CALLE,,"C/ Arcos de la Frontera , 27 - 2oA",-1,377,": Dr. Pablo Garrido Abad . C/ Arcos de la Frontera , 27 - 2oA 28023 . Madrid . ( España"
+S0004-06142009000900011-1,boundary_error,EDAD_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,Edad:53 años,años,57,58,24/07/1961 . País : España . Edad:53 años Sexo : H. Fecha de Ingreso
+S0004-06142010000100015-1,false_positive,O,CALLE,,Piso 14,-1,26,Plaza Carrera 7 # 114-33 . Piso 14 . . Localidad/ Provincia : Bogotá
+S0004-06142010000100015-1,false_positive,O,FECHAS,,04/05/2018,-1,66,: H. Fecha de Ingreso : 04/05/2018 . Médico : Julio Alexander Díaz
+S0004-06142010000100015-1,boundary_error,CALLE,CALLE,Plaza Carrera 7 # 114-33 . Piso 14,Plaza Carrera 7 # 114-33,20,20,87 0945 1 . Domicilio : Plaza Carrera 7 # 114-33 . Piso 14 . . Localidad/ Provincia : Bogotá
+S0004-06142010000100015-1,boundary_error,INSTITUCION,INSTITUCION,"Fundación para el Avance de la Anatomía Patológica , Citología y Clínica Molecular FAPCIM",Fundación para el Avance de la Anatomía,250,250,". Julio Alexander Díaz Pérez . Fundación para el Avance de la Anatomía Patológica , Citología y Clínica Molecular FAPCIM . Bogotá . ( Colombia )"
+S0004-06142010000500011-1,false_positive,O,TERRITORIO,,Valdivia,-1,326,"anestesia general , en posición de Valdivia , colocando sendos catéteres 8 Ch"
+S0210-48062003001000009-1,false_positive,O,TERRITORIO,,Buenos Aires,-1,1058,"León , Instituto de Nefrología Sa Buenos Aires . Sa Buenos Aires lleon@intramed.net.ar"
+S0210-48062003001000009-1,false_negative,SEXO_SUJETO_ASISTENCIA,O,femenina,,235,-1,intestinal normal . No disfunción sexual femenina previa hasta la presente dispareunia que
+S0210-48062003001000009-1,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,DR.Luis Roberto León,Roberto León,1050,1051,"conectivo denso . Remitido por : DR.Luis Roberto León , Instituto de Nefrología Sa Buenos"
+S0210-48062003001000009-1,boundary_error,INSTITUCION,INSTITUCION,Instituto de Nefrología Sa Buenos Aires,Instituto de Nefrología Sa,1054,1054,"por : DR.Luis Roberto León , Instituto de Nefrología Sa Buenos Aires . Sa Buenos Aires lleon@intramed.net.ar"
+S0210-48062003001000009-1,boundary_error,TERRITORIO,TERRITORIO,Buenos Aires,Sa Buenos Aires,1062,1061,de Nefrología Sa Buenos Aires . Sa Buenos Aires lleon@intramed.net.ar
+S0210-48062004000500008-1,false_positive,O,ID_SUJETO_ASISTENCIA,,NHC,-1,36,Albacete . CP : 02002 . NHC : 0325640 . Datos asistenciales .
+S0210-48062004000500008-1,false_positive,O,HOSPITAL,,Centro,-1,553,"clinico : Pilar Sánchez Ortiz , Centro de Salud Hellín II , C/"
+S0210-48062004000500008-1,false_positive,O,HOSPITAL,,II,-1,557,"Ortiz , Centro de Salud Hellín II , C/ Las Turbas de Cuenca"
+S0210-48062004000500008-1,false_negative,FECHAS,O,nacimiento:13/05/1981,,45,-1,. Datos asistenciales . Fecha de nacimiento:13/05/1981 . País : España . Edad
+S0210-48062004000500008-1,boundary_error,CENTRO_SALUD,INSTITUCION,Centro de Salud Hellín II,de Salud Hellín,553,554,"clinico : Pilar Sánchez Ortiz , Centro de Salud Hellín II , C/ Las Turbas de Cuenca"
+S0210-48062004000500010-1,false_negative,TERRITORIO,O,CP:24003,,30,-1,3H. Localidad/ Provincia : León . CP:24003 . NHC : 2545164 . Datos
+S0210-48062004000500010-1,type_confusion,NUMERO_TELEFONO,ID_TITULACION_PERSONAL_SANITARIO,637 909 232,637 909 232,87,87,de teléfono de la madre : 637 909 232 . Historia Actual : Niño de
+S0210-48062004000500011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:78 43567304 36,43567304 36,17,18,Nuñez . NHC : 7843562 . NASS:78 43567304 36 . Domicilio : Av. San Bernardo
+S0210-48062004000800009-1,false_negative,INSTITUCION,O,Servicio de Histopatología INTCF,,410,-1,Responsable clínico : Dra. Beatriz Aguilera Servicio de Histopatología INTCF - Madrid . c/ José Echegaray
+S0210-48062005000800014-1,false_positive,O,FECHAS,,29,-1,225,la intervención quirúrgica . El día 29 de marzo del 2004 realizamos tumorectomía
+S0210-48062005000800014-1,false_positive,O,FECHAS,,de,-1,226,intervención quirúrgica . El día 29 de marzo del 2004 realizamos tumorectomía renal
+S0210-48062005000800014-1,false_positive,O,CORREO_ELECTRONICO,,;,-1,278,"Petunia , 6 E-41089 Sevilla bertsand@terra.es ; oncojerez@saludalia.com"
+S0210-48062005000800014-1,boundary_error,FECHAS,FECHAS,29 de marzo del 2004,marzo del 2004,225,227,la intervención quirúrgica . El día 29 de marzo del 2004 realizamos tumorectomía renal izquierda vía lumbotomía
+S0210-48062005001000013-1,false_negative,HOSPITAL,O,HULP,,781,-1,Salas Cabrera Servicio de Urología . HULP . Correo Electronico . revimcaribe@gmail.com
+S0210-48062006000200017-1,false_positive,O,NOMBRE_PERSONAL_SANITARIO,,Cecilio Pujazón,-1,567,: Dr. María Soto Delgado . Cecilio Pujazón nº 26 1º 1 . 11100
+S0210-48062006000200017-1,boundary_error,CALLE,CALLE,Cecilio Pujazón nº 26 1º 1,nº 26 1º 1,567,569,: Dr. María Soto Delgado . Cecilio Pujazón nº 26 1º 1 . 11100 San Fernando ( Cádiz
+S0210-48062006000400012-1,false_positive,O,TERRITORIO,,de,-1,82,"años , residente en la ciudad de Medellín , previamente asintomático quien es"
+S0210-48062006000400012-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:23547842 16,16,10,11,. Apellidos : Uribe Cardona . NASS:23547842 16 . Domicilio : Calle 4 Sur
+S0210-48062006000400012-1,false_negative,ID_SUJETO_ASISTENCIA,O,NHC:7896541,,31,-1,Medellin . CP : 06411 . NHC:7896541 . Datos asistenciales . Fecha de
+S0210-48062007000700014-1,type_confusion,INSTITUCION,HOSPITAL,Fundación Puigvert,Fundación Puigvert,264,264,"Hernando Martínez-Rodríguez Servicio de Urología . Fundación Puigvert . Cartagena , 340-350 - 08025"
+S0210-48062007001000004-4,false_positive,O,EDAD_SUJETO_ASISTENCIA,,9 meses,-1,147,en la infancia . A los 9 meses sufrió un cuadro de meningitis que
+S0210-48062009000200018-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:28 28 64710,28 64710,73,74,06/12/2013 . Médico : Luís Xambre NºCol:28 28 64710 . Informe clínico del paciente :
+S0210-48062009000200019-1,false_negative,TERRITORIO,O,CP:36143,,34,-1,. Localidad/ Provincia : Pontevedra . CP:36143 . NHC : 7649551 . Datos
+S0210-48062009000600018-1,type_confusion,INSTITUCION,HOSPITAL,Fundació Puigvert,Fundació Puigvert,550,550,Marió Gaya Sopena Servicio de Urología Fundació Puigvert - Cartagena 340-350 . 08005 Barcelona
+S0210-48062009000900015-3,false_positive,O,FECHAS,,16,-1,60,H . Fecha de Ingreso : 16 . Médico : Antonio García Morúa
+S0210-48062009000900015-3,boundary_error,CALLE,CALLE,"Av Montes Pirineos 770 , Lomas de Chapultepec V Secc","Av Montes Pirineos 770 , Lomas de Chapultepec V Secc ..",12,12,": Ulloa Origel . Domicilio : Av Montes Pirineos 770 , Lomas de Chapultepec V Secc .. Localidad/ Provincia : Ciudad de México"
+S0210-48062009000900015-3,false_negative,TERRITORIO,O,CP:11010,,30,-1,Provincia : Ciudad de México . CP:11010 . NHC : 5221413 . Datos
+S0210-48062009001000019-1,false_positive,O,FECHAS,,1961,-1,130,de ulcus duodenal en el año 1961 y colecistectomía en 2002 . En
+S0210-48062009001000019-1,boundary_error,FECHAS,FECHAS,año 1961,año,129,129,quirúrgica de ulcus duodenal en el año 1961 y colecistectomía en 2002 . En
+S0210-48062010000100019-4,false_positive,O,ID_SUJETO_ASISTENCIA,,NHC,-1,40,Madrid . CP : 28029 . NHC : 214130 . Datos asistenciales .
+S0210-56912006000600007-1,false_positive,O,HOSPITAL,,Urbanización Pinos de,-1,959,"Dr. Jose Miguel Mora Ordóñez . Urbanización Pinos de Alhaurín . Avda. Andalucía , 146"
+S0210-56912006000600007-1,false_positive,O,TERRITORIO,,Alhaurín,-1,962,"Mora Ordóñez . Urbanización Pinos de Alhaurín . Avda. Andalucía , 146 ."
+S0210-56912006000600007-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:29 29 03549,29 03549,75,76,Médico : Jose Miguel Mora Ordóñez NºCol:29 29 03549 . Motivo de ingreso : síndrome
+S0210-56912006000600007-1,boundary_error,CALLE,CALLE,"Urbanización Pinos de Alhaurín . Avda. Andalucía , 146","Avda. Andalucía , 146",959,964,"Dr. Jose Miguel Mora Ordóñez . Urbanización Pinos de Alhaurín . Avda. Andalucía , 146 . 29130 Alhaurín de la Torre"
+S0210-56912006000800008-1,false_positive,O,CALLE,,Urbanización Pinos de,-1,575,". Avda. Andalucía , 146 . Urbanización Pinos de Alhaurín . Alhaurín de la Torre"
+S0210-56912006000800008-1,false_positive,O,TERRITORIO,,Alhaurín,-1,578,", 146 . Urbanización Pinos de Alhaurín . Alhaurín de la Torre ."
+S0210-56912006000800008-1,false_negative,ID_CONTACTO_ASISTENCIAL,O,Episodio:1520368541,,62,-1,Fecha de Ingreso : 13/01/2018 . Episodio:1520368541 . Médico : Jose Miguel Mora
+S0210-56912006000800008-1,boundary_error,CALLE,CALLE,"Avda. Andalucía , 146 . Urbanización Pinos de Alhaurín","Avda. Andalucía , 146",570,570,": Jose Miguel Mora Ordóñez . Avda. Andalucía , 146 . Urbanización Pinos de Alhaurín . Alhaurín de la Torre ."
+S0210-56912007000200007-3,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,materna,-1,164,"refieren sus padres , la abuela materna falleció de joven , atribuido a"
+S0210-56912007000200007-3,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,abuela materna,abuela,163,163,"Según refieren sus padres , la abuela materna falleció de joven , atribuido a"
+S0210-56912007000200007-3,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,dos hermanos,hermanos,176,177,a causa cardiaca . Jose tiene dos hermanos sanos y una hermana con cardiopatía
+S0210-56912007000200007-3,false_negative,FAMILIARES_SUJETO_ASISTENCIA,O,15 días de vida,,188,-1,con cardiopatía congénita fallecida a los 15 días de vida . Resumen de pruebas complementarias :
+S0210-56912008000200007-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,18,-1,85,: Varón de 3 años y 18 kg de peso trasladado desde su
+S0210-56912008000200007-1,type_confusion,FECHAS,EDAD_SUJETO_ASISTENCIA,3 años,3 años,82,82,clínico del paciente : Varón de 3 años y 18 kg de peso trasladado
+S0211-57352015000100011-2,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,madre,-1,339,sí una discusión previa con la madre . Adaptado a los ritmos de
+S0211-57352015000100011-2,type_confusion,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,soltero,soltero,90,90,": Varón de 44 años , soltero , que vive con su madre"
+S0211-69952011000500011-3,false_positive,O,INSTITUCION,,de,-1,321,. Departamento de Medicina . Universidad de Alcalá E-mail : garribad@senefro.org
+S0211-69952011000500011-3,false_positive,O,HOSPITAL,,Alcalá,-1,322,Departamento de Medicina . Universidad de Alcalá E-mail : garribad@senefro.org
+S0211-69952011000500011-3,boundary_error,EDAD_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,Edad:47 años,años,50,51,23/02/1970 . País : España . Edad:47 años Sexo : H. Fecha de Ingreso
+S0211-69952011000500011-3,boundary_error,INSTITUCION,HOSPITAL,Universidad de Alcalá,Universidad,320,320,Guadalajara . Departamento de Medicina . Universidad de Alcalá E-mail : garribad@senefro.org
+S0211-69952012000500016-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,varones,-1,208,familiares de espondilitis anquilopoyética en varios varones de su rama paterna ; un
+S0211-69952012000500016-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,rama,-1,211,"anquilopoyética en varios varones de su rama paterna ; un tío paterno ,"
+S0211-69952012000500016-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,paterna,-1,212,"en varios varones de su rama paterna ; un tío paterno , además"
+S0211-69952012000500016-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,paterno,-1,216,"su rama paterna ; un tío paterno , además , fue diagnosticado de"
+S0211-69952012000500016-1,false_positive,O,TERRITORIO,,Murcia,-1,943,"Hospital General Universitario Reina Sofía , Murcia E-mail : juanbecaro@gmail.com E-mail : juanb.cabezuelo@carm.es"
+S0211-69952012000500016-1,false_negative,ID_CONTACTO_ASISTENCIAL,O,Episodio:4387684,,73,-1,17/11/2017 . Servicio : Nefrología . Episodio:4387684 . Médico : Juan Blanco Cabezuelo
+S0211-69952012000500016-1,boundary_error,FECHAS,FECHAS,2006,finales de 2006,101,99,33 años consultó con Nefrología a finales de 2006 por elevación de la creatinina sérica
+S0211-69952012000500016-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,tío paterno,tío,215,215,"de su rama paterna ; un tío paterno , además , fue diagnosticado de"
+S0211-69952013000200019-1,false_positive,O,ID_SUJETO_ASISTENCIA,,62476454,-1,16,Navarro Olmedo . NHC : 73 62476454 66 . NASS : 46 23767405
+S0211-69952013000200019-1,false_positive,O,ID_ASEGURAMIENTO,,66,-1,17,Olmedo . NHC : 73 62476454 66 . NASS : 46 23767405 61
+S0211-69952013000200019-1,boundary_error,ID_SUJETO_ASISTENCIA,ID_SUJETO_ASISTENCIA,73 62476454 66,73,15,15,: Navarro Olmedo . NHC : 73 62476454 66 . NASS : 46 23767405 61
+S0211-69952013000200025-1,false_positive,O,CALLE,,edificio Cantabria Real,-1,425,"71-57 , apto . 501 , edificio Cantabria Real , Medellín , Antioquia , Colombia"
+S0211-69952013000200025-1,false_negative,TERRITORIO,O,CP:06411,,22,-1,. Localidad/ Provincia : Medellín . CP:06411 . NHC : 996543 . Datos
+S0211-69952013000200025-1,false_negative,FECHAS,O,Ingreso:02/11/2014,,51,-1,Sexo : Mujer . Fecha de Ingreso:02/11/2014 . Especialidad : Nefrología . Médico
+S0211-69952013000200025-1,boundary_error,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,raza negra,negra,89,90,": Paciente de 37 años , raza negra , que presentó previamente varios episodios"
+S0211-69952013000200025-1,boundary_error,CALLE,CALLE,"Transversal 39 a número 71-57 , apto . 501 , edificio Cantabria Real","Transversal 39 a número 71-57 , apto . 501",415,415,", Hospital Pablo Tobón Uribe , Transversal 39 a número 71-57 , apto . 501 , edificio Cantabria Real , Medellín , Antioquia , Colombia"
+S0211-69952014000600016-1,false_positive,O,CALLE,,Perrando,-1,249,Genética Molecular Hospital Dr. Julio C. Perrando Avda. 9 de Julio 1100 3500
+S0211-69952014000600016-1,false_positive,O,TERRITORIO,,1100,-1,254,"C. Perrando Avda. 9 de Julio 1100 3500 Resistencia , Chaco , Argentina"
+S0211-69952014000600016-1,false_positive,O,CORREO_ELECTRONICO,,msp.histocompat@ecomchaco.com.ar,-1,262,"Resistencia , Chaco , Argentina karinamarinic@yahoo.com.ar msp.histocompat@ecomchaco.com.ar"
+S0211-69952014000600016-1,type_confusion,ID_ASEGURAMIENTO,ID_SUJETO_ASISTENCIA,879475839/710,879475839/710,16,16,: Baudí Blanco . NHC : 879475839/710 . Domicilio : Entrada de las
+S0211-69952014000600016-1,type_confusion,TERRITORIO,PAIS,Argentina,Argentina,50,50,19/03/1956 . País de nacimiento : Argentina . Edad : 55 años Sexo
+S0211-69952014000600016-1,boundary_error,HOSPITAL,HOSPITAL,Hospital Dr. Julio C. Perrando,Hospital Dr. Julio C.,245,245,Servicio de Histocompatibilidad y Genética Molecular Hospital Dr. Julio C. Perrando Avda. 9 de Julio 1100 3500
+S0211-69952014000600016-1,boundary_error,CALLE,CALLE,Avda. 9 de Julio 1100,Avda. 9 de Julio,250,250,"Molecular Hospital Dr. Julio C. Perrando Avda. 9 de Julio 1100 3500 Resistencia , Chaco , Argentina"
+S0211-69952016000300015-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,varón,-1,530,". El paciente tiene un hijo varón , por lo que la mutación"
+S0211-69952016000300015-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,descendencia,-1,542,mutación no se transmite a la descendencia . Se inició la terapia de
+S0211-69952016000300015-1,false_negative,TERRITORIO,O,CP:37008,,32,-1,. Localidad/ Provincia : Salamanca . CP:37008 . Datos asistenciales . Fecha de
+S0211-69952016000300015-1,false_negative,INSTITUCION,O,Genetic Analyzer,,450,-1,capilar ( ABI PRISM ® 310 Genetic Analyzer ) . El análisis determinó que
+S0211-69952016000300015-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,hijo varón,hijo,529,529,"fecha . El paciente tiene un hijo varón , por lo que la mutación"
+S0211-69952016000300015-1,type_confusion,SEXO_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,esposa,esposa,610,610,"renal de donante vivo de su esposa . El paciente , durante el"
+S0211-69952017000200225-1,false_negative,ID_CONTACTO_ASISTENCIAL,O,Episodio:103985641,,66,-1,14/12/2017 . Servicio : Nefrología . Episodio:103985641 . Médico : Raquel Díaz-Mancebo NºCol
+S0212-16112009000300015-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,esposa,-1,152,". Su cuidadora habitual era su esposa de 72 años de edad ,"
+S0212-16112009000300015-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,esposa de 72 años,72 años,152,154,". Su cuidadora habitual era su esposa de 72 años de edad , afecta de una"
+S0212-16112012000500042-1,false_positive,O,FECHAS,,85,-1,348,"tratamiento con Infliximab , el día 85 recibe el alta hospitalaria , continuando"
+S0212-16112012000500042-1,boundary_error,HOSPITAL,HOSPITAL,Xeral-Cíes,( Xeral-Cíes,861,860,"Farmacia Complejo Hospitalario Universitario de Vigo ( Xeral-Cíes ) C/ Pizarro , 22 36202"
+S0212-71992005000400009-1,false_negative,TERRITORIO,O,CP:41011,,35,-1,. Localidad/ Provincia : Sevilla . CP:41011 . Datos asistenciales . Fecha de
+S0212-71992005000400009-1,false_negative,SEXO_SUJETO_ASISTENCIA,O,niño,,94,-1,"que había sufrido una neumonía siendo niño y que no era fumador ,"
+S0212-71992005001200008-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:32 64125896 32,64125896 32,13,14,Bierzo . NHC : 164253 . NASS:32 64125896 32 . Domicilio : Calle Mendez Alvado
+S0212-71992006000700009-1,false_positive,O,TERRITORIO,,A,-1,558,"Ridruejo Sáez Paseo Calanda , 57-4º A 50010 Zaragoza E-mail : raridru@mixmail.com"
+S0212-71992006000700009-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:89 84823485 45,84823485 45,15,16,Romero . NHC : 36985 . NASS:89 84823485 45 . Domicilio : Ronda Ibón de
+S0212-71992006000700009-1,type_confusion,TERRITORIO,PAIS,España,España,49,49,nacimiento : 16/11//1940 . País : España . Edad : 76 años Sexo
+S0212-71992006000700009-1,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,Raquel Ridruejo Sáez,Raquel Ridruejo Sáez Paseo Calanda,74,74,. Episodio : . Médico : Raquel Ridruejo Sáez Paseo Calanda NºCol:50 50 48912 . Historia Actual
+S0212-71992006000700009-1,boundary_error,CALLE,NOMBRE_PERSONAL_SANITARIO,Paseo Calanda,Raquel Ridruejo Sáez Paseo Calanda,77,74,. Episodio : . Médico : Raquel Ridruejo Sáez Paseo Calanda NºCol:50 50 48912 . Historia Actual
+S0212-71992006000700009-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:50 50 48912,50 48912,79,80,: Raquel Ridruejo Sáez Paseo Calanda NºCol:50 50 48912 . Historia Actual : Mujer de
+S0212-71992006000700009-1,false_negative,FECHAS,O,11/5/03,,369,-1,buena respuesta inicial . TAC-abdominal ( 11/5/03 ) que evidencia múltiples imágenes hipodensas
+S0212-71992006000700009-1,boundary_error,CALLE,CALLE,"Paseo Calanda , 57-4º A","Paseo Calanda , 57-4º",554,554,"Remitido por : Raquel Ridruejo Sáez Paseo Calanda , 57-4º A 50010 Zaragoza E-mail : raridru@mixmail.com"
+S0212-71992006000900007-1,type_confusion,CORREO_ELECTRONICO,CALLE,"Avenida de las Américas , 5 , 3 D.","Avenida de las Américas , 5 , 3 D.",25,25,"43 97856395 65 . Domicilio : Avenida de las Américas , 5 , 3 D. Localidad/ Provincia : Culleredo . CP"
+S0212-71992007000200007-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,italiano,-1,64,Rosada . Historia Actual : Varón italiano de 64 años ingresa en marzo
+S0212-71992007001000007-1,false_negative,TERRITORIO,O,CP:25001,,33,-1,. Localidad/ Provincia : Lleida . CP:25001 . Datos asistenciales . Fecha de
+S0213-12852005000400003-1,false_negative,TERRITORIO,O,CP:28036,,32,-1,3G. Localidad/ Provincia : Madrid . CP:28036 . Datos asistenciales . Fecha de
+S0213-12852005000400003-1,false_negative,ID_SUJETO_ASISTENCIA,O,casado,,82,-1,"varón , de 47 años , casado , acude al departamento de Medicina"
+S0213-12852006000600002-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,adicto,-1,98,"años de edad , pareja de adicto , con dos hijos negativos para"
+S0213-12852006000600002-1,boundary_error,ID_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,pareja de adicto,pareja,96,96,"de 34 años de edad , pareja de adicto , con dos hijos negativos para"
+S0213-12852006000600002-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,dos hijos,hijos,101,102,", pareja de adicto , con dos hijos negativos para el VIH . Positiva"
+S0213-12852006000600002-1,false_negative,ID_SUJETO_ASISTENCIA,O,soltera,,116,-1,"el año 1995 , se declara soltera y de ocupación ama de casa"
+S0213-12852006000600002-1,false_negative,PROFESION,O,ama de casa,,120,-1,se declara soltera y de ocupación ama de casa . Se presentó a la consulta
+S0213-12852006000600002-1,false_negative,FECHAS,O,6/9/05,,900,-1,"candidiasis oral y esofágica y el 6/9/05 , la paciente obitó , neutropénica"
+S0213-12852016000500002-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,negra,-1,75,"de sexo masculino , de raza negra , 21 años de edad ,"
+S0213-12852016000500002-1,false_positive,O,HOSPITAL,,Medellín,-1,96,Hospital Universitario San Vicente Fundación de Medellín adscrito a la Universidad de Antioquia
+S0213-12852016000500002-1,false_positive,O,HOSPITAL,,Universidad,-1,1113,por : Martha Lucia Marín Botero Universidad de Antioquia Facultad de Odontología Calle
+S0213-12852016000500002-1,boundary_error,ID_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,raza negra,raza,74,74,"Paciente de sexo masculino , de raza negra , 21 años de edad ,"
+S0213-12852016000500002-1,boundary_error,HOSPITAL,HOSPITAL,Hospital Universitario San Vicente Fundación de Medellín,Hospital Universitario San Vicente Fundación,90,90,al servicio de Cirugía Maxilofacial del Hospital Universitario San Vicente Fundación de Medellín adscrito a la Universidad de Antioquia
+S0213-12852016000500002-1,type_confusion,INSTITUCION,HOSPITAL,Universidad de Antioquia,Universidad de Antioquia,100,100,"Fundación de Medellín adscrito a la Universidad de Antioquia , remitido por odontólogo de una"
+S0213-12852016000500002-1,boundary_error,INSTITUCION,INSTITUCION,Universidad de Antioquia Facultad de Odontología,de Antioquia Facultad de Odontología,1113,1114,por : Martha Lucia Marín Botero Universidad de Antioquia Facultad de Odontología Calle 64 # 52-59 Medellín .
+S0365-66912004000600009-2,false_positive,O,EDAD_SUJETO_ASISTENCIA,,18,-1,209,la zona central . A los 18 meses el botón corneal se mantiene
+S0365-66912004000800009-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:25 87045626 23,87045626 23,14,15,Rajoy . NHC : 546534 . NASS:25 87045626 23 . Domicilio : Av. de los
+S0365-66912004000900009-1,false_positive,O,CORREO_ELECTRONICO,,E-mai,-1,395,"Pio XII , 36 31008 Pamplona E-mai . : wtorre@unav.es"
+S0365-66912004001100012-1,false_positive,O,HOSPITAL,,Área,-1,481,Arquitecto Marcide / Prof. Novoa Santos Área Sanitaria de Ferrol C/ Estrada San
+S0365-66912004001100012-1,false_positive,O,HOSPITAL,,Sanitaria,-1,482,Marcide / Prof. Novoa Santos Área Sanitaria de Ferrol C/ Estrada San Pedro
+S0365-66912004001100012-1,false_positive,O,INSTITUCION,,de,-1,483,/ Prof. Novoa Santos Área Sanitaria de Ferrol C/ Estrada San Pedro de
+S0365-66912004001100012-1,false_positive,O,PAIS,,La,-1,501,"15.405 Ferrol - ( Coruña , La ) , Spain Tel . :"
+S0365-66912004001100012-1,boundary_error,HOSPITAL,HOSPITAL,Hospital Arquitecto Marcide,Hospital Arquitecto Marcide /,474,474,", Reanimación y Tratamiento del Dolor Hospital Arquitecto Marcide / Prof. Novoa Santos Área Sanitaria de"
+S0365-66912004001100012-1,type_confusion,HOSPITAL,NOMBRE_PERSONAL_SANITARIO,Prof. Novoa Santos,Prof. Novoa Santos,478,478,del Dolor Hospital Arquitecto Marcide / Prof. Novoa Santos Área Sanitaria de Ferrol C/ Estrada
+S0365-66912004001100012-1,type_confusion,TERRITORIO,HOSPITAL,Ferrol,Ferrol,484,484,Prof. Novoa Santos Área Sanitaria de Ferrol C/ Estrada San Pedro de Leixa-Catabois
+S0365-66912004001100012-1,boundary_error,CALLE,CALLE,"C/ Estrada San Pedro de Leixa-Catabois , s / n","C/ Estrada San Pedro de Leixa-Catabois , s / n 15.405",485,485,"Novoa Santos Área Sanitaria de Ferrol C/ Estrada San Pedro de Leixa-Catabois , s / n 15.405 Ferrol - ( Coruña , La"
+S0365-66912004001100012-1,boundary_error,TERRITORIO,CALLE,15.405,"C/ Estrada San Pedro de Leixa-Catabois , s / n 15.405",495,485,"Novoa Santos Área Sanitaria de Ferrol C/ Estrada San Pedro de Leixa-Catabois , s / n 15.405 Ferrol - ( Coruña , La"
+S0365-66912004001100012-1,boundary_error,TERRITORIO,TERRITORIO,"Coruña , La",Coruña,499,499,"/ n 15.405 Ferrol - ( Coruña , La ) , Spain Tel . :"
+S0365-66912004001100012-1,type_confusion,NUMERO_FAX,NUMERO_TELEFONO,981.33.40.15,981.33.40.15,515,515,( Ext ): 138-137 Fax : 981.33.40.15 enriquefreire2000@yahoo.es
+S0365-66912004001200010-2,false_positive,O,INSTITUCION,,de Salud,-1,328,Asensio Sánchez Hospital General Servicio Castellano-Leonés de Salud Servicio de Oftalmología Medina del Campo
+S0365-66912004001200010-2,boundary_error,HOSPITAL,HOSPITAL,Hospital General,Hospital General Servicio Castellano-Leonés,324,324,clínico : Dra. Vanessa Asensio Sánchez Hospital General Servicio Castellano-Leonés de Salud Servicio de Oftalmología Medina
+S0365-66912004001200010-2,boundary_error,INSTITUCION,HOSPITAL,Servicio Castellano-Leonés de Salud,Hospital General Servicio Castellano-Leonés,326,324,clínico : Dra. Vanessa Asensio Sánchez Hospital General Servicio Castellano-Leonés de Salud Servicio de Oftalmología Medina del Campo
+S0365-66912005001000011-1,false_positive,O,INSTITUCION,,Trigon depot,-1,141,"mg/0,1 ml de triamcinolona acetonido ( Trigon depot ® Bristol-Myers Squibb SL , Anagni"
+S0365-66912005001000011-1,false_positive,O,TERRITORIO,,Mayo,-1,344,"Allergan , Wesport , Co . Mayo , Irlanda ) . A los"
+S0365-66912005001000011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:54 65745645 37,65745645 37,13,14,Rodriguez . NHC : 754695 . NASS:54 65745645 37 . Domicilio : Calle Valdemingómez 96
+S0365-66912005001000011-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:28 28 52513,28 52513,64,65,. Médico : Ana Zaragoza Herrero NºCol:28 28 52513 . Historia del paciente : se
+S0365-66912005001000011-1,false_negative,INSTITUCION,O,Allergan,,338,-1,"Poly-pred colirio ® cada 8h ( Allergan , Wesport , Co . Mayo"
+S0365-66912005001000011-1,boundary_error,TERRITORIO,TERRITORIO,Co . Mayo,Co,342,342,"8h ( Allergan , Wesport , Co . Mayo , Irlanda ) . A los"
+S0365-66912005001100009-2,boundary_error,INSTITUCION,INSTITUCION,Merck Sharp & Dohme,Sharp & Dohme de España SA,202,203,"0,5% ( Timoftol ® 0,5% , Merck Sharp & Dohme de España SA , Madrid ) cada 12 horas"
+S0365-66912005001100009-2,boundary_error,PAIS,INSTITUCION,España,Sharp & Dohme de España SA,207,203,"( Timoftol ® 0,5% , Merck Sharp & Dohme de España SA , Madrid ) cada 12 horas"
+S0365-66912005001200012-1,type_confusion,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,joven,joven,88,88,clínico del paciente : paciente varón joven de 40 años con pérdida de
+S0365-66912006000100010-1,false_negative,FECHAS,O,nacimiento:28/06/1945,,44,-1,. Datos asistenciales . Fecha de nacimiento:28/06/1945 . País de nacimiento : España
+S0365-66912006000100010-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:28 28 90172,28 90172,71,72,Médico : Noemí Ruiz del Río NºCol:28 28 90172 . Informe clínico del paciente :
+S0365-66912007000900010-1,type_confusion,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,caucásico,caucásico,90,90,"Informe clínico del paciente : Varón caucásico de 30 años , sin antecedentes"
+S0365-66912007000900016-1,false_negative,TERRITORIO,O,CP:28036,,32,-1,6B. Localidad/ Provincia : Madrid . CP:28036 . Datos asistenciales . Fecha de
+S0365-66912007000900016-1,type_confusion,INSTITUCION,TERRITORIO,Whyeth,Whyeth,446,446,"oral ( Metotrexato Lederle ® , Whyeth , Madrid ) a bajas dosis"
+S0365-66912007001200011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:45 37678645 63,37678645 63,13,14,Duarte . NHC : 463436 . NASS:45 37678645 63 . Domicilio : Calle las rosa
+S0365-66912007001200011-1,false_negative,TERRITORIO,O,CP:28014,,30,-1,6B. Localidad/ Provincia : Madrid . CP:28014 . Datos asistenciales . Fecha de
+S0365-66912008000100007-2,boundary_error,EDAD_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,11 años y 10 meses,11 años,238,238,", con una edad actual de 11 años y 10 meses , pero presentando un retardo psicomotor"
+S0365-66912008000100009-3,false_positive,O,INSTITUCION,,S.A.,-1,158,"( Ciclopléjico ® , AlconCusí , S.A. , Barcelona , España ) y"
+S0365-66912008000100009-3,boundary_error,INSTITUCION,INSTITUCION,"AlconCusí , S.A.",AlconCusí,156,156,"con ciclopentolato ( Ciclopléjico ® , AlconCusí , S.A. , Barcelona , España ) y"
+S0365-66912008000100009-3,boundary_error,INSTITUCION,INSTITUCION,Allergan S.A.,S.A.,196,197,"lubricante ( Viscofresh ® 0,5% , Allergan S.A. ) manteniendo una AV de 6/10"
+S0365-66912011000900005-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,nacida,-1,70,28987 . Historia Actual : Recién nacida a término que fue enviada para
+S0365-66912011000900005-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,20 días,-1,81,enviada para valoración oftalmológica a los 20 días de vida por la aparición de
+S0365-66912011000900005-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:28 28 28987,28 28987,62,63,. Médico : Yunieth Walter Eduardo NºCol:28 28 28987 . Historia Actual : Recién nacida
+S0365-66912011000900005-1,boundary_error,EDAD_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,Recién nacida,Recién,69,69,28 28987 . Historia Actual : Recién nacida a término que fue enviada para
+S0365-66912011000900005-1,type_confusion,FAMILIARES_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,20 años,20 años,110,110,sido operada de glaucoma a los 20 años de edad con trabeculectomía bilateral y
+S0365-66912012000200003-1,false_negative,INSTITUCION,O,Innogenetics N.V.,,348,-1,"( ABBOTT HTLV-1 / HTLV-2 , Innogenetics N.V. ) . Las muestras por EIA"
+S0365-66912012000200003-1,false_negative,INSTITUCION,O,Innogenetics N.V.,,371,-1,"INNO-LIATM HTLV I / II , Innogenetics N.V. ) que confirmaron la presencia de"
+S0365-66912012000500005-2,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:35 78659867 98,78659867 98,13,14,Gutierrez . NHC : 7823645 . NASS:35 78659867 98 . Domicilio : Calle la bañeza
+S0365-66912012000700004-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,tres,-1,119,la anamnesis familiar se registró a tres hermanos varones sordomudos y otro con
+S0365-66912012000700004-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,tres hermanos varones sordomudos y otro con baja visión,hermanos varones,119,120,la anamnesis familiar se registró a tres hermanos varones sordomudos y otro con baja visión . La agudeza visual ( AV
+S0365-66912012000800005-1,false_positive,O,INSTITUCION,,Inc,-1,266,"OCT Carl Zeiss Ophthalmic Systems , Inc ) mostraba un importante adelgazamiento en"
+S0365-66912012000800005-1,boundary_error,INSTITUCION,INSTITUCION,"Carl Zeiss Ophthalmic Systems , Inc",Zeiss,261,262,"( OCT ) ( Stratus OCT Carl Zeiss Ophthalmic Systems , Inc ) mostraba un importante adelgazamiento en"
+S0376-78922009000100005-1,false_positive,O,CALLE,,Palmar,-1,291,"Portal 2 , Piso 1ºD. El Palmar . 30120 Murcia . España ."
+S0376-78922009000100005-1,boundary_error,TERRITORIO,TERRITORIO,El Palmar,El,290,290,", Portal 2 , Piso 1ºD. El Palmar . 30120 Murcia . España ."
+S0376-78922009000100005-1,type_confusion,TERRITORIO,PAIS,España,España,296,296,El Palmar . 30120 Murcia . España . e-mail : alvaro.fernandez@telefonica.net
+S0376-78922009000100011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:89 72456896 56,72456896 56,13,14,Perez . NHC : 784668 . NASS:89 72456896 56 . Domicilio : Calle Abada 43
+S0376-78922009000100011-1,type_confusion,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,soltero,soltero,88,88,"hospital . Historia Actual : Varón soltero de 37 años de edad ,"
+S0376-78922009000100011-1,false_negative,PROFESION,O,trabajador del campo,,95,-1,"de 37 años de edad , trabajador del campo , que es enviado a nuestro"
+S0376-78922009000200008-1,false_negative,TERRITORIO,O,CP:28001,,25,-1,6A. Localidad/ Provincia : Madrid . CP:28001 . Datos asistenciales . Fecha de
+S0376-78922009000200008-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:28 08 79465,08 79465,61,62,Urgencias . Médico : Paulina Iwanyk NºCol:28 08 79465 . Motivo de ingreso : Paciente
+S0376-78922009000400010-1,false_negative,TERRITORIO,O,CP:28009,,28,-1,1A. Localidad/ Provincia : Madrid . CP:28009 . Datos asistenciales . Fecha de
+S0376-78922011000500012-1,false_negative,TERRITORIO,O,CP:08223,,35,-1,"Provincia : Terrassa , Barcelona . CP:08223 . Datos asistenciales . Fecha de"
+S0376-78922011000500012-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:08 08 47356,08 47356,67,68,19/11/2017 . Médico : Eva Guisantes NºCol:08 08 47356 . Historia Actual : Varón de
+S0376-78922012000300005-1,false_positive,O,INSTITUCION,,JMY México,-1,315,"transfixión , uniplanar , diseñado por JMY México ® de acuerdo a las características"
+S0376-78922012000300005-1,false_positive,O,HOSPITAL,,Nacional,-1,889,Cortés Hospital Español de México Ejército Nacional 613-703 Colonia Granada México D.F. c.p
+S0376-78922012000300005-1,false_positive,O,CALLE,,613-703,-1,890,Hospital Español de México Ejército Nacional 613-703 Colonia Granada México D.F. c.p .
+S0376-78922012000300005-1,false_positive,O,CALLE,,c.p .,-1,895,Nacional 613-703 Colonia Granada México D.F. c.p . 11520 . México . e-mail :
+S0376-78922012000300005-1,boundary_error,CALLE,CALLE,Ejército Nacional 613-703,Ejército,888,888,Caravantes Cortés Hospital Español de México Ejército Nacional 613-703 Colonia Granada México D.F. c.p .
+S0376-78922013000300013-1,false_positive,O,TERRITORIO,,Molina,-1,699,"no 1 Urb . La Quinta Molina de Segura 30509 . Murcia ,"
+S0376-78922013000300013-1,false_positive,O,CALLE,,de,-1,700,"1 Urb . La Quinta Molina de Segura 30509 . Murcia , España"
+S0376-78922013000300013-1,false_positive,O,TERRITORIO,,Segura,-1,701,"Urb . La Quinta Molina de Segura 30509 . Murcia , España e-mail"
+S0376-78922013000300013-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:30 30 47985,30 47985,67,68,. Médico : Joana Díaz Ontiveros NºCol:30 30 47985 . Historia Actual : Mujer de
+S0376-78922013000300013-1,boundary_error,CALLE,CALLE,C/ Pintor José Maria Soberano no 1 Urb,C/ Pintor José Maria Soberano no 1,688,688,por : Dr. Joana Díaz Ontiveros C/ Pintor José Maria Soberano no 1 Urb . La Quinta Molina de Segura
+S0376-78922013000300013-1,boundary_error,TERRITORIO,CALLE,La Quinta Molina de Segura,Urb . La Quinta,697,695,"Pintor José Maria Soberano no 1 Urb . La Quinta Molina de Segura 30509 . Murcia , España e-mail"
+S0376-78922015000100011-1,false_positive,O,CALLE,,Área,-1,1106,Martínez Servicio de Cirugía Plástica . Área 3400 Hospital General Universitario Gregorio Marañón
+S0376-78922015000100011-1,false_positive,O,TERRITORIO,,3400,-1,1107,Servicio de Cirugía Plástica . Área 3400 Hospital General Universitario Gregorio Marañón C/
+S0376-78922016000300005-1,false_positive,O,PAIS,,Unido,-1,268,"Smith&Nephew ® , Londres , Reino Unido ) , al 11er día de"
+S0376-78922016000300005-1,type_confusion,OTROS_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,neonato,neonato,77,77,"Informe clínico del paciente : Paciente neonato de 8 días de edad ,"
+S0376-78922016000300005-1,boundary_error,PAIS,PAIS,Reino Unido,Reino,267,267,", Smith&Nephew ® , Londres , Reino Unido ) , al 11er día de"
+S0376-78922016000300005-1,false_negative,EDAD_SUJETO_ASISTENCIA,O,45 días,,386,-1,"postoperatorio , con una edad de 45 días de vida . Tras 8 meses"
+S0376-78922016000300005-1,false_negative,TERRITORIO,O,Vancouver,,425,-1,a la Escala de Cicatrización de Vancouver ( Vancouver Scar Scale ) .
+S0376-78922016000300005-1,false_negative,INSTITUCION,O,Vancouver Scar Scale,,427,-1,Escala de Cicatrización de Vancouver ( Vancouver Scar Scale ) . Responsable clínico : Dr.
+S0376-78922016000300010-1,false_positive,O,NOMBRE_PERSONAL_SANITARIO,,Dr.,-1,838,"Mendieta Espinosa Hospital Militar Escuela "" Dr. Alejandro Dávila Bolaños "" Servicio de"
+S0376-78922016000300010-1,false_positive,O,NOMBRE_PERSONAL_SANITARIO,,Alejandro Dávila Bolaños,-1,839,"Espinosa Hospital Militar Escuela "" Dr. Alejandro Dávila Bolaños "" Servicio de Cirugía Plástica y"
+S0376-78922016000300010-1,false_negative,TERRITORIO,O,CP:14174,,26,-1,. Localidad/ Provincia : Managua . CP:14174 . Datos asistenciales . Fecha de
+S0376-78922016000300010-1,boundary_error,HOSPITAL,HOSPITAL,"Hospital Militar Escuela "" Dr. Alejandro Dávila Bolaños ""","Hospital Militar Escuela """,834,834,"por : Dr. Mauricio Mendieta Espinosa Hospital Militar Escuela "" Dr. Alejandro Dávila Bolaños "" Servicio de Cirugía Plástica y Reconstructiva"
+S0378-48352004000300007-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:07 61345896 47,61345896 47,13,14,"Murillo . NHC : 80926 . NASS:07 61345896 47 . Domicilio : Calle Navarrete ,"
+S0378-48352004000300007-1,false_negative,CORREO_ELECTRONICO,O,E-mail:dmarmed@hotmail.com,,598,-1,"Doctor Olóriz , 16 E-18012 Granada E-mail:dmarmed@hotmail.com"
+S0378-48352006000300005-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:61 45678143 05,45678143 05,13,14,"Ortiz . NHC : 897345 . NASS:61 45678143 05 . Domicilio : Calle Cartagena ,"
+S0378-48352006000300005-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:32 32 56457,32 56457,64,65,. Médico : Fernanda Ferrer Marín NºCol:32 32 56457 . Antecedentes : tabaquismo ( 50
+S0378-48352006000400006-1,boundary_error,CALLE,CALLE,Po de San Vicente 58,"Po de San Vicente 58 ,",469,469,"Cirugía Plástica Hospital Universitario de Salamanca Po de San Vicente 58 , 37007 Salamanca , España e-mail :"
+S0378-48352006000500005-1,boundary_error,CALLE,CALLE,"C/ Santa Teresa , 29 , 4 Der ..","C/ Santa Teresa , 29 , 4 Der",25,25,"87 34567345 49 . Domicilio : C/ Santa Teresa , 29 , 4 Der .. Localidad/ Provincia : Valencia . CP"
+S0465-546X2014000400012-1,false_positive,O,CALLE,,Planta -1,-1,328,s / n.º Edificio 2 . Planta -1 51003 . Ceuta . España Correo
+S0465-546X2014000400012-1,boundary_error,PROFESION,SEXO_SUJETO_ASISTENCIA,auxiliar de enfermería,auxiliar,85,85,"de 51 años de edad , auxiliar de enfermería , con antecedentes de Diabetes Mellitus"
+S0465-546X2014000400012-1,boundary_error,INSTITUCION,INSTITUCION,Instituto Nacional de Seguridad Social ( INSS ),Nacional de,276,277,. Se propone al órgano competente Instituto Nacional de Seguridad Social ( INSS ) como accidente de trabajo y una
+S0465-546X2014000400012-1,false_negative,PROFESION,O,auxiliar,,303,-1,Actualmente sigue desempeñando sus funciones como auxiliar en el hospital . Remitido por
+S0465-546X2014000400012-1,boundary_error,CALLE,CALLE,Loma Colmenar s / n.º Edificio 2 . Planta -1,Loma Colmenar s / n.º Edificio 2,320,320,Muñoz . Hospital Universitario de Ceuta Loma Colmenar s / n.º Edificio 2 . Planta -1 51003 . Ceuta . España Correo
+S1130-01082005000500013-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,5 años,-1,144,", fueron negativos . A los 5 años ingresa en el Servicio de Cirugía"
+S1130-01082006000700014-1,false_negative,FECHAS,O,Ingreso:10/09/2013,,64,-1,años Sexo : M. Fecha de Ingreso:10/09/2013 . Médico : Isabel Crehuet Rodríguez
+S1130-01082007001100010-1,type_confusion,NUMERO_FAX,NUMERO_TELEFONO,91 336 87 85,91 336 87 85,349,349,. 28034 Madrid . Fax : 91 336 87 85 . e-mail : lcreper@yahoo.es / jgraus@ya.com
+S1130-01082008000900016-1,false_positive,O,CALLE,,"""",-1,294,"de la Defensa "" Gómez Ulla "" Glorieta del Ejército , 1 28047"
+S1130-01082008000900016-1,boundary_error,HOSPITAL,HOSPITAL,"Hospital Universitario Central de la Defensa "" Gómez Ulla ""","Hospital Universitario Central de la Defensa "" Gómez Ulla",285,285,", Reanimación y Terapéutica del Dolor Hospital Universitario Central de la Defensa "" Gómez Ulla "" Glorieta del Ejército , 1 28047"
+S1130-01082008001000008-1,false_negative,FECHAS,O,nacimiento:25/10/1956,,41,-1,. Datos asistenciales . Fecha de nacimiento:25/10/1956 . País : España . Edad
+S1130-01082008001000008-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:28 28 98754,28 98754,64,65,25/12/2017 . Médico : Natalia Ventura-Martínez NºCol:28 28 98754 . Historia del paciente : Varón
+S1130-01082008001200016-1,type_confusion,INSTITUCION,HOSPITAL,IdiPAZ,IdiPAZ,234,234,", Hospital Universitario La Paz , IdiPAZ , Paseo de la Castellana ,"
+S1130-01082009000600013-1,false_positive,O,CALLE,,C.P.,-1,256,". Sant Boi , 59-61 . C.P. 08620 Sant Vicenç dels Horts ."
+S1130-01082009000600013-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:08 28 96385,28 96385,67,68,. Médico : Fernando Hidalgo Méndez NºCol:08 28 96385 . Informe Clínico : Varón homosexual
+S1130-01082009000600013-1,type_confusion,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,homosexual,homosexual,75,75,96385 . Informe Clínico : Varón homosexual de 21 años sin antecedentes patológicos
+S1130-01082009000600013-1,type_confusion,CENTRO_SALUD,HOSPITAL,CAP El Serral,CAP El Serral,245,245,"de Diagnóstico por la Imagen . CAP El Serral . Ctra . Sant Boi ,"
+S1130-01082009000700015-1,boundary_error,CALLE,CALLE,"Carrer de Santa Madrona , 60 , 5 Der ..","Carrer de Santa Madrona , 60 , 5 Der",21,21,"23 07563478 93 . Domicilio : Carrer de Santa Madrona , 60 , 5 Der .. Localidad/ Provincia : Badalona , Barcelona"
+S1130-05582007000500003-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,caucásica,-1,79,Informe Clinico : Varón de raza caucásica de 59 años de edad que
+S1130-05582007000500003-1,false_positive,O,TERRITORIO,,CHU,-1,286,: Dr. José Ferreras Granado . CHU Juan Canalejo Servicio de Cirugía Oral
+S1130-05582007000500003-1,false_positive,O,CALLE,,As,-1,295,"Servicio de Cirugía Oral y Maxilofacial As Xubias de Arriba , 84 15006"
+S1130-05582007000500003-1,boundary_error,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,raza caucásica,raza,78,78,. Informe Clinico : Varón de raza caucásica de 59 años de edad que
+S1130-05582007000500003-1,boundary_error,HOSPITAL,NOMBRE_PERSONAL_SANITARIO,CHU Juan Canalejo,Juan Canalejo,286,287,: Dr. José Ferreras Granado . CHU Juan Canalejo Servicio de Cirugía Oral y Maxilofacial
+S1130-05582007000500003-1,boundary_error,CALLE,CALLE,"As Xubias de Arriba , 84","Xubias de Arriba , 84",295,296,"Servicio de Cirugía Oral y Maxilofacial As Xubias de Arriba , 84 15006 La Coruña , España Email"
+S1130-05582008000500006-1,false_positive,O,TERRITORIO,,Región Metropolitana,-1,18,". Domicilio : San Pablo , Región Metropolitana . Localidad/ Provincia : Santiago ."
+S1130-05582008000500006-1,boundary_error,CALLE,TERRITORIO,"San Pablo , Región Metropolitana",San Pablo,15,15,"NHC : 25605435 . Domicilio : San Pablo , Región Metropolitana . Localidad/ Provincia : Santiago ."
+S1130-05582008000600006-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,Enfermo,-1,76,18 65498 . Historia Actual : Enfermo de 19 años que ingresa procedente
+S1130-05582008000600006-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:18 18 65498,18 65498,69,70,Médico : Juan Andrés Rodríguez Ruiz NºCol:18 18 65498 . Historia Actual : Enfermo de
+S1130-05582009000400004-1,false_positive,O,CALLE,,Federal,-1,21,": Hipolito Yrigoyen 1592 , Capital Federal . Localidad/ Provincia : Buenos Aires"
+S1130-05582009000400004-1,false_positive,O,TERRITORIO,,(,-1,295,de Agudos P. Piñero Varela 1301 ( Flores ) c.p : 1406 .
+S1130-05582009000400004-1,boundary_error,TERRITORIO,TERRITORIO,Capital Federal,Capital,20,20,"Domicilio : Hipolito Yrigoyen 1592 , Capital Federal . Localidad/ Provincia : Buenos Aires"
+S1130-05582009000400004-1,boundary_error,HOSPITAL,HOSPITAL,Hospital General de Agudos P. Piñero,Hospital General de Agudos,287,287,Servicio de Cirugía y Traumatología Buco-Máxilo-Facial Hospital General de Agudos P. Piñero Varela 1301 ( Flores ) c.p
+S1130-05582009000400004-1,boundary_error,CALLE,CALLE,Varela 1301,P. Piñero Varela 1301,293,291,Traumatología Buco-Máxilo-Facial Hospital General de Agudos P. Piñero Varela 1301 ( Flores ) c.p : 1406
+S1130-05582009000400004-1,type_confusion,CALLE,TERRITORIO,Flores,Flores,296,296,Agudos P. Piñero Varela 1301 ( Flores ) c.p : 1406 . Buenos
+S1130-05582011000200005-1,false_negative,TERRITORIO,O,CP:28035,,32,-1,C. Localidad/ Provincia : Madrid . CP:28035 . Datos asistenciales . Fecha de
+S1130-05582012000300006-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,género,-1,85,Informe clínico del paciente : Paciente género masculino de 22 años de edad
+S1130-05582013000200007-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,género,-1,78,". Historia Actual : Niño , género masculino de cuatro años de edad"
+S1130-05582013000200007-1,false_positive,O,HOSPITAL,,Mayor,-1,96,servicio de diagnóstico de la Universidad Mayor al Hospital Pediátrico Dr. Luis Calvo
+S1130-05582013000200007-1,boundary_error,INSTITUCION,INSTITUCION,Universidad Mayor,Universidad,95,95,el servicio de diagnóstico de la Universidad Mayor al Hospital Pediátrico Dr. Luis Calvo
+S1130-05582013000200007-1,type_confusion,SEXO_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,niño,niño,144,144,"la derivación , y que el niño nunca se quejó de dolor o"
+S1130-05582016000100005-1,false_positive,O,CORREO_ELECTRONICO,,ELectronico,-1,449,clínico : Esteban Peghini . Correo ELectronico estebanpg50@hotmail.com
+S1130-05582017000200099-1,false_positive,O,HOSPITAL,,Centro,-1,323,por : Antonio Lemos Aguilar . Centro de Salud Puerta de Madrid .
+S1130-05582017000200099-1,false_positive,O,HOSPITAL,,Madrid,-1,328,". Centro de Salud Puerta de Madrid . Avda. del Ejército , 61"
+S1130-05582017000200099-1,false_positive,O,CALLE,,C.P.,-1,336,"Avda. del Ejército , 61 . C.P. 28002 . Alcalá de Henares ."
+S1130-05582017000200099-1,boundary_error,CENTRO_SALUD,INSTITUCION,Centro de Salud Puerta de Madrid,de Salud Puerta de,323,324,"por : Antonio Lemos Aguilar . Centro de Salud Puerta de Madrid . Avda. del Ejército , 61"
+S1130-05582017000300150-3,false_negative,FECHAS,O,nacimiento:19/12/2008,,38,-1,. Datos asistenciales . Fecha de nacimiento:19/12/2008 . País : España . Edad
+S1130-14732006000200011-1,false_positive,O,HOSPITAL,,Universidad,-1,571,Actividad Física y el Deporte . Universidad Europea de Madrid . Calle Tajo
+S1130-14732006000200011-1,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,Vicente Javier Clemente SuárezNºCol,Vicente Javier Clemente,71,71,Ingreso : 10/06/2018 . Médico : Vicente Javier Clemente SuárezNºCol : 28 28 65890 . Informe
+S1130-14732006000200011-1,boundary_error,INSTITUCION,INSTITUCION,Universidad Europea de Madrid,Europea de Madrid,571,572,"Actividad Física y el Deporte . Universidad Europea de Madrid . Calle Tajo , s /"
+S1130-14732006000400007-1,false_positive,O,TERRITORIO,,Palm Beach Gardens,-1,574,"; 3i / Implant Innovations , Palm Beach Gardens , FL ® ) , y"
+S1130-14732006000400007-1,false_positive,O,TERRITORIO,,FL,-1,578,"Innovations , Palm Beach Gardens , FL ® ) , y se separaron"
+S1130-14732006000400007-1,false_positive,O,PAIS,,®,-1,579,", Palm Beach Gardens , FL ® ) , y se separaron las"
+S1130-14732006000400007-1,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,Manuel Acosta FeriaNºCol,Manuel Acosta,74,74,Ingreso : 06/05/2014 . Médico : Manuel Acosta FeriaNºCol : 41 41 25639 . Informe
+S1130-14732006000400007-1,boundary_error,CALLE,CALLE,Av. Manuel Siurot sin,Av. Manuel Siurot sin .,809,809,Hospitales Universitarios Virgen del Rocío . Av. Manuel Siurot sin . 41013 Sevilla .
+S1130-14732006000500005-1,false_negative,PROFESION,O,equilibrista funambulista,,92,-1,"años de edad , de profesión equilibrista funambulista , , que desarrolló progresivamente ,"
+S1130-14732006000500005-1,boundary_error,CALLE,CALLE,Ofra s / n.,Ofra s / n. La Cuesta,606,606,. Hospital Universitario de Canarias . Ofra s / n. La Cuesta . 38320 La Laguna . Santa
+S1130-14732006000500005-1,boundary_error,TERRITORIO,CALLE,La Cuesta,Ofra s / n. La Cuesta,610,606,. Hospital Universitario de Canarias . Ofra s / n. La Cuesta . 38320 La Laguna . Santa
+S1130-63432013000600017-1,false_negative,TERRITORIO,O,CP:28029,,33,-1,3A. Localidad/ Provincia : Madrid . CP:28029 . Datos asistenciales . Fecha de
+S1130-63432013000600017-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:28 28 54112,28 54112,70,71,. Médico : Marta Esteban Sánchez NºCol:28 28 54112 . Historia Actual : Varón de
+S1130-63432014000100011-1,false_positive,O,FECHAS,,29,-1,210,"dosis de etanercept , administrada el 29 de junio de 2012 , desarrolló"
+S1130-63432014000100011-1,false_positive,O,FECHAS,,de,-1,211,"de etanercept , administrada el 29 de junio de 2012 , desarrolló un"
+S1130-63432014000100011-1,false_positive,O,FECHAS,,5,-1,292,"semanas de tratamiento . El día 5 de marzo de 2013 , la"
+S1130-63432014000100011-1,false_positive,O,FECHAS,,de,-1,293,"de tratamiento . El día 5 de marzo de 2013 , la paciente"
+S1130-63432014000100011-1,false_positive,O,FECHAS,,27,-1,341,la última dosis de etanercept el 27 de febrero de 2013 . El
+S1130-63432014000100011-1,false_positive,O,FECHAS,,de,-1,342,última dosis de etanercept el 27 de febrero de 2013 . El cuadro
+S1130-63432014000100011-1,boundary_error,FECHAS,FECHAS,29 de junio de 2012,junio de 2012,210,212,"dosis de etanercept , administrada el 29 de junio de 2012 , desarrolló un cuadro de dermatitis"
+S1130-63432014000100011-1,boundary_error,FECHAS,FECHAS,5 de marzo de 2013,marzo de 2013,292,294,"semanas de tratamiento . El día 5 de marzo de 2013 , la paciente ingresó en Medicina"
+S1130-63432014000100011-1,boundary_error,FECHAS,FECHAS,27 de febrero de 2013,febrero de 2013,341,343,la última dosis de etanercept el 27 de febrero de 2013 . El cuadro no se acompañaba
+S1130-63432014000100012-1,false_positive,O,PAIS,,Unidos,-1,84,"24 años , natural de Estados Unidos , de 70 kg y 175"
+S1130-63432014000100012-1,false_positive,O,FECHAS,,13,-1,939,iniciar el tratamiento ( día + 13 ) la paciente tenía una diuresis
+S1130-63432014000100012-1,boundary_error,PAIS,PAIS,Estados Unidos,Estados,83,83,"de 24 años , natural de Estados Unidos , de 70 kg y 175"
+S1130-63432014000100012-1,false_negative,FAMILIARES_SUJETO_ASISTENCIA,O,familiar,,902,-1,", tras obtener el consentimiento informado familiar se administró una dosis de inducción"
+S1130-63432016000100007-1,false_positive,O,HOSPITAL,,Hospital,-1,441,"Farmacia a la Dirección Médica del Hospital , la cual autorizó el uso"
+S1130-63432016000400010-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,35 años,-1,403,", y para mujeres mayores de 35 años unos valores de células CD56+CD16 por"
+S1132-62552015000100006-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,administrativo,-1,115,"trabajadores . La trabajadora , auxiliar administrativo , de 41 años de edad"
+S1132-62552015000100006-1,false_positive,O,FECHAS,,4,-1,131,primera vez a nuestra Unidad el 4 de diciembre de 2013 . Los
+S1132-62552015000100006-1,false_positive,O,FECHAS,,de,-1,132,vez a nuestra Unidad el 4 de diciembre de 2013 . Los síntomas
+S1132-62552015000100006-1,boundary_error,HOSPITAL,HOSPITAL,Hospital Universitario de Alavade,Hospital Universitario de Alavade Osakidetza,95,95,"la Unidad Básica de Prevención del Hospital Universitario de Alavade Osakidetza , se realizan consultas médicas a"
+S1132-62552015000100006-1,boundary_error,INSTITUCION,HOSPITAL,Osakidetza,Hospital Universitario de Alavade Osakidetza,99,95,"la Unidad Básica de Prevención del Hospital Universitario de Alavade Osakidetza , se realizan consultas médicas a"
+S1132-62552015000100006-1,boundary_error,PROFESION,NOMBRE_SUJETO_ASISTENCIA,auxiliar administrativo,auxiliar,114,114,"los trabajadores . La trabajadora , auxiliar administrativo , de 41 años de edad"
+S1132-62552015000100006-1,boundary_error,FECHAS,FECHAS,4 de diciembre de 2013,diciembre de 2013,131,133,primera vez a nuestra Unidad el 4 de diciembre de 2013 . Los síntomas que presentaba eran
+S1132-62552015000100006-1,type_confusion,INSTITUCION,HOSPITAL,Osakidetza,Osakidetza,820,820,"del H. Universitario de Alava ( Osakidetza ) Olaguibel 29 , 201004 Vitoria"
+S1134-80462004000400007-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,08 08 57989,-1,75,: Ivan Domenech Juan NºCol : 08 08 57989 . Informe clínico del paciente :
+S1134-80462005000100007-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,ocho,-1,141,una silla de ruedas desde los ocho . En el preoperatorio destacaba una
+S1134-80462005000100007-1,false_negative,FECHAS,O,nacimiento:15/05/2005,,39,-1,. Datos asistenciales . Fecha de nacimiento:15/05/2005 . País de nacimiento : España
+S1134-80462005000300007-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,Primigesta,-1,79,". Informe clínico del paciente : Primigesta de 32 años de edad ,"
+S1134-80462005000300007-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,38,-1,86,"de 32 años de edad , 38 semanas de gestación , admitida en"
+S1134-80462005000300007-1,type_confusion,FAMILIARES_SUJETO_ASISTENCIA,NOMBRE_SUJETO_ASISTENCIA,Lara,Lara,181,181,"la pierna . La madre de Lara padeció carcinoma de lengua resuelto ,"
+S1134-80462006000600005-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,años,-1,46,País : España . Edad : años Sexo : H. Fecha de Ingreso
+S1134-80462006000600005-1,false_negative,SEXO_SUJETO_ASISTENCIA,O,niño,,425,-1,"de la explicación del tratamiento al niño , se eligieron los lugares para"
+S1134-80462006000600005-1,boundary_error,INSTITUCION,INSTITUCION,Sociedad Española de Anestesiología y Reanimación,Española,536,537,acuerdo con las recomendaciones de la Sociedad Española de Anestesiología y Reanimación . Evolución y comentarios : Pasados
+S1134-80462008000800003-1,false_positive,O,TERRITORIO,,B-16,-1,490,anaangelmd@hotmail.com Calle 13 A Nº 66 B-16 Cali - Colombia Financiación : Ninguna
+S1134-80462008000800003-1,boundary_error,CALLE,CALLE,Calle 13 A Nº 66 B-16,Calle 13 A Nº 66,485,485,Dra. Ana María Ángel Isaza anaangelmd@hotmail.com Calle 13 A Nº 66 B-16 Cali - Colombia Financiación : Ninguna
+S1134-80462009000800005-1,boundary_error,EDAD_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,Edad:32 años,años,57,58,País de nacimiento : España . Edad:32 años Sexo : M. Fecha de Ingreso
+S1134-80462014000500004-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,86,-1,389,"( 42 % ) ; FEV1 86 % , GSA : ( marzo"
+S1134-80462014000500004-1,false_positive,O,ID_ASEGURAMIENTO,,P02,-1,399,": ( marzo de 2011 ) P02 70 , PC02 55 . Situación"
+S1134-80462014000500004-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,70,-1,400,"( marzo de 2011 ) P02 70 , PC02 55 . Situación sociofuncional"
+S1134-80462014000500004-1,false_positive,O,TERRITORIO,,PC02,-1,402,"de 2011 ) P02 70 , PC02 55 . Situación sociofuncional : vive"
+S1134-80462014000500004-1,false_positive,O,ID_ASEGURAMIENTO,,55,-1,403,"2011 ) P02 70 , PC02 55 . Situación sociofuncional : vive con"
+S1134-80462014000500004-1,false_positive,O,INSTITUCION,,del Dolor,-1,963,: Juan José Arén Frontera Clínica del Dolor Servicio de Anestesiología y Reanimación Hospital
+S1134-80462014000500004-1,false_negative,OTROS_SUJETO_ASISTENCIA,O,Estudiante de administración de empresas,,413,-1,: vive con sus padres . Estudiante de administración de empresas . Se moviliza en silla de
+S1134-80462015000500005-1,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,José M.a Gómez Argüelles,José M.a Gómez,82,82,Episodio : 7834564 . Médico : José M.a Gómez Argüelles NºCol : 16 16 52330 .
+S1134-80462015000500005-1,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,José M.a Gómez Argüelles,José M.a Gómez,311,311,la clínica . Responsable clínico : José M.a Gómez Argüelles Servicio de Neurología Hospital General Virgen
+S1135-76062011000200009-1,false_positive,O,FECHAS,,7.43,-1,107,"servicio de urgencias hospitalario a las 7.43 h , procedente de su domicilio"
+S1135-76062011000200009-1,false_negative,OTROS_SUJETO_ASISTENCIA,O,portero,,147,-1,jugaba un partido de fútbol como portero . Durante su ingreso se practicó
+S1135-76062013000200010-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,40,-1,93,"años de edad , primigesta de 40 semanas , con antecedentes de diabetes"
+S1135-76062014000100006-1,false_positive,O,CALLE,,"Edifici G , 5a planta",-1,339,"Institut de Medicina Legal de Catalunya Edifici G , 5a planta Ciutat de la Justícia Gran Via"
+S1135-76062014000100006-1,false_positive,O,CALLE,,Ciutat,-1,344,"Catalunya Edifici G , 5a planta Ciutat de la Justícia Gran Via Corts"
+S1135-76062014000100006-1,boundary_error,INSTITUCION,HOSPITAL,Ciutat de la Justícia,de la Justícia,344,345,"Catalunya Edifici G , 5a planta Ciutat de la Justícia Gran Via Corts Catalanes , 111"
+S1137-66272007000500016-1,false_positive,O,CALLE,,Ubarmin,-1,474,. Servicio de Medicina Interna Clínica Ubarmin 31486 . Elcano Navarra E-mail :
+S1137-66272007000500016-1,false_negative,OTROS_SUJETO_ASISTENCIA,O,madre,,213,-1,. Ante el deseo de ser madre referido por la paciente y su
+S1137-66272007000500016-1,false_negative,FAMILIARES_SUJETO_ASISTENCIA,O,niño,,452,-1,"malformaciones ni problemas médicos en el niño , a los 13 meses de"
+S1137-66272007000500016-1,boundary_error,HOSPITAL,HOSPITAL,Clínica Ubarmin,Clínica,473,473,Maya . Servicio de Medicina Interna Clínica Ubarmin 31486 . Elcano Navarra E-mail :
+S1137-66272007000500016-1,boundary_error,TERRITORIO,TERRITORIO,Elcano,Elcano Navarra,477,477,Medicina Interna Clínica Ubarmin 31486 . Elcano Navarra E-mail : inaki.otermin.maya@cfnavarra.es
+S1137-66272007000500016-1,boundary_error,TERRITORIO,TERRITORIO,Navarra,Elcano Navarra,478,477,Medicina Interna Clínica Ubarmin 31486 . Elcano Navarra E-mail : inaki.otermin.maya@cfnavarra.es
+S1137-66272009000100013-1,false_positive,O,INSTITUCION,,Universitaria,-1,543,"Bastarrika . Servicio de Radiología Clínica Universitaria Avda. Pío XII , 36 31008"
+S1137-66272009000100013-1,false_negative,FECHAS,O,Ingreso:03/11/2014,,58,-1,años Sexo : H. Fecha de Ingreso:03/11/2014 . Servicio : Radiología . Médico
+S1137-66272009000100013-1,false_negative,INSTITUCION,O,Bracco,,358,-1,", 400 mgI / ml , Bracco , Milán , Italia ) a"
+S1137-66272009000100013-1,boundary_error,HOSPITAL,HOSPITAL,Clínica Universitaria,Clínica,542,542,"Gorka Bastarrika . Servicio de Radiología Clínica Universitaria Avda. Pío XII , 36 31008"
+S1137-66272009000100013-1,false_negative,NUMERO_TELEFONO,O,+0034948255400,,553,-1,", 36 31008 Pamplona Tfno . +0034948255400 Fax +0034948296500 E-mail : bastarrika@unav.es"
+S1137-66272009000100013-1,false_negative,NUMERO_FAX,O,+0034948296500,,555,-1,31008 Pamplona Tfno . +0034948255400 Fax +0034948296500 E-mail : bastarrika@unav.es
+S1137-66272011000100013-2,false_positive,O,EDAD_SUJETO_ASISTENCIA,,26,-1,94,"años , trabajador en canteras durante 26 años . Antecedentes de tabaquismo y"
+S1137-66272011000100013-2,false_negative,PROFESION,O,trabajador en canteras,,90,-1,": Varón de 44 años , trabajador en canteras durante 26 años . Antecedentes de"
+S1137-66272011000100013-2,boundary_error,TERRITORIO,CALLE,O Rosal,"O Rosal 15 ,",361,361,"Plaza de Miguel de Tabagón . O Rosal 15 , 36760 Pontevedra E-mail : josejesus.blanco.perez@sergas.es"
+S1137-66272011000100013-3,false_negative,PROFESION,O,trabajador en canteras,,85,-1,": Varón de 45 años , trabajador en canteras durante 15 años . Diagnosticado de"
+S1137-66272011000100013-3,false_negative,FECHAS,O,2007,,114,-1,/ año . Tuberculosis pulmonar en 2007 . Acudió al Servicio de Urgencias
+S1137-66272011000300022-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,8 meses,-1,79,": Varón de 9 años y 8 meses , sin antecedentes de interés ,"
+S1137-66272011000300022-1,boundary_error,EDAD_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,9 años y 8 meses,9 años y,76,76,". Historia Actual : Varón de 9 años y 8 meses , sin antecedentes de interés ,"
+S1137-66272012000100018-1,false_positive,O,HOSPITAL,,Clínica,-1,766,Asier Gómez Ibáñez Departamento de Neurología Clínica Universidad de Navarra Avda Pío XII
+S1137-66272012000100018-1,boundary_error,HOSPITAL,HOSPITAL,Clínica Universidad de Navarra,Universidad de Navarra,766,767,"Asier Gómez Ibáñez Departamento de Neurología Clínica Universidad de Navarra Avda Pío XII 36 , 31008"
+S1137-66272012000200017-1,boundary_error,EDAD_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,Edad:43 Años,Años,52,53,04/04/1970 . País : España . Edad:43 Años Sexo : H. Fecha de Ingreso
+S1137-66272012000300021-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,26 meses,-1,466,desde la intervención . A los 26 meses permanece asintomático y con PSA indetectable
+S1137-66272013000200023-1,false_positive,O,FECHAS,,27,-1,223,que se practicó sin incidencias el 27 de marzo de 2009 . El
+S1137-66272013000200023-1,false_positive,O,FECHAS,,de,-1,224,se practicó sin incidencias el 27 de marzo de 2009 . El informe
+S1137-66272013000200023-1,false_positive,O,FECHAS,,17,-1,630,"la enfermedad permanecía estabilizada . El 17 de febrero de 2011 , en"
+S1137-66272013000200023-1,false_positive,O,FECHAS,,de,-1,631,"enfermedad permanecía estabilizada . El 17 de febrero de 2011 , en TAC"
+S1137-66272013000200023-1,false_positive,O,FECHAS,,mediados,-1,723,"manera eficaz . Finalmente , a mediados de marzo de 2011 falleció el"
+S1137-66272013000200023-1,false_positive,O,FECHAS,,de,-1,724,"eficaz . Finalmente , a mediados de marzo de 2011 falleció el paciente"
+S1137-66272013000200023-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:31 31 50415,31 50415,75,76,. Médico : Jesús Vélez Isanta NºCol:31 31 50415 . Informe clínico del paciente :
+S1137-66272013000200023-1,boundary_error,FECHAS,FECHAS,27 de marzo de 2009,marzo de 2009,223,225,que se practicó sin incidencias el 27 de marzo de 2009 . El informe anatomopatológico reveló una
+S1137-66272013000200023-1,boundary_error,FECHAS,FECHAS,17 de febrero de 2011,febrero de 2011,630,632,"la enfermedad permanecía estabilizada . El 17 de febrero de 2011 , en TAC de reevaluación se"
+S1137-66272013000200023-1,boundary_error,HOSPITAL,HOSPITAL,Clínica Universidad de Navarra,Universidad de Navarra,743,744,Velez Isanta . Departamento de Urología Clínica Universidad de Navarra 31008 Pamplona E-mail : jvelis@unav.es
+S1137-66272014000200013-1,false_positive,O,INSTITUCION,,Eastern Cooperative Oncology,-1,473,vida según la escala de la Eastern Cooperative Oncology Group ) por la pérdida de
+S1137-66272014000200013-1,false_positive,O,HOSPITAL,,Complejo,-1,673,"Rodríguez Marco Servicio de Oftalmología , Complejo Hospitalario de Navarra A Calle Irunlarrea"
+S1137-66272014000200013-1,false_positive,O,CALLE,,A,-1,677,"Oftalmología , Complejo Hospitalario de Navarra A Calle Irunlarrea , 3 31008 Pamplona"
+S1137-66272014000200013-1,boundary_error,HOSPITAL,HOSPITAL,Complejo Hospitalario de Navarra,Hospitalario de Navarra,673,674,"Rodríguez Marco Servicio de Oftalmología , Complejo Hospitalario de Navarra A Calle Irunlarrea , 3 31008"
+S1139-76322009000700014-2,false_positive,O,EDAD_SUJETO_ASISTENCIA,,6,-1,130,y vive en España desde hace 6 años . Antecedentes : Antecedentes personales
+S1139-76322009000700014-2,false_negative,FAMILIARES_SUJETO_ASISTENCIA,O,Familia,,113,-1,llevaba una vida muy activa . Familia oriunda de Chile . La niña
+S1139-76322010000100009-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,madre,-1,240,superiores . Se informó a la madre de la necesidad de realizar la
+S1139-76322011000200007-1,false_positive,O,PAIS,,Unidos,-1,112,un viaje de estudios a Estados Unidos y refieren que es uno de
+S1139-76322011000200007-1,boundary_error,PAIS,PAIS,Estados Unidos,Estados,111,111,Proyecta un viaje de estudios a Estados Unidos y refieren que es uno de
+S1139-76322011000200007-1,boundary_error,TERRITORIO,TERRITORIO,Comunidad de Madrid,Madrid,165,167,"calendario vigente de inmunizaciones de la Comunidad de Madrid , así como de la posibilidad"
+S1139-76322011000200007-1,false_negative,INSTITUCION,O,Centro de Vacunación Internacional,,177,-1,"de la posibilidad de asistir al Centro de Vacunación Internacional . No obstante , la madre"
+S1139-76322011000200007-1,type_confusion,SEXO_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,niña,niña,228,228,la vacuna y al quejarse la niña de dolor en el lugar de
+S1139-76322011000200007-1,type_confusion,SEXO_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,niña,niña,328,328,comprobar que el estado de la niña es bueno y que presenta constantes
+S1139-76322011000200007-1,boundary_error,INSTITUCION,INSTITUCION,Instituto de Toxicología,de Toxicología,373,374,nos ponemos en contacto con el Instituto de Toxicología y el Servicio de Medicina Preventiva
+S1139-76322011000200007-1,boundary_error,INSTITUCION,INSTITUCION,Pharmacia Spain,Spain,411,412,y con el laboratorio fabricante ( Pharmacia Spain ) y el Centro de Vacunación
+S1139-76322011000200007-1,false_negative,INSTITUCION,O,Centro de Vacunación Internacional,,416,-1,( Pharmacia Spain ) y el Centro de Vacunación Internacional . Se hizo seguimiento clínico a
+S1139-76322011000200007-1,type_confusion,SEXO_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,niña,niña,427,427,Se hizo seguimiento clínico a la niña en el Servicio de Enfermedades Infecciosas
+S1139-76322011000300007-2,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,seis,-1,149,familiares destacaba únicamente un hermano de seis años que había presentado dos crisis
+S1139-76322011000300007-2,false_positive,O,EDAD_SUJETO_ASISTENCIA,,años,-1,150,destacaba únicamente un hermano de seis años que había presentado dos crisis febriles
+S1139-76322011000300007-2,false_negative,FECHAS,O,nacimiento:20/02/2013,,39,-1,. Datos asistenciales . Fecha de nacimiento:20/02/2013 . País : España . Edad
+S1139-76322011000300007-2,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,hermano de seis años,hermano,147,147,sus antecedentes familiares destacaba únicamente un hermano de seis años que había presentado dos crisis febriles
+S1139-76322013000100009-1,false_negative,FECHAS,O,nacimiento:14/04/2014,,40,-1,. Datos asistenciales . Fecha de nacimiento:14/04/2014 . País : España . Edad
+S1139-76322013000100009-1,false_negative,EDAD_SUJETO_ASISTENCIA,O,mes,,114,-1,"y parto normales . Desde el mes de vida mantiene ingesta escasa ,"
+S1139-76322016000400012-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,madre,-1,178,": padres de raza blanca , madre sana de 25 años , padre"
+S1139-76322016000400012-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,padre,-1,184,"madre sana de 25 años , padre sano de 36 años , salvo"
+S1139-76322016000400012-1,false_positive,O,ID_ASEGURAMIENTO,,> A;(p,-1,399,de significado clínico desconocido [ c.2509G > A;(p . Ala837Thr ) ] ( en
+S1139-76322016000400012-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,padres de raza blanca,padres,173,173,". Antecedentes : Antecedentes familiares : padres de raza blanca , madre sana de 25 años"
+S1139-76322016000400012-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,madre sana de 25 años,25 años,178,181,": padres de raza blanca , madre sana de 25 años , padre sano de 36 años"
+S1139-76322016000400012-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,padre sano de 36 años,36 años,184,187,"madre sana de 25 años , padre sano de 36 años , salvo manchas acrómicas en el"
+S1139-76322017000200009-1,false_positive,O,CORREO_ELECTRONICO,,juliamorataalba@gmail.com,-1,428,Morata Alba . Correo electrónico : juliamorataalba@gmail.com
+S1139-76322017000200009-1,boundary_error,EDAD_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,primeros meses,meses,88,89,"afecto de dermatitis atópica desde los primeros meses de vida , sin otros antecedentes"
+S1139-76322017000200016-3,false_negative,FECHAS,O,nacimiento:27/08/2009,,39,-1,. Datos asistenciales . Fecha de nacimiento:27/08/2009 . País : España . Edad
+S1698-44472004000100009-1,false_positive,O,INSTITUCION,,L1845,-1,289,", proteína S-100 ( Dako , L1845 , USA , prediluída ) ,"
+S1698-44472004000100009-1,false_positive,O,INSTITUCION,,MU055-VC,-1,310,"enolasa neuroespecífica NSE , ( Biogenex MU055-VC , USA , 10/1000 ) ,"
+S1698-44472004000100009-1,false_positive,O,INSTITUCION,,7660,-1,330,"10/500 ) , CD34 ( Becton-Dickinson 7660 , USA , 10/500 ) ,"
+S1698-44472004000100009-1,false_positive,O,TERRITORIO,,402255,-1,364,") , y vimentina ( Shandon 402255 , USA , pred . )"
+S1698-44472004000100009-1,false_negative,INSTITUCION,O,Dako,,276,-1,"de membrana epitelial EMA , ( Dako M613 , USA , 10/500 )"
+S1698-44472004000100009-1,false_negative,PAIS,O,USA,,279,-1,"EMA , ( Dako M613 , USA , 10/500 ) , proteína S-100"
+S1698-44472004000100009-1,false_negative,INSTITUCION,O,Dako,,287,-1,"10/500 ) , proteína S-100 ( Dako , L1845 , USA , prediluída"
+S1698-44472004000100009-1,false_negative,PAIS,O,USA,,291,-1,"S-100 ( Dako , L1845 , USA , prediluída ) , neurofilamentos ("
+S1698-44472004000100009-1,boundary_error,INSTITUCION,INSTITUCION,Biogenex,Biogenex 6670-0154,298,298,", prediluída ) , neurofilamentos ( Biogenex 6670-0154 , USA ) , enolasa neuroespecífica"
+S1698-44472004000100009-1,false_negative,INSTITUCION,O,Biogenex,,309,-1,", enolasa neuroespecífica NSE , ( Biogenex MU055-VC , USA , 10/1000 )"
+S1698-44472004000100009-1,false_negative,PAIS,O,USA,,312,-1,"NSE , ( Biogenex MU055-VC , USA , 10/1000 ) , CD57 ("
+S1698-44472004000100009-1,boundary_error,INSTITUCION,INSTITUCION,Becton-Dickinson,Becton-Dickinson 7660,319,319,", 10/1000 ) , CD57 ( Becton-Dickinson 7660 , USA , 10/500 ) ,"
+S1698-44472004000100009-1,false_negative,INSTITUCION,O,Becton-Dickinson,,329,-1,", 10/500 ) , CD34 ( Becton-Dickinson 7660 , USA , 10/500 )"
+S1698-44472004000100009-1,false_negative,PAIS,O,USA,,332,-1,", CD34 ( Becton-Dickinson 7660 , USA , 10/500 ) , a-actina de"
+S1698-44472004000100009-1,false_negative,INSTITUCION,O,Dako,,342,-1,", a-actina de músculo liso ( Dako MO851 , USA , 10/200 )"
+S1698-44472004000100009-1,false_negative,PAIS,O,USA,,345,-1,"músculo liso ( Dako MO851 , USA , 10/200 ) , desmina ("
+S1698-44472004000100009-1,false_negative,INSTITUCION,O,Dako,,352,-1,", 10/200 ) , desmina ( Dako M760 , USA , 10/500 )"
+S1698-44472004000100009-1,false_negative,PAIS,O,USA,,355,-1,", desmina ( Dako M760 , USA , 10/500 ) , y vimentina"
+S1698-44472004000100009-1,false_negative,INSTITUCION,O,Shandon,,363,-1,"10/500 ) , y vimentina ( Shandon 402255 , USA , pred ."
+S1698-44472004000100009-1,false_negative,PAIS,O,USA,,366,-1,"y vimentina ( Shandon 402255 , USA , pred . ) . El"
+S1698-44472004000100009-1,false_negative,INSTITUCION,O,VYSIS Inc,,417,-1,"color LSI BCR / ABL ( VYSIS Inc , Downers Grove , USA )"
+S1698-44472004000100009-1,type_confusion,NUMERO_FAX,NUMERO_TELEFONO,93 2746818,93 2746818,709,709,Barcelona . Tel 93 2746809 Fax 93 2746818 E-mail : phuguet@cs.vhebron.es
+S1698-44472004000200012-1,type_confusion,NUMERO_FAX,NUMERO_TELEFONO,983331566,983331566,362,362,Tlf : 983420400 . Fax : 983331566 E-mail : m_galdeano@hotmail.com
+S1698-69462006000100017-1,false_positive,O,CALLE,,C.P.,-1,360,( Navarra ) C/ Irunlarrea 4 C.P. : 31008 Teléfono : 848 429400
+S1698-69462006000100017-1,type_confusion,TERRITORIO,HOSPITAL,Pamplona,Pamplona,353,353,Maxilofacial Hospital Virgen del Camino - Pamplona ( Navarra ) C/ Irunlarrea 4
+S1698-69462006000100017-1,type_confusion,NUMERO_FAX,NUMERO_TELEFONO,848 429924,848 429924,370,370,: 848 429400 - Fax : 848 429924 E-mail : dapazu@hotmail.com E-mail : jgaratec@cfnavarra.es
+S1698-69462006000400002-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,pediátrica,-1,76,"Informe clínico del paciente : Paciente pediátrica de nueve años de edad ,"
+S1699-695X2014000300006-1,false_positive,O,HOSPITAL,,Centro,-1,520,: Dra. Marta Sánchez García . Centro de Salud Ciudad Real II .
+S1699-695X2014000300006-1,false_positive,O,INSTITUCION,,de Salud,-1,521,Dra. Marta Sánchez García . Centro de Salud Ciudad Real II . C/ Palma
+S1699-695X2014000300006-1,false_positive,O,CALLE,,C.P.,-1,532,". C/ Palma , 11 . C.P. 13001 . Ciudad Real ( España"
+S1699-695X2014000300006-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:84 24958768 30,24958768 30,17,18,Garrido . NHC : 8975388 . NASS:84 24958768 30 . Domicilio : Calle de la
+S1699-695X2014000300006-1,boundary_error,CENTRO_SALUD,HOSPITAL,Centro de Salud Ciudad Real II,Ciudad Real II,520,523,": Dra. Marta Sánchez García . Centro de Salud Ciudad Real II . C/ Palma , 11 ."
+S1699-695X2014000300010-1,false_positive,O,HOSPITAL,,Centro,-1,583,Dra. Petra María Cortés Durán . Centro de Salud María Ángeles López Gómez
+S1699-695X2014000300010-1,false_positive,O,INSTITUCION,,de Salud,-1,584,Petra María Cortés Durán . Centro de Salud María Ángeles López Gómez . C/
+S1699-695X2014000300010-1,false_positive,O,CALLE,,C.P.,-1,599,"Ángeles López Gómez , 2 . C.P. 28915 . Legánes . Madrid ("
+S1699-695X2014000300010-1,boundary_error,CENTRO_SALUD,HOSPITAL,Centro de Salud María Ángeles López Gómez,María Ángeles López Gómez,583,586,Dra. Petra María Cortés Durán . Centro de Salud María Ángeles López Gómez . C/ María Ángeles López Gómez
+S1699-695X2015000200010-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,ancianos,-1,182,. Es diestra y trabaja cuidando ancianos . A la exploración física de
+S1699-695X2015000200010-1,type_confusion,TERRITORIO,FECHAS,26/01/1978,26/01/1978,51,51,asistenciales . Fecha de nacimiento : 26/01/1978 . País : España . Edad
+S1699-695X2015000300013-1,boundary_error,TERRITORIO,CALLE,28905,C.P. 28905,612,611,"Toledo , Km . 12,500 . C.P. 28905 . Getafe ( Madrid ) ."
+S1699-695X2016000200010-1,false_positive,O,HOSPITAL,,Centro,-1,423,: María Pilar Orgaz Gallego . Centro de Salud de Tarancón . C/
+S1699-695X2016000200010-1,false_positive,O,HOSPITAL,,de Tarancón,-1,426,Orgaz Gallego . Centro de Salud de Tarancón . C/ Camino Corral de Almaguer
+S1699-695X2016000200010-1,false_positive,O,CALLE,,C.P.,-1,438,"de Almaguer , s / n. C.P. 16400 . Tarancón . Cuenca ("
+S1699-695X2016000200010-1,boundary_error,CENTRO_SALUD,INSTITUCION,Centro de Salud de Tarancón,de Salud,423,424,: María Pilar Orgaz Gallego . Centro de Salud de Tarancón . C/ Camino Corral de Almaguer
+S1699-695X2017000100011-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,3 años,-1,140,el desarrollo psicomotor . A los 3 años presentó crisis de ausencias sin crisis
+S1699-695X2017000100011-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,mayor,-1,284,". El paciente posee un hermano mayor sano , pero tiene un primo"
+S1699-695X2017000100011-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,primo,-1,290,"mayor sano , pero tiene un primo segundo por la rama materna de"
+S1699-695X2017000100011-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,segundo,-1,291,"sano , pero tiene un primo segundo por la rama materna de 33"
+S1699-695X2017000100011-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,rama,-1,294,tiene un primo segundo por la rama materna de 33 años de edad
+S1699-695X2017000100011-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,materna,-1,295,un primo segundo por la rama materna de 33 años de edad diagnosticado
+S1699-695X2017000100011-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,13 años,-1,304,años de edad diagnosticado a los 13 años de SXF tras estudio genético .
+S1699-695X2017000100011-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,hermanas,-1,363,ante sucesivos hijos sanos de las hermanas y el hermano sano del paciente
+S1699-695X2017000100011-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,hermano mayor,hermano,283,283,"característicos . El paciente posee un hermano mayor sano , pero tiene un primo"
+S1699-695X2017000100011-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,primo segundo por la rama materna de 33 años,33 años,290,297,"mayor sano , pero tiene un primo segundo por la rama materna de 33 años de edad diagnosticado a los 13"
+S1699-695X2017000100011-1,false_negative,FAMILIARES_SUJETO_ASISTENCIA,O,familiar materna,,318,-1,En aquel momento toda la rama familiar materna fue estudiada genéticamente y se comunicó
+S1699-695X2017000100011-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,hermanas de ésta,hermanas,341,341,madre del paciente caso como las hermanas de ésta eran portadoras sanas . Esta condición
+S1699-695X2017000100011-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,hijos sanos de las hermanas,hijos,359,359,valorada por la familia ante sucesivos hijos sanos de las hermanas y el hermano sano del paciente
+S1699-695X2017000100011-1,boundary_error,CALLE,CALLE,"C/ Santos Justo y Pastor 144 , P. 9 , Esc . B.","C/ Santos Justo y Pastor 144 , P. 9 , Esc . B. C.P.",446,446,"Dra. Maria Mercedes Mingarro Castillo . C/ Santos Justo y Pastor 144 , P. 9 , Esc . B. C.P. 46022 - Valencia ( España )"
+S1887-85712011000200007-1,false_positive,O,TERRITORIO,,CP,-1,603,Avda. Dr. Marañón s / n. CP . 51001 . Ceuta . España
+S1887-85712015000100005-1,type_confusion,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,heterosexual,heterosexual,97,97,. Historia Actual : Un varón heterosexual de 63 años ingresó en Noviembre
+S1887-85712015000200004-1,false_positive,O,INSTITUCION,,SAM Medical Products,-1,154,"a nivel tópico ( Celox ® SAM Medical Products , Newport , Oregon , EEUU"
+S1887-85712015000200004-1,false_positive,O,TERRITORIO,,Newport,-1,158,"Celox ® SAM Medical Products , Newport , Oregon , EEUU ) y"
+S1887-85712015000200004-1,false_positive,O,TERRITORIO,,Oregon,-1,160,"SAM Medical Products , Newport , Oregon , EEUU ) y se administró"
+S1887-85712015000200004-1,false_positive,O,PAIS,,EEUU,-1,162,"Products , Newport , Oregon , EEUU ) y se administró ácido tranexámico"
+S1887-85712015000200004-1,false_positive,O,CALLE,,2E,-1,186,un helicóptero medicalizado hasta el Role 2E español de Herat ( Afganistán )
+S1887-85712015000200004-1,false_negative,ID_SUJETO_ASISTENCIA,O,afgano,,99,-1,"cm , 68 Kg ) , afgano , policía , que durante un"
+S1887-85712015000200004-1,type_confusion,PROFESION,SEXO_SUJETO_ASISTENCIA,policía,policía,101,101,"68 Kg ) , afgano , policía , que durante un atentado sufrió"
+S1887-85712015000200004-1,false_negative,OTROS_SUJETO_ASISTENCIA,O,español,,187,-1,helicóptero medicalizado hasta el Role 2E español de Herat ( Afganistán ) llegando
+S1887-85712015000200004-1,type_confusion,PAIS,TERRITORIO,Afganistán,Afganistán,191,191,Role 2E español de Herat ( Afganistán ) llegando a la sala de
+S1887-85712015000200004-1,false_negative,HOSPITAL,O,hospital militar afgano,,836,-1,"atentando , siendo evacuado a un hospital militar afgano para su curación de partes blandes"
+S1889-836X2015000100003-1,false_positive,O,FECHAS,,2009,-1,177,") , ese mismo año de 2009 se suspendió el risedronato . Desde"
+S1889-836X2015000100003-1,false_negative,FECHAS,O,2007,,140,-1,de biopsia y gammagrafía realizadas en 2007 . Fue tratado con risedronato a
+S1889-836X2015000100003-1,boundary_error,FECHAS,FECHAS,año de 2009,de,175,176,"tipo 1 ) , ese mismo año de 2009 se suspendió el risedronato . Desde"
+S1889-836X2015000200005-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:50 50 23982,50 23982,80,81,Médico : Pilar del Río Martínez NºCol:50 50 23982 . Informe clínico del paciente :
+S2254-28842014000200009-1,false_positive,O,INSTITUCION,,®,-1,536,"fue un PRISMA CRRT-TPE ( Hospal ® ) , con filtro PTE-2000 ."
