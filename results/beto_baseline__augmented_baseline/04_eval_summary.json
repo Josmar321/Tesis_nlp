@@ -406,7 +406,23 @@
     "max_length": 512,
     "stride": 128
   },
-  "bootstrap": null,
+  "bootstrap": {
+    "n_iter": 1000,
+    "seed": 42,
+    "confidence": 95.0,
+    "micro": {
+      "mean": 0.9382051945879849,
+      "std": 0.00462721548307092,
+      "ci_low": 0.9288285509091135,
+      "ci_high": 0.9467203843228065
+    },
+    "macro": {
+      "mean": 0.7167792006631591,
+      "std": 0.0073108184799850874,
+      "ci_low": 0.7042698091057015,
+      "ci_high": 0.730104188939875
+    }
+  },
   "environment": {
     "python": "3.13.16",
     "torch": "2.14.1+cu130",
@@ -414,7 +430,7 @@
     "device": "cuda",
     "platform": "Linux-6.6.159+-x86_64-with-glibc2.39"
   },
-  "timestamp": "2026-11-11T20:53:27.823975+00:00",
+  "timestamp": "2026-11-11T22:13:40.907691+00:00",
   "error_analysis": {
     "total": 503,
     "written": 503,
