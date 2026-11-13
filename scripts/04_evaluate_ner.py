@@ -58,6 +58,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import platform
 from collections import Counter, defaultdict
@@ -810,6 +811,18 @@ def main() -> None:
     data_dir = resolver_ruta(args.data_dir)
     test_path = resolver_ruta(args.test_file) if args.test_file is not None else data_dir / "test.jsonl"
 
+    if args.test_file is not None:
+        try:
+            same_parent = test_path.parent.resolve() == data_dir.resolve()
+        except OSError:
+            same_parent = test_path.parent == data_dir
+        if not same_parent:
+            print(
+                f"[aviso] --data-dir ({relpath(data_dir)}) no coincide con el padre de "
+                f"--test-file ({relpath(test_path.parent)}). Para evitar inconsistencias en el "
+                f"summary, pasa --data-dir {relpath(test_path.parent)} o usa solo --data-dir."
+            )
+
     if not args.allow_non_test and test_path.name != "test.jsonl":
         raise SystemExit(
             "Por seguridad, la evaluacion oficial solo acepta un archivo llamado test.jsonl. "
@@ -1000,12 +1013,14 @@ def main() -> None:
     ]
     key_entities = {label: per_entity[label] for label in key_labels}
 
+    test_sha256 = hashlib.sha256(test_path.read_bytes()).hexdigest()
     summary = {
         "run_name": run_name,
         "model_dir": relpath(model_dir),
         "model_name": str(getattr(model.config, "_name_or_path", "") or ""),
         "data_dir": relpath(data_dir),
         "test_file": relpath(test_path),
+        "test_file_sha256": test_sha256,
         "scenario": data_dir.name if test_path.parent == data_dir else test_path.parent.name,
         "n_docs": len(docs),
         "n_tokens": sum(len(doc["tokens"]) for doc in docs),

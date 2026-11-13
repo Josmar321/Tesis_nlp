@@ -1,0 +1,13 @@
+\begin{table}
+\caption{Resultados globales en test.jsonl por modelo y escenario de aumentación (seqeval, nivel entidad, IC bootstrap 95\%).}
+\label{tab:resultados_ner}
+\begin{tabular}{llrlrlrrr}
+\toprule
+Modelo & Escenario & Micro-F1 & IC95 micro & Macro-F1 & IC95 macro & Weighted-F1 & Precision & Recall \\
+\midrule
+BETO & Baseline (0\%) & 0.9382 & [0.9288, 0.9467] & 0.7163 & [0.7043, 0.7301] & 0.9363 & 0.9310 & 0.9456 \\
+BETO & Mixto (50\%) & 0.9363 & [0.9274, 0.9448] & 0.7091 & [0.6976, 0.7213] & 0.9337 & 0.9316 & 0.9410 \\
+BETO & Full (100\%) & 0.7772 & [0.7691, 0.7843] & 0.5873 & [0.5750, 0.6004] & 0.8298 & 0.7218 & 0.8419 \\
+\bottomrule
+\end{tabular}
+\end{table}
