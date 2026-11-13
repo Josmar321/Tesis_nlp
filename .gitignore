@@ -1,12 +1,59 @@
-# Entorno
+# =============================================================================
+# Politica de versionado del repositorio (Tesis NER Clinico)
+# =============================================================================
+# SE VERSIONA:
+#   - Scripts (scripts/), notebooks (notebooks/) y documentacion (docs/, *.md)
+#   - Summaries ligeros de datos y entrenamiento:
+#       data/processed/01_summary.json
+#       data/augmented_*/02_summary.json
+#       models/*/03_train_summary.json, config.json, labels.json, tokenizer*.json
+#   - Artefactos ligeros de evaluacion (Fase 4) y visualizacion (Fase 5) en results/
+#
+# NO SE VERSIONA:
+#   - Entornos virtuales, caches y logs
+#   - Corpus procesados/aumentados en JSONL (regenerables con scripts 01 y 02, seed=42)
+#   - Respaldos locales (data/archive/) y corridas de humo (models/smoke_*/)
+#   - Pesos pesados de modelos (*.safetensors, *.bin, *.pt) y checkpoints intermedios
+#   - Predicciones completas por token (results/*/04_predictions.jsonl)
+# =============================================================================
+
+# Entorno y caches de Python / Jupyter
 .venv/
 venv/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+*.log
 
+# Respaldos locales y artefactos obsoletos
+data/archive/
 
-# Checkpoints de entrenamiento
+# Datasets JSONL generados (regenerables de forma determinista con 01 y 02)
+data/processed/*.jsonl
+data/augmented/*.jsonl
+data/augmented_baseline/*.jsonl
+data/augmented_50/*.jsonl
+data/augmented_100/*.jsonl
+!data/processed/01_summary.json
+!data/augmented_baseline/02_summary.json
+!data/augmented_50/02_summary.json
+!data/augmented_100/02_summary.json
+
+# Pesos de modelos entrenados, checkpoints y pruebas de humo
 checkpoints/
 runs/
-*.log
+models/smoke_beto/
+models/smoke_*/
+models/ner_model/
+models/**/checkpoints/
+models/**/*.safetensors
+models/**/*.bin
+models/**/*.pt
+models/**/*.pth
+models/**/*.h5
+models/**/optimizer.pt
+models/**/scheduler.pt
+models/**/rng_state.pth
+
+# Predicciones crudas a nivel documento (opcionales y voluminosas)
+results/*/04_predictions.jsonl

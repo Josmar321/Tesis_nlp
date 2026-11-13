@@ -61,6 +61,7 @@ from transformers import (
     AutoModelForTokenClassification,
     AutoTokenizer,
     DataCollatorForTokenClassification,
+    EarlyStoppingCallback,
     Trainer,
     TrainingArguments,
     set_seed,
@@ -200,7 +201,12 @@ def tokenize_and_align_labels(
                 else:
                     # Regla 4: Primer sub-token efectivo de la palabra -> recibe etiqueta BIO
                     tag_str = tags[word_id]
-                    label_ids.append(label2id.get(tag_str, label2id["O"]))
+                    if tag_str not in label2id:
+                        raise ValueError(
+                            f"Etiqueta BIO desconocida {tag_str!r} en doc_idx={doc_idx}, "
+                            f"word_id={word_id}. Etiquetas conocidas ({len(label2id)}): {sorted(label2id)}"
+                        )
+                    label_ids.append(label2id[tag_str])
                     if word_id > window_max_word_id:
                         window_max_word_id = word_id
             else:
@@ -315,6 +321,18 @@ def parse_args() -> argparse.Namespace:
         help="Solapamiento en sub-tokens entre ventanas de documentos largos (default: 128).",
     )
     ap.add_argument(
+        "--warmup-ratio",
+        type=float,
+        default=0.0,
+        help="Proporcion de pasos de entrenamiento para warmup lineal (default: 0.0).",
+    )
+    ap.add_argument(
+        "--early-stopping-patience",
+        type=int,
+        default=None,
+        help="Epocas sin mejora en dev F1 antes de detener el entrenamiento (default: None, desactivado).",
+    )
+    ap.add_argument(
         "--seed",
         type=int,
         default=42,
@@ -330,6 +348,10 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    if not 0.0 <= args.warmup_ratio < 1.0:
+        raise SystemExit("--warmup-ratio debe estar en [0.0, 1.0).")
+    if args.early_stopping_patience is not None and args.early_stopping_patience <= 0:
+        raise SystemExit("--early-stopping-patience debe ser un entero > 0.")
 
     # Fijar semillas de reproducibilidad en Python, NumPy y PyTorch
     random.seed(args.seed)
@@ -346,7 +368,7 @@ def main() -> None:
     dev_docs = read_jsonl(dev_path)
 
     # Construimos el mapa completo de etiquetas ANTES de recortar por smoke-test
-    # para garantizar que la capa de clasificacion tenga siempre las 45 clases del corpus.
+    # para garantizar que la capa de clasificacion tenga todas las clases BIO del corpus (44 en MEDDOCAN).
     labels, label2id, id2label = build_label_list(train_docs, dev_docs)
 
     epochs = 1.0 if args.smoke_test else args.epochs
@@ -431,6 +453,7 @@ def main() -> None:
         "per_device_eval_batch_size": args.batch_size,
         "num_train_epochs": epochs,
         "weight_decay": args.weight_decay,
+        "warmup_ratio": args.warmup_ratio,
         strategy_key: "epoch",
         "save_strategy": "no" if args.smoke_test else "epoch",
         "save_total_limit": 2,
@@ -459,6 +482,11 @@ def main() -> None:
         trainer_kwargs["processing_class"] = tokenizer
     else:
         trainer_kwargs["tokenizer"] = tokenizer
+
+    if args.early_stopping_patience is not None and not args.smoke_test:
+        trainer_kwargs["callbacks"] = [
+            EarlyStoppingCallback(early_stopping_patience=args.early_stopping_patience)
+        ]
 
     trainer = Trainer(**trainer_kwargs)
 
@@ -496,6 +524,8 @@ def main() -> None:
         "batch_size": args.batch_size,
         "learning_rate": args.lr,
         "weight_decay": args.weight_decay,
+        "warmup_ratio": args.warmup_ratio,
+        "early_stopping_patience": args.early_stopping_patience,
         "max_length": args.max_length,
         "stride": args.stride,
         "train_docs": len(train_docs),

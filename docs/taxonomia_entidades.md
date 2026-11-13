@@ -1,0 +1,43 @@
+# Taxonomía de Entidades Clínicas (SPACCC_MEDDOCAN → Contexto Peruano)
+
+El corpus contiene **22 categorías de información de salud protegida (PHI)** codificadas en esquema **IOB2 (BIO)**. En el vocabulario conjunto de entrenamiento y validación (`train` ∪ `dev`) existen **44 etiquetas BIO** (`O`, 22 etiquetas `B-` y 21 etiquetas `I-`; la categoría `ID_CONTACTO_ASISTENCIAL` aparece exclusivamente como token único, por lo que no genera `I-ID_CONTACTO_ASISTENCIAL`).
+
+---
+
+## Tabla General de las 22 Categorías
+
+| # | Etiqueta | Definición clínica (MEDDOCAN) | Tratamiento en Fase 2 (`02_augmentation.py`) | Soporte (`train` / `dev` / `test`) | Ejemplo Original (España) | Ejemplo Sintético (Perú, `augmented_100`) |
+|---:|---|---|---|---:|---|---|
+| 1 | `NOMBRE_SUJETO_ASISTENCIA` | Nombres de pila, iniciales y apellidos del paciente. | **Aumentada:** `Faker('es_MX')` + lista peruana con concordancia estricta de género según `SEXO_SUJETO_ASISTENCIA` y exclusión de apellidos ambiguos. | 1.009 / 503 / 502 | `Ernesto`, `Rivera Bueno` | `Julio`, `Pari Cusi` |
+| 2 | `NOMBRE_PERSONAL_SANITARIO` | Nombres y apellidos de médicos y personal asistencial que firman o se citan en el caso. | **Aumentada:** `Faker('es_MX')` + apellidos peruanos/andinos, conservando el género del primer nombre original. | 1.000 / 497 / 501 | `Ignacio Navarro Cuéllar` | `Jorge Atao Quiñónez` |
+| 3 | `FECHAS` | Fechas de ingreso, alta, nacimiento, intervenciones o consultas. | **Excluida (clase cerrada):** se preserva intacta para no alterar la cronología clínica ni el formato temporal. | 1.231 / 724 / 611 | `03/03/1946` | `03/03/1946` *(sin cambio)* |
+| 4 | `EDAD_SUJETO_ASISTENCIA` | Edad del paciente expresada en años, meses, días o semanas. | **Excluida (clase cerrada):** se preserva intacta por coherencia clínica con las patologías descritas. | 1.035 / 521 / 518 | `70 años` | `70 años` *(sin cambio)* |
+| 5 | `SEXO_SUJETO_ASISTENCIA` | Sexo biológico o expresión de género del paciente (`H.` = hombre, `M.` = mujer). | **Excluida (clase cerrada):** se preserva intacta y se utiliza como fuente primaria para concordar el género de `NOMBRE_SUJETO_ASISTENCIA`. | 925 / 455 / 461 | `H.`, `varón`, `M.`, `mujer` | `H.` *(sin cambio)* |
+| 6 | `FAMILIARES_SUJETO_ASISTENCIA` | Menciones de parentesco o familiares del paciente en antecedentes familiares. | **Aumentada:** diccionario de parentescos peruanos respetando número (singular/plural) y género gramatical. | 243 / 92 / 81 | `primo materno`, `prima materna` | `hermano menor`, `sobrina` |
+| 7 | `PROFESION` | Ocupación, oficio o profesión del paciente o su entorno. | **Aumentada:** mezcla 60 % de oficios frecuentes en Perú y 40 % de `Faker('es_MX').job()` ($\le 4$ palabras). | 24 / 4 / 9 | `azafata`, `dependienta` | `taxista`, `estudiante` |
+| 8 | `OTROS_SUJETO_ASISTENCIA` | Otros atributos identificativos o descriptivos del paciente no cubiertos en otras clases. | **Excluida (clase cerrada):** se preserva intacta por su alta heterogeneidad semántica. | 9 / 6 / 7 | `negro`, `gemelo` | `negro` *(sin cambio)* |
+| 9 | `PAIS` | País de origen, residencia o referencia geográfica. | **Aumentada:** muestreo ponderado sobre 27 entradas (16 países distintos; `"Perú"` con probabilidad $12/27 = 44{,}4\ \%$). | 713 / 347 / 363 | `España`, `EE. UU.` | `Perú`, `Ecuador` |
+| 10 | `TERRITORIO` | Regiones, provincias, ciudades, distritos o códigos postales de 5 dígitos. | **Aumentada:** ~115 departamentos, provincias y distritos del Perú; si el original es código postal de 5 dígitos, genera código postal peruano (`01001`–`25999`). | 1.875 / 987 / 956 | `Madrid`, `28016` | `Miraflores`, `08504` |
+| 11 | `CALLE` | Direcciones postales completas (vía, número, interior, urbanización o manzana/lote). | **Aumentada:** generador composicional peruano (`Av.`/`Jr.`/`Calle`/`Psje.` + 60 vías + número/`Dpto.`/`Int.`/`cdra.` o `Mz. X Lt. Y, Urb./AA.HH.`). | 862 / 434 / 413 | `Calle Miguel Benitez 90` | `Psje. Benavides 3286` |
+| 12 | `HOSPITAL` | Hospitales públicos, institutos especializados y clínicas privadas. | **Aumentada:** *gazetteer* de ~80 establecimientos del Perú (MINSA, EsSalud, INEN/INSN, FF. AA./PNP, hospitales regionales y clínicas privadas). | 255 / 140 / 130 | `Hospital Universitario de Getafe` | `Hospital Nacional Daniel Alcides Carrión` |
+| 13 | `CENTRO_SALUD` | Centros de atención primaria, postas médicas, puestos de salud y policlínicos. | **Aumentada:** *gazetteer* de ~43 centros de salud, centros materno-infantiles, postas y CAP peruanos. | 6 / 2 / 6 | `Centro de Salud Las Calesas` | `Puesto de Salud Pamplona Alta` |
+| 14 | `INSTITUCION` | Organismos públicos, ministerios, aseguradoras, universidades o laboratorios sin internamiento. | **Aumentada:** *gazetteer* de ~45 instituciones peruanas (MINSA, EsSalud, SIS, SUSALUD, DIRIS/DIRESA, CMP, universidades y laboratorios). | 98 / 72 / 67 | `Master Diagnostic` | `Sanidad de la Policía Nacional del Perú` |
+| 15 | `ID_SUJETO_ASISTENCIA` | Identificador principal del paciente (DNI o número de historia clínica). En MEDDOCAN incluye 42 spans descriptivos sin dígitos (`"lactante"`, `"casada"`). | **Aumentada condicional:** si contiene dígitos (525 en `train`), genera DNI peruano (8 dígitos) o NHC (6–7 dígitos) sin prefijos de texto; si no tiene dígitos (42 en `train`), se conserva intacto. | 567 / 292 / 283 | `368503`, `nhc-150679` (`Lactante` conservado) | `8247788`, `4976414` |
+| 16 | `ID_CONTACTO_ASISTENCIAL` | Número de episodio clínico, ingreso o acto asistencial. | **Aumentada:** código numérico de 7 dígitos (sin prefijos de texto y diferenciado de teléfonos celulares). | 77 / 32 / 39 | `Episodio:3629184` | `5643194` |
+| 17 | `ID_ASEGURAMIENTO` | Número de afiliación a la seguridad social o seguro de salud. | **Aumentada:** código numérico de 8 dígitos (afiliación SIS/DNI) o código alfanumérico autogenerado estilo EsSalud (`YYMMDD` + dígito + 5 letras + 3 dígitos), sin prefijo `"ESSALUD"` quemado. | 391 / 194 / 198 | `26 63514095`, `26 37482910 04` | `11443209`, `8110057WJHUS005` |
+| 18 | `ID_TITULACION_PERSONAL_SANITARIO` | Número de colegiatura profesional del personal sanitario. | **Aumentada:** número de colegiatura (CMP/CEP) de 5 a 6 dígitos como token único, sin prefijo `"CMP"` quemado. | 471 / 226 / 234 | `28 28 70973` | `130866` |
+| 19 | `ID_EMPLEO_PERSONAL_SANITARIO` | Identificador laboral o puesto administrativo del personal sanitario. | **Aumentada (definida en script):** código numérico de 6 a 8 dígitos. No tiene apariciones en `train` ni en `test` (solo 1 mención en `dev`). | 0 / 1 / 0 | `Residente de 5 ° año` *(en `dev`)* | — *(0 menciones en `train`)* |
+| 20 | `NUMERO_TELEFONO` | Números telefónicos móviles o fijos de contacto. | **Aumentada:** 70 % celular peruano (`9XXXXXXXX`, agrupado o con `+51`) y 30 % teléfono fijo de Lima (`01`) o provincias (`044`, `054`, `084`, etc.). | 58 / 25 / 26 | `93 416 97 00` | `992 784 997` |
+| 21 | `NUMERO_FAX` | Números de fax de hospitales, servicios o instituciones. | **Aumentada:** formato de línea fija peruana (código de área `01` o provincial + número). | 15 / 6 / 7 | `948 296 500` | `065 540990` |
+| 22 | `CORREO_ELECTRONICO` | Direcciones de correo electrónico de pacientes o médicos. | **Aumentada:** usuario sintético + dominios frecuentes y peruanos (`gmail.com`, `outlook.com`, `minsa.gob.pe`, `essalud.gob.pe`, `unmsm.edu.pe`, `upch.pe`, `pucp.edu.pe`). | 469 / 241 / 249 | `nnavcu@hotmail.com` | `fadame@outlook.com` |
+
+---
+
+## Observaciones sobre Cobertura y Evaluación en `test.jsonl`
+
+1. **Etiquetas presentes en `test.jsonl`:** 21 de las 22 categorías tienen soporte $>0$ en `test.jsonl` (todas excepto `ID_EMPLEO_PERSONAL_SANITARIO`, cuyo soporte es `0 / 1 / 0`).
+2. **Clases raras en `test.jsonl` (soporte $< 10$):**
+   - `CENTRO_SALUD` ($n=6$), `NUMERO_FAX` ($n=7$), `OTROS_SUJETO_ASISTENCIA` ($n=7$) y `PROFESION` ($n=9$) suman apenas 29 de las 5.661 menciones de `test.jsonl` ($0{,}51\ \%$), pero representan $4/21 = 19{,}0\ \%$ del peso en el promedio `Macro-F1`.
+3. **Diferencia estructural en identificadores (`ID_ASEGURAMIENTO` e `ID_TITULACION_PERSONAL_SANITARIO`):**
+   - En el corpus español original, ambos identificadores suelen estar formados por **múltiples tokens numéricos separados por espacios** (ej. `'26 37482910 04'` de 3 tokens para aseguramiento; `'28 28 70973'` de 3 tokens para colegiatura).
+   - En la adaptación peruana (`02_augmentation.py`), se reemplazan por **un único token** numérico o alfanumérico (DNI/autogenerado o CMP de 5–6 dígitos). Cuando se entrena al 100 % con formato peruano (`augmented_100`), el modelo deja de agrupar secuencias multi-token españolas en `test.jsonl`, explicando la caída de F1 de ~0.92 a ~0.01 en esas dos categorías.
