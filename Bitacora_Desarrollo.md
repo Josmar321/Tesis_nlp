@@ -25,7 +25,7 @@ XLM-RoBERTa y BERT en español (BETO, `dccuchile/bert-base-spanish-wwm-cased`).
 ```
 proyecto_tesis_nlp/
 ├── data/
-│   ├── raw/                     # SPACCC_MEDDOCAN clonado (txt y ann originales; no versionado)
+│   ├── raw/                     # SPACCC_MEDDOCAN clonado (txt y ann originales; versionado en Git)
 │   ├── processed/               # {train,dev,test}.jsonl en BIO (no versionados) + 01_summary.json
 │   ├── augmented_baseline/      # Escenario 1: copia exacta (rate=0; .jsonl no versionados, 02_summary.json sí)
 │   ├── augmented_100/           # Escenario 2: train aumentado al 100 %; dev/test originales
@@ -34,14 +34,14 @@ proyecto_tesis_nlp/
 │   └── augmented/               # (obsoleta; solo .gitkeep)
 ├── docs/
 │   ├── protocolo_experimental.md # Protocolo experimental, hiperparámetros, bootstrap y limitaciones
-│   └── taxonomia_entidades.md    # Catálogo de 21 entidades MEDDOCAN, aumentación y soporte
+│   └── taxonomia_entidades.md    # Catálogo de 22 categorías PHI (21 con soporte en test), aumentación y soporte
 ├── notebooks/                   # EDA, resultados ejecutados (01_resultados.ipynb)
 ├── scripts/
 │   ├── 01_brat_to_bio.py        # BRAT + spaCy -> BIO (JSONL)
 │   ├── 02_augmentation.py       # Aumentación: Faker es_MX + gazetteers peruanos
 │   ├── 03_train_ner.py          # Entrenamiento con Hugging Face
 │   └── 04_evaluate_ner.py       # Evaluación estricta sobre test.jsonl (seqeval)
-├── models/                      # Metadatos versionados (config.json, labels.json, 03_train_summary.json); pesos binarios no versionados
+├── models/                      # Metadatos versionados de 6 corridas (config.json, labels.json, 03_train_summary.json, tokenizer); pesos binarios no versionados
 ├── results/                     # Salidas ligeras de Fase 4 y Fase 5 (JSON/CSV/TXT/TEX/PNG versionados)
 ├── README.md
 ├── requirements.txt
@@ -64,11 +64,12 @@ proyecto_tesis_nlp/
 - [ ] EDA en `notebooks/` (pendiente; el notebook de resultados de Fase 5 ya está ejecutado).
 - [x] Fase 3: `03_train_ner.py` con rutas por defecto a `data/augmented_baseline`, ventana 512/128, validación estricta de `label2id` y soporte opcional para warmup/early stopping. _(2026-11-11 / 2026-11-12)_
 - [x] Entrenar las 3 combinaciones de BETO (Baseline, Mixto 50%, Full 100%) en Google Colab (GPU Tesla T4). _(2026-11-11)_
-- [ ] **TODO (decisión humana — 3/6 corridas pendientes):** Entrenar y evaluar las 3 combinaciones de `xlm-roberta-base` en GPU, o acotar formalmente el alcance de §2 exclusivamente a BETO.
+- [x] Entrenar y evaluar las 3 combinaciones de `xlm-roberta-base` (Baseline, Mixto 50%, Full 100%) con el mismo protocolo. _(2026-11-13)_
 - [x] Fase 4: `04_evaluate_ner.py` implementado (test-only, `seqeval`, bootstrap, análisis de errores y hash `SHA256` del test). _(2026-11-11 / 2026-11-12)_
-- [x] Ejecutar las evaluaciones con bootstrap (IC 95%) y documentar resultados reales de BETO. _(2026-11-11)_
-- [x] Fase 5: `notebooks/01_resultados.ipynb` generalizado, ejecutado con salidas guardadas y artefactos `results/05_*` exportados (`.csv`, `.tex`, `.png`). _(2026-11-12)_
-- [x] Documentar protocolo experimental (`docs/protocolo_experimental.md`), taxonomía de entidades (`docs/taxonomia_entidades.md`), trazabilidad de modelos/resultados (`models/README.md`, `results/README.md`) y política de versionado (`.gitignore`). _(2026-11-12)_
+- [x] Ejecutar las evaluaciones con bootstrap (IC 95%) y documentar resultados reales de BETO y XLM-R (6/6 corridas). _(2026-11-13)_
+- [x] Fase 5: `notebooks/01_resultados.ipynb` generalizado, re-ejecutado con las 6 corridas (BETO + XLM-R) y artefactos `results/05_*` exportados (`.csv`, `.tex`, `.png`). _(2026-11-13)_
+- [x] Documentar protocolo experimental (`docs/protocolo_experimental.md`), taxonomía de entidades (`docs/taxonomia_entidades.md`), trazabilidad de modelos/resultados (`models/README.md`, `results/README.md`) y política de versionado (`.gitignore`). _(2026-11-12 / 2026-11-13)_
+- [x] Cierre documental del experimento 6/6: corregir estados, soportes por entidad, hash canónico del test y explicar la diferencia BETO vs. XLM-R. _(2026-11-13)_
 
 ## 5. Registro de sesiones
 
@@ -109,6 +110,8 @@ python scripts/01_brat_to_bio.py
 | `corpus_bio_dev.json` | 250 | 132.663 | 5.463 | 11.479 | 3,74 MB |
 | `corpus_bio_test.json` | 250 | 126.085 | 5.324 | 11.103 | 3,56 MB |
 | **Total** | **1.000** | **509.934** | **21.459** | **44.875** | **14,40 MB** |
+
+> **Nota de actualización:** estas cifras corresponden a la primera conversión (2026-10-29), antes de corregir la alineación de 01. El corpus regenerado y vigente totaliza **509.964 tokens** y **22.795 menciones** (ver cierre de Fase 2, §5).
 
 **Validación:**
 - `len(tokens) == len(etiquetas_ner)` en los 1.000 documentos.
@@ -367,6 +370,8 @@ venv\Scripts\python.exe scripts\02_augmentation.py --scenario mixed
 
 Son tokens que heredan la etiqueta completa aunque la entidad BRAT cubre solo una parte (p. ej. `Madrid,`, `NHC:2569870`).
 
+> Cifras de la auditoría del 2026-11-04; el corpus regenerado y vigente totaliza **509.964 tokens** y **22.795 menciones**.
+
 **4. PAIS:** la lista tiene 27 entradas y 16 países distintos (Perú repetido 12 veces, P = 44,4 %). Distribución observada en `augmented_100/train` (713 menciones): Perú 299 (41,9 %); Ecuador, Japón y Colombia 34 cada uno; Haití, Venezuela y EE. UU. 30; Argentina y Chile 28; Italia y Bolivia 25; España 24; Cuba, China, México y Brasil 23.
 
 **Regeneración (seed = 42):**
@@ -421,7 +426,7 @@ Son tokens que heredan la etiqueta completa aunque la entidad BRAT cubre solo un
 
 **Estado:** ✅ **Fase 2 cerrada y congelada** (seed 42). Los datos de `processed/` y `augmented_*/` no deben regenerarse sin registrarlo en esta bitácora.
 
-**Pendiente para la siguiente etapa (03, fuera de alcance aquí):** rutas por defecto, truncación a 512 subtokens (documentos largos), uso exclusivo del test para la evaluación final y métricas por etiqueta con `seqeval`.
+**Pendiente para la siguiente etapa (03, fuera de alcance aquí):** rutas por defecto, truncación a 512 subtokens (documentos largos), uso exclusivo del test para la evaluación final y métricas por etiqueta con `seqeval`. _(Completado: ver sesiones del 2026-11-11 al 2026-11-13.)_
 
 ### 2026-11-11 — Fase 3: diseño final de `03_train_ner.py`
 
@@ -441,7 +446,7 @@ Son tokens que heredan la etiqueta completa aunque la entidad BRAT cubre solo un
 
 **Estado:** diseño cerrado, **no ejecutado** _(Nota: estado en el momento del diseño; ver sesiones posteriores de ejecución en Colab y Fase 5)_. En `models/` solo hay `.gitkeep`; no existen `03_train_summary.json` ni checkpoints. El `venv` actual no tiene `torch`, `transformers`, `datasets`, `accelerate` ni `seqeval`, y la máquina no tiene GPU NVIDIA (AMD Radeon 780M), por lo que el entrenamiento sería CPU-only y lento.
 
-**Pendiente:** instalar el stack, ejecutar `--smoke-test`, entrenar las 6 combinaciones (3 escenarios × 2 modelos) en GPU/Colab, corregir el comentario de 45 clases, hacer estricto `label2id` (no mapear etiquetas desconocidas a `O`) y añadir warmup/early stopping.
+**Pendiente:** instalar el stack, ejecutar `--smoke-test`, entrenar las 6 combinaciones (3 escenarios × 2 modelos) en GPU/Colab, corregir el comentario de 45 clases, hacer estricto `label2id` (no mapear etiquetas desconocidas a `O`) y añadir warmup/early stopping. _(Completado: 6/6 corridas el 2026-11-13.)_
 
 ### 2026-11-11 — Fase 4: diseño de la evaluación estricta (`04_evaluate_ner.py`)
 
@@ -464,13 +469,13 @@ Son tokens que heredan la etiqueta completa aunque la entidad BRAT cubre solo un
 
 **Estado:** implementado y validado a nivel de lógica; **no ejecutado end-to-end** porque no hay checkpoints y faltan `torch`/`transformers`/`seqeval` en el entorno. _(Nota: ver sesiones posteriores de ejecución en Colab y Fase 5)_.
 
-**Pendiente:** instalar dependencias, entrenar, ejecutar las 6 evaluaciones con `--bootstrap 1000`, revisar el reporte por entidad y decidir si el test final será MEDDOCAN o un gold set peruano.
+**Pendiente:** instalar dependencias, entrenar, ejecutar las 6 evaluaciones con `--bootstrap 1000`, revisar el reporte por entidad y decidir si el test final será MEDDOCAN o un gold set peruano. _(Completado: 6/6 evaluaciones el 2026-11-13; la decisión del test final sigue abierta.)_
 
 ### 2026-11-11 — Ejecución en Colab y Generación de Resultados (BETO)
 
 **Contexto:** Se llevó el código a Google Colab (GPU Tesla T4) para ejecutar el pipeline de entrenamiento (Fase 3) y evaluación estricta con Bootstrap ($B = 1000$, `seed = 42`) sobre el modelo **BETO** (`dccuchile/bert-base-spanish-wwm-cased`).
 - **Entorno de ejecución verificado (`03_train_summary.json` / `04_eval_summary.json`):** Linux (`x86_64`), `Python 3.13.16`, `torch 2.14.1+cu130`, `transformers 4.57.6`, dispositivo `cuda` (`fp16=True`).
-- **Nota de trazabilidad sobre `04_eval_summary.json`:** En las corridas `beto_mixed__augmented_50` y `beto_full__augmented_100`, el argumento CLI `--data-dir` se dejó por defecto en `data/augmented_baseline`, pero `test_file` apuntó a `data/augmented_50/test.jsonl` y `data/augmented_100/test.jsonl` respectivamente (archivos bit-a-bit idénticos con `SHA256 = 8b30b80360cce568a9087b754b9a38b33aa278a6be952107eab3c4ef1bc898e3`).
+- **Nota de trazabilidad sobre `04_eval_summary.json`:** En las corridas `beto_mixed__augmented_50` y `beto_full__augmented_100`, el argumento CLI `--data-dir` se dejó por defecto en `data/augmented_baseline`, pero `test_file` apuntó a `data/augmented_50/test.jsonl` y `data/augmented_100/test.jsonl` respectivamente (archivos idénticos en contenido con `SHA256 = 8b30b80360cce568a9087b754b9a38b33aa278a6be952107eab3c4ef1bc898e3`, variante CRLF; ver nota de hash del 2026-11-13).
 
 **Resultados Globales Verificados (`test.jsonl`, $N = 250$ docs, 5.661 entidades gold):**
 
@@ -482,15 +487,15 @@ Son tokens que heredan la etiqueta completa aunque la entidad BRAT cubre solo un
 
 **Hallazgos clave por entidad (Domain Shift — progresión `Baseline → Mixto → Full`):**
 - **Identificadores regulatorios europeos (colapso en `Full`):**
-  - `ID_ASEGURAMIENTO` ($n=199$): `0.9223 → 0.9223 → 0.0052`
-  - `ID_TITULACION_PERSONAL_SANITARIO` ($n=232$): `0.9175 → 0.9133 → 0.0067`
+  - `ID_ASEGURAMIENTO` ($n=198$): `0.9223 → 0.9223 → 0.0052`
+  - `ID_TITULACION_PERSONAL_SANITARIO` ($n=234$): `0.9175 → 0.9133 → 0.0067`
 - **Entidades institucionales y geográficas (degradación progresiva o abrupta):**
-  - `INSTITUCION` ($n=53$): `0.3810 → 0.2586 → 0.1261` (degradación ya visible en el escenario Mixto).
-  - `CALLE` ($n=417$): `0.8915 → 0.8715 → 0.6710`
-  - `HOSPITAL` ($n=129$): `0.7708 → 0.7762 → 0.5841` (ligera mejora en Mixto, caída en Full).
-  - `PAIS` ($n=341$): `0.9656 → 0.9576 → 0.8958`
-  - `TERRITORIO` ($n=930$): `0.9612 → 0.9570 → 0.9146`
-  - `FAMILIARES_SUJETO_ASISTENCIA` ($n=118$): `0.6480 → 0.6441 → 0.6211`
+  - `INSTITUCION` ($n=67$): `0.3810 → 0.2586 → 0.1261` (degradación ya visible en el escenario Mixto).
+  - `CALLE` ($n=413$): `0.8915 → 0.8715 → 0.6710`
+  - `HOSPITAL` ($n=130$): `0.7708 → 0.7762 → 0.5841` (ligera mejora en Mixto, caída en Full).
+  - `PAIS` ($n=363$): `0.9656 → 0.9576 → 0.8958`
+  - `TERRITORIO` ($n=956$): `0.9612 → 0.9570 → 0.9146`
+  - `FAMILIARES_SUJETO_ASISTENCIA` ($n=81$): `0.6480 → 0.6441 → 0.6211`
 - **Clases raras con `F1 = 0.0000` en los 3 escenarios:** `CENTRO_SALUD` ($n=6$ en test), `NUMERO_FAX` ($n=7$), `OTROS_SUJETO_ASISTENCIA` ($n=7$) y `PROFESION` ($n=9$). Además, `ID_EMPLEO_PERSONAL_SANITARIO` tiene soporte $0$ en `train` y `test` ($1$ mención en `dev`).
 
 **Limitaciones estadísticas y metodológicas:**
@@ -500,7 +505,7 @@ Son tokens que heredan la etiqueta completa aunque la entidad BRAT cubre solo un
 4. **Ausencia de un conjunto de prueba clínico peruano:** `test.jsonl` contiene exclusivamente entidades españolas originales de MEDDOCAN.
 
 **Conclusión (corregida y ajustada a la evidencia):**
-El escenario **Mixto (50%)** conserva el rendimiento global sobre el corpus MEDDOCAN original (Micro-F1 `0.9363` vs. `0.9382` en Baseline, con comportamiento heterogéneo en ciertas entidades como `INSTITUCION`, que cae de `0.3810` a `0.2586`); sin embargo, **la adaptación efectiva a entidades clínicas peruanas reales no está medida empíricamente por ausencia de un conjunto de prueba peruano (`gold test set`)**.
+El escenario **Mixto (50%)** conserva el rendimiento global sobre el corpus MEDDOCAN original (Micro-F1 `0.9363` vs. `0.9382` en Baseline, con comportamiento heterogéneo en ciertas entidades como `INSTITUCION`, que cae de `0.3810` a `0.2586`); sin embargo, **la adaptación efectiva a entidades clínicas peruanas reales no está medida empíricamente por ausencia de un conjunto de prueba peruano (`gold test set`)**. La misma conclusión se confirma con XLM-R (ver sesión del 2026-11-13): Mixto conserva el Micro-F1 y Full induce un colapso severo por *domain shift*.
 
 ### 2026-11-12 — Ejecución del notebook de F5 y auditoría de cierre (tesis-safe)
 
@@ -515,7 +520,7 @@ El escenario **Mixto (50%)** conserva el rendimiento global sobre el corpus MEDD
    - `results/05_resultados_comparativos.csv`: tabla consolidada plana de métricas globales e IC 95%.
    - `results/05_tabla_resultados.tex`, `results/05_tabla_micro_f1.tex`, `results/05_tabla_por_entidad.tex`: tablas LaTeX exportadas con `escape=True` y porcentajes escapados (`95\%`).
    - `results/05_f1_por_escenario.png`: barras comparativas Micro-F1 vs. Macro-F1 con barras de error asimétricas (IC 95%).
-   - `results/05_f1_entidades_clave.png`: mapa de calor completo de las **21 entidades evaluadas** en `test.jsonl`.
+   - `results/05_f1_entidades_clave.png`: mapa de calor completo de las **21 entidades con soporte en `test.jsonl`** (de las 22 categorías PHI).
    - `results/05_bootstrap_micro_f1.png` y `results/05_bootstrap_macro_f1.png`: distribuciones bootstrap ($B=1000$).
 3. **Endurecimiento de scripts (`Fase 3` y `Fase 4`):**
    - `scripts/03_train_ner.py`: corregido comentario de vocabulario (`44` etiquetas en MEDDOCAN); validación estricta en `align_labels_with_tokens` que lanza `ValueError` ante cualquier etiqueta desconocida (eliminando el mapeo silencioso a `"O"`); añadidos flags opcionales `--warmup-ratio` (default `0.0`) y `--early-stopping-patience` (default `None`, usando `EarlyStoppingCallback`), registrados en `03_train_summary.json` para futuras corridas.
@@ -523,6 +528,73 @@ El escenario **Mixto (50%)** conserva el rendimiento global sobre el corpus MEDD
 4. **Política de versionado y documentación:**
    - `.gitignore`: actualizado para ignorar `.jsonl` pesados, `data/archive/`, `models/smoke_*/`, checkpoints intermedios y pesos binarios (`*.safetensors`, `*.bin`, `*.pt`), manteniendo versionados los resúmenes JSON y todo `results/`.
    - Creados `docs/protocolo_experimental.md`, `docs/taxonomia_entidades.md`, `models/README.md`, `results/README.md` y `README.md` raíz.
+
+### 2026-11-13 — Cierre experimental 6/6: XLM-RoBERTa y comparabilidad BETO vs. XLM-R
+
+**Contexto:** se completaron las 3 corridas de `xlm-roberta-base` (`models/xlmr_baseline`, `models/xlmr_mixed`, `models/xlmr_full`) en Google Colab (GPU Tesla T4), con el mismo protocolo que BETO: 5 épocas, `batch_size=16`, `learning_rate=2e-5`, `max_length=512`, `stride=128`, `seed=42`, evaluación `seqeval` estricta y bootstrap por documento ($B=1000$, `seed=42`). Con ello la matriz experimental queda en **6/6 corridas** (3 escenarios × 2 modelos). No se reentrenó BETO ni se modificaron datos, `test.jsonl` o métricas previas.
+
+**Entorno registrado en los summaries de XLM-R:** Linux `x86_64`, Python `3.13.16`, `torch 2.14.1+cu130`, `transformers 4.57.6`, `device=cuda`. Modelo base: `xlm-roberta-base` (278 M parámetros).
+
+**Resultados verificados (`test.jsonl`: 250 documentos, 126.093 tokens, 5.661 entidades gold):**
+
+| Modelo | Escenario | Dev F1 | Micro-P | Micro-R | Micro-F1 | IC 95% Micro | Macro-F1 | IC 95% Macro | Weighted-F1 |
+| :--- | :--- | ---: | ---: | ---: | ---: | --- | ---: | --- | ---: |
+| BETO | Baseline (0%) | 0.9401 | 0.9310 | 0.9456 | **0.9382** | `[0.9288, 0.9467]` | **0.7163** | `[0.7043, 0.7301]` | 0.9363 |
+| BETO | Mixto (50%) | 0.9363 | 0.9316 | 0.9410 | **0.9363** | `[0.9274, 0.9448]` | **0.7091** | `[0.6976, 0.7213]` | 0.9337 |
+| BETO | Full (100%) | 0.7827 | 0.7218 | 0.8419 | **0.7772** | `[0.7691, 0.7843]` | **0.5873** | `[0.5750, 0.6004]` | 0.8298 |
+| XLM-R | Baseline (0%) | 0.9264 | 0.9198 | 0.9406 | 0.9301 | `[0.9194, 0.9399]` | 0.6156 | `[0.6065, 0.6270]` | 0.9210 |
+| XLM-R | Mixto (50%) | 0.9309 | 0.9243 | 0.9406 | 0.9324 | `[0.9227, 0.9416]` | 0.6095 | `[0.6010, 0.6187]` | 0.9218 |
+| XLM-R | Full (100%) | 0.7490 | 0.6810 | 0.8143 | 0.7418 | `[0.7320, 0.7509]` | 0.4679 | `[0.4601, 0.4759]` | 0.7670 |
+
+**Lectura comparativa (BETO − XLM-R):**
+
+- **Micro-F1:** BETO supera a XLM-R en los tres escenarios, pero la brecha es pequeña en Baseline (`-0.0081`) y Mixto (`-0.0039`), y se amplía en Full (`-0.0355`). En términos absolutos, ambos modelos conservan un Micro-F1 alto en Baseline/Mixto (>0.93) y caen con el reemplazo total.
+- **Macro-F1:** la brecha es mucho mayor: `-0.1007` (Baseline), `-0.0996` (Mixto) y `-0.1193` (Full). El Micro-F1 agregado oculta fallas sistemáticas en clases concretas; el Macro-F1 las hace visibles.
+- **Efecto del escenario Mixto:** BETO pierde `-0.0019` Micro y `-0.0072` Macro; XLM-R gana `+0.0023` Micro y pierde `-0.0061` Macro. En ambos modelos, el 50% de reemplazo conserva el rendimiento global y es el mejor compromiso de la matriz.
+- **Efecto del escenario Full:** BETO cae `-0.1610` Micro y `-0.1290` Macro; XLM-R cae `-0.1883` Micro y `-0.1477` Macro. El reemplazo total de entidades induce *domain shift* severo en ambos modelos, con colapso de los identificadores regulatorios europeos.
+
+**¿Por qué XLM-R tiene un Macro-F1 más bajo? Descomposición del gap:**
+
+| Comparación | Gap Macro (BETO − XLM-R) | Clases que concentran el gap | Aporte conjunto |
+| :--- | ---: | :--- | ---: |
+| Baseline | 0.1007 | `ID_CONTACTO` (0.0457) + `NUMERO_TELEFONO` (0.0369) + `INSTITUCION` (0.0171) | **99.0%** |
+| Mixto | 0.0996 | `ID_CONTACTO` (0.0457) + `NUMERO_TELEFONO` (0.0391) + `INSTITUCION` (0.0111) | **96.3%** |
+| Full | 0.1193 | `ID_CONTACTO` (0.0457) + `NUMERO_TELEFONO` (0.0364) + `CALLE` (0.0129) | **79.6%** |
+
+El gap no es difuso: en Baseline y Mixto, tres clases explican prácticamente todo. En Full, el colapso de `CALLE` en XLM-R (`0.3993` vs. `0.6710` de BETO) añade un componente específico del escenario; el resto se reparte entre `ID_SUJETO` (0.0057), `NOMBRE_SUJETO` (0.0052), `INSTITUCION` (0.0048), `EDAD` (0.0043) y `PAIS` (0.0028).
+
+**Análisis de errores (Baseline; `04_errors.csv` completo):**
+
+| Clase | XLM-R Baseline | BETO Baseline |
+| :--- | :--- | :--- |
+| `ID_CONTACTO_ASISTENCIAL` | 39 errores: 36 → `ID_SUJETO_ASISTENCIA`, 3 → `ID_TITULACION_PERSONAL_SANITARIO` | 3 errores, todos → `O` |
+| `NUMERO_TELEFONO` | 25 errores: 25/25 predicen `ID_TITULACION_PERSONAL_SANITARIO` (19 de tipo + 6 de frontera) | 3 errores: 2 → `ID_TITULACION_PERSONAL_SANITARIO`, 1 → `O` |
+| `INSTITUCION` | 66 errores: 19 confusiones de tipo (mayoritariamente → `HOSPITAL`), 22 falsos negativos (`O`) y 25 de frontera | 43 errores: 18 → `O`, 15 de frontera, 9 → `HOSPITAL`, 1 → `TERRITORIO` |
+
+**Interpretación:** XLM-R no falla de forma aleatoria: colapsa identificadores numéricos en una clase dominante. En Baseline, `ID_CONTACTO` se convierte en `ID_SUJETO` (36/39) y `NUMERO_TELEFONO` en `ID_TITULACION` (25/25); BETO separa mucho mejor esos identificadores. En Mixto el patrón se redistribuye (`ID_CONTACTO` → `ID_TITULACION` 26 e `ID_SUJETO` 10; `NUMERO_TELEFONO` → `ID_TITULACION` 14, `ID_ASEGURAMIENTO` 7, `ID_SUJETO` 3). En Full el análisis de errores está limitado a las primeras 1.000 filas de `04_errors.csv` (de 2.270 errores totales), por lo que no se reportan conteos absolutos de confusión.
+
+**Clases raras y techo del Macro-F1:** `CENTRO_SALUD` ($n=6$), `NUMERO_FAX` ($n=7$), `PROFESION` ($n=9$) y `OTROS_SUJETO_ASISTENCIA` ($n=7$) tienen `F1 = 0.0000` en las 6 corridas. Son 4/21 del promedio Macro (19,0%); incluso con el resto perfecto, el techo práctico sería $17/21 \approx 0.8095$. Esto afecta por igual a BETO y XLM-R y debe declararse en limitaciones.
+
+**Trazabilidad del test y hash CRLF/LF:**
+
+- Los summaries de BETO registran `test_file_sha256 = 8b30b80360cce568a9087b754b9a38b33aa278a6be952107eab3c4ef1bc898e3` (copia Windows con finales de línea CRLF).
+- Los summaries de XLM-R registran `test_file_sha256 = d596b103e92a38e8d7d45ea8fc9e674632aa3fd85e1a55cfca92368e129a680d` (copia Linux/Colab con LF).
+- Verificación: ambos archivos tienen 250 documentos, 126.093 tokens y 5.661 entidades; al normalizar CRLF→LF, el SHA256 es exactamente `d596b103...`. **No es otro test ni hay fuga de datos.**
+- **Decisión:** adoptar `d596b103...` (LF) como hash canónico y documentar `8b30b803...` como variante CRLF de la misma copia. Los resultados de las 6 corridas son comparables y no se reentrenó nada.
+- **Recomendación de ingeniería:** añadir `test_file_sha256_normalized` a `04_evaluate_ner.py` para que futuras evaluaciones registren ambos hashes.
+
+**Notebook de Fase 5 y la duda de las celdas 1–2:**
+
+- El notebook del *working tree* ya tenía las 6 corridas y las celdas 1–2 mostraban BETO y XLM-R.
+- La versión commiteada en `HEAD` (commit `1570f52`) seguía teniendo solo 3 filas de BETO en esas celdas; por eso GitHub mostraba únicamente BETO. **No era un filtro ni una truncación de pandas: era una salida vieja.**
+- Se añadió una línea de cobertura al inicio de la celda 1 (`Corridas detectadas: 6 | Modelos: BETO, XLM-R | Escenarios por modelo: BETO: 3; XLM-R: 3`), se re-ejecutó el notebook y se commitearon las salidas actualizadas.
+
+**Pesos y artefactos:**
+
+- `1570f52` subió metadatos, tokenizer y resultados de XLM-R, pero **no** los `model.safetensors`.
+- Los pesos de las 6 corridas siguen fuera de Git (`.gitignore`). Queda pendiente archivarlos en Drive/Hugging Face/LFS y registrar enlace + SHA256 en `models/README.md`.
+
+**Conclusión del cierre 6/6:** la matriz experimental está completa y es comparable. El hallazgo robusto es que el escenario **Mixto (50%)** conserva el rendimiento global en ambos modelos, mientras que **Full (100%)** induce un *domain shift* severo. BETO conserva mejor los identificadores numéricos; XLM-R pierde Macro-F1 por el colapso de `ID_CONTACTO`, `NUMERO_TELEFONO` e `INSTITUCION`, no por un deterioro generalizado. Con una sola semilla y CIs bootstrap solapados, no se afirma superioridad estadística formal; se reportan las diferencias observadas y su concentración por clase. La validación en dominio peruano sigue pendiente por ausencia de un `gold test set`.
 
 ## 6. Decisiones técnicas (ADR)
 
@@ -547,6 +619,9 @@ El escenario **Mixto (50%)** conserva el rendimiento global sobre el corpus MEDD
 | 2026-11-04 | No aumentar `ID_SUJETO_ASISTENCIA` sin dígitos (Opción A) | Aumentarlos y solo documentarlo (Opción B) | Convertir «lactante» en un DNI cambia la semántica del span |
 | 2026-11-04 | Congelar la Fase 2 (seed 42); 03 pasa a la siguiente etapa | Seguir iterando 02 en paralelo con 03 | Datos estables para experimentos comparables |
 | 2026-11-12 | Versionar en Git solo metadatos (`01/02/03_summary.json`, `config.json`, `labels.json`) y artefactos de evaluación (`results/`), excluyendo `.jsonl` y pesos binarios (`*.safetensors`) | Versionar datasets y pesos con Git LFS o en el repo | Mantener el repositorio ligero y auditable; los `.jsonl` son 100% reproducibles con `seed=42` |
+| 2026-11-13 | Conservar las métricas de BETO y XLM-R sin reentrenar; el cierre es documental | Reentrenar para unificar el formato/hash del test | Los resultados son válidos; el hash distinto es CRLF vs. LF y el contenido es idéntico |
+| 2026-11-13 | Adoptar `d596b103...` (LF) como hash canónico de `test.jsonl` y documentar `8b30b803...` (CRLF) como variante | Usar el hash raw de Windows como único valor | Permite reproducibilidad en Linux/Colab y evita falsos positivos de integridad |
+| 2026-11-13 | Commitear el notebook con las 6 corridas y una línea de cobertura de modelos/escenarios | Dejar el notebook sin outputs o solo con BETO | GitHub debe reflejar la matriz experimental completa y evitar la lectura de “solo BETO” |
 
 ## 7. Experimentos
 
@@ -555,7 +630,9 @@ El escenario **Mixto (50%)** conserva el rendimiento global sobre el corpus MEDD
 | E01 | 2026-11-11 | BETO | Baseline (0%) | 5 | 0.9401 | 0.9382 `[0.9288, 0.9467]` | 0.7163 `[0.7043, 0.7301]` | 0.9363 | Baseline oficial sobre `test.jsonl` intacto |
 | E02 | 2026-11-11 | BETO | Mixto (50%) | 5 | 0.9363 | 0.9363 `[0.9274, 0.9448]` | 0.7091 `[0.6976, 0.7213]` | 0.9337 | Rendimiento global conservado; caída puntual en `INSTITUCION` (`0.381→0.259`) |
 | E03 | 2026-11-11 | BETO | Full (100%) | 5 | 0.7827 | 0.7772 `[0.7691, 0.7843]` | 0.5873 `[0.5750, 0.6004]` | 0.8298 | Caída severa por domain shift en `ID_ASEGURAMIENTO`, `ID_TITULACION_*`, `CALLE` y `HOSPITAL` |
-| E04–E06 | _(pendiente)_ | XLM-RoBERTa | Baseline / 50% / 100% | 5 | — | — | — | — | **TODO (3/6 corridas pendientes):** requiere decisión humana (ver §10) |
+| E04 | 2026-11-13 | XLM-RoBERTa | Baseline (0%) | 5 | 0.9264 | 0.9301 `[0.9194, 0.9399]` | 0.6156 `[0.6065, 0.6270]` | 0.9210 | Competitivo en `CALLE`/`ID_ASEGURAMIENTO`; colapso de `ID_CONTACTO` → `ID_SUJETO` (36/39) |
+| E05 | 2026-11-13 | XLM-RoBERTa | Mixto (50%) | 5 | 0.9309 | 0.9324 `[0.9227, 0.9416]` | 0.6095 `[0.6010, 0.6187]` | 0.9218 | Micro +0.0023 vs. su Baseline; Macro -0.0061; mejor compromiso de XLM-R |
+| E06 | 2026-11-13 | XLM-RoBERTa | Full (100%) | 5 | 0.7490 | 0.7418 `[0.7320, 0.7509]` | 0.4679 `[0.4601, 0.4759]` | 0.7670 | Domain shift severo: `CALLE` 0.3993, `ID_ASEGURAMIENTO` 0.0082, `ID_TITULACION` 0.0036 |
 
 ## 8. Problemas y soluciones
 
@@ -586,6 +663,8 @@ El escenario **Mixto (50%)** conserva el rendimiento global sobre el corpus MEDD
 | 2026-11-04 | La bitácora decía «Perú pesa 12 de 27» sin aclarar el número de países | Corregido: 27 entradas, 16 países, P(Perú) = 44,4 %; distribución reportada | Resuelto |
 | 2026-11-12 | `04_eval_summary.json` de `mixed` y `full` registraron `data_dir="data/augmented_baseline"` aunque `test_file` apuntó al escenario correcto | `notebooks/01_resultados.ipynb` infiere el escenario exclusivamente desde `scenario` y `Path(test_file).parent.name`; `04_evaluate_ner.py` ahora emite `WARNING` y guarda `test_file_sha256` | Resuelto |
 | 2026-11-12 | `03_train_ner.py` mapeaba etiquetas desconocidas silenciosamente a `"O"` (`label2id.get(tag, O)`) y tenía comentario erróneo de 45 clases | Validación estricta con `ValueError` si una etiqueta no existe en `label2id` y corrección del comentario a 44 clases | Resuelto |
+| 2026-11-13 | Los summaries de BETO y XLM-R registran hashes distintos del mismo `test.jsonl` (`8b30...` vs. `d596...`) | Verificado que la diferencia es CRLF vs. LF; mismo contenido (250 docs, 126.093 tokens, 5.661 entidades). Se adopta `d596...` como hash canónico y se documenta la variante CRLF | Resuelto |
+| 2026-11-13 | El notebook commiteado en `HEAD` mostraba solo 3 filas de BETO en las celdas 1–2, aunque el *working tree* ya tenía 6 corridas | Se añadió una línea de cobertura, se re-ejecutó el notebook con las 6 corridas y se commitearon las salidas actualizadas | Resuelto |
 
 ## 9. Próximos pasos y criterios de aceptación
 
@@ -600,15 +679,15 @@ El escenario **Mixto (50%)** conserva el rendimiento global sobre el corpus MEDD
 - [x] Generar los escenarios `augmented_baseline`, `augmented_100` y `augmented_50`.
 - [x] Fase 3: actualizar las rutas por defecto de `03_train_ner.py`, fijar la ventana 512/128 y aislar `test.jsonl`.
 - [x] Entrenar y evaluar las 3 combinaciones de BETO (Baseline / 50% / 100%) en Google Colab (GPU Tesla T4). _(2026-11-11)_
+- [x] Entrenar y evaluar las 3 combinaciones de XLM-RoBERTa (Baseline / 50% / 100%) con el mismo protocolo. _(2026-11-13)_
 - [x] Definir la métrica principal (F1 por entidad con `seqeval`, micro/macro) y usar el test como conjunto fijo.
 - [x] Fase 4: implementar `04_evaluate_ner.py` (agregación por documento, bootstrap y análisis de errores).
-- [x] Ejecutar las evaluaciones con `--bootstrap 1000` y documentar los resultados reales para BETO. _(2026-11-11)_
-- [x] Fase 5: generalizar y ejecutar `notebooks/01_resultados.ipynb` con salidas guardadas y artefactos `results/05_*`. _(2026-11-12)_
+- [x] Ejecutar las evaluaciones con `--bootstrap 1000` y documentar los resultados reales para BETO y XLM-R. _(2026-11-13)_
+- [x] Fase 5: generalizar y ejecutar `notebooks/01_resultados.ipynb` con las 6 corridas, salidas guardadas y artefactos `results/05_*`. _(2026-11-13)_
 - [x] Documentar la taxonomía de entidades usada (`docs/taxonomia_entidades.md`) y el protocolo experimental (`docs/protocolo_experimental.md`). _(2026-11-12)_
-- [ ] **TODO (decisión humana — XLM-RoBERTa):** Definir el cierre de las 3/6 corridas restantes para `xlm-roberta-base` (ver opciones en §10).
-  - *Criterio de aceptación:* O bien existen `models/xlmr_{baseline,mixed,full}/03_train_summary.json` + `results/xlmr_*__augmented_*/04_eval_summary.json` y el notebook re-ejecutado incluye los 6 modelos, o bien §2 se actualiza formalmente acotando el estudio experimental a BETO.
+- [x] **XLM-RoBERTa completado (3/3; matriz 6/6):** existen `models/xlmr_{baseline,mixed,full}/03_train_summary.json`, `results/xlmr_*__augmented_*/04_eval_summary.json` y el notebook re-ejecutado incluye las 6 corridas. _(2026-11-13)_
 - [ ] **TODO (decisión humana — Validación en dominio peruano):** Decidir si se anota un conjunto de prueba clínico peruano (`gold test set`) o se declara como trabajo futuro (ver opciones en §10).
-  - *Criterio de aceptación:* O bien se evalúan los 3 modelos sobre un archivo `test_peru.jsonl` con `--allow-non-test`, o bien la tesis reporta explícitamente la limitación de evaluar únicamente sobre el `test.jsonl` español de MEDDOCAN.
+  - *Criterio de aceptación:* O bien se evalúan los 6 modelos sobre un archivo `test_peru.jsonl` con `--allow-non-test`, o bien la tesis reporta explícitamente la limitación de evaluar únicamente sobre el `test.jsonl` español de MEDDOCAN.
 - [ ] EDA adicional en `notebooks/` (distribución por etiqueta, longitud de spans antes/después de aumentar).
   - *Criterio de aceptación:* Notebook ejecutado con estadísticas descriptivas de longitud de documentos en tokens/sub-tokens y proporción de documentos que superan 512 sub-tokens.
 
@@ -616,12 +695,13 @@ El escenario **Mixto (50%)** conserva el rendimiento global sobre el corpus MEDD
 
 | Componente / Artefacto | Estado Actual en el Repositorio | Opciones de Decisión Humana (`TODO`) |
 | :--- | :--- | :--- |
-| **1. Pesos finales de BETO (`model.safetensors`)** | **No presentes en el repo.** Solo se conservan `config.json`, `labels.json` y `03_train_summary.json` de las corridas de Colab (5 épocas, `dev-F1`: `0.9401` / `0.9363` / `0.7827`). | **Opción A:** Subir los pesos finales desde Google Drive/Colab a Hugging Face Hub o GitHub Releases y registrar los enlaces/hashes en `models/README.md`.<br>**Opción B:** Mantener en Git solo los metadatos y resúmenes de evaluación (política actual en `.gitignore`). |
+| **1. Pesos finales de BETO y XLM-R (`model.safetensors`)** | **No presentes en el repo.** Solo se conservan `config.json`, `labels.json`, `03_train_summary.json` y tokenizer de las 6 corridas de Colab (5 épocas; `dev-F1` BETO: `0.9401` / `0.9363` / `0.7827`; XLM-R: `0.9264` / `0.9309` / `0.7490`). | **Opción A:** Subir los pesos finales desde Google Drive/Colab a Hugging Face Hub o GitHub Releases y registrar los enlaces/hashes en `models/README.md`.<br>**Opción B:** Mantener en Git solo los metadatos y resúmenes de evaluación (política actual en `.gitignore`). |
 | **2. Checkpoint local obsoleto (`models/beto_baseline/checkpoints/checkpoint-64`)** | **Obsoleto / Parcial.** Corresponde a una prueba antigua de 1 época (`best_metric = 0.8429`, `eval_runtime = 139.2 s`) y **NO** al modelo final de Colab (5 épocas, `dev-F1 = 0.9401`, `eval_runtime = 5.75 s`). Ignorado por `.gitignore`. | **Acción recomendada:** No usar nunca `checkpoint-64` para inferencia ni evaluación. Puede eliminarse localmente cuando se desee liberar ~420 MB de disco. |
-| **3. Corridas de `xlm-roberta-base` (3/6 experimentos)** | **Pendientes.** Las Fases 3 y 4 están completas para BETO (3/6 corridas), pero no se han ejecutado para `xlm-roberta-base`. | **Opción A:** Ejecutar las 3 corridas de `xlm-roberta-base` en Colab T4 y re-ejecutar `notebooks/01_resultados.ipynb` (que ya soporta múltiples modelos automáticamente).<br>**Opción B:** Acotar el alcance del documento de tesis en §2 a BETO y dejar `XLM-RoBERTa` como línea futura. |
+| **3. Corridas de `xlm-roberta-base` (3/3; matriz 6/6)** | **Completadas (3/3; matriz 6/6).** `models/xlmr_{baseline,mixed,full}` y `results/xlmr_*__augmented_*` están versionados (metadatos, tokenizer y resultados). Los pesos `model.safetensors` siguen fuera de Git. | **Opción A (actual):** Mantener las 3 corridas y reportar BETO vs. XLM-R en la tesis.<br>**Opción B:** Acotar el alcance a BETO y dejar XLM-R como línea futura (ya no es necesario: las corridas existen). |
 | **4. Conjunto de prueba clínico peruano (`Gold Test Set`)** | **Ausente.** Toda la evaluación de Fase 4 se realizó sobre `test.jsonl` original de MEDDOCAN (España). | **Opción A:** Anotar un mini-corpus clínico peruano (30–50 notas desidentificadas) y evaluarlo con `04_evaluate_ner.py --allow-non-test`.<br>**Opción B:** Mantener la evaluación sobre MEDDOCAN declarando explícitamente que mide retención del dominio fuente y vulnerabilidad al reemplazo sintético, sin medir el recall real en hospitales peruanos. |
 | **5. Versionado de datos `.jsonl` (`data/processed/`, `data/augmented_*/`)** | **Excluidos de Git en `.gitignore`.** Se versionan únicamente `01_summary.json` y `02_summary.json`. | **Opción A (actual):** No versionar los `.jsonl` (~35 MB por carpeta) dado que son 100% reproducibles ejecutando `01_brat_to_bio.py` y `02_augmentation.py` (`seed=42`).<br>**Opción B:** Usar DVC o un archivo comprimido en Releases si el jurado requiere descarga directa sin ejecutar los scripts 01 y 02. |
-| **6. Notebook de Fase 5 (`notebooks/01_resultados.ipynb`)** | **Ejecutado y verificado.** Contiene las 6 celdas de código con salidas embebidas (`execution_count` 1..6) y exporta todos los artefactos `results/05_*`. | Listo para incluir tablas (`.tex`/`.csv`) y figuras (`.png`) en el manuscrito de tesis. |
+| **6. Notebook de Fase 5 (`notebooks/01_resultados.ipynb`)** | **Ejecutado y verificado con 6 corridas (BETO + XLM-R).** Contiene las 6 celdas de código con salidas embebidas (`execution_count` 1..6), una línea de cobertura de modelos/escenarios y exporta todos los artefactos `results/05_*`. | Listo para incluir tablas (`.tex`/`.csv`) y figuras (`.png`) en el manuscrito de tesis. |
+| **7. Hash canónico del test (`test.jsonl`)** | **Dos representaciones del mismo contenido.** BETO registra `8b30b803...` (CRLF, Windows); XLM-R registra `d596b103...` (LF, Linux/Colab). Verificado: 250 docs, 126.093 tokens y 5.661 entidades en ambos casos. | **Opción A (actual):** Documentar `d596b103...` como hash canónico (LF) y `8b30b803...` como variante CRLF.<br>**Opción B:** Añadir `test_file_sha256_normalized` a `04_evaluate_ner.py` para registrar ambos hashes automáticamente. |
 
 ## 11. Referencias
 

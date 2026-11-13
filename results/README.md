@@ -22,9 +22,15 @@ results/
 │   └── (mismos 7 archivos 04_*)
 ├── beto_full__augmented_100/            # Fase 4: BETO entrenado en Full (100%)
 │   └── (mismos 7 archivos 04_*)
+├── xlmr_baseline__augmented_baseline/   # Fase 4: XLM-R entrenado en Baseline (0%)
+│   └── (mismos 7 archivos 04_*)
+├── xlmr_mixed__augmented_50/            # Fase 4: XLM-R entrenado en Mixto (50%)
+│   └── (mismos 7 archivos 04_*)
+├── xlmr_full__augmented_100/            # Fase 4: XLM-R entrenado en Full (100%)
+│   └── (mismos 7 archivos 04_*)
 ├── 05_resultados_comparativos.csv       # Fase 5: Tabla consolidada de todas las corridas
 ├── 05_tabla_resultados.tex              # Fase 5: Tabla principal en LaTeX para la tesis
-├── 05_tabla_por_entidad.tex             # Fase 5: Tabla LaTeX desglosada por las 21 entidades de test
+├── 05_tabla_por_entidad.tex             # Fase 5: Tabla LaTeX desglosada por las 21 entidades con soporte en test
 ├── 05_tabla_micro_f1.tex                # Fase 5: Tabla pivote resumida de Micro-F1
 ├── 05_f1_por_escenario.png              # Fase 5: Gráfico de barras Micro-F1 y Macro-F1
 ├── 05_f1_entidades_clave.png            # Fase 5: Mapa de calor de F1 por entidad y escenario
@@ -37,9 +43,11 @@ results/
 ## 2. Notas de Trazabilidad sobre las Corridas Actuales
 
 - **Metadato `data_dir` en `beto_mixed__augmented_50` y `beto_full__augmented_100`:**
-  Durante la ejecución en Google Colab se invocó `04_evaluate_ner.py` pasando explícitamente `--test-file data/augmented_50/test.jsonl` y `--test-file data/augmented_100/test.jsonl` sin sobrescribir `--data-dir`, por lo que el campo informativo `"data_dir"` quedó con su valor por defecto (`"data/augmented_baseline"`). Sin embargo, los campos `"test_file"` y `"scenario"` son exactos y los cuatro archivos `test.jsonl` son idénticos bit a bit (`SHA256: 8b30b80360cce568a9087b754b9a38b33aa278a6be952107eab3c4ef1bc898e3`). El notebook de Fase 5 clasifica cada corrida usando exclusivamente `"scenario"` y el directorio padre de `"test_file"`.
-- **Pendientes:**
-  Faltan los subdirectorios de `XLM-RoBERTa` (`xlmr_*`), sujetos a la decisión de completar las 3 corridas restantes en GPU.
+  Durante la ejecución en Google Colab se invocó `04_evaluate_ner.py` pasando explícitamente `--test-file data/augmented_50/test.jsonl` y `--test-file data/augmented_100/test.jsonl` sin sobrescribir `--data-dir`, por lo que el campo informativo `"data_dir"` quedó con su valor por defecto (`"data/augmented_baseline"`). Sin embargo, los campos `"test_file"` y `"scenario"` son exactos y los cuatro archivos `test.jsonl` son idénticos en contenido (250 documentos, 126.093 tokens, 5.661 entidades). El notebook de Fase 5 clasifica cada corrida usando exclusivamente `"scenario"` y el directorio padre de `"test_file"`.
+- **Hash del test (CRLF vs. LF):**
+  Los summaries de BETO registran `8b30b803...` (copia Windows con CRLF); los de XLM-R registran `d596b103...` (copia Linux/Colab con LF). Al normalizar CRLF→LF, el SHA256 es `d596b103...`; el contenido es idéntico. Se adopta `d596b103...` como hash canónico y se documenta la variante CRLF.
+- **XLM-R integrado:**
+  Los 3 subdirectorios `xlmr_*` están presentes y versionados. La matriz experimental está completa (6/6 corridas: BETO + XLM-R × Baseline/Mixto/Full). Los pesos `model.safetensors` siguen fuera de Git.
 
 ---
 
@@ -57,4 +65,7 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/01_resultados.ipyn
 python scripts/04_evaluate_ner.py --model-dir models/beto_baseline --data-dir data/augmented_baseline --output-dir results/beto_baseline__augmented_baseline --bootstrap 1000
 python scripts/04_evaluate_ner.py --model-dir models/beto_mixed    --data-dir data/augmented_50       --output-dir results/beto_mixed__augmented_50       --bootstrap 1000
 python scripts/04_evaluate_ner.py --model-dir models/beto_full     --data-dir data/augmented_100      --output-dir results/beto_full__augmented_100      --bootstrap 1000
+python scripts/04_evaluate_ner.py --model-dir models/xlmr_baseline --data-dir data/augmented_baseline --output-dir results/xlmr_baseline__augmented_baseline --bootstrap 1000
+python scripts/04_evaluate_ner.py --model-dir models/xlmr_mixed    --data-dir data/augmented_50       --output-dir results/xlmr_mixed__augmented_50       --bootstrap 1000
+python scripts/04_evaluate_ner.py --model-dir models/xlmr_full     --data-dir data/augmented_100      --output-dir results/xlmr_full__augmented_100      --bootstrap 1000
 ```
