@@ -1,0 +1,445 @@
+{
+  "run_name": "xlmr_mixed__augmented_50",
+  "model_dir": "models/xlmr_mixed",
+  "model_name": "/content/Tesis_nlp/models/xlmr_mixed",
+  "data_dir": "data/augmented_50",
+  "test_file": "data/augmented_50/test.jsonl",
+  "test_file_sha256": "d596b103e92a38e8d7d45ea8fc9e674632aa3fd85e1a55cfca92368e129a680d",
+  "scenario": "augmented_50",
+  "n_docs": 250,
+  "n_tokens": 126093,
+  "n_entities_true": 5661,
+  "n_entities_pred": 5761,
+  "micro": {
+    "precision": 0.9243186946710641,
+    "recall": 0.940646528881823,
+    "f1": 0.932411136403432,
+    "tp": 5325,
+    "fp": 436,
+    "fn": 336
+  },
+  "macro": {
+    "precision": 0.5945964718254748,
+    "recall": 0.6314692961625961,
+    "f1": 0.6095408483894621,
+    "labels_evaluated": 21
+  },
+  "weighted": {
+    "precision": 0.906086039796688,
+    "recall": 0.940646528881823,
+    "f1": 0.9218040436714863
+  },
+  "seqeval": {
+    "micro": {
+      "precision": 0.9243186946710641,
+      "recall": 0.940646528881823,
+      "f1": 0.932411136403432,
+      "support": 5661
+    },
+    "macro": {
+      "precision": 0.5945964718254747,
+      "recall": 0.6314692961625961,
+      "f1": 0.6095408483894621,
+      "support": 5661
+    },
+    "weighted": {
+      "precision": 0.906086039796688,
+      "recall": 0.940646528881823,
+      "f1": 0.9218040436714863,
+      "support": 5661
+    }
+  },
+  "per_entity": {
+    "CALLE": {
+      "support": 413,
+      "predicted": 426,
+      "tp": 384,
+      "fp": 42,
+      "fn": 29,
+      "precision": 0.9014084507042254,
+      "recall": 0.9297820823244553,
+      "f1": 0.9153754469606675
+    },
+    "CENTRO_SALUD": {
+      "support": 6,
+      "predicted": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "CORREO_ELECTRONICO": {
+      "support": 249,
+      "predicted": 248,
+      "tp": 246,
+      "fp": 2,
+      "fn": 3,
+      "precision": 0.9919354838709677,
+      "recall": 0.9879518072289156,
+      "f1": 0.9899396378269617
+    },
+    "EDAD_SUJETO_ASISTENCIA": {
+      "support": 518,
+      "predicted": 540,
+      "tp": 511,
+      "fp": 29,
+      "fn": 7,
+      "precision": 0.9462962962962963,
+      "recall": 0.9864864864864865,
+      "f1": 0.9659735349716446
+    },
+    "FAMILIARES_SUJETO_ASISTENCIA": {
+      "support": 81,
+      "predicted": 105,
+      "tp": 57,
+      "fp": 48,
+      "fn": 24,
+      "precision": 0.5428571428571428,
+      "recall": 0.7037037037037037,
+      "f1": 0.6129032258064516
+    },
+    "FECHAS": {
+      "support": 611,
+      "predicted": 628,
+      "tp": 600,
+      "fp": 28,
+      "fn": 11,
+      "precision": 0.9554140127388535,
+      "recall": 0.9819967266775778,
+      "f1": 0.9685230024213075
+    },
+    "HOSPITAL": {
+      "support": 130,
+      "predicted": 176,
+      "tp": 109,
+      "fp": 67,
+      "fn": 21,
+      "precision": 0.6193181818181818,
+      "recall": 0.8384615384615385,
+      "f1": 0.7124183006535947
+    },
+    "ID_ASEGURAMIENTO": {
+      "support": 198,
+      "predicted": 226,
+      "tp": 197,
+      "fp": 29,
+      "fn": 1,
+      "precision": 0.8716814159292036,
+      "recall": 0.9949494949494949,
+      "f1": 0.9292452830188679
+    },
+    "ID_CONTACTO_ASISTENCIAL": {
+      "support": 39,
+      "predicted": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 39,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "ID_SUJETO_ASISTENCIA": {
+      "support": 283,
+      "predicted": 279,
+      "tp": 262,
+      "fp": 17,
+      "fn": 21,
+      "precision": 0.9390681003584229,
+      "recall": 0.9257950530035336,
+      "f1": 0.9323843416370107
+    },
+    "ID_TITULACION_PERSONAL_SANITARIO": {
+      "support": 234,
+      "predicted": 287,
+      "tp": 233,
+      "fp": 54,
+      "fn": 1,
+      "precision": 0.8118466898954704,
+      "recall": 0.9957264957264957,
+      "f1": 0.8944337811900192
+    },
+    "INSTITUCION": {
+      "support": 67,
+      "predicted": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 66,
+      "precision": 0.1,
+      "recall": 0.014925373134328358,
+      "f1": 0.025974025974025972
+    },
+    "NOMBRE_PERSONAL_SANITARIO": {
+      "support": 501,
+      "predicted": 508,
+      "tp": 495,
+      "fp": 13,
+      "fn": 6,
+      "precision": 0.9744094488188977,
+      "recall": 0.9880239520958084,
+      "f1": 0.9811694747274529
+    },
+    "NOMBRE_SUJETO_ASISTENCIA": {
+      "support": 502,
+      "predicted": 501,
+      "tp": 500,
+      "fp": 1,
+      "fn": 2,
+      "precision": 0.998003992015968,
+      "recall": 0.9960159362549801,
+      "f1": 0.9970089730807578
+    },
+    "NUMERO_FAX": {
+      "support": 7,
+      "predicted": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "NUMERO_TELEFONO": {
+      "support": 26,
+      "predicted": 2,
+      "tp": 0,
+      "fp": 2,
+      "fn": 26,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "OTROS_SUJETO_ASISTENCIA": {
+      "support": 7,
+      "predicted": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "PAIS": {
+      "support": 363,
+      "predicted": 377,
+      "tp": 349,
+      "fp": 28,
+      "fn": 14,
+      "precision": 0.9257294429708223,
+      "recall": 0.9614325068870524,
+      "f1": 0.9432432432432433
+    },
+    "PROFESION": {
+      "support": 9,
+      "predicted": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "SEXO_SUJETO_ASISTENCIA": {
+      "support": 461,
+      "predicted": 476,
+      "tp": 455,
+      "fp": 21,
+      "fn": 6,
+      "precision": 0.9558823529411765,
+      "recall": 0.9869848156182213,
+      "f1": 0.9711846318036287
+    },
+    "TERRITORIO": {
+      "support": 956,
+      "predicted": 972,
+      "tp": 926,
+      "fp": 46,
+      "fn": 30,
+      "precision": 0.9526748971193416,
+      "recall": 0.9686192468619247,
+      "f1": 0.9605809128630706
+    }
+  },
+  "key_entities": {
+    "PAIS": {
+      "support": 363,
+      "predicted": 377,
+      "tp": 349,
+      "fp": 28,
+      "fn": 14,
+      "precision": 0.9257294429708223,
+      "recall": 0.9614325068870524,
+      "f1": 0.9432432432432433
+    },
+    "HOSPITAL": {
+      "support": 130,
+      "predicted": 176,
+      "tp": 109,
+      "fp": 67,
+      "fn": 21,
+      "precision": 0.6193181818181818,
+      "recall": 0.8384615384615385,
+      "f1": 0.7124183006535947
+    },
+    "SEXO_SUJETO_ASISTENCIA": {
+      "support": 461,
+      "predicted": 476,
+      "tp": 455,
+      "fp": 21,
+      "fn": 6,
+      "precision": 0.9558823529411765,
+      "recall": 0.9869848156182213,
+      "f1": 0.9711846318036287
+    },
+    "FECHAS": {
+      "support": 611,
+      "predicted": 628,
+      "tp": 600,
+      "fp": 28,
+      "fn": 11,
+      "precision": 0.9554140127388535,
+      "recall": 0.9819967266775778,
+      "f1": 0.9685230024213075
+    },
+    "ID_ASEGURAMIENTO": {
+      "support": 198,
+      "predicted": 226,
+      "tp": 197,
+      "fp": 29,
+      "fn": 1,
+      "precision": 0.8716814159292036,
+      "recall": 0.9949494949494949,
+      "f1": 0.9292452830188679
+    },
+    "ID_CONTACTO_ASISTENCIAL": {
+      "support": 39,
+      "predicted": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 39,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "ID_SUJETO_ASISTENCIA": {
+      "support": 283,
+      "predicted": 279,
+      "tp": 262,
+      "fp": 17,
+      "fn": 21,
+      "precision": 0.9390681003584229,
+      "recall": 0.9257950530035336,
+      "f1": 0.9323843416370107
+    },
+    "ID_TITULACION_PERSONAL_SANITARIO": {
+      "support": 234,
+      "predicted": 287,
+      "tp": 233,
+      "fp": 54,
+      "fn": 1,
+      "precision": 0.8118466898954704,
+      "recall": 0.9957264957264957,
+      "f1": 0.8944337811900192
+    }
+  },
+  "label_coverage": {
+    "labels_in_test": [
+      "B-CALLE",
+      "B-CENTRO_SALUD",
+      "B-CORREO_ELECTRONICO",
+      "B-EDAD_SUJETO_ASISTENCIA",
+      "B-FAMILIARES_SUJETO_ASISTENCIA",
+      "B-FECHAS",
+      "B-HOSPITAL",
+      "B-ID_ASEGURAMIENTO",
+      "B-ID_CONTACTO_ASISTENCIAL",
+      "B-ID_SUJETO_ASISTENCIA",
+      "B-ID_TITULACION_PERSONAL_SANITARIO",
+      "B-INSTITUCION",
+      "B-NOMBRE_PERSONAL_SANITARIO",
+      "B-NOMBRE_SUJETO_ASISTENCIA",
+      "B-NUMERO_FAX",
+      "B-NUMERO_TELEFONO",
+      "B-OTROS_SUJETO_ASISTENCIA",
+      "B-PAIS",
+      "B-PROFESION",
+      "B-SEXO_SUJETO_ASISTENCIA",
+      "B-TERRITORIO",
+      "I-CALLE",
+      "I-CENTRO_SALUD",
+      "I-CORREO_ELECTRONICO",
+      "I-EDAD_SUJETO_ASISTENCIA",
+      "I-FAMILIARES_SUJETO_ASISTENCIA",
+      "I-FECHAS",
+      "I-HOSPITAL",
+      "I-ID_ASEGURAMIENTO",
+      "I-ID_SUJETO_ASISTENCIA",
+      "I-ID_TITULACION_PERSONAL_SANITARIO",
+      "I-INSTITUCION",
+      "I-NOMBRE_PERSONAL_SANITARIO",
+      "I-NOMBRE_SUJETO_ASISTENCIA",
+      "I-NUMERO_FAX",
+      "I-NUMERO_TELEFONO",
+      "I-OTROS_SUJETO_ASISTENCIA",
+      "I-PAIS",
+      "I-PROFESION",
+      "I-TERRITORIO",
+      "O"
+    ],
+    "labels_in_model_not_in_test": [
+      "B-ID_EMPLEO_PERSONAL_SANITARIO",
+      "I-ID_EMPLEO_PERSONAL_SANITARIO",
+      "I-SEXO_SUJETO_ASISTENCIA"
+    ]
+  },
+  "prediction": {
+    "aggregation": "first",
+    "missing_word_predictions": 0,
+    "bio_repairs": 78,
+    "n_words": 126093,
+    "n_windows": 577
+  },
+  "windows": {
+    "n_windows": 577,
+    "docs_with_multiple_windows": 211,
+    "max_windows_per_doc": 5,
+    "max_length": 512,
+    "stride": 128
+  },
+  "bootstrap": {
+    "n_iter": 1000,
+    "seed": 42,
+    "confidence": 95.0,
+    "micro": {
+      "mean": 0.9324698615083076,
+      "std": 0.0048780699494530835,
+      "ci_low": 0.9227271248037054,
+      "ci_high": 0.941599694801477
+    },
+    "macro": {
+      "mean": 0.6098808600221891,
+      "std": 0.005158188518735488,
+      "ci_low": 0.6010339557909926,
+      "ci_high": 0.618706460563785
+    }
+  },
+  "environment": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "transformers": "4.57.6",
+    "device": "cuda",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39"
+  },
+  "timestamp": "2026-11-13T07:06:47.561964+00:00",
+  "error_analysis": {
+    "total": 511,
+    "written": 511,
+    "by_type": {
+      "type_confusion": 119,
+      "false_positive": 175,
+      "false_negative": 65,
+      "boundary_error": 152
+    }
+  }
+}

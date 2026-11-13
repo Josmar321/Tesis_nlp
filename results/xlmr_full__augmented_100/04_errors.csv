@@ -1,0 +1,1001 @@
+﻿doc_id,error_type,true_label,pred_label,true_text,pred_text,true_start,pred_start,context
+S0004-06142006000500002-2,false_positive,O,ID_ASEGURAMIENTO,,28,-1,68,Rubio Tortosa Servicio NºCol : 46 28 52938 . Informe clínico del paciente
+S0004-06142006000500002-2,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,52938,-1,69,Tortosa Servicio NºCol : 46 28 52938 . Informe clínico del paciente :
+S0004-06142006000500002-2,false_positive,O,HOSPITAL,,Peset,-1,391,"Tortosa Servicio de Urología Hospital Dr. Peset Avda. Gaspar Aguilar , 90 46017"
+S0004-06142006000500002-2,false_positive,O,CALLE,,90,-1,396,"Dr. Peset Avda. Gaspar Aguilar , 90 46017 Valencia . ( España )"
+S0004-06142006000500002-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,46 28 52938,46,67,67,Ignacio Rubio Tortosa Servicio NºCol : 46 28 52938 . Informe clínico del paciente :
+S0004-06142006000500002-2,boundary_error,HOSPITAL,HOSPITAL,Hospital Dr. Peset,Hospital,389,389,"Ignacio Rubio Tortosa Servicio de Urología Hospital Dr. Peset Avda. Gaspar Aguilar , 90 46017"
+S0004-06142006000500002-2,boundary_error,CALLE,CALLE,"Avda. Gaspar Aguilar , 90",Avda. Gaspar Aguilar,392,392,"Servicio de Urología Hospital Dr. Peset Avda. Gaspar Aguilar , 90 46017 Valencia . ( España )"
+S0004-06142006000500011-1,false_positive,O,ID_ASEGURAMIENTO,,9096265001,-1,17,: nhc-987654 . NASS : 14 9096265001 02 . Domicilio : Aluche .
+S0004-06142006000500011-1,false_positive,O,CALLE,,02,-1,18,nhc-987654 . NASS : 14 9096265001 02 . Domicilio : Aluche . Localidad/
+S0004-06142006000500011-1,false_positive,O,CALLE,,188 A,-1,572,"Antonio Cánovas Ivorra Urbanización Montiboli , 188 A - 6 03570 Villajoyosa . Alicante"
+S0004-06142006000500011-1,false_positive,O,CALLE,,6,-1,575,"Urbanización Montiboli , 188 A - 6 03570 Villajoyosa . Alicante . jacanovas@hotmail.com"
+S0004-06142006000500011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,14 9096265001 02,14,16,16,CIPA : nhc-987654 . NASS : 14 9096265001 02 . Domicilio : Aluche . Localidad/
+S0004-06142006000500011-1,type_confusion,ID_TITULACION_PERSONAL_SANITARIO,FECHAS,02-08-17593,02-08-17593,74,74,José Antonio Cánovas Ivorra NºCol : 02-08-17593 . Motivo de ingreso : Cólico
+S0004-06142006000500011-1,boundary_error,CALLE,CALLE,"Urbanización Montiboli , 188 A - 6",Urbanización Montiboli,569,569,"por : José Antonio Cánovas Ivorra Urbanización Montiboli , 188 A - 6 03570 Villajoyosa . Alicante . jacanovas@hotmail.com"
+S0004-06142006000600014-1,false_positive,O,ID_ASEGURAMIENTO,,4568642,-1,16,: nhc/19453 . NASS : 33 4568642 23 . Domicilio : Calle Padre
+S0004-06142006000600014-1,false_positive,O,CALLE,,23,-1,17,nhc/19453 . NASS : 33 4568642 23 . Domicilio : Calle Padre José
+S0004-06142006000600014-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,35,-1,80,A. Hermida Pérez NºCol : 35 35 16446 . Motivo de ingreso :
+S0004-06142006000600014-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,16446,-1,81,Hermida Pérez NºCol : 35 35 16446 . Motivo de ingreso : Disuria
+S0004-06142006000600014-1,false_positive,O,CALLE,,1F,-1,307,Pérez Calle Manuel Gomez 35 . 1F 38750 El Paso . La Palma
+S0004-06142006000600014-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,33 4568642 23,33,15,15,CIPA : nhc/19453 . NASS : 33 4568642 23 . Domicilio : Calle Padre José
+S0004-06142006000600014-1,false_negative,ID_SUJETO_ASISTENCIA,O,NHC:19453,,40,-1,palma . CP : 35001 . NHC:19453 . Datos asistenciales . Fecha de
+S0004-06142006000600014-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,35 35 16446,35,79,79,José A. Hermida Pérez NºCol : 35 35 16446 . Motivo de ingreso : Disuria
+S0004-06142006000600014-1,boundary_error,CALLE,CALLE,Calle Manuel Gomez 35 . 1F,Calle Manuel Gomez 35,302,302,por : José A. Hermida Pérez Calle Manuel Gomez 35 . 1F 38750 El Paso . La Palma
+S0004-06142006000700013-1,false_positive,O,ID_SUJETO_ASISTENCIA,,nhc,-1,11,: Campos Vicente . CIPA : nhc 963852 . NASS : 95-16275568-30 .
+S0004-06142006000700013-1,type_confusion,ID_TITULACION_PERSONAL_SANITARIO,ID_SUJETO_ASISTENCIA,12-89-96589,12-89-96589,75,75,: Tomás Rodríguez Collar NºCol : 12-89-96589 . Motivo de ingreso : dolor
+S0004-06142006000700013-1,false_negative,OTROS_SUJETO_ASISTENCIA,O,mestizo,,99,-1,"de 63 años de edad , mestizo , diabético y fumador inveterado ."
+S0004-06142006000700013-1,boundary_error,CALLE,CALLE,Calle 114 No,Calle 114,477,477,clinico : Tomás Rodríguez Collar . Calle 114 No . 29005 Marianao . Ciudad de
+S0004-06142006000900006-1,false_positive,O,ID_ASEGURAMIENTO,,19865453,-1,16,: nhc-6326226 . NASS : 28 19865453 56 . Domicilio : C/ Victor
+S0004-06142006000900006-1,false_positive,O,CALLE,,56,-1,17,nhc-6326226 . NASS : 28 19865453 56 . Domicilio : C/ Victor de
+S0004-06142006000900006-1,false_positive,O,CALLE,,43,-1,27,"C/ Victor de la serna , 43 . 10 A+ . Localidad/ Provincia"
+S0004-06142006000900006-1,false_positive,O,CALLE,,10 A+,-1,29,"de la serna , 43 . 10 A+ . Localidad/ Provincia : Madrid ."
+S0004-06142006000900006-1,false_positive,O,ID_SUJETO_ASISTENCIA,,28,-1,80,Pablo Garrido Abad NºCol : 28 28 45612 . Historia Actual : Se
+S0004-06142006000900006-1,false_positive,O,ID_SUJETO_ASISTENCIA,,45612,-1,81,Garrido Abad NºCol : 28 28 45612 . Historia Actual : Se presenta
+S0004-06142006000900006-1,false_positive,O,CALLE,,62,-1,324,"La Princesa Diego de León , 62 E-28006 Madrid . ( España )"
+S0004-06142006000900006-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,28 19865453 56,28,15,15,CIPA : nhc-6326226 . NASS : 28 19865453 56 . Domicilio : C/ Victor de
+S0004-06142006000900006-1,boundary_error,CALLE,CALLE,"C/ Victor de la serna , 43 . 10 A+",C/ Victor de la serna,21,21,"28 19865453 56 . Domicilio : C/ Victor de la serna , 43 . 10 A+ . Localidad/ Provincia : Madrid ."
+S0004-06142006000900006-1,false_negative,TERRITORIO,O,CP:28016,,37,-1,. Localidad/ Provincia : Madrid . CP:28016 . NHC : 6326226 . Datos
+S0004-06142006000900006-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,28 28 45612,28,79,79,: Pablo Garrido Abad NºCol : 28 28 45612 . Historia Actual : Se presenta
+S0004-06142006000900006-1,boundary_error,CALLE,CALLE,"Diego de León , 62",Diego de León,320,320,"Urología Hospital Universitario de La Princesa Diego de León , 62 E-28006 Madrid . ( España )"
+S0004-06142006000900006-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,326,326,"Diego de León , 62 E-28006 Madrid . ( España ) E-mail:pgabad@hotmail.com"
+S0004-06142006000900006-1,false_negative,CORREO_ELECTRONICO,O,E-mail:pgabad@hotmail.com,,331,-1,E-28006 Madrid . ( España ) E-mail:pgabad@hotmail.com
+S0004-06142006000900014-1,false_positive,O,CALLE,,AV,-1,559,por : Dr. Alberto Palacios Torres AV . Eduardo Torres 579 2 °
+S0004-06142006000900014-1,false_positive,O,CALLE,,Frente esquerdo,-1,566,. Eduardo Torres 579 2 ° Frente esquerdo . 4450-117 Matosinhos . Porto (
+S0004-06142006000900014-1,false_negative,ID_SUJETO_ASISTENCIA,O,NHC:178945,,32,-1,LISBOA . CP : 1269-052 . NHC:178945 . Datos asistenciales . Fecha de
+S0004-06142006000900014-1,boundary_error,CALLE,CALLE,AV . Eduardo Torres 579 2 ° Frente esquerdo,Eduardo Torres 579,559,561,por : Dr. Alberto Palacios Torres AV . Eduardo Torres 579 2 ° Frente esquerdo . 4450-117 Matosinhos . Porto (
+S0004-06142006000900015-1,false_positive,O,ID_ASEGURAMIENTO,,23892036,-1,16,: nhc-231213 . NASS : 29 23892036 09 . Domicilio : Av. medellin
+S0004-06142006000900015-1,false_positive,O,CALLE,,09,-1,17,nhc-231213 . NASS : 29 23892036 09 . Domicilio : Av. medellin 18
+S0004-06142006000900015-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,45,-1,72,Nuria Rodríguez García NºCol : 45 45 31075 . Historia Actual : Varón
+S0004-06142006000900015-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,31075,-1,73,Rodríguez García NºCol : 45 45 31075 . Historia Actual : Varón de
+S0004-06142006000900015-1,false_positive,O,CALLE,,Ctra,-1,451,"Servicio de Urología Hospital de Getafe Ctra . de Toledo Km 12,500 E-28905"
+S0004-06142006000900015-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,29 23892036 09,29,15,15,CIPA : nhc-231213 . NASS : 29 23892036 09 . Domicilio : Av. medellin 18
+S0004-06142006000900015-1,false_negative,ID_SUJETO_ASISTENCIA,O,NHC:231213,,35,-1,Getafe . CP : 45002 . NHC:231213 . Datos asistenciales . Fecha de
+S0004-06142006000900015-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,45 45 31075,45,71,71,: Nuria Rodríguez García NºCol : 45 45 31075 . Historia Actual : Varón de
+S0004-06142006000900015-1,boundary_error,CALLE,CALLE,"Ctra . de Toledo Km 12,500","de Toledo Km 12,500",451,453,"Servicio de Urología Hospital de Getafe Ctra . de Toledo Km 12,500 E-28905 Getafe . Madrid . ("
+S0004-06142006000900015-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,460,460,"Toledo Km 12,500 E-28905 Getafe . Madrid . ( España ) E-mail :"
+S0004-06142007000100015-1,false_positive,O,ID_ASEGURAMIENTO,,85940385,-1,20,: 4375280 . NASS : 25 85940385 75 . Domicilio : Calle Lirios
+S0004-06142007000100015-1,false_positive,O,CALLE,,75,-1,21,"4375280 . NASS : 25 85940385 75 . Domicilio : Calle Lirios ,"
+S0004-06142007000100015-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,06,-1,73,Jesús Mateos Blanco NºCol : 06 06 98234 . Informe clínico del paciente
+S0004-06142007000100015-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,98234,-1,74,Mateos Blanco NºCol : 06 06 98234 . Informe clínico del paciente :
+S0004-06142007000100015-1,false_positive,O,CALLE,,n.,-1,630,Cristina Avda. de Elvas s / n. 06080 Badajoz . ( España )
+S0004-06142007000100015-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,25 85940385 75,25,19,19,"NHC : 4375280 . NASS : 25 85940385 75 . Domicilio : Calle Lirios ,"
+S0004-06142007000100015-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,06 06 98234,06,72,72,: Jesús Mateos Blanco NºCol : 06 06 98234 . Informe clínico del paciente :
+S0004-06142007000100015-1,boundary_error,CALLE,CALLE,Avda. de Elvas s / n.,Avda. de Elvas s,625,625,Servicio de Urología Hospital Infanta Cristina Avda. de Elvas s / n. 06080 Badajoz . ( España )
+S0004-06142007000500014-1,false_positive,O,ID_ASEGURAMIENTO,,29,-1,68,Javier Márquez Moreno NºCol : 29 29 83404 . Informe clínico del paciente
+S0004-06142007000500014-1,false_positive,O,ID_ASEGURAMIENTO,,83404,-1,69,Márquez Moreno NºCol : 29 29 83404 . Informe clínico del paciente :
+S0004-06142007000500014-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,27,27,", 14 . Localidad/ Provincia : Madrid . CP : 29034 . Datos"
+S0004-06142007000500014-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,29 29 83404,29,67,67,Antonio Javier Márquez Moreno NºCol : 29 29 83404 . Informe clínico del paciente :
+S0004-06142007000500014-1,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,Antonio Javier Márquez Moreno,Antonio Javier Márquez Moreno Teseo,259,259,"macroscópicamente . Remitido por : Dr. Antonio Javier Márquez Moreno Teseo , 5 3-N. 29010 . Málaga"
+S0004-06142007000500014-1,boundary_error,CALLE,CALLE,"Teseo , 5 3-N.",5 3-N.,263,265,": Dr. Antonio Javier Márquez Moreno Teseo , 5 3-N. 29010 . Málaga . ( España"
+S0004-06142007000600014-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,21,-1,70,Sandra Bellorin Custo NºCol : 21 21 34754 . Informe clínico del paciente
+S0004-06142007000600014-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,34754,-1,71,Bellorin Custo NºCol : 21 21 34754 . Informe clínico del paciente :
+S0004-06142007000600014-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,21 21 34754,21,69,69,: Sandra Bellorin Custo NºCol : 21 21 34754 . Informe clínico del paciente :
+S0004-06142007000600014-1,false_negative,INSTITUCION,O,Master Diagnostic,,395,-1,actina de músculo liso específica ( Master Diagnostic . Granada . España ) .
+S0004-06142007000600014-1,type_confusion,TERRITORIO,PAIS,Granada,Granada,398,398,liso específica ( Master Diagnostic . Granada . España ) . Remitido por
+S0004-06142007000600016-2,false_positive,O,ID_ASEGURAMIENTO,,6834562,-1,16,: nhc-643185 . NASS : 16 6834562 26 . Domicilio : Calle de
+S0004-06142007000600016-2,false_positive,O,CALLE,,26,-1,17,nhc-643185 . NASS : 16 6834562 26 . Domicilio : Calle de la
+S0004-06142007000600016-2,false_positive,O,ID_SUJETO_ASISTENCIA,,28,-1,78,Pablo Garrido Abad NºCol : 31 28 54753 . Motivo de ingreso :
+S0004-06142007000600016-2,false_positive,O,ID_SUJETO_ASISTENCIA,,54753,-1,79,Garrido Abad NºCol : 31 28 54753 . Motivo de ingreso : tumoración
+S0004-06142007000600016-2,false_positive,O,CALLE,,de,-1,304,"Urología Hospital de la Princesa Diego de León , 28006 Madrid . ("
+S0004-06142007000600016-2,false_positive,O,HOSPITAL,,León,-1,305,"Hospital de la Princesa Diego de León , 28006 Madrid . ( España"
+S0004-06142007000600016-2,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,16 6834562 26,16,15,15,CIPA : nhc-643185 . NASS : 16 6834562 26 . Domicilio : Calle de la
+S0004-06142007000600016-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,31 28 54753,31,77,77,: Pablo Garrido Abad NºCol : 31 28 54753 . Motivo de ingreso : tumoración
+S0004-06142007000600016-2,boundary_error,HOSPITAL,HOSPITAL,Hospital de la Princesa,Hospital de la Princesa Diego,299,299,"Pablo Garrido Abad Servicio de Urología Hospital de la Princesa Diego de León , 28006 Madrid ."
+S0004-06142007000600016-2,boundary_error,CALLE,HOSPITAL,Diego de León,Hospital de la Princesa Diego,303,299,"Pablo Garrido Abad Servicio de Urología Hospital de la Princesa Diego de León , 28006 Madrid . ( España"
+S0004-06142007000600016-2,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,308,308,"Princesa Diego de León , 28006 Madrid . ( España ) . pgabad@hotmail.com"
+S0004-06142007000700015-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,30,-1,70,Ignacio Tornero Ruiz NºCol : 30 30 56390 . Informe clínico del paciente
+S0004-06142007000700015-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,56390,-1,71,Tornero Ruiz NºCol : 30 30 56390 . Informe clínico del paciente :
+S0004-06142007000700015-1,false_positive,O,CALLE,,Ctra,-1,279,Ruiz Hospital Virgen de la Arrixaca Ctra . Madrid-Cartagena s / n. 30120
+S0004-06142007000700015-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,30 30 56390,30,69,69,Jesús Ignacio Tornero Ruiz NºCol : 30 30 56390 . Informe clínico del paciente :
+S0004-06142007000700015-1,boundary_error,CALLE,CALLE,Ctra . Madrid-Cartagena s / n.,Madrid-Cartagena s / n.,279,281,Ruiz Hospital Virgen de la Arrixaca Ctra . Madrid-Cartagena s / n. 30120 El Palmar . Murcia .
+S0004-06142007000900010-1,false_positive,O,ID_ASEGURAMIENTO,,4563215,-1,17,: 21413043 . NASS : 73 4563215 45 . Domicilio : Av. de
+S0004-06142007000900010-1,false_positive,O,CALLE,,45,-1,18,21413043 . NASS : 73 4563215 45 . Domicilio : Av. de Huelva
+S0004-06142007000900010-1,false_positive,O,FECHAS,,06,-1,76,: Eduardo Sánchez NºCol : 29 06 1995 . Motivo de ingreso :
+S0004-06142007000900010-1,false_positive,O,FECHAS,,1995,-1,77,Eduardo Sánchez NºCol : 29 06 1995 . Motivo de ingreso : Herida
+S0004-06142007000900010-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,73 4563215 45,73,16,16,CIPA : 21413043 . NASS : 73 4563215 45 . Domicilio : Av. de Huelva
+S0004-06142007000900010-1,type_confusion,TERRITORIO,PAIS,España,España,52,52,nacimiento : 15/03/1954 . País : España . Edad : 59 Sexo :
+S0004-06142007000900010-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,FECHAS,29 06 1995,29,75,75,Médico : Eduardo Sánchez NºCol : 29 06 1995 . Motivo de ingreso : Herida
+S0004-06142007000900011-1,false_positive,O,CALLE,,23,-1,24,: Av. Castilla y Leon . 23 . Localidad/ Provincia : Asturias .
+S0004-06142007000900011-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,28,-1,69,Carmen Macia Bobes NºCol : 28 28 . Informe clínico del paciente :
+S0004-06142007000900011-1,boundary_error,CALLE,CALLE,Av. Castilla y Leon . 23,Av. Castilla y Leon,19,19,NHC : 3485964 . Domicilio : Av. Castilla y Leon . 23 . Localidad/ Provincia : Asturias .
+S0004-06142007000900011-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28,28,68,68,: Carmen Macia Bobes NºCol : 28 28 . Informe clínico del paciente :
+S0004-06142007000900011-1,type_confusion,TERRITORIO,PAIS,Asturias,Asturias,119,119,"Hospital San Agustín ( Avilés , Asturias ) , en mayo de 2006"
+S0004-06142007000900011-1,type_confusion,TERRITORIO,PAIS,Asturias,Asturias,542,542,. 33405 Salinas . Castrillón . Asturias . ( España ) cmacb@arrakis.es
+S0004-06142007000900013-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,28065,-1,78,: Manuel Fernandez Arjona NºCol:01 13 28065 . Número de teléfono de la
+S0004-06142007000900013-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,madre,-1,85,. Número de teléfono de la madre : 630 304 365 . Motivo
+S0004-06142007000900013-1,false_positive,O,ID_SUJETO_ASISTENCIA,,304,-1,88,teléfono de la madre : 630 304 365 . Motivo de ingreso :
+S0004-06142007000900013-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,365,-1,89,de la madre : 630 304 365 . Motivo de ingreso : aumento
+S0004-06142007000900013-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:01 13 28065,13,76,77,. Médico : Manuel Fernandez Arjona NºCol:01 13 28065 . Número de teléfono de la
+S0004-06142007000900013-1,boundary_error,NUMERO_TELEFONO,ID_SUJETO_ASISTENCIA,630 304 365,630,87,87,de teléfono de la madre : 630 304 365 . Motivo de ingreso : aumento
+S0004-06142007000900013-1,boundary_error,OTROS_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,Recién nacido,Recién,103,103,"hemiescroto izquierdo . Historia Actual : Recién nacido de tres días de vida ,"
+S0004-06142007000900013-1,false_negative,FAMILIARES_SUJETO_ASISTENCIA,O,Remedios,,118,-1,acude a urgencias con su madre Remedios por descubrir un aumento del hemiescroto
+S0004-06142007000900013-1,false_negative,NOMBRE_SUJETO_ASISTENCIA,O,Jesús,,135,-1,un color violáceo del mismo ; Jesús se encontraba bien al nacimiento según
+S0004-06142007000900014-1,false_positive,O,ID_ASEGURAMIENTO,,28,-1,69,Ignacio Rodríguez Gómez NºCol : 28 28 734568 . Informe clínico del paciente
+S0004-06142007000900014-1,false_positive,O,ID_ASEGURAMIENTO,,734568,-1,70,Rodríguez Gómez NºCol : 28 28 734568 . Informe clínico del paciente :
+S0004-06142007000900014-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,28 28 734568,28,68,68,: Ignacio Rodríguez Gómez NºCol : 28 28 734568 . Informe clínico del paciente :
+S0004-06142008000300015-1,false_positive,O,ID_ASEGURAMIENTO,,83067120,-1,20,: 9834752 . NASS : 74 83067120 58 . Domicilio : Paseo Miguel
+S0004-06142008000300015-1,false_positive,O,CALLE,,58,-1,21,9834752 . NASS : 74 83067120 58 . Domicilio : Paseo Miguel Galvan
+S0004-06142008000300015-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,años,-1,56,. País : España . Edad:23 años Sexo : H. Fecha de Ingreso
+S0004-06142008000300015-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,20,-1,74,Roberto Llarena Ibarguren NºCol : 20 20 57830 . Informe clínico del paciente
+S0004-06142008000300015-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,57830,-1,75,Llarena Ibarguren NºCol : 20 20 57830 . Informe clínico del paciente :
+S0004-06142008000300015-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,16 meses,-1,280,cordones de Billroth . A los 16 meses el paciente se encuentra asintomático con
+S0004-06142008000300015-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,74 83067120 58,74,19,19,NHC : 9834752 . NASS : 74 83067120 58 . Domicilio : Paseo Miguel Galvan
+S0004-06142008000300015-1,boundary_error,EDAD_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,Edad:23 años,Edad:23,55,55,15/03/1995 . País : España . Edad:23 años Sexo : H. Fecha de Ingreso
+S0004-06142008000300015-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,20 20 57830,20,73,73,: Roberto Llarena Ibarguren NºCol : 20 20 57830 . Informe clínico del paciente :
+S0004-06142008000300015-1,type_confusion,TERRITORIO,PAIS,Bilbao,Bilbao,308,308,Ibarguren Apartado de correos 20134 48080 Bilbao . ( España ) rllarena@euskalnet.net
+S0004-06142008000400011-2,false_positive,O,ID_ASEGURAMIENTO,,06423578,-1,16,: nhc-32182565 . NASS : 13 06423578 65 . Domicilio : Avenida las
+S0004-06142008000400011-2,false_positive,O,CALLE,,65,-1,17,nhc-32182565 . NASS : 13 06423578 65 . Domicilio : Avenida las naciones
+S0004-06142008000400011-2,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,22,-1,73,Paloma Delgado Bavai NºCol : 22 22 26452 . Historia Actual y antecedentes
+S0004-06142008000400011-2,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,26452,-1,74,Delgado Bavai NºCol : 22 22 26452 . Historia Actual y antecedentes :
+S0004-06142008000400011-2,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,13 06423578 65,13,15,15,CIPA : nhc-32182565 . NASS : 13 06423578 65 . Domicilio : Avenida las naciones
+S0004-06142008000400011-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,22 22 26452,22,72,72,: Paloma Delgado Bavai NºCol : 22 22 26452 . Historia Actual y antecedentes :
+S0004-06142008000500015-1,false_positive,O,ID_ASEGURAMIENTO,,65132546,-1,16,: nhc-79324542 . NASS : 61 65132546 22 . Domicilio : Calle de
+S0004-06142008000500015-1,false_positive,O,CALLE,,22,-1,17,nhc-79324542 . NASS : 61 65132546 22 . Domicilio : Calle de las
+S0004-06142008000500015-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,04,-1,80,Manuel Ramos Pleguezuelos NºCol : 04 04 74125 . Motivo de ingreso :
+S0004-06142008000500015-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,74125,-1,81,Ramos Pleguezuelos NºCol : 04 04 74125 . Motivo de ingreso : Dolor
+S0004-06142008000500015-1,false_positive,O,CALLE,,n.,-1,383,Hospitalario Torrecárdenas Paraje Torrecárdenas s / n. 04009 Almería ( España ) .
+S0004-06142008000500015-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,61 65132546 22,61,15,15,CIPA : nhc-79324542 . NASS : 61 65132546 22 . Domicilio : Calle de las
+S0004-06142008000500015-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,04 04 74125,04,79,79,Francisco Manuel Ramos Pleguezuelos NºCol : 04 04 74125 . Motivo de ingreso : Dolor
+S0004-06142008000500015-1,boundary_error,CALLE,CALLE,Paraje Torrecárdenas s / n.,Paraje Torrecárdenas s,379,379,Ramos Pleguezuelos . Complejo Hospitalario Torrecárdenas Paraje Torrecárdenas s / n. 04009 Almería ( España ) .
+S0004-06142008000600011-1,false_positive,O,ID_ASEGURAMIENTO,,3141698,-1,16,: nhc-346798 . NASS : 74 3141698 12 . Domicilio : Avda. de
+S0004-06142008000600011-1,false_positive,O,CALLE,,12,-1,17,nhc-346798 . NASS : 74 3141698 12 . Domicilio : Avda. de Federico
+S0004-06142008000600011-1,false_positive,O,ID_SUJETO_ASISTENCIA,,03,-1,76,Ulises Juan Escudero NºCol : 06 03 21395 . Motivo de ingreso :
+S0004-06142008000600011-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,21395,-1,77,Juan Escudero NºCol : 06 03 21395 . Motivo de ingreso : Paciente
+S0004-06142008000600011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,74 3141698 12,74,15,15,CIPA : nhc-346798 . NASS : 74 3141698 12 . Domicilio : Avda. de Federico
+S0004-06142008000600011-1,false_negative,ID_SUJETO_ASISTENCIA,O,NHC:346798,,37,-1,Alicante . CP : 03001 . NHC:346798 . Datos asistenciales . Fecha de
+S0004-06142008000600011-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,06 03 21395,06,75,75,Joaquín Ulises Juan Escudero NºCol : 06 03 21395 . Motivo de ingreso : Paciente
+S0004-06142008000600014-1,false_positive,O,ID_ASEGURAMIENTO,,75648232,-1,16,: nhc-76844523 . NASS : 71 75648232 33 . Domicilio : c/ Martíne
+S0004-06142008000600014-1,false_positive,O,CALLE,,33,-1,17,nhc-76844523 . NASS : 71 75648232 33 . Domicilio : c/ Martíne Villena
+S0004-06142008000600014-1,false_positive,O,CALLE,,4,-1,25,"Domicilio : c/ Martíne Villena , 4 . Localidad/ Provincia : Albacete ."
+S0004-06142008000600014-1,false_positive,O,ID_SUJETO_ASISTENCIA,,02,-1,73,Pedro Carrión López NºCol : 06 02 76485 . Motivo de ingreso :
+S0004-06142008000600014-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,76485,-1,74,Carrión López NºCol : 06 02 76485 . Motivo de ingreso : Dolor
+S0004-06142008000600014-1,false_positive,O,TERRITORIO,,1D,-1,528,"Calle Ginzo de limia 56 , 1D Albacete . ( España ) ."
+S0004-06142008000600014-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,71 75648232 33,71,15,15,CIPA : nhc-76844523 . NASS : 71 75648232 33 . Domicilio : c/ Martíne Villena
+S0004-06142008000600014-1,boundary_error,CALLE,CALLE,"c/ Martíne Villena , 4",c/ Martíne Villena,21,21,"71 75648232 33 . Domicilio : c/ Martíne Villena , 4 . Localidad/ Provincia : Albacete ."
+S0004-06142008000600014-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,06 02 76485,06,72,72,: Pedro Carrión López NºCol : 06 02 76485 . Motivo de ingreso : Dolor
+S0004-06142008000600014-1,boundary_error,CALLE,CALLE,"Calle Ginzo de limia 56 , 1D",Calle Ginzo de limia 56,522,522,"clínico : Pedro Carrión López . Calle Ginzo de limia 56 , 1D Albacete . ( España ) ."
+S0004-06142008000700003-1,false_positive,O,ID_ASEGURAMIENTO,,29079703,-1,20,: 4568978 . NASS : 65 29079703 30 . Domicilio : Calle Ventisquero
+S0004-06142008000700003-1,false_positive,O,CALLE,,30,-1,21,4568978 . NASS : 65 29079703 30 . Domicilio : Calle Ventisquero de
+S0004-06142008000700003-1,false_positive,O,CALLE,,14,-1,31,"Calle Ventisquero de la condesa , 14 . Localidad/ Provincia : Murcia ."
+S0004-06142008000700003-1,false_positive,O,ID_SUJETO_ASISTENCIA,,08,-1,81,Pablo Guzmán Martínez-Valls NºCol : 30 08 59710 . Historia Actual : Paciente
+S0004-06142008000700003-1,false_positive,O,ID_SUJETO_ASISTENCIA,,59710,-1,82,Guzmán Martínez-Valls NºCol : 30 08 59710 . Historia Actual : Paciente mujer
+S0004-06142008000700003-1,false_positive,O,CALLE,,ICA,-1,486,"Pz . de Pontevedra,2 Ed . ICA , Esc.2º,5ºC 30009 Murcia . ("
+S0004-06142008000700003-1,false_positive,O,CALLE,,"Esc.2º,5ºC",-1,488,"de Pontevedra,2 Ed . ICA , Esc.2º,5ºC 30009 Murcia . ( España )"
+S0004-06142008000700003-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,65 29079703 30,65,19,19,NHC : 4568978 . NASS : 65 29079703 30 . Domicilio : Calle Ventisquero de
+S0004-06142008000700003-1,boundary_error,CALLE,CALLE,"Calle Ventisquero de la condesa , 14",Calle Ventisquero de la condesa,25,25,"65 29079703 30 . Domicilio : Calle Ventisquero de la condesa , 14 . Localidad/ Provincia : Murcia ."
+S0004-06142008000700003-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,30 08 59710,30,80,80,: Pablo Guzmán Martínez-Valls NºCol : 30 08 59710 . Historia Actual : Paciente mujer
+S0004-06142008000700003-1,boundary_error,CALLE,CALLE,"Pz . de Pontevedra,2 Ed . ICA , Esc.2º,5ºC","Pz . de Pontevedra,2 Ed",480,480,"por : Dr. Pablo Guzmán Martínez-Valls Pz . de Pontevedra,2 Ed . ICA , Esc.2º,5ºC 30009 Murcia . ( España )"
+S0004-06142009000100010-3,false_positive,O,ID_ASEGURAMIENTO,,14657845,-1,16,: nhc-7845454 . NASS : 23 14657845 23 . Domicilio : Pº rosales
+S0004-06142009000100010-3,false_positive,O,CALLE,,23,-1,17,"nhc-7845454 . NASS : 23 14657845 23 . Domicilio : Pº rosales ,"
+S0004-06142009000100010-3,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,50,-1,75,Jorge Subirá Ríos NºCol : 50 50 33654 . Historia Actual : Mujer
+S0004-06142009000100010-3,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,33654,-1,76,Subirá Ríos NºCol : 50 50 33654 . Historia Actual : Mujer de
+S0004-06142009000100010-3,false_positive,O,CALLE,,AV,-1,272,"dr . Jorge Subirá Ríos . AV . San Francisco 7 , 3D"
+S0004-06142009000100010-3,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,23 14657845 23,23,15,15,"CIPA : nhc-7845454 . NASS : 23 14657845 23 . Domicilio : Pº rosales ,"
+S0004-06142009000100010-3,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,50 50 33654,50,74,74,: Jorge Subirá Ríos NºCol : 50 50 33654 . Historia Actual : Mujer de
+S0004-06142009000100010-3,boundary_error,CALLE,CALLE,"AV . San Francisco 7 , 3D","San Francisco 7 , 3D",272,274,"dr . Jorge Subirá Ríos . AV . San Francisco 7 , 3D 50006 Zaragoza . ( España )"
+S0004-06142009000200013-1,false_positive,O,CALLE,,01,-1,19,NHC : 4026560 . NASS:24 76078256 01 . Domicilio : AV . Conde
+S0004-06142009000200013-1,false_positive,O,CALLE,,AV,-1,23,"NASS:24 76078256 01 . Domicilio : AV . Conde Casal , 35 ."
+S0004-06142009000200013-1,false_positive,O,CALLE,,35,-1,28,": AV . Conde Casal , 35 . Localidad/ Provincia : Zamora ."
+S0004-06142009000200013-1,false_positive,O,ID_ASEGURAMIENTO,,28,-1,82,Alberto Cruz Guerra NºCol : 49 28 46237 . Informe clínico del paciente
+S0004-06142009000200013-1,false_positive,O,ID_ASEGURAMIENTO,,46237,-1,83,Cruz Guerra NºCol : 49 28 46237 . Informe clínico del paciente :
+S0004-06142009000200013-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,años,-1,107,", con antecedente de aborto dos años y medio antes de ser estudiada"
+S0004-06142009000200013-1,false_positive,O,CALLE,,5 bajo izda,-1,360,"Av. de los Reyes Católicos , 5 bajo izda . 49021 Zamora . ( España"
+S0004-06142009000200013-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:24 76078256 01,76078256,17,18,Paez . NHC : 4026560 . NASS:24 76078256 01 . Domicilio : AV . Conde
+S0004-06142009000200013-1,boundary_error,CALLE,CALLE,"AV . Conde Casal , 35",Conde Casal,23,25,"NASS:24 76078256 01 . Domicilio : AV . Conde Casal , 35 . Localidad/ Provincia : Zamora ."
+S0004-06142009000200013-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_TITULACION_PERSONAL_SANITARIO,5267937,5267937,71,71,Servicio : Ginecologia . Episodio : 5267937 . Médico : Nicolás Alberto Cruz
+S0004-06142009000200013-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,49 28 46237,49,81,81,Nicolás Alberto Cruz Guerra NºCol : 49 28 46237 . Informe clínico del paciente :
+S0004-06142009000200013-1,boundary_error,CALLE,CALLE,"Av. de los Reyes Católicos , 5 bajo izda",Av. de los Reyes Católicos,354,354,": Dr. Nicolás Alberto Cruz Guerra Av. de los Reyes Católicos , 5 bajo izda . 49021 Zamora . ( España"
+S0004-06142009000300014-1,false_positive,O,ID_ASEGURAMIENTO,,465497132,-1,16,: nhc-9764523 . NASS : 02 465497132 12 . Domicilio : Avda. de
+S0004-06142009000300014-1,false_positive,O,CALLE,,12,-1,17,nhc-9764523 . NASS : 02 465497132 12 . Domicilio : Avda. de la
+S0004-06142009000300014-1,false_positive,O,CALLE,,2,-1,26,": Avda. de la Estación , 2 . Localidad/ Provincia : ALbacete ."
+S0004-06142009000300014-1,false_positive,O,ID_SUJETO_ASISTENCIA,,02,-1,76,Pedro Carrión López NºCol : 02 02 78942 . Motivo de ingreso :
+S0004-06142009000300014-1,false_positive,O,ID_SUJETO_ASISTENCIA,,78942,-1,77,Carrión López NºCol : 02 02 78942 . Motivo de ingreso : tumoración
+S0004-06142009000300014-1,false_positive,O,ID_ASEGURAMIENTO,,21,-1,339,02080 Albacete . FAX : 967 21 63 20 EMAIL : pedrocarrion1980@hotmail.com
+S0004-06142009000300014-1,false_positive,O,ID_ASEGURAMIENTO,,63,-1,340,Albacete . FAX : 967 21 63 20 EMAIL : pedrocarrion1980@hotmail.com
+S0004-06142009000300014-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,20,-1,341,. FAX : 967 21 63 20 EMAIL : pedrocarrion1980@hotmail.com
+S0004-06142009000300014-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,02 465497132 12,02,15,15,CIPA : nhc-9764523 . NASS : 02 465497132 12 . Domicilio : Avda. de la
+S0004-06142009000300014-1,boundary_error,CALLE,CALLE,"Avda. de la Estación , 2",Avda. de la Estación,21,21,"02 465497132 12 . Domicilio : Avda. de la Estación , 2 . Localidad/ Provincia : ALbacete ."
+S0004-06142009000300014-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,02 02 78942,02,75,75,: Pedro Carrión López NºCol : 02 02 78942 . Motivo de ingreso : tumoración
+S0004-06142009000300014-1,boundary_error,NUMERO_FAX,ID_ASEGURAMIENTO,967 21 63 20,967,338,338,CP 02080 Albacete . FAX : 967 21 63 20 EMAIL : pedrocarrion1980@hotmail.com
+S0004-06142009000500011-1,false_positive,O,ID_ASEGURAMIENTO,,56413641,-1,16,: nhc-97431658 . NASS : 32 56413641 11 . Domicilio : Plaza Recife
+S0004-06142009000500011-1,false_positive,O,CALLE,,11,-1,17,"nhc-97431658 . NASS : 32 56413641 11 . Domicilio : Plaza Recife ,"
+S0004-06142009000500011-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,15,-1,77,Daniel Lopez García NºCol : 15 15 32145 . Historia Actual : Mujer
+S0004-06142009000500011-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,32145,-1,78,Lopez García NºCol : 15 15 32145 . Historia Actual : Mujer de
+S0004-06142009000500011-1,false_positive,O,PAIS,,Coruña,-1,482,Arriba s / n 15006 La Coruña . ( España ) delnilopez@hotmail.com
+S0004-06142009000500011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,32 56413641 11,32,15,15,"CIPA : nhc-97431658 . NASS : 32 56413641 11 . Domicilio : Plaza Recife ,"
+S0004-06142009000500011-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,15 15 32145,15,76,76,: Daniel Lopez García NºCol : 15 15 32145 . Historia Actual : Mujer de
+S0004-06142009000500011-1,boundary_error,HOSPITAL,HOSPITAL,Hospital Juan Canalejo,planta 11 Hospital Juan Canalejo Xubias,471,469,Lopez García Servicio de Urología - planta 11 Hospital Juan Canalejo Xubias de Arriba s / n 15006
+S0004-06142009000500011-1,boundary_error,CALLE,CALLE,Xubias de Arriba s / n,de Arriba s,474,475,- planta 11 Hospital Juan Canalejo Xubias de Arriba s / n 15006 La Coruña . ( España
+S0004-06142009000500011-1,boundary_error,TERRITORIO,TERRITORIO,La Coruña,La,481,481,de Arriba s / n 15006 La Coruña . ( España ) delnilopez@hotmail.com
+S0004-06142009000900011-1,false_positive,O,ID_ASEGURAMIENTO,,92785623,-1,20,: 0265788 . NASS : 78 92785623 45 . Domicilio : Paseo de
+S0004-06142009000900011-1,false_positive,O,CALLE,,45,-1,21,0265788 . NASS : 78 92785623 45 . Domicilio : Paseo de la
+S0004-06142009000900011-1,false_positive,O,CALLE,,Paseo de la Castellana,-1,25,"78 92785623 45 . Domicilio : Paseo de la Castellana , 81 , 3 , A."
+S0004-06142009000900011-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,28,-1,76,Pablo Garrido Abad NºCol : 28 28 . Informe clínico del paciente :
+S0004-06142009000900011-1,false_positive,O,CALLE,,"C/ Arcos de la Frontera , 27 - 2oA",-1,377,": Dr. Pablo Garrido Abad . C/ Arcos de la Frontera , 27 - 2oA 28023 . Madrid . ( España"
+S0004-06142009000900011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,78 92785623 45,78,19,19,NHC : 0265788 . NASS : 78 92785623 45 . Domicilio : Paseo de la
+S0004-06142009000900011-1,boundary_error,CALLE,CALLE,"Paseo de la Castellana , 81 , 3 , A.","81 , 3 , A.",25,30,"78 92785623 45 . Domicilio : Paseo de la Castellana , 81 , 3 , A. Localidad/ Provincia : Madrid . CP"
+S0004-06142009000900011-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28,28,75,75,: Pablo Garrido Abad NºCol : 28 28 . Informe clínico del paciente :
+S0004-06142009000900011-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,388,388,", 27 - 2oA 28023 . Madrid . ( España ) pgabad@hotmail.com"
+S0004-06142010000100015-1,false_positive,O,ID_ASEGURAMIENTO,,11,-1,13,Jaramillo Pinto . NASS : 46 11 87 0945 1 . Domicilio :
+S0004-06142010000100015-1,false_positive,O,ID_ASEGURAMIENTO,,87,-1,14,Pinto . NASS : 46 11 87 0945 1 . Domicilio : Plaza
+S0004-06142010000100015-1,false_positive,O,ID_ASEGURAMIENTO,,0945,-1,15,. NASS : 46 11 87 0945 1 . Domicilio : Plaza Carrera
+S0004-06142010000100015-1,false_positive,O,CALLE,,1,-1,16,NASS : 46 11 87 0945 1 . Domicilio : Plaza Carrera 7
+S0004-06142010000100015-1,false_positive,O,CALLE,,Piso 14,-1,26,Plaza Carrera 7 # 114-33 . Piso 14 . . Localidad/ Provincia : Bogotá
+S0004-06142010000100015-1,false_positive,O,FECHAS,,04/05/2018,-1,66,: H. Fecha de Ingreso : 04/05/2018 . Médico : Julio Alexander Díaz
+S0004-06142010000100015-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,46 11 87 0945 1,46,12,12,: Jaramillo Pinto . NASS : 46 11 87 0945 1 . Domicilio : Plaza Carrera 7
+S0004-06142010000100015-1,boundary_error,CALLE,CALLE,Plaza Carrera 7 # 114-33 . Piso 14,Plaza Carrera 7 # 114-33,20,20,87 0945 1 . Domicilio : Plaza Carrera 7 # 114-33 . Piso 14 . . Localidad/ Provincia : Bogotá
+S0004-06142010000100015-1,type_confusion,TERRITORIO,PAIS,Bogotá,Bogotá,33,33,14 . . Localidad/ Provincia : Bogotá . CP : 110111 . NHC
+S0004-06142010000100015-1,type_confusion,ID_SUJETO_ASISTENCIA,TERRITORIO,73164,73164,41,41,CP : 110111 . NHC : 73164 . Datos asistenciales . Fecha de
+S0004-06142010000100015-1,false_negative,INSTITUCION,O,"Fundación para el Avance de la Anatomía Patológica , Citología y Clínica Molecular FAPCIM",,250,-1,". Julio Alexander Díaz Pérez . Fundación para el Avance de la Anatomía Patológica , Citología y Clínica Molecular FAPCIM . Bogotá . ( Colombia )"
+S0004-06142010000100015-1,type_confusion,TERRITORIO,PAIS,Bogotá,Bogotá,265,265,Citología y Clínica Molecular FAPCIM . Bogotá . ( Colombia ) Email :
+S0004-06142010000500011-1,false_positive,O,ID_ASEGURAMIENTO,,76679546,-1,20,: 7048598 . NASS : 84 76679546 68 . Domicilio : Paseo Maritimo
+S0004-06142010000500011-1,false_positive,O,CALLE,,68,-1,21,"7048598 . NASS : 84 76679546 68 . Domicilio : Paseo Maritimo ,"
+S0004-06142010000500011-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,15,-1,81,Adolfo Pérez Fentes NºCol : 15 15 98304 . Informe clínico del paciente
+S0004-06142010000500011-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,98304,-1,82,Pérez Fentes NºCol : 15 15 98304 . Informe clínico del paciente :
+S0004-06142010000500011-1,false_positive,O,INSTITUCION,,Compostela,-1,571,Urología Complejo Universitario de Santiago de Compostela . Travesía Choupana s / n.
+S0004-06142010000500011-1,false_positive,O,PAIS,,Compostela,-1,582,/ n. 15706 . Santiago de Compostela . La Coruña ( España )
+S0004-06142010000500011-1,false_positive,O,PAIS,,Coruña,-1,585,. Santiago de Compostela . La Coruña ( España ) danielfentes@yahoo.es
+S0004-06142010000500011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,84 76679546 68,84,19,19,"NHC : 7048598 . NASS : 84 76679546 68 . Domicilio : Paseo Maritimo ,"
+S0004-06142010000500011-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,15 15 98304,15,80,80,Daniel Adolfo Pérez Fentes NºCol : 15 15 98304 . Informe clínico del paciente :
+S0004-06142010000500011-1,boundary_error,HOSPITAL,HOSPITAL,Complejo Universitario de Santiago de Compostela,Complejo Universitario de Santiago de,566,566,Pérez Fentes . Servicio de Urología Complejo Universitario de Santiago de Compostela . Travesía Choupana s / n.
+S0004-06142010000500011-1,boundary_error,TERRITORIO,TERRITORIO,Santiago de Compostela,Santiago de,580,580,Choupana s / n. 15706 . Santiago de Compostela . La Coruña ( España )
+S0004-06142010000500011-1,boundary_error,TERRITORIO,TERRITORIO,La Coruña,La,584,584,15706 . Santiago de Compostela . La Coruña ( España ) danielfentes@yahoo.es
+S0004-06142010000500014-1,false_positive,O,ID_ASEGURAMIENTO,,24675873,-1,20,: 2046598 . NASS : 07 24675873 03 . Domicilio : Calle de
+S0004-06142010000500014-1,false_positive,O,CALLE,,03,-1,21,2046598 . NASS : 07 24675873 03 . Domicilio : Calle de la
+S0004-06142010000500014-1,false_positive,O,ID_SUJETO_ASISTENCIA,,45,-1,82,Ignacio Gómez García NºCol : 45 45 87952 . Historia Actual : Varón
+S0004-06142010000500014-1,false_positive,O,ID_ASEGURAMIENTO,,87952,-1,83,Gómez García NºCol : 45 45 87952 . Historia Actual : Varón de
+S0004-06142010000500014-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,Piuria,-1,168,normal . Sedimento de orina : Piuria . Cultivo de orina : estéril
+S0004-06142010000500014-1,false_positive,O,CALLE,,n,-1,506,"Avda. de Barber , s / n 45004 Toledo ( España ) naggoga@yahoo.es"
+S0004-06142010000500014-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,07 24675873 03,07,19,19,NHC : 2046598 . NASS : 07 24675873 03 . Domicilio : Calle de la
+S0004-06142010000500014-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,45 45 87952,45,81,81,: Ignacio Gómez García NºCol : 45 45 87952 . Historia Actual : Varón de
+S0004-06142010000500014-1,boundary_error,CALLE,CALLE,"Avda. de Barber , s / n","Avda. de Barber , s",500,500,"Urología Hospital Virgen de la Salud Avda. de Barber , s / n 45004 Toledo ( España ) naggoga@yahoo.es"
+S0210-48062003001000009-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,54,-1,12,"Ardoain Suarez . NASS : 12397565 54 . Domicilio : C/ Viamonte ,"
+S0210-48062003001000009-1,false_positive,O,INSTITUCION,,Sa,-1,1057,"Roberto León , Instituto de Nefrología Sa Buenos Aires . Sa Buenos Aires"
+S0210-48062003001000009-1,false_positive,O,TERRITORIO,,Buenos Aires,-1,1058,"León , Instituto de Nefrología Sa Buenos Aires . Sa Buenos Aires lleon@intramed.net.ar"
+S0210-48062003001000009-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,12397565 54,12397565,11,11,": Ardoain Suarez . NASS : 12397565 54 . Domicilio : C/ Viamonte ,"
+S0210-48062003001000009-1,false_negative,SEXO_SUJETO_ASISTENCIA,O,femenina,,235,-1,intestinal normal . No disfunción sexual femenina previa hasta la presente dispareunia que
+S0210-48062003001000009-1,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,DR.Luis Roberto León,Roberto León,1050,1051,"conectivo denso . Remitido por : DR.Luis Roberto León , Instituto de Nefrología Sa Buenos"
+S0210-48062003001000009-1,boundary_error,INSTITUCION,HOSPITAL,Instituto de Nefrología Sa Buenos Aires,Instituto de Nefrología,1054,1054,"por : DR.Luis Roberto León , Instituto de Nefrología Sa Buenos Aires . Sa Buenos Aires lleon@intramed.net.ar"
+S0210-48062003001000009-1,boundary_error,TERRITORIO,TERRITORIO,Buenos Aires,Sa Buenos Aires,1062,1061,de Nefrología Sa Buenos Aires . Sa Buenos Aires lleon@intramed.net.ar
+S0210-48062004000300007-1,false_positive,O,ID_ASEGURAMIENTO,,35637063,-1,20,: 3740648 . NASS : 74 35637063 21 . Domicilio : C/ Sinesio
+S0210-48062004000300007-1,false_positive,O,CALLE,,21,-1,21,3740648 . NASS : 74 35637063 21 . Domicilio : C/ Sinesio Delgado
+S0210-48062004000300007-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,28,-1,80,Enrique Antón Florit NºCol : 28 28 57800 . Informe clínico del paciente
+S0210-48062004000300007-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,57800,-1,81,Antón Florit NºCol : 28 28 57800 . Informe clínico del paciente :
+S0210-48062004000300007-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,74 35637063 21,74,19,19,NHC : 3740648 . NASS : 74 35637063 21 . Domicilio : C/ Sinesio Delgado
+S0210-48062004000300007-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 57800,28,79,79,: Enrique Antón Florit NºCol : 28 28 57800 . Informe clínico del paciente :
+S0210-48062004000300007-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,740,740,", Hospital Clínico San Carlos , Madrid E-mail : kiqueflorit@hotmail.com"
+S0210-48062004000400008-1,false_positive,O,ID_ASEGURAMIENTO,,35676035,-1,20,: 7345893 . NASS : 48 35676035 31 . Domicilio : P/ Gómez
+S0210-48062004000400008-1,false_positive,O,CALLE,,31,-1,21,7345893 . NASS : 48 35676035 31 . Domicilio : P/ Gómez de
+S0210-48062004000400008-1,false_positive,O,ID_SUJETO_ASISTENCIA,,28,-1,78,María Madruga Garrido NºCol : 28 28 57893 . Informe clínico del paciente
+S0210-48062004000400008-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,57893,-1,79,Madruga Garrido NºCol : 28 28 57893 . Informe clínico del paciente :
+S0210-48062004000400008-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,48 35676035 31,48,19,19,NHC : 7345893 . NASS : 48 35676035 31 . Domicilio : P/ Gómez de
+S0210-48062004000400008-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 57893,28,77,77,: María Madruga Garrido NºCol : 28 28 57893 . Informe clínico del paciente :
+S0210-48062004000500008-1,false_positive,O,ID_ASEGURAMIENTO,,94312567,-1,16,: nhc-0325640 . NASS : 78 94312567 55 . Domicilio : Calle Teodoro
+S0210-48062004000500008-1,false_positive,O,CALLE,,55,-1,17,nhc-0325640 . NASS : 78 94312567 55 . Domicilio : Calle Teodoro Camino
+S0210-48062004000500008-1,false_positive,O,CALLE,,27,-1,25,"Domicilio : Calle Teodoro Camino , 27 . Localidad/ Provincia : Albacete ."
+S0210-48062004000500008-1,false_positive,O,ID_SUJETO_ASISTENCIA,,02,-1,75,Pilar Sánchez Ortiz NºCol : 02 02 79461 . Motivo de ingreso :
+S0210-48062004000500008-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,79461,-1,76,Sánchez Ortiz NºCol : 02 02 79461 . Motivo de ingreso : erección
+S0210-48062004000500008-1,false_positive,O,CALLE,,II,-1,557,"Ortiz , Centro de Salud Hellín II , C/ Las Turbas de Cuenca"
+S0210-48062004000500008-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,78 94312567 55,78,15,15,CIPA : nhc-0325640 . NASS : 78 94312567 55 . Domicilio : Calle Teodoro Camino
+S0210-48062004000500008-1,boundary_error,CALLE,CALLE,"Calle Teodoro Camino , 27",Calle Teodoro Camino,21,21,"78 94312567 55 . Domicilio : Calle Teodoro Camino , 27 . Localidad/ Provincia : Albacete ."
+S0210-48062004000500008-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,02 02 79461,02,74,74,: Pilar Sánchez Ortiz NºCol : 02 02 79461 . Motivo de ingreso : erección
+S0210-48062004000500008-1,boundary_error,CENTRO_SALUD,HOSPITAL,Centro de Salud Hellín II,Centro de Salud Hellín,553,553,"clinico : Pilar Sánchez Ortiz , Centro de Salud Hellín II , C/ Las Turbas de Cuenca"
+S0210-48062004000500008-1,boundary_error,CALLE,CALLE,C/ Las Turbas de Cuenca s / n,C/ Las Turbas de Cuenca s,559,559,"Centro de Salud Hellín II , C/ Las Turbas de Cuenca s / n , 02400 - Hellín ( Albacete"
+S0210-48062004000500008-1,type_confusion,NUMERO_TELEFONO,ID_ASEGURAMIENTO,967542406,967542406,580,580,"España ) . Telf . : 967542406 , e-mail : pilarsortiz@hotmail.com"
+S0210-48062004000500010-1,false_positive,O,ID_SUJETO_ASISTENCIA,,24,-1,77,Isabel González Pérez NºCol : 24 24 45612 . Número de teléfono de
+S0210-48062004000500010-1,false_positive,O,ID_ASEGURAMIENTO,,45612,-1,78,González Pérez NºCol : 24 24 45612 . Número de teléfono de la
+S0210-48062004000500010-1,false_positive,O,ID_ASEGURAMIENTO,,909,-1,88,teléfono de la madre : 637 909 232 . Historia Actual : Niño
+S0210-48062004000500010-1,false_positive,O,ID_ASEGURAMIENTO,,232,-1,89,de la madre : 637 909 232 . Historia Actual : Niño de
+S0210-48062004000500010-1,false_negative,TERRITORIO,O,CP:24003,,30,-1,3H. Localidad/ Provincia : León . CP:24003 . NHC : 2545164 . Datos
+S0210-48062004000500010-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,24 24 45612,24,76,76,María Isabel González Pérez NºCol : 24 24 45612 . Número de teléfono de la
+S0210-48062004000500010-1,boundary_error,NUMERO_TELEFONO,ID_ASEGURAMIENTO,637 909 232,637,87,87,de teléfono de la madre : 637 909 232 . Historia Actual : Niño de
+S0210-48062004000500010-1,boundary_error,HOSPITAL,HOSPITAL,Complejo Hospitalario de León,del Complejo Hospitalario de León,433,432,Pérez . Servicio de Medicina Intensiva del Complejo Hospitalario de León . Altos de Nava s /
+S0210-48062004000500010-1,boundary_error,CALLE,CALLE,Altos de Nava s / n.,Altos de Nava s,438,438,del Complejo Hospitalario de León . Altos de Nava s / n. 24071 León .
+S0210-48062004000500011-1,false_positive,O,CALLE,,36,-1,19,NHC : 7843562 . NASS:78 43567304 36 . Domicilio : Av. San Bernardo
+S0210-48062004000500011-1,false_positive,O,CALLE,,3,-1,31,"Bernardo , 11 , 1 , 3 . Localidad/ Provincia : Madrid ."
+S0210-48062004000500011-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,28,-1,83,Pilar Bahílo Mateu NºCol : 28 28 94550 . Informe clínico del paciente
+S0210-48062004000500011-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,94550,-1,84,Bahílo Mateu NºCol : 28 28 94550 . Informe clínico del paciente :
+S0210-48062004000500011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:78 43567304 36,43567304,17,18,Nuñez . NHC : 7843562 . NASS:78 43567304 36 . Domicilio : Av. San Bernardo
+S0210-48062004000500011-1,boundary_error,CALLE,CALLE,"Av. San Bernardo , 11 , 1 , 3","Av. San Bernardo , 11 , 1",23,23,"NASS:78 43567304 36 . Domicilio : Av. San Bernardo , 11 , 1 , 3 . Localidad/ Provincia : Madrid ."
+S0210-48062004000500011-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,36,36,", 3 . Localidad/ Provincia : Madrid . CP : 28001 . Datos"
+S0210-48062004000500011-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,28 28 94550,28,82,82,María Pilar Bahílo Mateu NºCol : 28 28 94550 . Informe clínico del paciente :
+S0210-48062004000800009-1,false_positive,O,ID_ASEGURAMIENTO,,56756794,-1,20,: 3456723 . NASS : 89 56756794 75 . Domicilio : C/ Pinto
+S0210-48062004000800009-1,false_positive,O,CALLE,,75,-1,21,"3456723 . NASS : 89 56756794 75 . Domicilio : C/ Pinto ,"
+S0210-48062004000800009-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,75,: Beatriz Aguilera NºCol : 28 28 64891 . Historia Actual : Paciente
+S0210-48062004000800009-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,64891,-1,76,Beatriz Aguilera NºCol : 28 28 64891 . Historia Actual : Paciente varón
+S0210-48062004000800009-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,89 56756794 75,89,19,19,"NHC : 3456723 . NASS : 89 56756794 75 . Domicilio : C/ Pinto ,"
+S0210-48062004000800009-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 64891,28,74,74,Médico : Beatriz Aguilera NºCol : 28 28 64891 . Historia Actual : Paciente varón
+S0210-48062004000800009-1,false_negative,INSTITUCION,O,Servicio de Histopatología INTCF,,410,-1,Responsable clínico : Dra. Beatriz Aguilera Servicio de Histopatología INTCF - Madrid . c/ José Echegaray
+S0210-48062004000800009-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,415,415,Aguilera Servicio de Histopatología INTCF - Madrid . c/ José Echegaray 4 .
+S0210-48062004000800009-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,426,426,4 . 28232 Las Rozas . Madrid . E-mail : b.aguilera@mju.es
+S0210-48062005000800014-1,false_positive,O,ID_ASEGURAMIENTO,,35670165,-1,20,: 4756758 . NASS : 74 35670165 14 . Domicilio : C/ Telémaco
+S0210-48062005000800014-1,false_positive,O,CALLE,,14,-1,21,"4756758 . NASS : 74 35670165 14 . Domicilio : C/ Telémaco ,"
+S0210-48062005000800014-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,41,-1,77,Angel Moreno Vega NºCol : 41 41 87441 . Informe clínico del paciente
+S0210-48062005000800014-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,87441,-1,78,Moreno Vega NºCol : 41 41 87441 . Informe clínico del paciente :
+S0210-48062005000800014-1,false_positive,O,FECHAS,,29,-1,225,la intervención quirúrgica . El día 29 de marzo del 2004 realizamos tumorectomía
+S0210-48062005000800014-1,false_positive,O,FECHAS,,de,-1,226,intervención quirúrgica . El día 29 de marzo del 2004 realizamos tumorectomía renal
+S0210-48062005000800014-1,false_positive,O,CALLE,,6,-1,274,"Moreno Vega . Pasaje Petunia , 6 E-41089 Sevilla bertsand@terra.es ; oncojerez@saludalia.com"
+S0210-48062005000800014-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,74 35670165 14,74,19,19,"NHC : 4756758 . NASS : 74 35670165 14 . Domicilio : C/ Telémaco ,"
+S0210-48062005000800014-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,41 41 87441,41,76,76,: Angel Moreno Vega NºCol : 41 41 87441 . Informe clínico del paciente :
+S0210-48062005000800014-1,boundary_error,FECHAS,FECHAS,29 de marzo del 2004,marzo del 2004,225,227,la intervención quirúrgica . El día 29 de marzo del 2004 realizamos tumorectomía renal izquierda vía lumbotomía
+S0210-48062005000800014-1,boundary_error,CALLE,CALLE,"Pasaje Petunia , 6",Pasaje Petunia,271,271,": Dr. Angel Moreno Vega . Pasaje Petunia , 6 E-41089 Sevilla bertsand@terra.es ; oncojerez@saludalia.com"
+S0210-48062005001000013-1,false_positive,O,ID_ASEGURAMIENTO,,56785477,-1,20,: 8973552 . NASS : 89 56785477 01 . Domicilio : C/ Melquiades
+S0210-48062005001000013-1,false_positive,O,CALLE,,01,-1,21,"8973552 . NASS : 89 56785477 01 . Domicilio : C/ Melquiades ,"
+S0210-48062005001000013-1,false_positive,O,CALLE,,2,-1,28,". Domicilio : C/ Melquiades , 2 , 6 , 1 . Localidad/"
+S0210-48062005001000013-1,false_positive,O,CALLE,,6,-1,30,": C/ Melquiades , 2 , 6 , 1 . Localidad/ Provincia :"
+S0210-48062005001000013-1,false_positive,O,CALLE,,1,-1,32,"Melquiades , 2 , 6 , 1 . Localidad/ Provincia : Madrid ."
+S0210-48062005001000013-1,false_positive,O,ID_SUJETO_ASISTENCIA,,28,-1,79,René Salas Cabrera NºCol : 28 28 57992 . Informe clínico del paciente
+S0210-48062005001000013-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,57992,-1,80,Salas Cabrera NºCol : 28 28 57992 . Informe clínico del paciente :
+S0210-48062005001000013-1,false_positive,O,TERRITORIO,,Correo,-1,783,Servicio de Urología . HULP . Correo Electronico . revimcaribe@gmail.com
+S0210-48062005001000013-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,89 56785477 01,89,19,19,"NHC : 8973552 . NASS : 89 56785477 01 . Domicilio : C/ Melquiades ,"
+S0210-48062005001000013-1,boundary_error,CALLE,CALLE,"C/ Melquiades , 2 , 6 , 1",C/ Melquiades,25,25,"89 56785477 01 . Domicilio : C/ Melquiades , 2 , 6 , 1 . Localidad/ Provincia : Madrid ."
+S0210-48062005001000013-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,37,37,", 1 . Localidad/ Provincia : Madrid . CP : 28047 . Datos"
+S0210-48062005001000013-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 57992,28,78,78,: René Salas Cabrera NºCol : 28 28 57992 . Informe clínico del paciente :
+S0210-48062005001000013-1,type_confusion,HOSPITAL,TERRITORIO,HULP,HULP,781,781,Salas Cabrera Servicio de Urología . HULP . Correo Electronico . revimcaribe@gmail.com
+S0210-48062006000200017-1,false_positive,O,ID_ASEGURAMIENTO,,17845723,-1,20,: 7635956 . NASS : 12 17845723 56 . Domicilio : Calle Cuenca
+S0210-48062006000200017-1,false_positive,O,CALLE,,56,-1,21,"7635956 . NASS : 12 17845723 56 . Domicilio : Calle Cuenca ,"
+S0210-48062006000200017-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,11,-1,80,María Soto Delgado NºCol : 11 11 50124 . Historia Actual : varón
+S0210-48062006000200017-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,50124,-1,81,Soto Delgado NºCol : 11 11 50124 . Historia Actual : varón de
+S0210-48062006000200017-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,12 17845723 56,12,19,19,"NHC : 7635956 . NASS : 12 17845723 56 . Domicilio : Calle Cuenca ,"
+S0210-48062006000200017-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,11 11 50124,11,79,79,: María Soto Delgado NºCol : 11 11 50124 . Historia Actual : varón de
+S0210-48062006000300014-1,false_positive,O,ID_ASEGURAMIENTO,,27845613,-1,20,: 7246572 . NASS : 46 27845613 05 . Domicilio : P/ de
+S0210-48062006000300014-1,false_positive,O,CALLE,,05,-1,21,7246572 . NASS : 46 27845613 05 . Domicilio : P/ de ALicante
+S0210-48062006000300014-1,false_positive,O,ID_SUJETO_ASISTENCIA,,46,-1,78,Mario Ramírez Backhaus NºCol : 46 46 57812 . Informe clínico del paciente
+S0210-48062006000300014-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,57812,-1,79,Ramírez Backhaus NºCol : 46 46 57812 . Informe clínico del paciente :
+S0210-48062006000300014-1,false_positive,O,HOSPITAL,,La,-1,999,"Servicio de Urología Hospital Univ . La Fe Avda. Campanar , 21 46009"
+S0210-48062006000300014-1,false_positive,O,CALLE,,Fe,-1,1000,"de Urología Hospital Univ . La Fe Avda. Campanar , 21 46009 Valencia"
+S0210-48062006000300014-1,false_positive,O,CALLE,,21,-1,1004,". La Fe Avda. Campanar , 21 46009 Valencia E-mail : ramirezbackhaus@yahoo.es"
+S0210-48062006000300014-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,46 27845613 05,46,19,19,NHC : 7246572 . NASS : 46 27845613 05 . Domicilio : P/ de ALicante
+S0210-48062006000300014-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,46 46 57812,46,77,77,: Mario Ramírez Backhaus NºCol : 46 46 57812 . Informe clínico del paciente :
+S0210-48062006000300014-1,boundary_error,HOSPITAL,HOSPITAL,Hospital Univ . La Fe,Hospital Univ,996,996,"Mario Ramírez Backhaus Servicio de Urología Hospital Univ . La Fe Avda. Campanar , 21 46009 Valencia"
+S0210-48062006000300014-1,boundary_error,CALLE,CALLE,"Avda. Campanar , 21",Avda. Campanar,1001,1001,"Urología Hospital Univ . La Fe Avda. Campanar , 21 46009 Valencia E-mail : ramirezbackhaus@yahoo.es"
+S0210-48062006000400012-1,boundary_error,ID_ASEGURAMIENTO,CALLE,NASS:23547842 16,16,10,11,. Apellidos : Uribe Cardona . NASS:23547842 16 . Domicilio : Calle 4 Sur
+S0210-48062006000400012-1,false_negative,ID_SUJETO_ASISTENCIA,O,NHC:7896541,,31,-1,Medellin . CP : 06411 . NHC:7896541 . Datos asistenciales . Fecha de
+S0210-48062006000400012-1,type_confusion,PAIS,TERRITORIO,COlombia,COlombia,44,44,nacimiento : 19/04/2000 . País : COlombia . Edad : 14 Sexo :
+S0210-48062006000400012-1,false_negative,INSTITUCION,O,Johnson & Johnson,,630,-1,"Vicryl ® 4-0 ( Ethicon , Johnson & Johnson ) . Se realiza un cierre"
+S0210-48062006000400012-1,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,JG Velásquez López,JG Velásquez,703,703,seminal . Remitido por : Dr. JG Velásquez López Carrera 39 No 47-33 Medellín -
+S0210-48062006000400012-1,boundary_error,CALLE,CALLE,Carrera 39 No 47-33,López Carrera 39 No 47-33,706,705,Remitido por : Dr. JG Velásquez López Carrera 39 No 47-33 Medellín - Colombia E-mail : juangvl@gmail.com
+S0210-48062007000100004-1,false_positive,O,ID_ASEGURAMIENTO,,37583784,-1,20,: 8943568 . NASS : 84 37583784 05 . Domicilio : Calle FInisterre
+S0210-48062007000100004-1,false_positive,O,CALLE,,05,-1,21,"8943568 . NASS : 84 37583784 05 . Domicilio : Calle FInisterre ,"
+S0210-48062007000100004-1,false_positive,O,FECHAS,,28,-1,75,Carla Núñez Mora NºCol : 28 28 62003 . Informe clínico del paciente
+S0210-48062007000100004-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,62003,-1,76,Núñez Mora NºCol : 28 28 62003 . Informe clínico del paciente :
+S0210-48062007000100004-1,false_positive,O,HOSPITAL,,La Paz,-1,298,"de Urología . Hospital Univ . La Paz . Pº de la Castellana ,"
+S0210-48062007000100004-1,false_positive,O,CALLE,,261,-1,306,". Pº de la Castellana , 261 . 28046 Madrid . Tel ."
+S0210-48062007000100004-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,277,-1,315,Madrid . Tel . : 917 277 000 E-mail autor : cnunezmora@hotmail.com
+S0210-48062007000100004-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,000,-1,316,. Tel . : 917 277 000 E-mail autor : cnunezmora@hotmail.com
+S0210-48062007000100004-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,84 37583784 05,84,19,19,"NHC : 8943568 . NASS : 84 37583784 05 . Domicilio : Calle FInisterre ,"
+S0210-48062007000100004-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 62003,28,74,74,: Carla Núñez Mora NºCol : 28 28 62003 . Informe clínico del paciente :
+S0210-48062007000100004-1,boundary_error,HOSPITAL,HOSPITAL,Hospital Univ . La Paz,Hospital Univ,295,295,"Mora . Servicio de Urología . Hospital Univ . La Paz . Pº de la Castellana ,"
+S0210-48062007000100004-1,boundary_error,CALLE,CALLE,"Pº de la Castellana , 261",Pº de la Castellana,301,301,"Hospital Univ . La Paz . Pº de la Castellana , 261 . 28046 Madrid . Tel ."
+S0210-48062007000100004-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,309,309,"la Castellana , 261 . 28046 Madrid . Tel . : 917 277"
+S0210-48062007000100004-1,boundary_error,NUMERO_TELEFONO,ID_ASEGURAMIENTO,917 277 000,917,314,314,28046 Madrid . Tel . : 917 277 000 E-mail autor : cnunezmora@hotmail.com
+S0210-48062007000100012-1,false_positive,O,ID_SUJETO_ASISTENCIA,,50201565,-1,13,Suárez Castro . NASS : 15 50201565 22 . Domicilio : Avda. de
+S0210-48062007000100012-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,22,-1,14,Castro . NASS : 15 50201565 22 . Domicilio : Avda. de los
+S0210-48062007000100012-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,11,-1,77,Manuel Soto Delgado NºCol : 11 11 26484 . Antecedentes : sin antecedentes
+S0210-48062007000100012-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,26484,-1,78,Soto Delgado NºCol : 11 11 26484 . Antecedentes : sin antecedentes personales
+S0210-48062007000100012-1,false_positive,O,CALLE,,Ctra,-1,361,"Urología . Hospital Puerto Real . Ctra . Nacional IV , Km 665"
+S0210-48062007000100012-1,false_positive,O,ID_ASEGURAMIENTO,,005,-1,379,Cádiz . Tel . : 956 005 000 E-mail : manuelsotocorreo@yahoo.es
+S0210-48062007000100012-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,000,-1,380,. Tel . : 956 005 000 E-mail : manuelsotocorreo@yahoo.es
+S0210-48062007000100012-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,15 50201565 22,15,12,12,: Suárez Castro . NASS : 15 50201565 22 . Domicilio : Avda. de los
+S0210-48062007000100012-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,11 11 26484,11,76,76,: Manuel Soto Delgado NºCol : 11 11 26484 . Antecedentes : sin antecedentes personales
+S0210-48062007000100012-1,boundary_error,CALLE,CALLE,"Ctra . Nacional IV , Km 665","Nacional IV , Km 665",361,363,"Urología . Hospital Puerto Real . Ctra . Nacional IV , Km 665 . 11510 Puerto Real - Cádiz"
+S0210-48062007000100012-1,boundary_error,NUMERO_TELEFONO,ID_ASEGURAMIENTO,956 005 000,956,378,378,- Cádiz . Tel . : 956 005 000 E-mail : manuelsotocorreo@yahoo.es
+S0210-48062007000500016-1,false_positive,O,ID_ASEGURAMIENTO,,65456795,-1,20,: 7845633 . NASS : 27 65456795 38 . Domicilio : Calle del
+S0210-48062007000500016-1,false_positive,O,CALLE,,38,-1,21,7845633 . NASS : 27 65456795 38 . Domicilio : Calle del Cobre
+S0210-48062007000500016-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,28,-1,79,Cabrera Meirás . NºCol : 28 28 . Historia Actual : Varón de
+S0210-48062007000500016-1,false_positive,O,CALLE,,n,-1,785,. Avda. de Cordoba s / n - 28041 Madrid . Tel .
+S0210-48062007000500016-1,false_positive,O,ID_ASEGURAMIENTO,,913,-1,793,28041 Madrid . Tel . : 913 908 121 E-mail autor : cabdoc@hotmail.com
+S0210-48062007000500016-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,27 65456795 38,27,19,19,NHC : 7845633 . NASS : 27 65456795 38 . Domicilio : Calle del Cobre
+S0210-48062007000500016-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28,28,78,78,Francisco Cabrera Meirás . NºCol : 28 28 . Historia Actual : Varón de
+S0210-48062007000500016-1,boundary_error,CALLE,CALLE,Avda. de Cordoba s / n,Avda. de Cordoba s,780,780,Hospital Universitario 12 de Octubre . Avda. de Cordoba s / n - 28041 Madrid . Tel .
+S0210-48062007000500016-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,788,788,Cordoba s / n - 28041 Madrid . Tel . : 913 908
+S0210-48062007000500016-1,boundary_error,NUMERO_TELEFONO,NOMBRE_SUJETO_ASISTENCIA,913 908 121,908 121,793,794,28041 Madrid . Tel . : 913 908 121 E-mail autor : cabdoc@hotmail.com
+S0210-48062007000700014-1,false_positive,O,ID_ASEGURAMIENTO,,45978369,-1,20,: 7438498 . NASS : 83 45978369 13 . Domicilio : Avda. Diego
+S0210-48062007000700014-1,false_positive,O,CALLE,,13,-1,21,7438498 . NASS : 83 45978369 13 . Domicilio : Avda. Diego de
+S0210-48062007000700014-1,false_positive,O,CALLE,,24,-1,30,": Avda. Diego de León , 24 . Localidad/ Provincia : Barcelona ."
+S0210-48062007000700014-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,08,-1,81,Raúl Hernando Martínez-Rodríguez NºCol : 08 08 22845 . Informe clínico del paciente
+S0210-48062007000700014-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,22845,-1,82,Hernando Martínez-Rodríguez NºCol : 08 08 22845 . Informe clínico del paciente :
+S0210-48062007000700014-1,false_positive,O,CALLE,,340-350,-1,269,". Fundación Puigvert . Cartagena , 340-350 - 08025 Barcelona . Tel ."
+S0210-48062007000700014-1,false_positive,O,ID_ASEGURAMIENTO,,934,-1,277,08025 Barcelona . Tel . : 934 169 700 E-mail autor : dr.rmartinez@yahoo.es
+S0210-48062007000700014-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,83 45978369 13,83,19,19,NHC : 7438498 . NASS : 83 45978369 13 . Domicilio : Avda. Diego de
+S0210-48062007000700014-1,boundary_error,CALLE,CALLE,"Avda. Diego de León , 24",Avda. Diego de León,25,25,"83 45978369 13 . Domicilio : Avda. Diego de León , 24 . Localidad/ Provincia : Barcelona ."
+S0210-48062007000700014-1,type_confusion,TERRITORIO,PAIS,Barcelona,Barcelona,35,35,", 24 . Localidad/ Provincia : Barcelona . CP : 08025 . Datos"
+S0210-48062007000700014-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,08 08 22845,08,80,80,: Raúl Hernando Martínez-Rodríguez NºCol : 08 08 22845 . Informe clínico del paciente :
+S0210-48062007000700014-1,type_confusion,INSTITUCION,HOSPITAL,Fundación Puigvert,Fundación Puigvert,264,264,"Hernando Martínez-Rodríguez Servicio de Urología . Fundación Puigvert . Cartagena , 340-350 - 08025"
+S0210-48062007000700014-1,boundary_error,CALLE,CALLE,"Cartagena , 340-350",Cartagena,267,267,"de Urología . Fundación Puigvert . Cartagena , 340-350 - 08025 Barcelona . Tel ."
+S0210-48062007000700014-1,type_confusion,TERRITORIO,PAIS,Barcelona,Barcelona,272,272,". Cartagena , 340-350 - 08025 Barcelona . Tel . : 934 169"
+S0210-48062007000700014-1,boundary_error,NUMERO_TELEFONO,NOMBRE_SUJETO_ASISTENCIA,934 169 700,169 700,277,278,08025 Barcelona . Tel . : 934 169 700 E-mail autor : dr.rmartinez@yahoo.es
+S0210-48062007001000004-4,false_positive,O,ID_ASEGURAMIENTO,,98743156,-1,12,Mercado Ruiz . NASS : 15 98743156 21 . Domicilio : Avenida Manuel
+S0210-48062007001000004-4,false_positive,O,EDAD_SUJETO_ASISTENCIA,,21,-1,13,Ruiz . NASS : 15 98743156 21 . Domicilio : Avenida Manuel de
+S0210-48062007001000004-4,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,36,-1,76,Jorge Planelles Gómez NºCol : 36 36 79464 . Motivo de ingreso :
+S0210-48062007001000004-4,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,79464,-1,77,Planelles Gómez NºCol : 36 36 79464 . Motivo de ingreso : Paciente
+S0210-48062007001000004-4,false_positive,O,EDAD_SUJETO_ASISTENCIA,,9 meses,-1,147,en la infancia . A los 9 meses sufrió un cuadro de meningitis que
+S0210-48062007001000004-4,false_positive,O,ID_ASEGURAMIENTO,,862,-1,554,46017 Valencia Tel . : 963 862 500 E-mail autor : jorge_planelles@yahoo.es
+S0210-48062007001000004-4,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,500,-1,555,Valencia Tel . : 963 862 500 E-mail autor : jorge_planelles@yahoo.es
+S0210-48062007001000004-4,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,15 98743156 21,15,11,11,: Mercado Ruiz . NASS : 15 98743156 21 . Domicilio : Avenida Manuel de
+S0210-48062007001000004-4,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,36 36 79464,36,75,75,: Jorge Planelles Gómez NºCol : 36 36 79464 . Motivo de ingreso : Paciente
+S0210-48062007001000004-4,boundary_error,NUMERO_TELEFONO,ID_ASEGURAMIENTO,963 862 500,963,553,553,- 46017 Valencia Tel . : 963 862 500 E-mail autor : jorge_planelles@yahoo.es
+S0210-48062009000200017-1,false_positive,O,ID_ASEGURAMIENTO,,75620756,-1,20,: 8597254 . NASS : 43 75620756 31 . Domicilio : Calle de
+S0210-48062009000200017-1,false_positive,O,CALLE,,31,-1,21,8597254 . NASS : 43 75620756 31 . Domicilio : Calle de Antonio
+S0210-48062009000200017-1,false_positive,O,ID_SUJETO_ASISTENCIA,,46,-1,88,Vanesa Bango García NºCol : 46 46 58941 . Informe clínico del paciente
+S0210-48062009000200017-1,false_positive,O,ID_ASEGURAMIENTO,,58941,-1,89,Bango García NºCol : 46 46 58941 . Informe clínico del paciente :
+S0210-48062009000200017-1,false_positive,O,CALLE,,21,-1,530,"de Valencia . Avenida Campanar , 21 - 46009 Valencia Tel . :"
+S0210-48062009000200017-1,false_positive,O,ID_ASEGURAMIENTO,,963,-1,537,- 46009 Valencia Tel . : 963 862 700 E-mail autor : vaneban45@hotmail.com
+S0210-48062009000200017-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,43 75620756 31,43,19,19,NHC : 8597254 . NASS : 43 75620756 31 . Domicilio : Calle de Antonio
+S0210-48062009000200017-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_TITULACION_PERSONAL_SANITARIO,8349623,8349623,78,78,Servicio : Urología . Episodio : 8349623 . Médico : Vanesa Bango García
+S0210-48062009000200017-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,46 46 58941,46,87,87,: Vanesa Bango García NºCol : 46 46 58941 . Informe clínico del paciente :
+S0210-48062009000200017-1,boundary_error,CALLE,CALLE,"Avenida Campanar , 21",Avenida Campanar,527,527,"Universitario La Fe de Valencia . Avenida Campanar , 21 - 46009 Valencia Tel . :"
+S0210-48062009000200017-1,boundary_error,NUMERO_TELEFONO,NOMBRE_SUJETO_ASISTENCIA,963 862 700,862 700,537,538,- 46009 Valencia Tel . : 963 862 700 E-mail autor : vaneban45@hotmail.com
+S0210-48062009000200018-1,false_positive,O,ID_ASEGURAMIENTO,,46082647,-1,21,: 3780659 . NASS : 73 46082647 20 . Domicilio : C/ Conde
+S0210-48062009000200018-1,false_positive,O,CALLE,,20,-1,22,3780659 . NASS : 73 46082647 20 . Domicilio : C/ Conde Duque
+S0210-48062009000200018-1,false_positive,O,CALLE,,23,-1,30,Domicilio : C/ Conde Duque . 23 . Localidad/ Provincia : Madrid .
+S0210-48062009000200018-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,64710,-1,75,Médico : Luís Xambre NºCol:28 28 64710 . Informe clínico del paciente :
+S0210-48062009000200018-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,ganado,-1,144,agentes químicos . Refería exposición a ganado ovino en la juventud . Negaba
+S0210-48062009000200018-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,ovino,-1,145,químicos . Refería exposición a ganado ovino en la juventud . Negaba antecedentes
+S0210-48062009000200018-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,73 46082647 20,73,20,20,NHC : 3780659 . NASS : 73 46082647 20 . Domicilio : C/ Conde Duque
+S0210-48062009000200018-1,boundary_error,CALLE,CALLE,C/ Conde Duque . 23,C/ Conde Duque,26,26,73 46082647 20 . Domicilio : C/ Conde Duque . 23 . Localidad/ Provincia : Madrid .
+S0210-48062009000200018-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,35,35,. 23 . Localidad/ Provincia : Madrid . CP : 28010 . Datos
+S0210-48062009000200018-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:28 28 64710,28,73,74,06/12/2013 . Médico : Luís Xambre NºCol:28 28 64710 . Informe clínico del paciente :
+S0210-48062009000200019-1,false_positive,O,ID_ASEGURAMIENTO,,97642583,-1,16,: nhc-7649551 . NASS : 12 97642583 56 . Domicilio : Rúa De
+S0210-48062009000200019-1,false_positive,O,CALLE,,56,-1,17,nhc-7649551 . NASS : 12 97642583 56 . Domicilio : Rúa De San
+S0210-48062009000200019-1,false_positive,O,ID_SUJETO_ASISTENCIA,,36,-1,79,Daniel Pérez Fentes NºCol : 36 36 46541 . Antecedentes : Como antecedentes
+S0210-48062009000200019-1,false_positive,O,ID_SUJETO_ASISTENCIA,,46541,-1,80,Pérez Fentes NºCol : 36 36 46541 . Antecedentes : Como antecedentes personales
+S0210-48062009000200019-1,false_positive,O,PAIS,,Coruña,-1,533,s / n - 15706 A Coruña Tel . : 981 950 000
+S0210-48062009000200019-1,false_positive,O,ID_SUJETO_ASISTENCIA,,950,-1,538,A Coruña Tel . : 981 950 000 E- mail : danielfentes@yahoo.es
+S0210-48062009000200019-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,000,-1,539,Coruña Tel . : 981 950 000 E- mail : danielfentes@yahoo.es
+S0210-48062009000200019-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,12 97642583 56,12,15,15,CIPA : nhc-7649551 . NASS : 12 97642583 56 . Domicilio : Rúa De San
+S0210-48062009000200019-1,false_negative,TERRITORIO,O,CP:36143,,34,-1,. Localidad/ Provincia : Pontevedra . CP:36143 . NHC : 7649551 . Datos
+S0210-48062009000200019-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,36 36 46541,36,78,78,: Daniel Pérez Fentes NºCol : 36 36 46541 . Antecedentes : Como antecedentes personales
+S0210-48062009000200019-1,boundary_error,CALLE,CALLE,Av. Travesía Choupana s / n,Av. Travesía Choupana s,524,524,Universitario de Santiago de Compostela . Av. Travesía Choupana s / n - 15706 A Coruña Tel .
+S0210-48062009000200019-1,boundary_error,TERRITORIO,TERRITORIO,A Coruña,A,532,532,Choupana s / n - 15706 A Coruña Tel . : 981 950 000
+S0210-48062009000200019-1,boundary_error,NUMERO_TELEFONO,ID_ASEGURAMIENTO,981 950 000,981,537,537,15706 A Coruña Tel . : 981 950 000 E- mail : danielfentes@yahoo.es
+S0210-48062009000600016-1,false_positive,O,ID_ASEGURAMIENTO,,45619507,-1,20,: 7456922 . NASS : 78 45619507 36 . Domicilio : C/ Las
+S0210-48062009000600016-1,false_positive,O,CALLE,,36,-1,21,7456922 . NASS : 78 45619507 36 . Domicilio : C/ Las Mercedes
+S0210-48062009000600016-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,36,-1,79,Armando Fariña Pérez NºCol : 36 36 58794 . Informe clínico del paciente
+S0210-48062009000600016-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,58794,-1,80,Fariña Pérez NºCol : 36 36 58794 . Informe clínico del paciente :
+S0210-48062009000600016-1,false_positive,O,HOSPITAL,,Povisa,-1,400,"Pérez Servicio de Urología . Hospital Povisa Salamanca , 5 , 36211 Vigo"
+S0210-48062009000600016-1,false_positive,O,ID_ASEGURAMIENTO,,986,-1,412,"Vigo , Pontevedra Tel . : 986 413 144 E-mail autor : luisfarina@yahoo.com"
+S0210-48062009000600016-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,78 45619507 36,78,19,19,NHC : 7456922 . NASS : 78 45619507 36 . Domicilio : C/ Las Mercedes
+S0210-48062009000600016-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,36 36 58794,36,78,78,Luis Armando Fariña Pérez NºCol : 36 36 58794 . Informe clínico del paciente :
+S0210-48062009000600016-1,boundary_error,HOSPITAL,CALLE,Hospital Povisa,Hospital,399,399,"Fariña Pérez Servicio de Urología . Hospital Povisa Salamanca , 5 , 36211 Vigo"
+S0210-48062009000600016-1,type_confusion,TERRITORIO,PAIS,Pontevedra,Pontevedra,408,408,", 5 , 36211 Vigo , Pontevedra Tel . : 986 413 144"
+S0210-48062009000600016-1,boundary_error,NUMERO_TELEFONO,NOMBRE_SUJETO_ASISTENCIA,986 413 144,413 144,412,413,"Vigo , Pontevedra Tel . : 986 413 144 E-mail autor : luisfarina@yahoo.com"
+S0210-48062009000600018-1,false_positive,O,ID_ASEGURAMIENTO,,34789675,-1,20,: 8793542 . NASS : 89 34789675 36 . Domicilio : Paseo Santa
+S0210-48062009000600018-1,false_positive,O,CALLE,,36,-1,21,8793542 . NASS : 89 34789675 36 . Domicilio : Paseo Santa Laia
+S0210-48062009000600018-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,08,-1,83,Marió Gaya Sopena NºCol : 08 08 52105 . Motivo de ingreso :
+S0210-48062009000600018-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,52105,-1,84,Gaya Sopena NºCol : 08 08 52105 . Motivo de ingreso : polaquiuria
+S0210-48062009000600018-1,false_positive,O,ID_ASEGURAMIENTO,,934,-1,562,08005 Barcelona . Tel . : 934 169 731 E-mail autor : 36178jgs@comb.es
+S0210-48062009000600018-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,89 34789675 36,89,19,19,NHC : 8793542 . NASS : 89 34789675 36 . Domicilio : Paseo Santa Laia
+S0210-48062009000600018-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,08 08 52105,08,82,82,Josep Marió Gaya Sopena NºCol : 08 08 52105 . Motivo de ingreso : polaquiuria
+S0210-48062009000600018-1,type_confusion,INSTITUCION,HOSPITAL,Fundació Puigvert,Fundació Puigvert,550,550,Marió Gaya Sopena Servicio de Urología Fundació Puigvert - Cartagena 340-350 . 08005 Barcelona
+S0210-48062009000600018-1,type_confusion,TERRITORIO,PAIS,Barcelona,Barcelona,557,557,Puigvert - Cartagena 340-350 . 08005 Barcelona . Tel . : 934 169
+S0210-48062009000600018-1,boundary_error,NUMERO_TELEFONO,NOMBRE_SUJETO_ASISTENCIA,934 169 731,169 731,562,563,08005 Barcelona . Tel . : 934 169 731 E-mail autor : 36178jgs@comb.es
+S0210-48062009000900015-3,false_positive,O,TERRITORIO,,Lomas,-1,17,": Av Montes Pirineos 770 , Lomas de Chapultepec V Secc .. Localidad/"
+S0210-48062009000900015-3,false_positive,O,CALLE,,de,-1,18,"Av Montes Pirineos 770 , Lomas de Chapultepec V Secc .. Localidad/ Provincia"
+S0210-48062009000900015-3,false_positive,O,TERRITORIO,,Chapultepec,-1,19,"Montes Pirineos 770 , Lomas de Chapultepec V Secc .. Localidad/ Provincia :"
+S0210-48062009000900015-3,false_positive,O,CALLE,,V,-1,20,"Pirineos 770 , Lomas de Chapultepec V Secc .. Localidad/ Provincia : Ciudad"
+S0210-48062009000900015-3,false_positive,O,EDAD_SUJETO_ASISTENCIA,,16,-1,60,H . Fecha de Ingreso : 16 . Médico : Antonio García Morúa
+S0210-48062009000900015-3,boundary_error,CALLE,CALLE,"Av Montes Pirineos 770 , Lomas de Chapultepec V Secc",Av Montes Pirineos 770,12,12,": Ulloa Origel . Domicilio : Av Montes Pirineos 770 , Lomas de Chapultepec V Secc .. Localidad/ Provincia : Ciudad de"
+S0210-48062009000900015-3,false_negative,TERRITORIO,O,CP:11010,,30,-1,Provincia : Ciudad de México . CP:11010 . NHC : 5221413 . Datos
+S0210-48062009001000016-2,false_positive,O,ID_ASEGURAMIENTO,,65474612,-1,16,: nhc-79431562 . NASS : 32 65474612 65 . Domicilio : Avenida de
+S0210-48062009001000016-2,false_positive,O,CALLE,,65,-1,17,nhc-79431562 . NASS : 32 65474612 65 . Domicilio : Avenida de los
+S0210-48062009001000016-2,false_positive,O,ID_SUJETO_ASISTENCIA,,20,-1,76,de la Illa NºCol : 20 20 34913 . Motivo de ingreso :
+S0210-48062009001000016-2,false_positive,O,ID_SUJETO_ASISTENCIA,,34913,-1,77,la Illa NºCol : 20 20 34913 . Motivo de ingreso : El
+S0210-48062009001000016-2,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,32 65474612 65,32,15,15,CIPA : nhc-79431562 . NASS : 32 65474612 65 . Domicilio : Avenida de los
+S0210-48062009001000016-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,20 20 34913,20,75,75,Ruiz de la Illa NºCol : 20 20 34913 . Motivo de ingreso : El
+S0210-48062009001000016-2,boundary_error,CALLE,CALLE,"Paseo Dr. Begiristain , s / n","Paseo Dr. Begiristain , s",276,276,"Illa . Hospital Universitario Donostia . Paseo Dr. Begiristain , s / n 20014 Donostia . Email : nerea.senarriagaruiz@osakidetza.net"
+S0210-48062009001000016-2,type_confusion,TERRITORIO,PAIS,Donostia,Donostia,284,284,"Begiristain , s / n 20014 Donostia . Email : nerea.senarriagaruiz@osakidetza.net"
+S0210-48062009001000019-1,false_positive,O,ID_SUJETO_ASISTENCIA,,23456856,-1,12,Mendieta Rodrigo . NASS : 15 23456856 74 . Domicilio : Calle Larre
+S0210-48062009001000019-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,74,-1,13,Rodrigo . NASS : 15 23456856 74 . Domicilio : Calle Larre 27
+S0210-48062009001000019-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,20,-1,75,de la Illa NºCol : 20 20 81556 . Historia Actual : Varón
+S0210-48062009001000019-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,81556,-1,76,la Illa NºCol : 20 20 81556 . Historia Actual : Varón de
+S0210-48062009001000019-1,false_positive,O,FECHAS,,1961,-1,130,de ulcus duodenal en el año 1961 y colecistectomía en 2002 . En
+S0210-48062009001000019-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,15 23456856 74,15,11,11,: Mendieta Rodrigo . NASS : 15 23456856 74 . Domicilio : Calle Larre 27
+S0210-48062009001000019-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,20 20 81556,20,74,74,Ruiz de la Illa NºCol : 20 20 81556 . Historia Actual : Varón de
+S0210-48062009001000019-1,boundary_error,FECHAS,FECHAS,año 1961,año,129,129,quirúrgica de ulcus duodenal en el año 1961 y colecistectomía en 2002 . En
+S0210-48062010000100019-3,false_positive,O,CALLE,,3D.,-1,24,Avenida de la albufera 56 . 3D. Localidad/ Provincia : Madrid . CP
+S0210-48062010000100019-3,false_positive,O,EDAD_SUJETO_ASISTENCIA,,28,-1,68,: ÁngelGarcía Escudero NºCol : 28 28 64132 . Historia Actual : Paciente
+S0210-48062010000100019-3,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,64132,-1,69,ÁngelGarcía Escudero NºCol : 28 28 64132 . Historia Actual : Paciente mujer
+S0210-48062010000100019-3,boundary_error,CALLE,CALLE,Avenida de la albufera 56 . 3D.,Avenida de la albufera 56,18,18,. NASS : . Domicilio : Avenida de la albufera 56 . 3D. Localidad/ Provincia : Madrid . CP
+S0210-48062010000100019-3,false_negative,ID_SUJETO_ASISTENCIA,O,NHC:8945154,,34,-1,Madrid . CP : 28009 . NHC:8945154 . Datos asistenciales . Fecha de
+S0210-48062010000100019-3,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 64132,28,67,67,Médico : ÁngelGarcía Escudero NºCol : 28 28 64132 . Historia Actual : Paciente mujer
+S0210-48062010000100019-4,false_positive,O,ID_ASEGURAMIENTO,,13465656,-1,16,: nhc-214130 . NASS : 28 13465656 52 . Domicilio : Calle de
+S0210-48062010000100019-4,false_positive,O,CALLE,,52,-1,17,nhc-214130 . NASS : 28 13465656 52 . Domicilio : Calle de la
+S0210-48062010000100019-4,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,81,Ángel García Escudero NºCol : 28 28 46158 . Historia Actual : Paciente
+S0210-48062010000100019-4,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,46158,-1,82,García Escudero NºCol : 28 28 46158 . Historia Actual : Paciente mujer
+S0210-48062010000100019-4,false_positive,O,CALLE,,261,-1,286,"Paz Paseo de la Castellana , 261 , 28046 Madrid . Correo electrónico"
+S0210-48062010000100019-4,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,28 13465656 52,28,15,15,CIPA : nhc-214130 . NASS : 28 13465656 52 . Domicilio : Calle de la
+S0210-48062010000100019-4,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 46158,28,80,80,: Ángel García Escudero NºCol : 28 28 46158 . Historia Actual : Paciente mujer
+S0210-48062010000100019-4,boundary_error,CALLE,CALLE,"Paseo de la Castellana , 261",Paseo de la Castellana,281,281,"Escudero . Hospital Universitario La Paz Paseo de la Castellana , 261 , 28046 Madrid . Correo electrónico"
+S0210-48062010000100019-4,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,289,289,"la Castellana , 261 , 28046 Madrid . Correo electrónico : agareslo@telefonica.net"
+S0210-56912006000300007-2,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_SUJETO_ASISTENCIA,1583097461454,1583097461454,63,63,Ingreso : 13/11/2017 . Episodio : 1583097461454 . Médico : Raymond Karatanasopuloz Pintos
+S0210-56912006000600007-1,false_positive,O,ID_ASEGURAMIENTO,,13467598,-1,16,: 72030434 . NASS : 28 13467598 21 . Domicilio : Calle Ollerías
+S0210-56912006000600007-1,false_positive,O,CALLE,,21,-1,17,"72030434 . NASS : 28 13467598 21 . Domicilio : Calle Ollerías ,"
+S0210-56912006000600007-1,false_positive,O,TERRITORIO,,03549,-1,77,Jose Miguel Mora Ordóñez NºCol:29 29 03549 . Motivo de ingreso : síndrome
+S0210-56912006000600007-1,false_positive,O,CALLE,,Avda. Andalucía,-1,964,". Urbanización Pinos de Alhaurín . Avda. Andalucía , 146 . 29130 Alhaurín de"
+S0210-56912006000600007-1,false_positive,O,CALLE,,146,-1,967,"de Alhaurín . Avda. Andalucía , 146 . 29130 Alhaurín de la Torre"
+S0210-56912006000600007-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,28 13467598 21,28,15,15,"NHC : 72030434 . NASS : 28 13467598 21 . Domicilio : Calle Ollerías ,"
+S0210-56912006000600007-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_SUJETO_ASISTENCIA,632632225,632632225,67,67,Especialidad : Cardiologia . Episodio : 632632225 . Médico : Jose Miguel Mora
+S0210-56912006000600007-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:29 29 03549,29,75,76,Médico : Jose Miguel Mora Ordóñez NºCol:29 29 03549 . Motivo de ingreso : síndrome
+S0210-56912006000600007-1,boundary_error,CALLE,CALLE,"Urbanización Pinos de Alhaurín . Avda. Andalucía , 146",Urbanización Pinos de Alhaurín,959,959,"Dr. Jose Miguel Mora Ordóñez . Urbanización Pinos de Alhaurín . Avda. Andalucía , 146 . 29130 Alhaurín de la Torre"
+S0210-56912006000800008-1,false_positive,O,ID_ASEGURAMIENTO,,38594235,-1,16,: 94646874 . NASS : 25 38594235 54 . Domicilio : Calle Gustavo
+S0210-56912006000800008-1,false_positive,O,CALLE,,54,-1,17,94646874 . NASS : 25 38594235 54 . Domicilio : Calle Gustavo Pittaluga
+S0210-56912006000800008-1,false_positive,O,CALLE,,6,-1,25,"Domicilio : Calle Gustavo Pittaluga , 6 . Localidad/ Provincia : Málaga ."
+S0210-56912006000800008-1,false_positive,O,ID_SUJETO_ASISTENCIA,,29,-1,73,Miguel Mora Ordóñez NºCol : 29 29 78451 . Antecedentes : bebedor de
+S0210-56912006000800008-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,78451,-1,74,Mora Ordóñez NºCol : 29 29 78451 . Antecedentes : bebedor de más
+S0210-56912006000800008-1,false_positive,O,CALLE,,Avda. Andalucía,-1,570,": Jose Miguel Mora Ordóñez . Avda. Andalucía , 146 . Urbanización Pinos de"
+S0210-56912006000800008-1,false_positive,O,CALLE,,146,-1,573,"Mora Ordóñez . Avda. Andalucía , 146 . Urbanización Pinos de Alhaurín ."
+S0210-56912006000800008-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,25 38594235 54,25,15,15,NHC : 94646874 . NASS : 25 38594235 54 . Domicilio : Calle Gustavo Pittaluga
+S0210-56912006000800008-1,boundary_error,CALLE,CALLE,"Calle Gustavo Pittaluga , 6",Calle Gustavo Pittaluga,21,21,"25 38594235 54 . Domicilio : Calle Gustavo Pittaluga , 6 . Localidad/ Provincia : Málaga ."
+S0210-56912006000800008-1,false_negative,ID_CONTACTO_ASISTENCIAL,O,Episodio:1520368541,,62,-1,Fecha de Ingreso : 13/01/2018 . Episodio:1520368541 . Médico : Jose Miguel Mora
+S0210-56912006000800008-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,29 29 78451,29,72,72,Jose Miguel Mora Ordóñez NºCol : 29 29 78451 . Antecedentes : bebedor de más
+S0210-56912006000800008-1,boundary_error,CALLE,CALLE,"Avda. Andalucía , 146 . Urbanización Pinos de Alhaurín",Urbanización Pinos de Alhaurín,570,575,": Jose Miguel Mora Ordóñez . Avda. Andalucía , 146 . Urbanización Pinos de Alhaurín . Alhaurín de la Torre ."
+S0210-56912006000800008-1,type_confusion,TERRITORIO,CALLE,Alhaurín de la Torre,Alhaurín de la Torre,580,580,. Urbanización Pinos de Alhaurín . Alhaurín de la Torre . 29130 Málaga . España .
+S0210-56912007000200007-3,false_positive,O,CALLE,,"8 , 4I.",-1,19,"Domicilio : Calle República Dominicana , 8 , 4I. Localidad/ Provincia : Las palmas de"
+S0210-56912007000200007-3,false_positive,O,EDAD_SUJETO_ASISTENCIA,,35,-1,80,Maria López Álvarez NºCol : 35 35 79465 . Historia Actual : Niño
+S0210-56912007000200007-3,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,79465,-1,81,López Álvarez NºCol : 35 35 79465 . Historia Actual : Niño de
+S0210-56912007000200007-3,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,materna,-1,164,"refieren sus padres , la abuela materna falleció de joven , atribuido a"
+S0210-56912007000200007-3,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,joven,-1,167,", la abuela materna falleció de joven , atribuido a causa cardiaca ."
+S0210-56912007000200007-3,false_positive,O,PAIS,,Canaria,-1,498,E. 35002 Las Palmas de Gran Canaria . España . Correo electrónico :
+S0210-56912007000200007-3,boundary_error,CALLE,CALLE,"Calle República Dominicana , 8 , 4I.",Calle República Dominicana,15,15,"NHC : 78943621 . Domicilio : Calle República Dominicana , 8 , 4I. Localidad/ Provincia : Las palmas de"
+S0210-56912007000200007-3,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_SUJETO_ASISTENCIA,15648894641,15648894641,69,69,: Medicina Intensiva . Episodio : 15648894641 . Médico : Jose Maria López
+S0210-56912007000200007-3,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,35 35 79465,35,79,79,Jose Maria López Álvarez NºCol : 35 35 79465 . Historia Actual : Niño de
+S0210-56912007000200007-3,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,abuela materna,abuela,163,163,"Según refieren sus padres , la abuela materna falleció de joven , atribuido a"
+S0210-56912007000200007-3,type_confusion,NOMBRE_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,Jose,Jose,174,174,", atribuido a causa cardiaca . Jose tiene dos hermanos sanos y una"
+S0210-56912007000200007-3,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,dos hermanos,hermanos,176,177,a causa cardiaca . Jose tiene dos hermanos sanos y una hermana con cardiopatía
+S0210-56912007000200007-3,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,15 días de vida,15,188,188,con cardiopatía congénita fallecida a los 15 días de vida . Resumen de pruebas complementarias :
+S0210-56912007000200007-3,boundary_error,TERRITORIO,TERRITORIO,Las Palmas de Gran Canaria,Las Palmas de Gran,494,494,", 28 , 5.º E. 35002 Las Palmas de Gran Canaria . España . Correo electrónico :"
+S0210-56912008000100008-1,false_positive,O,ID_ASEGURAMIENTO,,23457896,-1,16,: 19547865 . NASS : 26 23457896 12 . Domicilio : Calle Alisos
+S0210-56912008000100008-1,false_positive,O,CALLE,,12,-1,17,"19547865 . NASS : 26 23457896 12 . Domicilio : Calle Alisos ,"
+S0210-56912008000100008-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,13,-1,74,Jorge Ortega Carnicer NºCol : 02 13 16485 . Historia Actual : Varón
+S0210-56912008000100008-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,16485,-1,75,Ortega Carnicer NºCol : 02 13 16485 . Historia Actual : Varón de
+S0210-56912008000100008-1,false_positive,O,CALLE,,10,-1,415,"Ortega Carnicer . Los Alisos , 10 . 13002 Ciudad Real . Correo"
+S0210-56912008000100008-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,26 23457896 12,26,15,15,"NHC : 19547865 . NASS : 26 23457896 12 . Domicilio : Calle Alisos ,"
+S0210-56912008000100008-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_SUJETO_ASISTENCIA,746589123,746589123,64,64,Ingreso : 13/12/2016 . Episodio : 746589123 . Médico : Jorge Ortega Carnicer
+S0210-56912008000100008-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,02 13 16485,02,73,73,: Jorge Ortega Carnicer NºCol : 02 13 16485 . Historia Actual : Varón de
+S0210-56912008000100008-1,boundary_error,CALLE,CALLE,"Los Alisos , 10",Los Alisos,412,412,": Dr. Jorge Ortega Carnicer . Los Alisos , 10 . 13002 Ciudad Real . Correo"
+S0210-56912008000200007-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,23,-1,72,Javier Alados Arboledas NºCol : 23 23 23605 . Informe clínico del paciente
+S0210-56912008000200007-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,23605,-1,73,Alados Arboledas NºCol : 23 23 23605 . Informe clínico del paciente :
+S0210-56912008000200007-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,18,-1,85,: Varón de 3 años y 18 kg de peso trasladado desde su
+S0210-56912008000200007-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,23 23 23605,23,71,71,Francisco Javier Alados Arboledas NºCol : 23 23 23605 . Informe clínico del paciente :
+S0210-56912008000200007-1,type_confusion,FECHAS,EDAD_SUJETO_ASISTENCIA,3 años,3 años,82,82,clínico del paciente : Varón de 3 años y 18 kg de peso trasladado
+S0210-56912009000900008-1,false_positive,O,ID_ASEGURAMIENTO,,94375685,-1,20,: 3784635 . NASS : 08 94375685 61 . Domicilio : Av. Hospitalet
+S0210-56912009000900008-1,false_positive,O,CALLE,,61,-1,21,"3784635 . NASS : 08 94375685 61 . Domicilio : Av. Hospitalet ,"
+S0210-56912009000900008-1,false_positive,O,ID_SUJETO_ASISTENCIA,,08,-1,77,Raul Ferrer Roca NºCol : 08 08 54882 . Informe clínico del paciente
+S0210-56912009000900008-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,54882,-1,78,Ferrer Roca NºCol : 08 08 54882 . Informe clínico del paciente :
+S0210-56912009000900008-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,08 94375685 61,08,19,19,"NHC : 3784635 . NASS : 08 94375685 61 . Domicilio : Av. Hospitalet ,"
+S0210-56912009000900008-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,08 08 54882,08,76,76,: Raul Ferrer Roca NºCol : 08 08 54882 . Informe clínico del paciente :
+S0210-56912011000500009-3,false_positive,O,ID_ASEGURAMIENTO,,89637596,-1,20,: 7843955 . NASS : 47 89637596 31 . Domicilio : C/ Patricio
+S0210-56912011000500009-3,false_positive,O,CALLE,,31,-1,21,7843955 . NASS : 47 89637596 31 . Domicilio : C/ Patricio Rico
+S0210-56912011000500009-3,false_positive,O,ID_SUJETO_ASISTENCIA,,28,-1,79,Milton Gómez Grande NºCol : 28 28 57410 . Informe clínico del paciente
+S0210-56912011000500009-3,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,57410,-1,80,Gómez Grande NºCol : 28 28 57410 . Informe clínico del paciente :
+S0210-56912011000500009-3,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,47 89637596 31,47,19,19,NHC : 7843955 . NASS : 47 89637596 31 . Domicilio : C/ Patricio Rico
+S0210-56912011000500009-3,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 57410,28,78,78,: Milton Gómez Grande NºCol : 28 28 57410 . Informe clínico del paciente :
+S0211-57352015000100011-2,false_positive,O,ID_ASEGURAMIENTO,,63745637,-1,20,: 8456231 . NASS : 75 63745637 54 . Domicilio : C/ Montera
+S0211-57352015000100011-2,false_positive,O,CALLE,,54,-1,21,"8456231 . NASS : 75 63745637 54 . Domicilio : C/ Montera ,"
+S0211-57352015000100011-2,false_positive,O,ID_SUJETO_ASISTENCIA,,28,-1,77,Ander Galdeano Mondragón NºCol : 28 28 57910 . Informe clínico del paciente
+S0211-57352015000100011-2,false_positive,O,ID_SUJETO_ASISTENCIA,,57910,-1,78,Galdeano Mondragón NºCol : 28 28 57910 . Informe clínico del paciente :
+S0211-57352015000100011-2,false_positive,O,HOSPITAL,,de Salud Mental,-1,122,) en seguimiento en su Centro de Salud Mental y con tratamiento psicofarmacológico con 400
+S0211-57352015000100011-2,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,muleta,-1,175,"la marcha , camina con una muleta , como consecuencia de un politraumatismo"
+S0211-57352015000100011-2,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,madre,-1,339,sí una discusión previa con la madre . Adaptado a los ritmos de
+S0211-57352015000100011-2,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,75 63745637 54,75,19,19,"NHC : 8456231 . NASS : 75 63745637 54 . Domicilio : C/ Montera ,"
+S0211-57352015000100011-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 57910,28,76,76,: Ander Galdeano Mondragón NºCol : 28 28 57910 . Informe clínico del paciente :
+S0211-57352015000100011-2,type_confusion,ID_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,soltero,soltero,90,90,": Varón de 44 años , soltero , que vive con su madre"
+S0211-69952011000500011-3,false_positive,O,ID_ASEGURAMIENTO,,78136524,-1,16,: 3661587 . NASS : 99 78136524 77 . Domicilio : Av. de
+S0211-69952011000500011-3,false_positive,O,CALLE,,77,-1,17,3661587 . NASS : 99 78136524 77 . Domicilio : Av. de Pío
+S0211-69952011000500011-3,false_positive,O,EDAD_SUJETO_ASISTENCIA,,años,-1,51,. País : España . Edad:47 años Sexo : H. Fecha de Ingreso
+S0211-69952011000500011-3,false_positive,O,ID_SUJETO_ASISTENCIA,,19,-1,77,Gabriel de Arriba NºCol : 19 19 98741 . Historia Actual : Hombre
+S0211-69952011000500011-3,false_positive,O,ID_SUJETO_ASISTENCIA,,98741,-1,78,de Arriba NºCol : 19 19 98741 . Historia Actual : Hombre de
+S0211-69952011000500011-3,false_positive,O,INSTITUCION,,de,-1,321,. Departamento de Medicina . Universidad de Alcalá E-mail : garribad@senefro.org
+S0211-69952011000500011-3,false_positive,O,TERRITORIO,,Alcalá,-1,322,Departamento de Medicina . Universidad de Alcalá E-mail : garribad@senefro.org
+S0211-69952011000500011-3,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,99 78136524 77,99,15,15,NHC : 3661587 . NASS : 99 78136524 77 . Domicilio : Av. de Pío
+S0211-69952011000500011-3,boundary_error,EDAD_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,Edad:47 años,Edad:47,50,50,23/02/1970 . País : España . Edad:47 años Sexo : H. Fecha de Ingreso
+S0211-69952011000500011-3,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_TITULACION_PERSONAL_SANITARIO,7436985,7436985,67,67,Servicio : Nefrología . Episodio : 7436985 . Médico : Gabriel de Arriba
+S0211-69952011000500011-3,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,19 19 98741,19,76,76,: Gabriel de Arriba NºCol : 19 19 98741 . Historia Actual : Hombre de
+S0211-69952011000500011-3,boundary_error,INSTITUCION,NOMBRE_PERSONAL_SANITARIO,Universidad de Alcalá,Universidad,320,320,Guadalajara . Departamento de Medicina . Universidad de Alcalá E-mail : garribad@senefro.org
+S0211-69952012000500016-1,false_positive,O,ID_ASEGURAMIENTO,,60474056,-1,20,: 5689502 . NASS : 30 60474056 36 . Domicilio : Calle de
+S0211-69952012000500016-1,false_positive,O,CALLE,,36,-1,21,5689502 . NASS : 30 60474056 36 . Domicilio : Calle de Andrés
+S0211-69952012000500016-1,false_positive,O,ID_SUJETO_ASISTENCIA,,30,-1,83,Juan Blanco Cabezuelo NºCol : 30 30 58801 . Informe clínico del paciente
+S0211-69952012000500016-1,false_positive,O,ID_SUJETO_ASISTENCIA,,58801,-1,84,Blanco Cabezuelo NºCol : 30 30 58801 . Informe clínico del paciente :
+S0211-69952012000500016-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,Cinco,-1,129,"de enfermedad urológica ni renal . Cinco años antes , la Crs era"
+S0211-69952012000500016-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,varones,-1,208,familiares de espondilitis anquilopoyética en varios varones de su rama paterna ; un
+S0211-69952012000500016-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,paterna,-1,212,"en varios varones de su rama paterna ; un tío paterno , además"
+S0211-69952012000500016-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,paterno,-1,216,"su rama paterna ; un tío paterno , además , fue diagnosticado de"
+S0211-69952012000500016-1,false_positive,O,TERRITORIO,,Murcia,-1,943,"Hospital General Universitario Reina Sofía , Murcia E-mail : juanbecaro@gmail.com E-mail : juanb.cabezuelo@carm.es"
+S0211-69952012000500016-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,30 60474056 36,30,19,19,NHC : 5689502 . NASS : 30 60474056 36 . Domicilio : Calle de Andrés
+S0211-69952012000500016-1,false_negative,ID_CONTACTO_ASISTENCIAL,O,Episodio:4387684,,73,-1,17/11/2017 . Servicio : Nefrología . Episodio:4387684 . Médico : Juan Blanco Cabezuelo
+S0211-69952012000500016-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,30 30 58801,30,82,82,: Juan Blanco Cabezuelo NºCol : 30 30 58801 . Informe clínico del paciente :
+S0211-69952012000500016-1,boundary_error,FECHAS,FECHAS,2006,de 2006,101,100,años consultó con Nefrología a finales de 2006 por elevación de la creatinina sérica
+S0211-69952012000500016-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,tío paterno,tío,215,215,"de su rama paterna ; un tío paterno , además , fue diagnosticado de"
+S0211-69952013000200018-1,false_positive,O,ID_ASEGURAMIENTO,,96435798,-1,20,: 63728 . NASS : 78 96435798 60 . Domicilio : Avda. Ginzo
+S0211-69952013000200018-1,false_positive,O,CALLE,,60,-1,21,63728 . NASS : 78 96435798 60 . Domicilio : Avda. Ginzo de
+S0211-69952013000200018-1,false_positive,O,ID_ASEGURAMIENTO,,40,-1,86,: Manuel Heras NºCol : 40 40 53220 . Historia Actual : Varón
+S0211-69952013000200018-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,53220,-1,87,Manuel Heras NºCol : 40 40 53220 . Historia Actual : Varón de
+S0211-69952013000200018-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,78 96435798 60,78,19,19,NHC : 63728 . NASS : 78 96435798 60 . Domicilio : Avda. Ginzo de
+S0211-69952013000200018-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_TITULACION_PERSONAL_SANITARIO,6736754,6736754,77,77,Servicio : Nefrología . Episodio : 6736754 . Médico : Manuel Heras NºCol
+S0211-69952013000200018-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,40 40 53220,40,85,85,Médico : Manuel Heras NºCol : 40 40 53220 . Historia Actual : Varón de
+S0211-69952013000200019-1,false_positive,O,ID_SUJETO_ASISTENCIA,,62476454,-1,16,Navarro Olmedo . NHC : 73 62476454 66 . NASS : 46 23767405
+S0211-69952013000200019-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,66,-1,17,Olmedo . NHC : 73 62476454 66 . NASS : 46 23767405 61
+S0211-69952013000200019-1,false_positive,O,ID_ASEGURAMIENTO,,23767405,-1,22,62476454 66 . NASS : 46 23767405 61 . Domicilio : Av. Juana
+S0211-69952013000200019-1,false_positive,O,CALLE,,61,-1,23,66 . NASS : 46 23767405 61 . Domicilio : Av. Juana Ibarra
+S0211-69952013000200019-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,46,-1,85,Torregrosa de Juan NºCol : 46 46 52381 . Informe clínico del paciente
+S0211-69952013000200019-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,52381,-1,86,de Juan NºCol : 46 46 52381 . Informe clínico del paciente :
+S0211-69952013000200019-1,boundary_error,ID_SUJETO_ASISTENCIA,ID_ASEGURAMIENTO,73 62476454 66,73,15,15,: Navarro Olmedo . NHC : 73 62476454 66 . NASS : 46 23767405 61
+S0211-69952013000200019-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,46 23767405 61,46,21,21,73 62476454 66 . NASS : 46 23767405 61 . Domicilio : Av. Juana Ibarra
+S0211-69952013000200019-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,46 46 52381,46,84,84,Eduardo Torregrosa de Juan NºCol : 46 46 52381 . Informe clínico del paciente :
+S0211-69952013000200025-1,false_positive,O,CALLE,,apto,-1,421,"Transversal 39 a número 71-57 , apto . 501 , edificio Cantabria Real"
+S0211-69952013000200025-1,false_positive,O,CALLE,,501,-1,423,"a número 71-57 , apto . 501 , edificio Cantabria Real , Medellín"
+S0211-69952013000200025-1,false_positive,O,CALLE,,edificio Cantabria Real,-1,425,"71-57 , apto . 501 , edificio Cantabria Real , Medellín , Antioquia , Colombia"
+S0211-69952013000200025-1,false_negative,TERRITORIO,O,CP:06411,,22,-1,. Localidad/ Provincia : Medellín . CP:06411 . NHC : 996543 . Datos
+S0211-69952013000200025-1,boundary_error,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,raza negra,raza,89,89,": Paciente de 37 años , raza negra , que presentó previamente varios episodios"
+S0211-69952013000200025-1,boundary_error,CALLE,CALLE,"Transversal 39 a número 71-57 , apto . 501 , edificio Cantabria Real",Transversal 39 a número 71-57,415,415,", Hospital Pablo Tobón Uribe , Transversal 39 a número 71-57 , apto . 501 , edificio Cantabria Real , Medellín , Antioquia , Colombia"
+S0211-69952013000500035-1,false_positive,O,ID_ASEGURAMIENTO,,43657846,-1,21,: 9784844 . NASS : 78 43657846 54 . Domicilio : C/ Fermín
+S0211-69952013000500035-1,false_positive,O,CALLE,,54,-1,22,9784844 . NASS : 78 43657846 54 . Domicilio : C/ Fermín Caballero
+S0211-69952013000500035-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,77,Florencio García Martín NºCol : 28 28 57880 . Informe clínico del paciente
+S0211-69952013000500035-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,57880,-1,78,García Martín NºCol : 28 28 57880 . Informe clínico del paciente :
+S0211-69952013000500035-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,78 43657846 54,78,20,20,NHC : 9784844 . NASS : 78 43657846 54 . Domicilio : C/ Fermín Caballero
+S0211-69952013000500035-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 57880,28,76,76,: Florencio García Martín NºCol : 28 28 57880 . Informe clínico del paciente :
+S0211-69952014000200016-1,false_positive,O,ID_ASEGURAMIENTO,,34657896,-1,20,: 3956384 . NASS : 89 34657896 35 . Domicilio : C/ Moliner
+S0211-69952014000200016-1,false_positive,O,CALLE,,35,-1,21,"3956384 . NASS : 89 34657896 35 . Domicilio : C/ Moliner ,"
+S0211-69952014000200016-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,20,-1,75,Ane Mujika López NºCol : 20 20 56890 . Informe clínico del paciente
+S0211-69952014000200016-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,56890,-1,76,Mujika López NºCol : 20 20 56890 . Informe clínico del paciente :
+S0211-69952014000200016-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,89 34657896 35,89,19,19,"NHC : 3956384 . NASS : 89 34657896 35 . Domicilio : C/ Moliner ,"
+S0211-69952014000200016-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,20 20 56890,20,74,74,: Ane Mujika López NºCol : 20 20 56890 . Informe clínico del paciente :
+S0211-69952014000400020-1,false_positive,O,ID_ASEGURAMIENTO,,78364507,-1,19,: 7361802 . NASS : 78 78364507 12 . Domicilio : Calle General
+S0211-69952014000400020-1,false_positive,O,CALLE,,12,-1,20,7361802 . NASS : 78 78364507 12 . Domicilio : Calle General Ramirez
+S0211-69952014000400020-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,04,-1,83,Eugenia Palacios Gómez NºCol : 04 04 45112 . Informe clínico del paciente
+S0211-69952014000400020-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,45112,-1,84,Palacios Gómez NºCol : 04 04 45112 . Informe clínico del paciente :
+S0211-69952014000400020-1,false_positive,O,CALLE,,N,-1,272,"Carretera de Almerimar , S / N , 04700 , El Ejido ,"
+S0211-69952014000400020-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,78 78364507 12,78,18,18,NHC : 7361802 . NASS : 78 78364507 12 . Domicilio : Calle General Ramirez
+S0211-69952014000400020-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,04 04 45112,04,82,82,María Eugenia Palacios Gómez NºCol : 04 04 45112 . Informe clínico del paciente :
+S0211-69952014000400020-1,boundary_error,CALLE,CALLE,"Carretera de Almerimar , S / N","Carretera de Almerimar , S",266,266,"Nefrología , Hospital de Poniente , Carretera de Almerimar , S / N , 04700 , El Ejido ,"
+S0211-69952014000600016-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,nueve,-1,113,", sin proteinuria . A los nueve meses postrasplante presenta viruria ( 107"
+S0211-69952014000600016-1,false_positive,O,HOSPITAL,,Hospital,-1,245,Servicio de Histocompatibilidad y Genética Molecular Hospital Dr. Julio C. Perrando Avda. 9
+S0211-69952014000600016-1,false_positive,O,HOSPITAL,,Perrando,-1,249,Genética Molecular Hospital Dr. Julio C. Perrando Avda. 9 de Julio 1100 3500
+S0211-69952014000600016-1,false_positive,O,CORREO_ELECTRONICO,,msp.histocompat@ecomchaco.com.ar,-1,262,"Resistencia , Chaco , Argentina karinamarinic@yahoo.com.ar msp.histocompat@ecomchaco.com.ar"
+S0211-69952014000600016-1,type_confusion,TERRITORIO,PAIS,Argentina,Argentina,50,50,19/03/1956 . País de nacimiento : Argentina . Edad : 55 años Sexo
+S0211-69952014000600016-1,boundary_error,HOSPITAL,NOMBRE_PERSONAL_SANITARIO,Hospital Dr. Julio C. Perrando,Julio C.,245,247,Servicio de Histocompatibilidad y Genética Molecular Hospital Dr. Julio C. Perrando Avda. 9 de Julio 1100 3500
+S0211-69952015000600014-2,false_positive,O,EDAD_SUJETO_ASISTENCIA,,28,-1,73,Arturo Sánchez Jiménez NºCol : 28 28 57402 . Informe clínico del paciente
+S0211-69952015000600014-2,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,57402,-1,74,Sánchez Jiménez NºCol : 28 28 57402 . Informe clínico del paciente :
+S0211-69952015000600014-2,false_positive,O,EDAD_SUJETO_ASISTENCIA,,5 años,-1,105,plasmaféresis sin resultados . Durante los 5 años que permaneció en DP sufrió 10
+S0211-69952015000600014-2,false_positive,O,CALLE,,261,-1,235,"Paz Paseo de la Castellana , 261 , 28046 Madrid"
+S0211-69952015000600014-2,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,31,31,", 8 A. Localidad/ Provincia : Madrid . CP : 28046 . Datos"
+S0211-69952015000600014-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,28 28 57402,28,72,72,: Arturo Sánchez Jiménez NºCol : 28 28 57402 . Informe clínico del paciente :
+S0211-69952015000600014-2,boundary_error,CALLE,CALLE,"Paseo de la Castellana , 261",Paseo de la Castellana,230,230,"jesastur@hotmail.com . Hospital Universitario La Paz Paseo de la Castellana , 261 , 28046 Madrid"
+S0211-69952015000600014-2,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,238,238,"la Castellana , 261 , 28046 Madrid"
+S0211-69952016000300015-1,false_positive,O,ID_ASEGURAMIENTO,,87126855,-1,16,: 3695454 . NASS : 56 87126855 66 . Domicilio : Patio Escuelas
+S0211-69952016000300015-1,false_positive,O,CALLE,,66,-1,17,"3695454 . NASS : 56 87126855 66 . Domicilio : Patio Escuelas ,"
+S0211-69952016000300015-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,71,: Pilar Fraile-Gómez NºCol : 37 28 03464 . Historia Actual : Presentamos
+S0211-69952016000300015-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,03464,-1,72,Pilar Fraile-Gómez NºCol : 37 28 03464 . Historia Actual : Presentamos el
+S0211-69952016000300015-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,varón,-1,530,". El paciente tiene un hijo varón , por lo que la mutación"
+S0211-69952016000300015-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,56 87126855 66,56,15,15,"NHC : 3695454 . NASS : 56 87126855 66 . Domicilio : Patio Escuelas ,"
+S0211-69952016000300015-1,false_negative,TERRITORIO,O,CP:37008,,32,-1,. Localidad/ Provincia : Salamanca . CP:37008 . Datos asistenciales . Fecha de
+S0211-69952016000300015-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,37 28 03464,37,70,70,Médico : Pilar Fraile-Gómez NºCol : 37 28 03464 . Historia Actual : Presentamos el
+S0211-69952016000300015-1,false_negative,INSTITUCION,O,Genetic Analyzer,,450,-1,capilar ( ABI PRISM ® 310 Genetic Analyzer ) . El análisis determinó que
+S0211-69952016000300015-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,hijo varón,hijo,529,529,"fecha . El paciente tiene un hijo varón , por lo que la mutación"
+S0211-69952016000300015-1,type_confusion,SEXO_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,esposa,esposa,610,610,"renal de donante vivo de su esposa . El paciente , durante el"
+S0211-69952017000200225-1,false_positive,O,ID_ASEGURAMIENTO,,95413624,-1,16,: 665326454 . NASS : 48 95413624 09 . Domicilio : Calle Francos
+S0211-69952017000200225-1,false_positive,O,CALLE,,09,-1,17,665326454 . NASS : 48 95413624 09 . Domicilio : Calle Francos Rodriguez
+S0211-69952017000200225-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,28,-1,75,: Raquel Díaz-Mancebo NºCol : 28 28 13166 . Historia Actual : Varón
+S0211-69952017000200225-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,13166,-1,76,Raquel Díaz-Mancebo NºCol : 28 28 13166 . Historia Actual : Varón de
+S0211-69952017000200225-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,48 95413624 09,48,15,15,NHC : 665326454 . NASS : 48 95413624 09 . Domicilio : Calle Francos Rodriguez
+S0211-69952017000200225-1,false_negative,ID_CONTACTO_ASISTENCIAL,O,Episodio:103985641,,66,-1,14/12/2017 . Servicio : Nefrología . Episodio:103985641 . Médico : Raquel Díaz-Mancebo NºCol
+S0211-69952017000200225-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 13166,28,74,74,Médico : Raquel Díaz-Mancebo NºCol : 28 28 13166 . Historia Actual : Varón de
+S0211-69952017000200225-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,452,452,"la Castellana 261 , 28046 , Madrid E-mail : rdiazm.hulp@salud.madrid.org"
+S0212-16112009000300015-1,false_positive,O,ID_ASEGURAMIENTO,,68716451,-1,16,: 8946887 . NASS : 94 68716451 52 . Domicilio : Avenida de
+S0212-16112009000300015-1,false_positive,O,CALLE,,52,-1,17,8946887 . NASS : 94 68716451 52 . Domicilio : Avenida de legazpi
+S0212-16112009000300015-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,75,Manuel Moreno Villares NºCol : 28 28 94138 . Historia Actual : Se
+S0212-16112009000300015-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,94138,-1,76,Moreno Villares NºCol : 28 28 94138 . Historia Actual : Se trató
+S0212-16112009000300015-1,false_positive,O,FAMILIARES_SUJETO_ASISTENCIA,,esposa,-1,152,". Su cuidadora habitual era su esposa de 72 años de edad ,"
+S0212-16112009000300015-1,false_positive,O,HOSPITAL,,12,-1,349,Unidad de Nutrición Clínica . Hospital 12 de Octubre . 28041 Madrid .
+S0212-16112009000300015-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,94 68716451 52,94,15,15,NHC : 8946887 . NASS : 94 68716451 52 . Domicilio : Avenida de legazpi
+S0212-16112009000300015-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_SUJETO_ASISTENCIA,5843556,5843556,64,64,Ingreso : 31/03/2018 . Episodio : 5843556 . Médico : José Manuel Moreno
+S0212-16112009000300015-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 94138,28,74,74,José Manuel Moreno Villares NºCol : 28 28 94138 . Historia Actual : Se trató
+S0212-16112009000300015-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,esposa de 72 años,72 años,152,154,". Su cuidadora habitual era su esposa de 72 años de edad , afecta de una"
+S0212-16112009000300015-1,false_negative,FAMILIARES_SUJETO_ASISTENCIA,O,familia,,171,-1,incipiente . Además disponía de una familia cercana muy involucrada . La NPD
+S0212-16112009000300015-1,boundary_error,HOSPITAL,CALLE,Hospital 12 de Octubre,de Octubre,348,350,. Unidad de Nutrición Clínica . Hospital 12 de Octubre . 28041 Madrid . E-mail :
+S0212-16112009000300015-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,354,354,Hospital 12 de Octubre . 28041 Madrid . E-mail : jmoreno.hdoc@salud.madrid.org
+S0212-16112012000300028-1,false_positive,O,ID_ASEGURAMIENTO,,45672036,-1,20,: 7345673 . NASS : 37 45672036 13 . Domicilio : Calle de
+S0212-16112012000300028-1,false_positive,O,CALLE,,13,-1,21,7345673 . NASS : 37 45672036 13 . Domicilio : Calle de Maeso
+S0212-16112012000300028-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,32,-1,80,Teresa Fernández López NºCol : 32 32 57480 . Informe clínico del paciente
+S0212-16112012000300028-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,57480,-1,81,Fernández López NºCol : 32 32 57480 . Informe clínico del paciente :
+S0212-16112012000300028-1,false_positive,O,CALLE,,Complexo,-1,835,Dra. María Teresa Fernández López . Complexo Hospitalario Universitario Ourensano . 32002 Ourense
+S0212-16112012000300028-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,37 45672036 13,37,19,19,NHC : 7345673 . NASS : 37 45672036 13 . Domicilio : Calle de Maeso
+S0212-16112012000300028-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,32 32 57480,32,79,79,María Teresa Fernández López NºCol : 32 32 57480 . Informe clínico del paciente :
+S0212-16112012000300028-1,boundary_error,HOSPITAL,HOSPITAL,Complexo Hospitalario Universitario Ourensano,Hospitalario Universitario Ourensano,835,836,Dra. María Teresa Fernández López . Complexo Hospitalario Universitario Ourensano . 32002 Ourense . España .
+S0212-16112012000500042-1,false_positive,O,ID_ASEGURAMIENTO,,01482264,-1,20,: 8928210 . NASS : 49 01482264 19 . Domicilio : Av. da
+S0212-16112012000500042-1,false_positive,O,CALLE,,19,-1,21,8928210 . NASS : 49 01482264 19 . Domicilio : Av. da Gran
+S0212-16112012000500042-1,false_positive,O,ID_ASEGURAMIENTO,,36,-1,90,Natividad Lago Rivero NºCol : 36 36 57810 . Informe clínico del paciente
+S0212-16112012000500042-1,false_positive,O,ID_ASEGURAMIENTO,,57810,-1,91,Lago Rivero NºCol : 36 36 57810 . Informe clínico del paciente :
+S0212-16112012000500042-1,false_positive,O,HOSPITAL,,Complejo,-1,855,Natividad Lago Rivero Servicio de Farmacia Complejo Hospitalario Universitario de Vigo ( Xeral-Cíes
+S0212-16112012000500042-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,49 01482264 19,49,19,19,NHC : 8928210 . NASS : 49 01482264 19 . Domicilio : Av. da Gran
+S0212-16112012000500042-1,type_confusion,TERRITORIO,PAIS,Pontevedra,Pontevedra,40,40,"B. Localidad/ Provincia : Vigo , Pontevedra . CP : 36204 . Datos"
+S0212-16112012000500042-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_TITULACION_PERSONAL_SANITARIO,5948114,5948114,80,80,Servicio : Farmacia . Episodio : 5948114 . Médico : Natividad Lago Rivero
+S0212-16112012000500042-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,36 36 57810,36,89,89,: Natividad Lago Rivero NºCol : 36 36 57810 . Informe clínico del paciente :
+S0212-16112012000500042-1,boundary_error,HOSPITAL,HOSPITAL,Complejo Hospitalario Universitario de Vigo,Hospitalario Universitario de Vigo,855,856,"Natividad Lago Rivero Servicio de Farmacia Complejo Hospitalario Universitario de Vigo ( Xeral-Cíes ) C/ Pizarro ,"
+S0212-16112012000500042-1,type_confusion,HOSPITAL,CALLE,Xeral-Cíes,Xeral-Cíes,861,861,"Complejo Hospitalario Universitario de Vigo ( Xeral-Cíes ) C/ Pizarro , 22 36202"
+S0212-16112012000500042-1,type_confusion,TERRITORIO,PAIS,Pontevedra,Pontevedra,870,870,"Pizarro , 22 36202 Vigo . Pontevedra . España E-mail : natividad.lago.rivero@sergas.es"
+S0212-71992005000400009-1,false_positive,O,ID_ASEGURAMIENTO,,64135645,-1,16,: 4135413 . NASS : 32 64135645 18 . Domicilio : Av. de
+S0212-71992005000400009-1,false_positive,O,CALLE,,18,-1,17,4135413 . NASS : 32 64135645 18 . Domicilio : Av. de la
+S0212-71992005000400009-1,false_positive,O,CALLE,,26 5C,-1,27,"Av. de la República Argentina , 26 5C . Localidad/ Provincia : Sevilla ."
+S0212-71992005000400009-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,41,-1,75,Manuel Ortega Calvo NºCol : 41 41 03264 . Historia Actual : varón
+S0212-71992005000400009-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,03264,-1,76,Ortega Calvo NºCol : 41 41 03264 . Historia Actual : varón de
+S0212-71992005000400009-1,false_positive,O,CALLE,,Avda. de la Cruz del Campo,-1,894,"por : Manuel Ortega Calvo . Avda. de la Cruz del Campo , 36 , Bl . 1"
+S0212-71992005000400009-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,32 64135645 18,32,15,15,NHC : 4135413 . NASS : 32 64135645 18 . Domicilio : Av. de la
+S0212-71992005000400009-1,boundary_error,CALLE,CALLE,"Av. de la República Argentina , 26 5C",Av. de la República Argentina,21,21,"32 64135645 18 . Domicilio : Av. de la República Argentina , 26 5C . Localidad/ Provincia : Sevilla ."
+S0212-71992005000400009-1,false_negative,TERRITORIO,O,CP:41011,,35,-1,. Localidad/ Provincia : Sevilla . CP:41011 . Datos asistenciales . Fecha de
+S0212-71992005000400009-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_SUJETO_ASISTENCIA,85136412,85136412,65,65,Ingreso : 15/05/2018 . Episodio : 85136412 . Médico : Manuel Ortega Calvo
+S0212-71992005000400009-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,41 41 03264,41,74,74,: Manuel Ortega Calvo NºCol : 41 41 03264 . Historia Actual : varón de
+S0212-71992005000400009-1,boundary_error,CALLE,CALLE,"Avda. de la Cruz del Campo , 36 , Bl . 1 , 2º A.","36 , Bl . 1 , 2º A.",894,901,"por : Manuel Ortega Calvo . Avda. de la Cruz del Campo , 36 , Bl . 1 , 2º A. 41005 Sevilla . e-mail : ortegacalvo@terra.es"
+S0212-71992005001200008-1,false_positive,O,CALLE,,32,-1,15,NHC : 164253 . NASS:32 64125896 32 . Domicilio : Calle Mendez Alvado
+S0212-71992005001200008-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,16,-1,66,: Javier García-Cano NºCol : 16 16 03844 . Historia Actual : Paciente
+S0212-71992005001200008-1,false_positive,O,TERRITORIO,,03844,-1,67,Javier García-Cano NºCol : 16 16 03844 . Historia Actual : Paciente de
+S0212-71992005001200008-1,false_positive,O,CALLE,,5A,-1,421,"Federico Mayor Zaragoza , 2 , 5A , 16002 Cuenca . e-mail :"
+S0212-71992005001200008-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:32 64125896 32,64125896,13,14,Bierzo . NHC : 164253 . NASS:32 64125896 32 . Domicilio : Calle Mendez Alvado
+S0212-71992005001200008-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,16 16 03844,16,65,65,Médico : Javier García-Cano NºCol : 16 16 03844 . Historia Actual : Paciente de
+S0212-71992005001200008-1,boundary_error,CALLE,CALLE,"C/ Federico Mayor Zaragoza , 2 , 5A","C/ Federico Mayor Zaragoza , 2",414,414,"por : Dr. Javier García-Cano . C/ Federico Mayor Zaragoza , 2 , 5A , 16002 Cuenca . e-mail :"
+S0212-71992006000100005-1,false_positive,O,ID_ASEGURAMIENTO,,96666017,-1,20,: 4392216 . NASS : 27 96666017 83 . Domicilio : Av. Luis
+S0212-71992006000100005-1,false_positive,O,CALLE,,83,-1,21,4392216 . NASS : 27 96666017 83 . Domicilio : Av. Luis Montoto
+S0212-71992006000100005-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,41,-1,87,Iñigo Marín Montín NºCol : 41 41 78970 . Informe clínico del paciente
+S0212-71992006000100005-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,78970,-1,88,Marín Montín NºCol : 41 41 78970 . Informe clínico del paciente :
+S0212-71992006000100005-1,false_positive,O,CALLE,,n.,-1,562,"C/ Doctor Fedriani , s / n. 41071 Sevilla"
+S0212-71992006000100005-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,27 96666017 83,27,19,19,NHC : 4392216 . NASS : 27 96666017 83 . Domicilio : Av. Luis Montoto
+S0212-71992006000100005-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_TITULACION_PERSONAL_SANITARIO,1421349,1421349,77,77,: Medicina Interna . Episodio : 1421349 . Médico : Iñigo Marín Montín
+S0212-71992006000100005-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,41 41 78970,41,86,86,: Iñigo Marín Montín NºCol : 41 41 78970 . Informe clínico del paciente :
+S0212-71992006000100005-1,boundary_error,CALLE,CALLE,"C/ Doctor Fedriani , s / n.","C/ Doctor Fedriani , s",556,556,". Hospital Universitario Virgen Macarena . C/ Doctor Fedriani , s / n. 41071 Sevilla"
+S0212-71992006000600008-1,false_positive,O,ID_ASEGURAMIENTO,,97845126,-1,16,: 21412043 . NASS : 36 97845126 38 . Domicilio : Av. del
+S0212-71992006000600008-1,false_positive,O,CALLE,,38,-1,17,21412043 . NASS : 36 97845126 38 . Domicilio : Av. del Paraŀlel
+S0212-71992006000600008-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,28,-1,72,Javier Marchena Iglesias NºCol : 08 28 54781 . Motivo de ingreso :
+S0212-71992006000600008-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,54781,-1,73,Marchena Iglesias NºCol : 08 28 54781 . Motivo de ingreso : Mujer
+S0212-71992006000600008-1,false_positive,O,CALLE,,2º 3ª esc B.,-1,369,". C/ Berlín , 63-65 , 2º 3ª esc B. 08029 Barcelona . e-mail : pjmy1@yahoo.es"
+S0212-71992006000600008-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,36 97845126 38,36,15,15,NHC : 21412043 . NASS : 36 97845126 38 . Domicilio : Av. del Paraŀlel
+S0212-71992006000600008-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,08 28 54781,08,71,71,Pablo Javier Marchena Iglesias NºCol : 08 28 54781 . Motivo de ingreso : Mujer
+S0212-71992006000600008-1,boundary_error,CALLE,CALLE,"C/ Berlín , 63-65 , 2º 3ª esc B.","C/ Berlín , 63-65",364,364,"Dr. Pablo Javier Marchena Iglesias . C/ Berlín , 63-65 , 2º 3ª esc B. 08029 Barcelona . e-mail : pjmy1@yahoo.es"
+S0212-71992006000600008-1,type_confusion,TERRITORIO,PAIS,Barcelona,Barcelona,374,374,", 2º 3ª esc B. 08029 Barcelona . e-mail : pjmy1@yahoo.es"
+S0212-71992006000700009-1,false_positive,O,CALLE,,45,-1,17,NHC : 36985 . NASS:89 84823485 45 . Domicilio : Ronda Ibón de
+S0212-71992006000700009-1,false_positive,O,CALLE,,3F,-1,27,"Ronda Ibón de Plan 22 , 3F . Localidad/ Provincia : Zaragoza ."
+S0212-71992006000700009-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,48912,-1,81,Ridruejo Sáez Paseo Calanda NºCol:50 50 48912 . Historia Actual : Mujer de
+S0212-71992006000700009-1,false_positive,O,CALLE,,57-4º A,-1,557,"Raquel Ridruejo Sáez Paseo Calanda , 57-4º A 50010 Zaragoza E-mail : raridru@mixmail.com"
+S0212-71992006000700009-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:89 84823485 45,84823485,15,16,Romero . NHC : 36985 . NASS:89 84823485 45 . Domicilio : Ronda Ibón de
+S0212-71992006000700009-1,boundary_error,CALLE,CALLE,"Ronda Ibón de Plan 22 , 3F",Ronda Ibón de Plan 22,21,21,"NASS:89 84823485 45 . Domicilio : Ronda Ibón de Plan 22 , 3F . Localidad/ Provincia : Zaragoza ."
+S0212-71992006000700009-1,type_confusion,TERRITORIO,PAIS,España,España,49,49,nacimiento : 16/11//1940 . País : España . Edad : 76 años Sexo
+S0212-71992006000700009-1,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,Raquel Ridruejo Sáez,Raquel Ridruejo Sáez Paseo Calanda,74,74,. Episodio : . Médico : Raquel Ridruejo Sáez Paseo Calanda NºCol:50 50 48912 . Historia Actual
+S0212-71992006000700009-1,boundary_error,CALLE,NOMBRE_PERSONAL_SANITARIO,Paseo Calanda,Raquel Ridruejo Sáez Paseo Calanda,77,74,. Episodio : . Médico : Raquel Ridruejo Sáez Paseo Calanda NºCol:50 50 48912 . Historia Actual
+S0212-71992006000700009-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:50 50 48912,50,79,80,: Raquel Ridruejo Sáez Paseo Calanda NºCol:50 50 48912 . Historia Actual : Mujer de
+S0212-71992006000700009-1,boundary_error,CALLE,CALLE,"Paseo Calanda , 57-4º A",Paseo Calanda,554,554,"Remitido por : Raquel Ridruejo Sáez Paseo Calanda , 57-4º A 50010 Zaragoza E-mail : raridru@mixmail.com"
+S0212-71992006000900007-1,false_positive,O,ID_ASEGURAMIENTO,,97856395,-1,20,: 3785649 . NASS : 43 97856395 65 . Domicilio : Avenida de
+S0212-71992006000900007-1,false_positive,O,CALLE,,65,-1,21,3785649 . NASS : 43 97856395 65 . Domicilio : Avenida de las
+S0212-71992006000900007-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,83,Beatriz Fernández Jorge NºCol : 15 28 54789 . Historia Actual : Varón
+S0212-71992006000900007-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,54789,-1,84,Fernández Jorge NºCol : 15 28 54789 . Historia Actual : Varón de
+S0212-71992006000900007-1,false_positive,O,CALLE,,20B,-1,483,". Avda. Alcalde Electro Carballo , 20B , 4C 15174 Culleredo , A"
+S0212-71992006000900007-1,false_positive,O,CALLE,,4C,-1,485,"Alcalde Electro Carballo , 20B , 4C 15174 Culleredo , A Coruña e-mail"
+S0212-71992006000900007-1,false_positive,O,PAIS,,Coruña,-1,490,", 4C 15174 Culleredo , A Coruña e-mail : Beafjorge@hotmail.com ; bea_fjorge@yahoo.es"
+S0212-71992006000900007-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,43 97856395 65,43,19,19,NHC : 3785649 . NASS : 43 97856395 65 . Domicilio : Avenida de las
+S0212-71992006000900007-1,type_confusion,CORREO_ELECTRONICO,CALLE,"Avenida de las Américas , 5 , 3 D.","Avenida de las Américas , 5 , 3 D.",25,25,"43 97856395 65 . Domicilio : Avenida de las Américas , 5 , 3 D. Localidad/ Provincia : Culleredo . CP"
+S0212-71992006000900007-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,15 28 54789,15,82,82,: Beatriz Fernández Jorge NºCol : 15 28 54789 . Historia Actual : Varón de
+S0212-71992006000900007-1,boundary_error,CALLE,CALLE,"Avda. Alcalde Electro Carballo , 20B , 4C",Avda. Alcalde Electro Carballo,478,478,": Dra. Beatriz Fernández Jorge . Avda. Alcalde Electro Carballo , 20B , 4C 15174 Culleredo , A Coruña e-mail"
+S0212-71992006000900007-1,boundary_error,TERRITORIO,TERRITORIO,A Coruña,A,489,489,"20B , 4C 15174 Culleredo , A Coruña e-mail : Beafjorge@hotmail.com ; bea_fjorge@yahoo.es"
+S0212-71992007000200007-1,false_positive,O,SEXO_SUJETO_ASISTENCIA,,italiano,-1,64,Rosada . Historia Actual : Varón italiano de 64 años ingresa en marzo
+S0212-71992007000400005-1,false_positive,O,ID_ASEGURAMIENTO,,86165464,-1,16,: 65463543 . NASS : 54 86165464 44 . Domicilio : Plaça de
+S0212-71992007000400005-1,false_positive,O,CALLE,,44,-1,17,65463543 . NASS : 54 86165464 44 . Domicilio : Plaça de l'Ajuntament
+S0212-71992007000400005-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,46,-1,74,José Pérez Silvestre NºCol : 46 46 81856 . Historia Actual del paciente
+S0212-71992007000400005-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,81856,-1,75,Pérez Silvestre NºCol : 46 46 81856 . Historia Actual del paciente :
+S0212-71992007000400005-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,54 86165464 44,54,15,15,NHC : 65463543 . NASS : 54 86165464 44 . Domicilio : Plaça de l'Ajuntament
+S0212-71992007000400005-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_TITULACION_PERSONAL_SANITARIO,123464,123464,64,64,Ingreso : 30/05/2017 . Episodio : 123464 . Médico : José Pérez Silvestre
+S0212-71992007000400005-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,46 46 81856,46,73,73,: José Pérez Silvestre NºCol : 46 46 81856 . Historia Actual del paciente :
+S0212-71992007000400005-1,boundary_error,CALLE,CALLE,"Avda. Tres Cruces , s / n.",Avda. Tres Cruces,429,429,"Silvestre . Hospital General Universitario . Avda. Tres Cruces , s / n. 46014 Valencia . e-mail : jopesilver@hotmail.com"
+S0212-71992007000600008-1,false_positive,O,ID_ASEGURAMIENTO,,35619335,-1,20,: 7890346 . NASS : 74 35619335 67 . Domicilio : Av/ Silgado
+S0212-71992007000600008-1,false_positive,O,CALLE,,67,-1,21,"7890346 . NASS : 74 35619335 67 . Domicilio : Av/ Silgado ,"
+S0212-71992007000600008-1,false_positive,O,CALLE,,3 Izq,-1,30,": Av/ Silgado , 4 , 3 Izq .. Localidad/ Provincia : Toledo ."
+S0212-71992007000600008-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,45,-1,78,Fernando Marcos Sánchez NºCol : 45 45 32610 . Historia Actual : Varón
+S0212-71992007000600008-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,32610,-1,79,Marcos Sánchez NºCol : 45 45 32610 . Historia Actual : Varón de
+S0212-71992007000600008-1,false_positive,O,CALLE,,1,-1,981,"Sánchez . C/ Gregorio Corrochano , 1 . 45600 Talavera de la Reina"
+S0212-71992007000600008-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,74 35619335 67,74,19,19,"NHC : 7890346 . NASS : 74 35619335 67 . Domicilio : Av/ Silgado ,"
+S0212-71992007000600008-1,boundary_error,CALLE,CALLE,"Av/ Silgado , 4 , 3 Izq","Av/ Silgado , 4",25,25,"74 35619335 67 . Domicilio : Av/ Silgado , 4 , 3 Izq .. Localidad/ Provincia : Toledo ."
+S0212-71992007000600008-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,45 45 32610,45,77,77,: Fernando Marcos Sánchez NºCol : 45 45 32610 . Historia Actual : Varón de
+S0212-71992007000600008-1,boundary_error,CALLE,CALLE,"C/ Gregorio Corrochano , 1",C/ Gregorio Corrochano,977,977,": Dr. Fernando Marcos Sánchez . C/ Gregorio Corrochano , 1 . 45600 Talavera de la Reina"
+S0212-71992007001000007-1,false_positive,O,ID_ASEGURAMIENTO,,53654065,-1,16,: 874554 . NASS : 69 53654065 04 . Domicilio : Carrer de
+S0212-71992007001000007-1,false_positive,O,CALLE,,04,-1,17,874554 . NASS : 69 53654065 04 . Domicilio : Carrer de Jaume
+S0212-71992007001000007-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,75,José Nicolás Sánchez NºCol : 25 28 47586 . Historia Actual : Paciente
+S0212-71992007001000007-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,47586,-1,76,Nicolás Sánchez NºCol : 25 28 47586 . Historia Actual : Paciente varón
+S0212-71992007001000007-1,false_positive,O,CALLE,,44,-1,638,"María . Avda. Alcalde Roure , 44 . 25006 Lleida . e-mail :"
+S0212-71992007001000007-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,69 53654065 04,69,15,15,NHC : 874554 . NASS : 69 53654065 04 . Domicilio : Carrer de Jaume
+S0212-71992007001000007-1,false_negative,TERRITORIO,O,CP:25001,,33,-1,. Localidad/ Provincia : Lleida . CP:25001 . Datos asistenciales . Fecha de
+S0212-71992007001000007-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,25 28 47586,25,74,74,Francisco José Nicolás Sánchez NºCol : 25 28 47586 . Historia Actual : Paciente varón
+S0212-71992007001000007-1,boundary_error,CALLE,CALLE,"Avda. Alcalde Roure , 44",Avda. Alcalde Roure,634,634,". Hospital de Santa María . Avda. Alcalde Roure , 44 . 25006 Lleida . e-mail :"
+S0213-12852005000400003-1,false_positive,O,ID_ASEGURAMIENTO,,985674,-1,16,: 986565 . NASS : 20 985674 55 . Domicilio : Avenida de
+S0213-12852005000400003-1,false_positive,O,CALLE,,55,-1,17,986565 . NASS : 20 985674 55 . Domicilio : Avenida de asturias
+S0213-12852005000400003-1,false_positive,O,ID_ASEGURAMIENTO,,28,-1,68,Maria Olmedo Baez NºCol : 28 28 54971 . Historia del paciente :
+S0213-12852005000400003-1,false_positive,O,ID_ASEGURAMIENTO,,54971,-1,69,Olmedo Baez NºCol : 28 28 54971 . Historia del paciente : Paciente
+S0213-12852005000400003-1,false_positive,O,INSTITUCION,,de Porto,-1,94,Medicina Oral del Hospital de Clínicas de Porto Alegre y afirma tener lesiones dolorosas
+S0213-12852005000400003-1,false_positive,O,TERRITORIO,,Alegre,-1,96,del Hospital de Clínicas de Porto Alegre y afirma tener lesiones dolorosas en
+S0213-12852005000400003-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,20 985674 55,20,15,15,NHC : 986565 . NASS : 20 985674 55 . Domicilio : Avenida de asturias
+S0213-12852005000400003-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,30,30,"16 , 3G. Localidad/ Provincia : Madrid . CP:28036 . Datos asistenciales ."
+S0213-12852005000400003-1,false_negative,TERRITORIO,O,CP:28036,,32,-1,3G. Localidad/ Provincia : Madrid . CP:28036 . Datos asistenciales . Fecha de
+S0213-12852005000400003-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,28 28 54971,28,67,67,: Maria Olmedo Baez NºCol : 28 28 54971 . Historia del paciente : Paciente
+S0213-12852005000400003-1,type_confusion,ID_SUJETO_ASISTENCIA,FAMILIARES_SUJETO_ASISTENCIA,casado,casado,82,82,"varón , de 47 años , casado , acude al departamento de Medicina"
+S0213-12852005000400003-1,boundary_error,HOSPITAL,HOSPITAL,Hospital de Clínicas de Porto Alegre,Hospital de Clínicas,91,91,al departamento de Medicina Oral del Hospital de Clínicas de Porto Alegre y afirma tener lesiones dolorosas en
+S0213-12852006000600002-1,false_positive,O,ID_ASEGURAMIENTO,,55478621,-1,20,: 7845693 . NASS : 67 55478621 30 . Domicilio : Avda. Pitis
+S0213-12852006000600002-1,false_positive,O,CALLE,,30,-1,21,"7845693 . NASS : 67 55478621 30 . Domicilio : Avda. Pitis ,"
+S0213-12852006000600002-1,false_positive,O,ID_SUJETO_ASISTENCIA,,28,-1,77,Zulema Casariego Acosta NºCol : 28 28 74510 . Informe clínico del paciente
+S0213-12852006000600002-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,74510,-1,78,Casariego Acosta NºCol : 28 28 74510 . Informe clínico del paciente :
+S0213-12852006000600002-1,false_positive,O,FECHAS,,marzo,-1,138,los primeros días del mes de marzo del año 2005 . A la
+S0213-12852006000600002-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,67 55478621 30,67,19,19,"NHC : 7845693 . NASS : 67 55478621 30 . Domicilio : Avda. Pitis ,"
+S0213-12852006000600002-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 74510,28,76,76,: Zulema Casariego Acosta NºCol : 28 28 74510 . Informe clínico del paciente :
+S0213-12852006000600002-1,false_negative,ID_SUJETO_ASISTENCIA,O,pareja de adicto,,96,-1,"de 34 años de edad , pareja de adicto , con dos hijos negativos para"
+S0213-12852006000600002-1,boundary_error,FAMILIARES_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,dos hijos,hijos,101,102,", pareja de adicto , con dos hijos negativos para el VIH . Positiva"
+S0213-12852006000600002-1,false_negative,ID_SUJETO_ASISTENCIA,O,soltera,,116,-1,"el año 1995 , se declara soltera y de ocupación ama de casa"
+S0213-12852006000600002-1,false_negative,PROFESION,O,ama de casa,,120,-1,se declara soltera y de ocupación ama de casa . Se presentó a la consulta
+S0213-12852006000600002-1,boundary_error,FECHAS,FECHAS,marzo del año 2005,año 2005,138,140,"los primeros días del mes de marzo del año 2005 . A la admisión , se"
+S0213-12852016000500002-1,false_positive,O,CALLE,,Cl,-1,12,: Caicedo Cruz . Domicilio : Cl . 20 # 44-16 . Localidad/
+S0213-12852016000500002-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,negra,-1,75,"de sexo masculino , de raza negra , 21 años de edad ,"
+S0213-12852016000500002-1,false_positive,O,INSTITUCION,,Fundación de,-1,94,Maxilofacial del Hospital Universitario San Vicente Fundación de Medellín adscrito a la Universidad de
+S0213-12852016000500002-1,false_positive,O,TERRITORIO,,Medellín,-1,96,Hospital Universitario San Vicente Fundación de Medellín adscrito a la Universidad de Antioquia
+S0213-12852016000500002-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,años,-1,861,10 meses y a los 2 años . En la cita de control
+S0213-12852016000500002-1,false_positive,O,TERRITORIO,,52-59,-1,1122,Facultad de Odontología Calle 64 # 52-59 Medellín . Colombia Correo electrónico :
+S0213-12852016000500002-1,boundary_error,CALLE,CALLE,Cl . 20 # 44-16,20 # 44-16,12,14,: Caicedo Cruz . Domicilio : Cl . 20 # 44-16 . Localidad/ Provincia : Medellín .
+S0213-12852016000500002-1,boundary_error,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,raza negra,raza,74,74,"Paciente de sexo masculino , de raza negra , 21 años de edad ,"
+S0213-12852016000500002-1,boundary_error,HOSPITAL,HOSPITAL,Hospital Universitario San Vicente Fundación de Medellín,Hospital Universitario San Vicente,90,90,al servicio de Cirugía Maxilofacial del Hospital Universitario San Vicente Fundación de Medellín adscrito a la Universidad de Antioquia
+S0213-12852016000500002-1,type_confusion,INSTITUCION,HOSPITAL,Universidad de Antioquia Facultad de Odontología,Universidad de Antioquia Facultad de Odontología,1113,1113,por : Martha Lucia Marín Botero Universidad de Antioquia Facultad de Odontología Calle 64 # 52-59 Medellín .
+S0213-12852016000500002-1,boundary_error,CALLE,CALLE,Calle 64 # 52-59,Calle 64,1119,1119,Universidad de Antioquia Facultad de Odontología Calle 64 # 52-59 Medellín . Colombia Correo electrónico :
+S0365-66912004000600009-2,false_positive,O,ID_ASEGURAMIENTO,,47563379,-1,20,: 8439754 . NASS : 38 47563379 20 . Domicilio : Avda. Europa
+S0365-66912004000600009-2,false_positive,O,CALLE,,20,-1,21,"8439754 . NASS : 38 47563379 20 . Domicilio : Avda. Europa ,"
+S0365-66912004000600009-2,false_positive,O,CALLE,,19,-1,28,". Domicilio : Avda. Europa , 19 . Localidad/ Provincia : Alcobendas ."
+S0365-66912004000600009-2,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,75,María Jesús Morán NºCol : 28 28 94675 . Informe clínico del paciente
+S0365-66912004000600009-2,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,94675,-1,76,Jesús Morán NºCol : 28 28 94675 . Informe clínico del paciente :
+S0365-66912004000600009-2,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,38 47563379 20,38,19,19,"NHC : 8439754 . NASS : 38 47563379 20 . Domicilio : Avda. Europa ,"
+S0365-66912004000600009-2,boundary_error,CALLE,CALLE,"Avda. Europa , 19",Avda. Europa,25,25,"38 47563379 20 . Domicilio : Avda. Europa , 19 . Localidad/ Provincia : Alcobendas ."
+S0365-66912004000600009-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 94675,28,74,74,: María Jesús Morán NºCol : 28 28 94675 . Informe clínico del paciente :
+S0365-66912004000800009-1,false_positive,O,CALLE,,23,-1,16,NHC : 546534 . NASS:25 87045626 23 . Domicilio : Av. de los
+S0365-66912004000800009-1,false_positive,O,CALLE,,3,-1,26,"Av. de los Reyes Leoneses , 3 . Localidad/ Provincia : León ."
+S0365-66912004000800009-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,24,-1,74,: Miguel Cordero-Coma NºCol : 24 24 67845 . Historia Actual : Mujer
+S0365-66912004000800009-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,67845,-1,75,Miguel Cordero-Coma NºCol : 24 24 67845 . Historia Actual : Mujer de
+S0365-66912004000800009-1,false_positive,O,CALLE,,n,-1,361,"Altos de Nava , s / n 24080 León . España E-mail :"
+S0365-66912004000800009-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:25 87045626 23,87045626,14,15,Rajoy . NHC : 546534 . NASS:25 87045626 23 . Domicilio : Av. de los
+S0365-66912004000800009-1,boundary_error,CALLE,CALLE,"Av. de los Reyes Leoneses , 3",Av. de los Reyes Leoneses,20,20,"NASS:25 87045626 23 . Domicilio : Av. de los Reyes Leoneses , 3 . Localidad/ Provincia : León ."
+S0365-66912004000800009-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_TITULACION_PERSONAL_SANITARIO,368556,368556,65,65,Ingreso : 16/10/2017 . Episodio : 368556 . Médico : Miguel Cordero-Coma NºCol
+S0365-66912004000800009-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,24 24 67845,24,73,73,Médico : Miguel Cordero-Coma NºCol : 24 24 67845 . Historia Actual : Mujer de
+S0365-66912004000800009-1,boundary_error,CALLE,CALLE,"C/. Altos de Nava , s / n","C/. Altos de Nava , s",354,354,"Miguel Cordero-Coma . Hospital de León C/. Altos de Nava , s / n 24080 León . España E-mail :"
+S0365-66912004000900009-1,false_positive,O,ID_ASEGURAMIENTO,,62602657,-1,20,: 3478056 . NASS : 85 62602657 31 . Domicilio : Calle Arzobispo
+S0365-66912004000900009-1,false_positive,O,CALLE,,31,-1,21,3478056 . NASS : 85 62602657 31 . Domicilio : Calle Arzobispo Raimundo
+S0365-66912004000900009-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,31,-1,76,Wenceslao Torre Buxalleu NºCol : 31 31 44789 . Informe clínico del paciente
+S0365-66912004000900009-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,44789,-1,77,Torre Buxalleu NºCol : 31 31 44789 . Informe clínico del paciente :
+S0365-66912004000900009-1,false_positive,O,TERRITORIO,,E-mai,-1,395,"Pio XII , 36 31008 Pamplona E-mai . : wtorre@unav.es"
+S0365-66912004000900009-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,85 62602657 31,85,19,19,NHC : 3478056 . NASS : 85 62602657 31 . Domicilio : Calle Arzobispo Raimundo
+S0365-66912004000900009-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,31 31 44789,31,75,75,: Wenceslao Torre Buxalleu NºCol : 31 31 44789 . Informe clínico del paciente :
+S0365-66912004001100012-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,15,-1,73,Enrique Freiré Vila NºCol : 15 15 23910 . Informe clínico del paciente
+S0365-66912004001100012-1,false_positive,O,TERRITORIO,,23910,-1,74,Freiré Vila NºCol : 15 15 23910 . Informe clínico del paciente :
+S0365-66912004001100012-1,false_positive,O,TERRITORIO,,La,-1,501,"15.405 Ferrol - ( Coruña , La ) , Spain Tel . :"
+S0365-66912004001100012-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,15 15 23910,15,72,72,: Enrique Freiré Vila NºCol : 15 15 23910 . Informe clínico del paciente :
+S0365-66912004001100012-1,boundary_error,HOSPITAL,NOMBRE_PERSONAL_SANITARIO,Prof. Novoa Santos,Novoa Santos,478,479,del Dolor Hospital Arquitecto Marcide / Prof. Novoa Santos Área Sanitaria de Ferrol C/ Estrada
+S0365-66912004001100012-1,boundary_error,TERRITORIO,HOSPITAL,Ferrol,Área Sanitaria de Ferrol,484,481,Arquitecto Marcide / Prof. Novoa Santos Área Sanitaria de Ferrol C/ Estrada San Pedro de Leixa-Catabois
+S0365-66912004001100012-1,boundary_error,CALLE,CALLE,"C/ Estrada San Pedro de Leixa-Catabois , s / n","C/ Estrada San Pedro de Leixa-Catabois , s",485,485,"Novoa Santos Área Sanitaria de Ferrol C/ Estrada San Pedro de Leixa-Catabois , s / n 15.405 Ferrol - ( Coruña ,"
+S0365-66912004001100012-1,boundary_error,TERRITORIO,TERRITORIO,"Coruña , La",Coruña,499,499,"/ n 15.405 Ferrol - ( Coruña , La ) , Spain Tel . :"
+S0365-66912004001100012-1,type_confusion,NUMERO_TELEFONO,ID_ASEGURAMIENTO,981.33.40.00,981.33.40.00,508,508,") , Spain Tel . : 981.33.40.00 ( Ext ): 138-137 Fax :"
+S0365-66912004001100012-1,type_confusion,NUMERO_TELEFONO,ID_SUJETO_ASISTENCIA,138-137,138-137,512,512,. : 981.33.40.00 ( Ext ): 138-137 Fax : 981.33.40.15 enriquefreire2000@yahoo.es
+S0365-66912004001100012-1,type_confusion,NUMERO_FAX,ID_ASEGURAMIENTO,981.33.40.15,981.33.40.15,515,515,( Ext ): 138-137 Fax : 981.33.40.15 enriquefreire2000@yahoo.es
+S0365-66912004001200010-2,false_positive,O,ID_ASEGURAMIENTO,,46578345,-1,20,: 7456745 . NASS : 83 46578345 65 . Domicilio : C/ Jacinto
+S0365-66912004001200010-2,false_positive,O,CALLE,,65,-1,21,7456745 . NASS : 83 46578345 65 . Domicilio : C/ Jacinto Benavente
+S0365-66912004001200010-2,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,47,-1,76,Vanessa Asensio Sánchez NºCol : 47 47 58996 . Informe clínico del paciente
+S0365-66912004001200010-2,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,58996,-1,77,Asensio Sánchez NºCol : 47 47 58996 . Informe clínico del paciente :
+S0365-66912004001200010-2,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,83 46578345 65,83,19,19,NHC : 7456745 . NASS : 83 46578345 65 . Domicilio : C/ Jacinto Benavente
+S0365-66912004001200010-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,47 47 58996,47,75,75,: Vanessa Asensio Sánchez NºCol : 47 47 58996 . Informe clínico del paciente :
+S0365-66912004001200010-2,boundary_error,HOSPITAL,HOSPITAL,Hospital General,Hospital General Servicio Castellano-Leonés de Salud,324,324,clínico : Dra. Vanessa Asensio Sánchez Hospital General Servicio Castellano-Leonés de Salud Servicio de Oftalmología Medina del Campo
+S0365-66912004001200010-2,boundary_error,INSTITUCION,HOSPITAL,Servicio Castellano-Leonés de Salud,Hospital General Servicio Castellano-Leonés de Salud,326,324,clínico : Dra. Vanessa Asensio Sánchez Hospital General Servicio Castellano-Leonés de Salud Servicio de Oftalmología Medina del Campo
+S0365-66912005001000011-1,false_positive,O,CALLE,,37,-1,15,NHC : 754695 . NASS:54 65745645 37 . Domicilio : Calle Valdemingómez 96
+S0365-66912005001000011-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,52513,-1,66,: Ana Zaragoza Herrero NºCol:28 28 52513 . Historia del paciente : se
+S0365-66912005001000011-1,false_positive,O,TERRITORIO,,Mayo,-1,344,"Allergan , Wesport , Co . Mayo , Irlanda ) . A los"
+S0365-66912005001000011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:54 65745645 37,65745645,13,14,Rodriguez . NHC : 754695 . NASS:54 65745645 37 . Domicilio : Calle Valdemingómez 96
+S0365-66912005001000011-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:28 28 52513,28,64,65,. Médico : Ana Zaragoza Herrero NºCol:28 28 52513 . Historia del paciente : se
+S0365-66912005001000011-1,false_negative,INSTITUCION,O,Bristol-Myers Squibb SL,,144,-1,"triamcinolona acetonido ( Trigon depot ® Bristol-Myers Squibb SL , Anagni Frosinone , Italia )"
+S0365-66912005001000011-1,boundary_error,INSTITUCION,NOMBRE_PERSONAL_SANITARIO,Alcon Cusi,Cusi,321,322,"2 h ( Oftacilox ® , Alcon Cusi , El Masnou , Barcelona ,"
+S0365-66912005001000011-1,false_negative,INSTITUCION,O,Allergan,,338,-1,"Poly-pred colirio ® cada 8h ( Allergan , Wesport , Co . Mayo"
+S0365-66912005001000011-1,boundary_error,TERRITORIO,TERRITORIO,Co . Mayo,Co,342,342,"8h ( Allergan , Wesport , Co . Mayo , Irlanda ) . A los"
+S0365-66912005001100009-2,false_positive,O,ID_ASEGURAMIENTO,,95642345,-1,16,: 3576324 . NASS : 23 95642345 45 . Domicilio : Calle Carnicer
+S0365-66912005001100009-2,false_positive,O,CALLE,,45,-1,17,3576324 . NASS : 23 95642345 45 . Domicilio : Calle Carnicer 17
+S0365-66912005001100009-2,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,73,Luis Torres Copado NºCol : 28 28 46712 . Historia Actual : Mujer
+S0365-66912005001100009-2,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,46712,-1,74,Torres Copado NºCol : 28 28 46712 . Historia Actual : Mujer de
+S0365-66912005001100009-2,false_positive,O,NOMBRE_PERSONAL_SANITARIO,,Merck,-1,202,"0,5% ( Timoftol ® 0,5% , Merck Sharp & Dohme de España SA"
+S0365-66912005001100009-2,false_positive,O,INSTITUCION,,SA,-1,208,"Merck Sharp & Dohme de España SA , Madrid ) cada 12 horas"
+S0365-66912005001100009-2,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,23 95642345 45,23,15,15,NHC : 3576324 . NASS : 23 95642345 45 . Domicilio : Calle Carnicer 17
+S0365-66912005001100009-2,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,32,32,puerta 14 . Localidad/ Provincia : Madrid . CP : 28028 . Datos
+S0365-66912005001100009-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 46712,28,72,72,Jose Luis Torres Copado NºCol : 28 28 46712 . Historia Actual : Mujer de
+S0365-66912005001100009-2,boundary_error,INSTITUCION,HOSPITAL,Merck Sharp & Dohme,Sharp & Dohme de España,202,203,"0,5% ( Timoftol ® 0,5% , Merck Sharp & Dohme de España SA , Madrid ) cada 12"
+S0365-66912005001100009-2,boundary_error,PAIS,HOSPITAL,España,Sharp & Dohme de España,207,203,"( Timoftol ® 0,5% , Merck Sharp & Dohme de España SA , Madrid ) cada 12"
+S0365-66912005001100009-2,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,210,210,"& Dohme de España SA , Madrid ) cada 12 horas . Remitido"
+S0365-66912005001200012-1,false_positive,O,ID_ASEGURAMIENTO,,75468925,-1,20,: 8973852 . NASS : 89 75468925 03 . Domicilio : C/ Pedregal
+S0365-66912005001200012-1,false_positive,O,CALLE,,03,-1,21,"8973852 . NASS : 89 75468925 03 . Domicilio : C/ Pedregal ,"
+S0365-66912005001200012-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,34,-1,78,Victoria Oviedo Gómez NºCol : 34 34 51203 . Informe clínico del paciente
+S0365-66912005001200012-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,51203,-1,79,Oviedo Gómez NºCol : 34 34 51203 . Informe clínico del paciente :
+S0365-66912005001200012-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,89 75468925 03,89,19,19,"NHC : 8973852 . NASS : 89 75468925 03 . Domicilio : C/ Pedregal ,"
+S0365-66912005001200012-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,34 34 51203,34,77,77,: Victoria Oviedo Gómez NºCol : 34 34 51203 . Informe clínico del paciente :
+S0365-66912005001200012-1,type_confusion,ID_SUJETO_ASISTENCIA,SEXO_SUJETO_ASISTENCIA,joven,joven,88,88,clínico del paciente : paciente varón joven de 40 años con pérdida de
+S0365-66912005001200012-1,boundary_error,CALLE,CALLE,Avda. Donantes de sangre s / n,Avda. Donantes de sangre s,308,308,", Complejo Asistencial de Palencia , Avda. Donantes de sangre s / n , 34005 , Palencia E-mail :"
+S0365-66912006000100010-1,false_positive,O,ID_ASEGURAMIENTO,,28634576,-1,20,: 8238612 . NASS : 83 28634576 54 . Domicilio : Paseo de
+S0365-66912006000100010-1,false_positive,O,CALLE,,54,-1,21,8238612 . NASS : 83 28634576 54 . Domicilio : Paseo de las
+S0365-66912006000100010-1,false_positive,O,TERRITORIO,,de,-1,26,28634576 54 . Domicilio : Paseo de las palmeras . Localidad/ Provincia :
+S0365-66912006000100010-1,false_positive,O,CALLE,,las,-1,27,54 . Domicilio : Paseo de las palmeras . Localidad/ Provincia : Madrid
+S0365-66912006000100010-1,false_positive,O,TERRITORIO,,palmeras,-1,28,. Domicilio : Paseo de las palmeras . Localidad/ Provincia : Madrid .
+S0365-66912006000100010-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,90172,-1,73,Noemí Ruiz del Río NºCol:28 28 90172 . Informe clínico del paciente :
+S0365-66912006000100010-1,false_positive,O,CALLE,,nº 29,-1,458,"Río C./ Melchor Fernández Almagro , nº 29 , 8º D 28029 Madrid España"
+S0365-66912006000100010-1,false_positive,O,CALLE,,8º D,-1,461,"Fernández Almagro , nº 29 , 8º D 28029 Madrid España E-mail : noeruizdelrio@yahoo.es"
+S0365-66912006000100010-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,83 28634576 54,83,19,19,NHC : 8238612 . NASS : 83 28634576 54 . Domicilio : Paseo de las
+S0365-66912006000100010-1,boundary_error,CALLE,CALLE,Paseo de las palmeras,Paseo,25,25,83 28634576 54 . Domicilio : Paseo de las palmeras . Localidad/ Provincia : Madrid .
+S0365-66912006000100010-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,NºCol:28 28 90172,28,71,72,Médico : Noemí Ruiz del Río NºCol:28 28 90172 . Informe clínico del paciente :
+S0365-66912006000100010-1,boundary_error,CALLE,CALLE,"C./ Melchor Fernández Almagro , nº 29 , 8º D",C./ Melchor Fernández Almagro,453,453,"clínico : Noemí Ruiz del Río C./ Melchor Fernández Almagro , nº 29 , 8º D 28029 Madrid España E-mail : noeruizdelrio@yahoo.es"
+S0365-66912006001100007-1,false_positive,O,ID_ASEGURAMIENTO,,27567845,-1,20,: 7834691 . NASS : 36 27567845 36 . Domicilio : Av. Diego
+S0365-66912006001100007-1,false_positive,O,CALLE,,36,-1,21,7834691 . NASS : 36 27567845 36 . Domicilio : Av. Diego Lopez
+S0365-66912006001100007-1,false_positive,O,ID_SUJETO_ASISTENCIA,,36,-1,84,Inés Pérez Flores NºCol : 36 36 26640 . Historia Actual : Mujer
+S0365-66912006001100007-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,26640,-1,85,Pérez Flores NºCol : 36 36 26640 . Historia Actual : Mujer de
+S0365-66912006001100007-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,36 27567845 36,36,19,19,NHC : 7834691 . NASS : 36 27567845 36 . Domicilio : Av. Diego Lopez
+S0365-66912006001100007-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,36 36 26640,36,83,83,María Inés Pérez Flores NºCol : 36 36 26640 . Historia Actual : Mujer de
+S0365-66912006001100007-1,type_confusion,TERRITORIO,PAIS,Pontevedra,Pontevedra,309,309,"POVISA C/. Salamanca,5 36211 Vigo ( Pontevedra ) España E-mail : mari-nes@eremas.net"
+S0365-66912007000700011-1,false_positive,O,ID_ASEGURAMIENTO,,76347043,-1,20,: 7645745 . NASS : 28 76347043 12 . Domicilio : Av. Palomero
+S0365-66912007000700011-1,false_positive,O,CALLE,,12,-1,21,"7645745 . NASS : 28 76347043 12 . Domicilio : Av. Palomero ,"
+S0365-66912007000700011-1,false_positive,O,EDAD_SUJETO_ASISTENCIA,,28,-1,82,Carmen Blanco Rivera NºCol : 28 28 . Informe clínico del paciente :
+S0365-66912007000700011-1,false_positive,O,CALLE,,22,-1,369,"( CHUVI ) C/. Pizarro , 22 36204 Vigo ( Pontevedra ) España"
+S0365-66912007000700011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,28 76347043 12,28,19,19,"NHC : 7645745 . NASS : 28 76347043 12 . Domicilio : Av. Palomero ,"
+S0365-66912007000700011-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28,28,81,81,M.ª Carmen Blanco Rivera NºCol : 28 28 . Informe clínico del paciente :
+S0365-66912007000700011-1,false_negative,HOSPITAL,O,CHUVI,,364,-1,"Complexo Hospitalario Universitario de Vigo ( CHUVI ) C/. Pizarro , 22 36204"
+S0365-66912007000700011-1,boundary_error,CALLE,CALLE,"C/. Pizarro , 22",C/. Pizarro,366,366,"Universitario de Vigo ( CHUVI ) C/. Pizarro , 22 36204 Vigo ( Pontevedra ) España"
+S0365-66912007000700011-1,type_confusion,TERRITORIO,PAIS,Vigo,Vigo,371,371,") C/. Pizarro , 22 36204 Vigo ( Pontevedra ) España E-mail :"
+S0365-66912007000700011-1,type_confusion,TERRITORIO,PAIS,Pontevedra,Pontevedra,373,373,"Pizarro , 22 36204 Vigo ( Pontevedra ) España E-mail : mcarmenbr@wanadoo.es"
+S0365-66912007000900010-1,false_positive,O,ID_ASEGURAMIENTO,,81405663,-1,20,: 8263401 . NASS : 27 81405663 24 . Domicilio : C/ Marques
+S0365-66912007000900010-1,false_positive,O,CALLE,,24,-1,21,8263401 . NASS : 27 81405663 24 . Domicilio : C/ Marques de
+S0365-66912007000900010-1,false_positive,O,CALLE,,"94 , 2",-1,30,": C/ Marques de Vadillo , 94 , 2 , 1 . Localidad/ Provincia :"
+S0365-66912007000900010-1,false_positive,O,CALLE,,1,-1,34,"Vadillo , 94 , 2 , 1 . Localidad/ Provincia : Madrid ."
+S0365-66912007000900010-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,81,Eric Perez Campagne NºCol : 28 28 57496 . Informe clínico del paciente
+S0365-66912007000900010-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,57496,-1,82,Perez Campagne NºCol : 28 28 57496 . Informe clínico del paciente :
+S0365-66912007000900010-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,27 81405663 24,27,19,19,NHC : 8263401 . NASS : 27 81405663 24 . Domicilio : C/ Marques de
+S0365-66912007000900010-1,boundary_error,CALLE,CALLE,"C/ Marques de Vadillo , 94 , 2 , 1",C/ Marques de Vadillo,25,25,"27 81405663 24 . Domicilio : C/ Marques de Vadillo , 94 , 2 , 1 . Localidad/ Provincia : Madrid ."
+S0365-66912007000900010-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,39,39,", 1 . Localidad/ Provincia : Madrid . CP : 28046 . Datos"
+S0365-66912007000900010-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 57496,28,80,80,: Eric Perez Campagne NºCol : 28 28 57496 . Informe clínico del paciente :
+S0365-66912007000900010-1,type_confusion,ID_SUJETO_ASISTENCIA,NOMBRE_PERSONAL_SANITARIO,caucásico,caucásico,90,90,"Informe clínico del paciente : Varón caucásico de 30 años , sin antecedentes"
+S0365-66912007000900016-1,false_positive,O,ID_ASEGURAMIENTO,,05789655,-1,16,: 75603 . NASS : 34 05789655 69 . Domicilio : Calle via
+S0365-66912007000900016-1,false_positive,O,CALLE,,69,-1,17,75603 . NASS : 34 05789655 69 . Domicilio : Calle via limite
+S0365-66912007000900016-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,28,-1,72,Yolanda Fernández Barrientos NºCol : 28 28 64168 . Motivo de ingreso :
+S0365-66912007000900016-1,false_positive,O,ID_TITULACION_PERSONAL_SANITARIO,,64168,-1,73,Fernández Barrientos NºCol : 28 28 64168 . Motivo de ingreso : Mujer
+S0365-66912007000900016-1,false_positive,O,HOSPITAL,,Farmacéutica,-1,548,"fotodinámica ( Visudyne ® , Novartis Farmacéutica S.A. , Barcelona ) y triamcinolona"
+S0365-66912007000900016-1,false_positive,O,CALLE,,apto,-1,653,"Vallehermoso , 15 , 2.º , apto . 20 28015 Madrid España E-mail"
+S0365-66912007000900016-1,false_positive,O,CALLE,,20,-1,655,"15 , 2.º , apto . 20 28015 Madrid España E-mail : yferbar@hotmail.com"
+S0365-66912007000900016-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,34 05789655 69,34,15,15,NHC : 75603 . NASS : 34 05789655 69 . Domicilio : Calle via limite
+S0365-66912007000900016-1,false_negative,TERRITORIO,O,CP:28036,,32,-1,6B. Localidad/ Provincia : Madrid . CP:28036 . Datos asistenciales . Fecha de
+S0365-66912007000900016-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 64168,28,71,71,: Yolanda Fernández Barrientos NºCol : 28 28 64168 . Motivo de ingreso : Mujer
+S0365-66912007000900016-1,false_negative,INSTITUCION,O,Aventis Pharma S.A.,,195,-1,"Urbason ® soluble 40 mg , Aventis Pharma S.A. , Madrid ) , atropina sulfato"
+S0365-66912007000900016-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,199,199,"mg , Aventis Pharma S.A. , Madrid ) , atropina sulfato 10 mg"
+S0365-66912007000900016-1,boundary_error,INSTITUCION,NOMBRE_PERSONAL_SANITARIO,Alcon Cusí S.A.,Cusí,214,215,"tópica ( Atropina ® 1% , Alcon Cusí S.A. , Barcelona ) cada 12 horas"
+S0365-66912007000900016-1,type_confusion,TERRITORIO,PAIS,Barcelona,Barcelona,218,218,"1% , Alcon Cusí S.A. , Barcelona ) cada 12 horas y dexametasona"
+S0365-66912007000900016-1,false_negative,INSTITUCION,O,Alcon Cusí S.A.,,234,-1,"ml tópica ( Maxidex ® , Alcon Cusí S.A. , Barcelona ) cada 6 horas"
+S0365-66912007000900016-1,type_confusion,TERRITORIO,PAIS,Barcelona,Barcelona,238,238,"® , Alcon Cusí S.A. , Barcelona ) cada 6 horas . A"
+S0365-66912007000900016-1,type_confusion,INSTITUCION,TERRITORIO,Whyeth,Whyeth,446,446,"oral ( Metotrexato Lederle ® , Whyeth , Madrid ) a bajas dosis"
+S0365-66912007000900016-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,448,448,"Metotrexato Lederle ® , Whyeth , Madrid ) a bajas dosis . Se"
+S0365-66912007000900016-1,boundary_error,INSTITUCION,NOMBRE_PERSONAL_SANITARIO,Novartis Farmacéutica S.A.,Novartis,547,547,"terapia fotodinámica ( Visudyne ® , Novartis Farmacéutica S.A. , Barcelona ) y triamcinolona acetónido"
+S0365-66912007000900016-1,false_negative,INSTITUCION,O,Bristol-Myers Squibb,,571,-1,"® 40 mg / ml , Bristol-Myers Squibb , Madrid ) . La AV"
+S0365-66912007000900016-1,type_confusion,TERRITORIO,PAIS,Madrid,Madrid,574,574,"/ ml , Bristol-Myers Squibb , Madrid ) . La AV en el"
+S0365-66912007000900016-1,boundary_error,CALLE,CALLE,"C/. Vallehermoso , 15 , 2.º , apto . 20","C/. Vallehermoso , 15 , 2.º",646,646,"Remitido por : Yolanda Fernández Barrientos C/. Vallehermoso , 15 , 2.º , apto . 20 28015 Madrid España E-mail : yferbar@hotmail.com"
+S0365-66912007001200011-1,false_positive,O,CALLE,,63,-1,15,NHC : 463436 . NASS:45 37678645 63 . Domicilio : Calle las rosa
+S0365-66912007001200011-1,false_positive,O,ID_SUJETO_ASISTENCIA,,28,-1,74,David Díaz Valle NºCol : 28 28 94267 . Historia Actual : Paciente
+S0365-66912007001200011-1,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,94267,-1,75,Díaz Valle NºCol : 28 28 94267 . Historia Actual : Paciente varón
+S0365-66912007001200011-1,false_positive,O,CALLE,,n,-1,425,"C/. Martín Lagos , s / n Madrid España E-mail : daviddiazvalle@yahoo.es"
+S0365-66912007001200011-1,boundary_error,ID_ASEGURAMIENTO,ID_ASEGURAMIENTO,NASS:45 37678645 63,37678645,13,14,Duarte . NHC : 463436 . NASS:45 37678645 63 . Domicilio : Calle las rosa
+S0365-66912007001200011-1,false_negative,TERRITORIO,O,CP:28014,,30,-1,6B. Localidad/ Provincia : Madrid . CP:28014 . Datos asistenciales . Fecha de
+S0365-66912007001200011-1,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_SUJETO_ASISTENCIA,9848163,9848163,64,64,Servicio : Oftalmologia . Episodio : 9848163 . Médico : David Díaz Valle
+S0365-66912007001200011-1,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_TITULACION_PERSONAL_SANITARIO,28 28 94267,28,73,73,: David Díaz Valle NºCol : 28 28 94267 . Historia Actual : Paciente varón
+S0365-66912007001200011-1,boundary_error,CALLE,CALLE,"C/. Martín Lagos , s / n","C/. Martín Lagos , s",419,419,"Ocular Hospital Clínico Universitario San Carlos C/. Martín Lagos , s / n Madrid España E-mail : daviddiazvalle@yahoo.es"
+S0365-66912008000100007-2,false_positive,O,CALLE,,B.,-1,27,"Kalea , 21 , 3 , B. Localidad/ Provincia : Barakaldo , Bizkaia"
+S0365-66912008000100007-2,false_positive,O,EDAD_SUJETO_ASISTENCIA,,48,-1,82,: Marta Galdós NºCol : 48 48 90511 . Informe clínico del paciente
+S0365-66912008000100007-2,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,90511,-1,83,Marta Galdós NºCol : 48 48 90511 . Informe clínico del paciente :
+S0365-66912008000100007-2,false_positive,O,EDAD_SUJETO_ASISTENCIA,,10 meses,-1,241,"edad actual de 11 años y 10 meses , pero presentando un retardo psicomotor"
+S0365-66912008000100007-2,false_positive,O,CALLE,,n,-1,272,"Plaza de Cruces , s / n 48903 Baracaldo ( Vizcaya ) España"
+S0365-66912008000100007-2,boundary_error,CALLE,CALLE,"Rio Castaños Kalea , 21 , 3 , B.","Rio Castaños Kalea , 21 , 3",19,19,"NHC : 8309139 . Domicilio : Rio Castaños Kalea , 21 , 3 , B. Localidad/ Provincia : Barakaldo , Bizkaia"
+S0365-66912008000100007-2,type_confusion,TERRITORIO,PAIS,Bizkaia,Bizkaia,33,33,"B. Localidad/ Provincia : Barakaldo , Bizkaia . CP : 48903 . Datos"
+S0365-66912008000100007-2,type_confusion,ID_CONTACTO_ASISTENCIAL,ID_TITULACION_PERSONAL_SANITARIO,3024760,3024760,73,73,Servicio : Oftalmología . Episodio : 3024760 . Médico : Marta Galdós NºCol
+S0365-66912008000100007-2,boundary_error,ID_TITULACION_PERSONAL_SANITARIO,ID_ASEGURAMIENTO,48 48 90511,48,81,81,Médico : Marta Galdós NºCol : 48 48 90511 . Informe clínico del paciente :
+S0365-66912008000100007-2,boundary_error,EDAD_SUJETO_ASISTENCIA,EDAD_SUJETO_ASISTENCIA,11 años y 10 meses,11 años,238,238,", con una edad actual de 11 años y 10 meses , pero presentando un retardo psicomotor"
+S0365-66912008000100007-2,boundary_error,NOMBRE_PERSONAL_SANITARIO,NOMBRE_PERSONAL_SANITARIO,Marta Galdós,Marta Galdós Dpto,256,256,severo . Responsable clínico : Dra. Marta Galdós Dpto . de Oftalmología . Hospital de
+S0365-66912008000100007-2,boundary_error,CALLE,CALLE,"Plaza de Cruces , s / n","Plaza de Cruces , s",266,266,"de Oftalmología . Hospital de Cruces Plaza de Cruces , s / n 48903 Baracaldo ( Vizcaya ) España"
+S0365-66912008000100009-3,false_positive,O,ID_ASEGURAMIENTO,,50689435,-1,16,: 52564 . NASS : 32 50689435 45 . Domicilio : Calle puerto
+S0365-66912008000100009-3,false_positive,O,CALLE,,45,-1,17,52564 . NASS : 32 50689435 45 . Domicilio : Calle puerto principe
+S0365-66912008000100009-3,false_positive,O,EDAD_SUJETO_ASISTENCIA,,08,-1,78,Jordi Bosch Valero NºCol : 07 08 94861 . Historia Actual : Mujer
+S0365-66912008000100009-3,false_positive,O,NOMBRE_SUJETO_ASISTENCIA,,94861,-1,79,Bosch Valero NºCol : 07 08 94861 . Historia Actual : Mujer de

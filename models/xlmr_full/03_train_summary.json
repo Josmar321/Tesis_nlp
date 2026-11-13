@@ -1,0 +1,38 @@
+{
+  "model_name": "xlm-roberta-base",
+  "scenario_data_dir": "data/augmented_100",
+  "output_dir": "models/xlmr_full",
+  "smoke_test": false,
+  "seed": 42,
+  "epochs": 5.0,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.0,
+  "early_stopping_patience": null,
+  "max_length": 512,
+  "stride": 128,
+  "train_docs": 500,
+  "train_windows": 1142,
+  "dev_docs": 250,
+  "dev_windows": 599,
+  "num_labels": 44,
+  "train_metrics": {
+    "train_runtime": 505.7026,
+    "train_samples_per_second": 11.291,
+    "train_steps_per_second": 0.712,
+    "total_flos": 1492571024056320.0,
+    "train_loss": 0.22670624893572594,
+    "epoch": 5.0
+  },
+  "dev_metrics": {
+    "eval_loss": 0.07684911787509918,
+    "eval_precision": 0.6912556380037829,
+    "eval_recall": 0.8173060381902632,
+    "eval_f1": 0.7490146618319408,
+    "eval_runtime": 5.7571,
+    "eval_samples_per_second": 104.045,
+    "eval_steps_per_second": 6.601,
+    "epoch": 5.0
+  }
+}
