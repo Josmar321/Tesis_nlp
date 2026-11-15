@@ -12,7 +12,7 @@ Repositorio de investigación de tesis (Ingeniería de Sistemas) sobre **Desiden
 | **Fase 2** | Aumentación Sintética Peruana (`02_augmentation.py`) | **Cerrada y congelada** | 3 escenarios (`augmented_baseline` 0%, `augmented_50` 50%, `augmented_100` 100%). `dev` y `test` permanecen intactos. |
 | **Fase 3** | Entrenamiento Fine-Tuning (`03_train_ner.py`) | **Completada (6/6 corridas)** | BETO (`dccuchile/bert-base-spanish-wwm-cased`) y XLM-RoBERTa (`xlm-roberta-base`) en los 3 escenarios, GPU Colab T4. |
 | **Fase 4** | Evaluación Estricta y Bootstrap (`04_evaluate_ner.py`) | **Completada (6/6 corridas)** | Evaluación `seqeval` estricta a nivel de entidad + bootstrap ($B = 1000$) para BETO y XLM-R. |
-| **Fase 5** | Consolidación y Visualización (`notebooks/01_resultados.ipynb`) | **Completada (BETO + XLM-R)** | Notebook re-ejecutado con las 6 corridas, salidas embebidas, tablas `.csv`/`.tex` y figuras `.png` en `results/05_*`. |
+| **Fase 5** | Consolidación y Visualización (`notebooks/01_resultados.ipynb`) | **Completada (BETO + XLM-R)** | Notebook re-ejecutado con las 6 corridas, salidas embebidas, tablas `.csv`/`.tex`, figuras `.png` en `results/05_*` y `results/figuras_tesis/`, y tabla de fuga `results/05_fuga_entidades.csv`. |
 
 ---
 
@@ -32,6 +32,25 @@ Evaluación estricta (`seqeval`, `IOB2` exact-match) sobre `test.jsonl` ($N = 25
 > **Interpretación metodológica:** El escenario **Mixto (50%)** conserva el rendimiento global en ambos modelos (BETO: $\Delta\text{Micro-F1} = -0.0019$; XLM-R: $+0.0023$), aunque con comportamiento heterogéneo por entidad. En BETO, `HOSPITAL` sube ligeramente de `0.7708` a `0.7762`, mientras `INSTITUCION` baja de `0.3810` a `0.2586`. El reemplazo total **Full (100%)** induce un desplazamiento de dominio severo sobre formatos regulatorios españoles (`ID_ASEGURAMIENTO`: BETO `0.9223 → 0.0052`, XLM-R `0.9875 → 0.0082`; `ID_TITULACION_PERSONAL_SANITARIO`: BETO `0.9175 → 0.0067`, XLM-R `0.9246 → 0.0036`). BETO conserva mejor los identificadores numéricos; XLM-R pierde Macro-F1 por el colapso de `ID_CONTACTO`, `NUMERO_TELEFONO` e `INSTITUCION`, no por un deterioro generalizado. La efectividad real sobre historias clínicas peruanas requerirá validación en un conjunto de prueba anotado localmente.
 
 > **Trazabilidad del test:** el hash canónico de `test.jsonl` es `d596b103e92a38e8d7d45ea8fc9e674632aa3fd85e1a55cfca92368e129a680d` (LF). La copia Windows con CRLF produce `8b30b80360cce568a9087b754b9a38b33aa278a6be952107eab3c4ef1bc898e3`; el contenido es idéntico (250 documentos, 126,093 tokens, 5,661 entidades).
+
+### 2.1 Fuga de entidades sensibles
+
+La **fuga completa** se define como una entidad de referencia que no tiene ningún solapamiento con una predicción (`false_negative`). Las confusiones de tipo no cuentan como fuga, porque la entidad sí se detecta como sensible. La **fuga con frontera** añade los errores de límite (`boundary_error`). Solo se reportan Baseline y Mixto: `04_errors.csv` está limitado a 1.000 filas y los escenarios Full están truncados.
+
+| Modelo | Escenario | Fuga completa | Fuga con frontera | Fuga completa (directos) | Fuga con frontera (directos) |
+| :--- | :--- | ---: | ---: | ---: | ---: |
+| BETO | Baseline (0%) | **1.73 %** (98) | 4.65 % | 1.17 % (21) | 4.67 % |
+| BETO | Mixto (50%) | **1.89 %** (107) | 4.96 % | 1.33 % (24) | 5.34 % |
+| XLM-R | Baseline (0%) | **1.01 %** (57) | 3.59 % | 0.50 % (9) | 3.11 % |
+| XLM-R | Mixto (50%) | **1.15 %** (65) | 3.83 % | 0.78 % (14) | 4.45 % |
+
+> Los porcentajes se calculan sobre el total de entidades con soporte en `test.jsonl` (5.661). Los valores entre paréntesis son el número de entidades fugadas. La tabla completa está en `results/05_fuga_entidades.csv`.
+
+### 2.2 Modelo seleccionado
+
+**BETO, escenario Mixto (50 %)**: Micro-F1 `0.9363` `[0.9274, 0.9448]`, Macro-F1 `0.7091` `[0.6976, 0.7213]` y fuga completa `1.89 %` (107 entidades). Conserva el rendimiento global de BETO Baseline (Micro `0.9382`, Macro `0.7163`), incorpora el 50 % de reemplazo sintético peruano y evita el colapso de Full (Micro `0.7772`, Macro `0.5873`). La fuga completa es 0.16 pp superior a la de BETO Baseline (`1.73 %`), por lo que la adaptación parcial **no reduce la fuga**; el criterio de selección es el compromiso entre retención del rendimiento y adaptación, no una mejora de privacidad. XLM-R presenta fugas completas menores (`1.01 %` y `1.15 %`), pero su Macro-F1 es aproximadamente 0.10 menor.
+
+> **Alcance:** el test es `test.jsonl` de MEDDOCAN (español peninsular), no texto clínico peruano. La selección mide retención en el dominio fuente y no demuestra generalización a hospitales peruanos.
 
 ---
 
@@ -66,13 +85,21 @@ proyecto_tesis_nlp/
 │   ├── xlmr_baseline__augmented_baseline/
 │   ├── xlmr_mixed__augmented_50/
 │   ├── xlmr_full__augmented_100/
-│   └── 05_*                  # Tablas (.csv, .tex) y gráficos (.png) listos para el documento de tesis
+│   ├── figuras_tesis/        # Fase 5: figuras 3-5 en PNG 300 ppp
+│   │   ├── figura3_micro_f1.png
+│   │   ├── figura4_macro_f1.png
+│   │   └── figura5_f1_por_entidad.png
+│   ├── 05_*                  # Tablas (.csv, .tex) y gráficos (.png) listos para la tesis
+│   └── 05_fuga_entidades.csv # Fuga completa y con frontera (Baseline y Mixto)
 ├── scripts/
 │   ├── 01_brat_to_bio.py     # Fase 1: Conversión BRAT a BIO JSONL con spaCy (es_core_news_sm)
 │   ├── 02_augmentation.py    # Fase 2: Aumentación sintética peruana con preservación de integridad
 │   ├── 03_train_ner.py       # Fase 3: Fine-tuning token classification con Hugging Face Trainer
-│   └── 04_evaluate_ner.py    # Fase 4: Evaluación estricta seqeval + Bootstrap IC 95%
+│   ├── 04_evaluate_ner.py    # Fase 4: Evaluación estricta seqeval + Bootstrap IC 95%
+│   ├── 05_figuras_tesis.py   # Fase 5: figuras 3-5 de la tesis
+│   └── 05_fuga_entidades.py  # Fase 5: tabla de fuga de entidades sensibles
 ├── Bitacora_Desarrollo.md    # Registro cronológico y técnico detallado del proyecto
+├── CITATION.cff              # Metadatos de citación del proyecto
 └── requirements.txt          # Dependencias reproducibles del pipeline
 ```
 
@@ -114,6 +141,11 @@ python scripts/04_evaluate_ner.py \
   --data-dir data/augmented_baseline \
   --output-dir results/beto_baseline__augmented_baseline \
   --bootstrap 1000
+
+# Fase 5: Tablas, figuras y fuga de entidades
+python -m jupyter nbconvert --to notebook --execute --inplace notebooks/01_resultados.ipynb
+python scripts/05_figuras_tesis.py
+python scripts/05_fuga_entidades.py > results/05_fuga_entidades.csv
 ```
 
 ---
@@ -123,5 +155,6 @@ python scripts/04_evaluate_ner.py \
 - [Bitacora_Desarrollo.md](Bitacora_Desarrollo.md): Historial completo de decisiones de diseño, auditorías de datos, resultados y tareas pendientes (`TODOs`).
 - [docs/protocolo_experimental.md](docs/protocolo_experimental.md): Especificación formal de particiones, hiperparámetros, realineamiento de sub-tokens, protocolo bootstrap y amenazas a la validez.
 - [docs/taxonomia_entidades.md](docs/taxonomia_entidades.md): Taxonomía de las 22 categorías PHI de MEDDOCAN (21 con soporte en `test`), estrategia de reemplazo sintético peruano y soporte estadístico por partición.
-- [models/README.md](models/README.md): Trazabilidad de los modelos entrenados, política de exclusión de pesos binarios en Git y advertencia sobre checkpoints locales.
-- [results/README.md](results/README.md): Descripción de los archivos generados por las Fases 4 y 5 (incluyendo tablas LaTeX listas para compilar).
+- [models/README.md](models/README.md): Trazabilidad de las 6 corridas, ubicación de los pesos, modelo seleccionado y advertencia sobre checkpoints locales.
+- [results/README.md](results/README.md): Descripción de los archivos generados por las Fases 4 y 5, figuras de tesis y tabla de fuga.
+- [CITATION.cff](CITATION.cff): Metadatos de citación del proyecto (autor, título y licencia MIT).

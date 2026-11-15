@@ -1,6 +1,6 @@
 # Directorio de Modelos (`models/`)
 
-Este directorio almacena los metadatos de configuración, vocabularios de etiquetas y resúmenes de entrenamiento generados por [03_train_ner.py](file:///c:/Users/kotem/Documents/Universidad/26.2/Tesis/github/proyecto_tesis_nlp/scripts/03_train_ner.py).
+Este directorio almacena los metadatos de configuración, vocabularios de etiquetas y resúmenes de entrenamiento generados por [03_train_ner.py](../scripts/03_train_ner.py).
 
 ---
 
@@ -8,22 +8,24 @@ Este directorio almacena los metadatos de configuración, vocabularios de etique
 
 Para mantener el repositorio ligero y reproducible, en Git **solo se versionan los artefactos de configuración y trazabilidad** de las **6 corridas oficiales** (3 de **BETO** `dccuchile/bert-base-spanish-wwm-cased` y 3 de **XLM-RoBERTa** `xlm-roberta-base`) ejecutadas en Google Colab (GPU Tesla T4, 5 épocas, `seed=42`):
 
-| Subdirectorio | Escenario de datos | Dev Micro-F1 | Archivos versionados en Git | Pesos finales (`model.safetensors`) |
+| Subdirectorio | Escenario | Dev F1 (`03_train_summary.json`) | Archivos versionados | Pesos (`model.safetensors`) |
 |---|---|---:|---|---|
-| `models/beto_baseline/` | `data/augmented_baseline` | `0.9401` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json` | No versionados en Git (~440 MB) |
-| `models/beto_mixed/` | `data/augmented_50` | `0.9363` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json` | No versionados en Git (~440 MB) |
-| `models/beto_full/` | `data/augmented_100` | `0.7827` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json` | No versionados en Git (~440 MB) |
-| `models/xlmr_baseline/` | `data/augmented_baseline` | `0.9264` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json`, `sentencepiece.bpe.model` | No versionados en Git (~1.1 GB) |
-| `models/xlmr_mixed/` | `data/augmented_50` | `0.9309` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json`, `sentencepiece.bpe.model` | No versionados en Git (~1.1 GB) |
-| `models/xlmr_full/` | `data/augmented_100` | `0.7490` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json`, `sentencepiece.bpe.model` | No versionados en Git (~1.1 GB) |
+| `models/beto_baseline/` | `data/augmented_baseline` | `0.9401` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json` | No versionados (~440 MB); salida en `models/beto_baseline/` |
+| `models/beto_mixed/` | `data/augmented_50` | `0.9363` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json` | No versionados (~440 MB); salida en `models/beto_mixed/` |
+| `models/beto_full/` | `data/augmented_100` | `0.7827` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json` | No versionados (~440 MB); salida en `models/beto_full/` |
+| `models/xlmr_baseline/` | `data/augmented_baseline` | `0.9264` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json`, `sentencepiece.bpe.model` | No versionados (~1.1 GB); salida en `models/xlmr_baseline/` |
+| `models/xlmr_mixed/` | `data/augmented_50` | `0.9309` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json`, `sentencepiece.bpe.model` | No versionados (~1.1 GB); salida en `models/xlmr_mixed/` |
+| `models/xlmr_full/` | `data/augmented_100` | `0.7490` | `03_train_summary.json`, `config.json`, `labels.json`, `special_tokens_map.json`, `tokenizer.json`, `tokenizer_config.json`, `sentencepiece.bpe.model` | No versionados (~1.1 GB); salida en `models/xlmr_full/` |
+
+**Modelo seleccionado para la tesis:** **BETO, escenario Mixto (50 %)** (`models/beto_mixed/`), con Dev F1 `0.9363`, Micro-F1 `0.9363` y Macro-F1 `0.7091` en `test.jsonl`. Conserva el rendimiento global de BETO Baseline, incorpora el 50 % de reemplazo sintético peruano y evita el colapso de Full. La fuga completa es `1.89 %`, ligeramente superior a la de BETO Baseline (`1.73 %`); la selección prioriza el compromiso entre retención y adaptación, no una mejora de privacidad. El test es MEDDOCAN (español peninsular), no texto clínico peruano.
 
 ---
 
 ## 2. Qué falta y advertencias importantes sobre artefactos locales
 
-1. **Pesos finales (`model.safetensors`) ausentes del repositorio Git:**
-   - Los archivos binarios de pesos entrenados en Google Colab (BETO y XLM-R) no fueron subidos a Git por superar el límite de tamaño de GitHub y están excluidos en [`.gitignore`](file:///c:/Users/kotem/Documents/Universidad/26.2/Tesis/github/proyecto_tesis_nlp/.gitignore). El commit `1570f52` subió metadatos, tokenizer y resultados de XLM-R, pero **no** los pesos.
-   - **TODO (Decisión humana):** Definir el almacenamiento externo definitivo de los pesos finales (Google Drive institucional, Hugging Face Hub privado o Git LFS) en caso de requerir inferencia directa sin reentrenar. Registrar enlace y SHA256 por corrida.
+1. **Pesos finales (`model.safetensors`) fuera del repositorio Git:**
+   - El entrenamiento escribe los pesos en `models/<run>/model.safetensors` (BETO ~440 MB; XLM-R ~1.1 GB), junto con `config.json`, tokenizer y `03_train_summary.json`. Los binarios están excluidos por [`.gitignore`](../.gitignore) y no se versionan.
+   - En este clon **no están presentes** los pesos de las 6 corridas. Deben conservarse en el almacenamiento externo del autor (Google Drive institucional, Hugging Face Hub privado o Git LFS). Aún no hay enlaces ni SHA256 registrados por corrida; si se añaden, deben documentarse en esta sección.
 2. **ADVERTENCIA CRÍTICA sobre `models/beto_baseline/checkpoints/checkpoint-64`:**
    - En el sistema de archivos local puede existir la carpeta `models/beto_baseline/checkpoints/checkpoint-64` (ignorada por Git).
    - Ese checkpoint corresponde a una **prueba parcial/antigua de 1 sola época en CPU** (`best_metric: 0.8429`, `eval_runtime: 139 s`) y **NO corresponde** al modelo final entrenado por 5 épocas en GPU Tesla T4 reportado en `models/beto_baseline/03_train_summary.json` (`eval_f1: 0.9401`, `eval_runtime: 5.71 s`). **No debe utilizarse como modelo final.**

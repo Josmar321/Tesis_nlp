@@ -6,8 +6,8 @@ Registro central del proyecto de tesis: decisiones, avances, experimentos y prob
 
 | Campo | Valor |
 |---|---|
-| Título | _(pendiente)_ |
-| Autor | _(pendiente)_ |
+| Título | Reconocimiento de Entidades Nombradas (NER) en Textos Clínicos: Adaptación al Contexto Peruano |
+| Autor | Avalos Rivera, Jose Maria |
 | Asesor | _(pendiente)_ |
 | Repositorio | `proyecto_tesis_nlp` |
 | Inicio | 2026-10-29 |
@@ -40,10 +40,15 @@ proyecto_tesis_nlp/
 │   ├── 01_brat_to_bio.py        # BRAT + spaCy -> BIO (JSONL)
 │   ├── 02_augmentation.py       # Aumentación: Faker es_MX + gazetteers peruanos
 │   ├── 03_train_ner.py          # Entrenamiento con Hugging Face
-│   └── 04_evaluate_ner.py       # Evaluación estricta sobre test.jsonl (seqeval)
+│   ├── 04_evaluate_ner.py       # Evaluación estricta sobre test.jsonl (seqeval)
+│   ├── 05_figuras_tesis.py      # Figuras 3-5 de la tesis (PNG 300 ppp)
+│   └── 05_fuga_entidades.py     # Tabla de fuga de entidades sensibles
 ├── models/                      # Metadatos versionados de 6 corridas (config.json, labels.json, 03_train_summary.json, tokenizer); pesos binarios no versionados
 ├── results/                     # Salidas ligeras de Fase 4 y Fase 5 (JSON/CSV/TXT/TEX/PNG versionados)
+│   ├── figuras_tesis/           # Figuras 3-5 para el manuscrito
+│   └── 05_fuga_entidades.csv    # Fuga completa y con frontera (Baseline y Mixto)
 ├── README.md
+├── CITATION.cff                 # Metadatos de citación (autor, título y licencia MIT)
 ├── requirements.txt
 └── Bitacora_Desarrollo.md
 ```
@@ -70,6 +75,8 @@ proyecto_tesis_nlp/
 - [x] Fase 5: `notebooks/01_resultados.ipynb` generalizado, re-ejecutado con las 6 corridas (BETO + XLM-R) y artefactos `results/05_*` exportados (`.csv`, `.tex`, `.png`). _(2026-11-13)_
 - [x] Documentar protocolo experimental (`docs/protocolo_experimental.md`), taxonomía de entidades (`docs/taxonomia_entidades.md`), trazabilidad de modelos/resultados (`models/README.md`, `results/README.md`) y política de versionado (`.gitignore`). _(2026-11-12 / 2026-11-13)_
 - [x] Cierre documental del experimento 6/6: corregir estados, soportes por entidad, hash canónico del test y explicar la diferencia BETO vs. XLM-R. _(2026-11-13)_
+- [x] Fase 5 completa: figuras 3-5 en `results/figuras_tesis/` y tabla de fuga `results/05_fuga_entidades.csv`, generadas desde artefactos versionados. _(2026-11-14)_
+- [x] Documentación 6/6, enlaces relativos y `CITATION.cff` con licencia MIT. _(2026-11-14)_
 
 ## 5. Registro de sesiones
 
@@ -594,7 +601,50 @@ El gap no es difuso: en Baseline y Mixto, tres clases explican prácticamente to
 - `1570f52` subió metadatos, tokenizer y resultados de XLM-R, pero **no** los `model.safetensors`.
 - Los pesos de las 6 corridas siguen fuera de Git (`.gitignore`). Queda pendiente archivarlos en Drive/Hugging Face/LFS y registrar enlace + SHA256 en `models/README.md`.
 
-**Conclusión del cierre 6/6:** la matriz experimental está completa y es comparable. El hallazgo robusto es que el escenario **Mixto (50%)** conserva el rendimiento global en ambos modelos, mientras que **Full (100%)** induce un *domain shift* severo. BETO conserva mejor los identificadores numéricos; XLM-R pierde Macro-F1 por el colapso de `ID_CONTACTO`, `NUMERO_TELEFONO` e `INSTITUCION`, no por un deterioro generalizado. Con una sola semilla y CIs bootstrap solapados, no se afirma superioridad estadística formal; se reportan las diferencias observadas y su concentración por clase. La validación en dominio peruano sigue pendiente por ausencia de un `gold test set`.
+**Conclusión del cierre 6/6:** la matriz experimental está completa y es comparable. El hallazgo robusto es que el escenario **Mixto (50%)** conserva el rendimiento global en ambos modelos, mientras que **Full (100%)** induce un *domain shift* severo. BETO conserva mejor los identificadores numéricos; XLM-R pierde Macro-F1 por el colapso de `ID_CONTACTO`, `NUMERO_TELEFONO` e `INSTITUCION`, no por un deterioro generalizado. Con una sola semilla y CIs bootstrap solapados, no se afirma superioridad estadística formal; se reportan las diferencias observadas y su concentración por clase.
+
+La validación en dominio peruano queda como trabajo futuro por ausencia de un `gold test set`.
+
+### 2026-11-14 — Figuras de tesis, fuga de entidades y cierre documental
+
+**Contexto:** las 6 corridas ya estaban versionadas, pero las tablas consolidadas, las figuras `05_*` y la documentación se habían generado cuando solo existían las 3 corridas de BETO. No se reentrenó ni se reevaluó ningún modelo: todo se derivó de los archivos `03_*` y `04_*` ya versionados, sin modificar sus valores.
+
+**Verificación de artefactos:**
+
+- Las 6 carpetas `results/*__*/` contienen `04_eval_summary.json`, `04_bootstrap.json`, `04_per_entity.csv` y `04_errors.csv`; los 6 `models/*/03_train_summary.json` existen.
+- Se re-ejecutó `notebooks/01_resultados.ipynb` (`jupyter nbconvert --to notebook --execute --inplace`). Las 6 celdas de código terminaron sin errores (`execution_count` 1..6) y la celda 1 imprime `Corridas detectadas: 6 | Modelos: BETO, XLM-R | Escenarios por modelo: BETO: 3; XLM-R: 3`.
+- `results/05_resultados_comparativos.csv` tiene 6 filas y 66 valores numéricos; los 66 coinciden exactamente con `04_eval_summary.json` y `04_bootstrap.json` (comparación programática, sin tolerancia).
+- Las tablas `.tex` y los PNG `results/05_*.png` regenerados incluyen BETO y XLM-R.
+
+**Figuras y fuga (Fase 5):**
+
+- Se movieron `05_figuras_tesis.py` y `05_fuga_entidades.py` a `scripts/`.
+- `python scripts/05_figuras_tesis.py` escribió `results/figuras_tesis/figura3_micro_f1.png`, `figura4_macro_f1.png` y `figura5_f1_por_entidad.png` (PNG 300 ppp).
+- `python scripts/05_fuga_entidades.py > results/05_fuga_entidades.csv` produjo exactamente los valores esperados:
+
+| Modelo | Escenario | Fuga completa | Fuga con frontera | Fuga completa (directos) | Fuga con frontera (directos) |
+| :--- | :--- | ---: | ---: | ---: | ---: |
+| BETO | Baseline (0%) | **1.73 %** (98) | 4.65 % | 1.17 % (21) | 4.67 % |
+| BETO | Mixto (50%) | **1.89 %** (107) | 4.96 % | 1.33 % (24) | 5.34 % |
+| XLM-R | Baseline (0%) | **1.01 %** (57) | 3.59 % | 0.50 % (9) | 3.11 % |
+| XLM-R | Mixto (50%) | **1.15 %** (65) | 3.83 % | 0.78 % (14) | 4.45 % |
+
+**Documentación y citación:**
+
+- `README.md`: Fases 3–5 en 6/6, tabla de las 6 corridas, sección de fuga, modelo seleccionado y alcance MEDDOCAN.
+- `results/README.md`: 6 carpetas, `figuras_tesis/`, `05_fuga_entidades.csv`, definición de fuga y truncamiento de `04_errors.csv`.
+- `models/README.md`: 6 corridas con Dev F1, ubicación/política de pesos y modelo seleccionado; se eliminó la advertencia sobre corridas faltantes.
+- `docs/protocolo_experimental.md`: cierre de XLM-R, comandos de Fase 5, definición de fuga y limitaciones.
+- `CITATION.cff`: autor `Avalos Rivera, Jose Maria`, título del proyecto y licencia **MIT**.
+- Todos los enlaces absolutos locales se reemplazaron por rutas relativas.
+
+**Modelo seleccionado:** **BETO, escenario Mixto (50 %)**. Micro-F1 `0.9363` `[0.9274, 0.9448]`, Macro-F1 `0.7091` `[0.6976, 0.7213]` y fuga completa `1.89 %` (107 entidades). Conserva el rendimiento global de BETO Baseline (Micro `0.9382`, Macro `0.7163`), incorpora el 50 % de reemplazo sintético peruano y evita el colapso de Full (Micro `0.7772`, Macro `0.5873`). La fuga completa es 0.16 pp superior a la de BETO Baseline (`1.73 %`): la adaptación parcial no mejora la privacidad, solo equilibra retención y adaptación. El test es MEDDOCAN (español peninsular), no texto clínico peruano.
+
+**Limitaciones y discrepancias:**
+
+- La tabla de fuga solo cubre Baseline y Mixto. `04_errors.csv` está limitado a 1.000 filas; Full tiene 1.989 errores (BETO) y 2.270 (XLM-R), por lo que el CSV está truncado y no permite un cálculo completo. Los totales y el desglose `error_analysis.by_type` de `04_eval_summary.json` sí son completos.
+- Los pesos `model.safetensors` de las 6 corridas no están en el repositorio ni en este clon; siguen pendientes de archivo externo y registro de enlace/SHA256.
+- No se modificó ningún archivo `03_*` ni `04_*`.
 
 ## 6. Decisiones técnicas (ADR)
 
@@ -622,6 +672,10 @@ El gap no es difuso: en Baseline y Mixto, tres clases explican prácticamente to
 | 2026-11-13 | Conservar las métricas de BETO y XLM-R sin reentrenar; el cierre es documental | Reentrenar para unificar el formato/hash del test | Los resultados son válidos; el hash distinto es CRLF vs. LF y el contenido es idéntico |
 | 2026-11-13 | Adoptar `d596b103...` (LF) como hash canónico de `test.jsonl` y documentar `8b30b803...` (CRLF) como variante | Usar el hash raw de Windows como único valor | Permite reproducibilidad en Linux/Colab y evita falsos positivos de integridad |
 | 2026-11-13 | Commitear el notebook con las 6 corridas y una línea de cobertura de modelos/escenarios | Dejar el notebook sin outputs o solo con BETO | GitHub debe reflejar la matriz experimental completa y evitar la lectura de “solo BETO” |
+| 2026-11-14 | Generar tablas, figuras y fuga solo desde artefactos `03_*`/`04_*` versionados | Reentrenar o reevaluar para regenerar todo | Los resultados ya son válidos; el cierre es reproducible sin GPU y sin alterar métricas |
+| 2026-11-14 | Reportar fuga solo en Baseline y Mixto | Calcular también Full con `04_errors.csv` truncado | El CSV de Full solo contiene 1.000 de 1.989/2.270 errores; los totales completos están en `04_eval_summary.json` |
+| 2026-11-14 | Seleccionar BETO Mixto (50 %) como modelo de la tesis | BETO Baseline; XLM-R Mixto | Conserva Micro/Macro-F1, incorpora adaptación parcial y evita el colapso de Full; XLM-R tiene ~0.10 menos Macro-F1 |
+| 2026-11-14 | Licencia MIT en `CITATION.cff` | CC BY 4.0; CC BY-NC 4.0; Apache-2.0 | Decisión del autor; permisiva, simple y compatible con uso académico |
 
 ## 7. Experimentos
 
@@ -665,6 +719,7 @@ El gap no es difuso: en Baseline y Mixto, tres clases explican prácticamente to
 | 2026-11-12 | `03_train_ner.py` mapeaba etiquetas desconocidas silenciosamente a `"O"` (`label2id.get(tag, O)`) y tenía comentario erróneo de 45 clases | Validación estricta con `ValueError` si una etiqueta no existe en `label2id` y corrección del comentario a 44 clases | Resuelto |
 | 2026-11-13 | Los summaries de BETO y XLM-R registran hashes distintos del mismo `test.jsonl` (`8b30...` vs. `d596...`) | Verificado que la diferencia es CRLF vs. LF; mismo contenido (250 docs, 126.093 tokens, 5.661 entidades). Se adopta `d596...` como hash canónico y se documenta la variante CRLF | Resuelto |
 | 2026-11-13 | El notebook commiteado en `HEAD` mostraba solo 3 filas de BETO en las celdas 1–2, aunque el *working tree* ya tenía 6 corridas | Se añadió una línea de cobertura, se re-ejecutó el notebook con las 6 corridas y se commitearon las salidas actualizadas | Resuelto |
+| 2026-11-14 | `04_errors.csv` de Full truncado a 1.000 filas (1.989 errores en BETO; 2.270 en XLM-R) | Se reporta fuga solo en Baseline y Mixto; los totales completos se leen de `04_eval_summary.json` y se documenta la limitación | Aceptado (documentado) |
 
 ## 9. Próximos pasos y criterios de aceptación
 
@@ -686,6 +741,8 @@ El gap no es difuso: en Baseline y Mixto, tres clases explican prácticamente to
 - [x] Fase 5: generalizar y ejecutar `notebooks/01_resultados.ipynb` con las 6 corridas, salidas guardadas y artefactos `results/05_*`. _(2026-11-13)_
 - [x] Documentar la taxonomía de entidades usada (`docs/taxonomia_entidades.md`) y el protocolo experimental (`docs/protocolo_experimental.md`). _(2026-11-12)_
 - [x] **XLM-RoBERTa completado (3/3; matriz 6/6):** existen `models/xlmr_{baseline,mixed,full}/03_train_summary.json`, `results/xlmr_*__augmented_*/04_eval_summary.json` y el notebook re-ejecutado incluye las 6 corridas. _(2026-11-13)_
+- [x] Fase 5: generar `results/figuras_tesis/figura{3,4,5}_*.png` y `results/05_fuga_entidades.csv` desde los artefactos versionados. _(2026-11-14)_
+- [x] Cerrar la documentación 6/6, reemplazar enlaces absolutos por relativos y añadir `CITATION.cff` (MIT). _(2026-11-14)_
 - [ ] **TODO (decisión humana — Validación en dominio peruano):** Decidir si se anota un conjunto de prueba clínico peruano (`gold test set`) o se declara como trabajo futuro (ver opciones en §10).
   - *Criterio de aceptación:* O bien se evalúan los 6 modelos sobre un archivo `test_peru.jsonl` con `--allow-non-test`, o bien la tesis reporta explícitamente la limitación de evaluar únicamente sobre el `test.jsonl` español de MEDDOCAN.
 - [ ] EDA adicional en `notebooks/` (distribución por etiqueta, longitud de spans antes/después de aumentar).
@@ -697,11 +754,10 @@ El gap no es difuso: en Baseline y Mixto, tres clases explican prácticamente to
 | :--- | :--- | :--- |
 | **1. Pesos finales de BETO y XLM-R (`model.safetensors`)** | **No presentes en el repo.** Solo se conservan `config.json`, `labels.json`, `03_train_summary.json` y tokenizer de las 6 corridas de Colab (5 épocas; `dev-F1` BETO: `0.9401` / `0.9363` / `0.7827`; XLM-R: `0.9264` / `0.9309` / `0.7490`). | **Opción A:** Subir los pesos finales desde Google Drive/Colab a Hugging Face Hub o GitHub Releases y registrar los enlaces/hashes en `models/README.md`.<br>**Opción B:** Mantener en Git solo los metadatos y resúmenes de evaluación (política actual en `.gitignore`). |
 | **2. Checkpoint local obsoleto (`models/beto_baseline/checkpoints/checkpoint-64`)** | **Obsoleto / Parcial.** Corresponde a una prueba antigua de 1 época (`best_metric = 0.8429`, `eval_runtime = 139.2 s`) y **NO** al modelo final de Colab (5 épocas, `dev-F1 = 0.9401`, `eval_runtime = 5.75 s`). Ignorado por `.gitignore`. | **Acción recomendada:** No usar nunca `checkpoint-64` para inferencia ni evaluación. Puede eliminarse localmente cuando se desee liberar ~420 MB de disco. |
-| **3. Corridas de `xlm-roberta-base` (3/3; matriz 6/6)** | **Completadas (3/3; matriz 6/6).** `models/xlmr_{baseline,mixed,full}` y `results/xlmr_*__augmented_*` están versionados (metadatos, tokenizer y resultados). Los pesos `model.safetensors` siguen fuera de Git. | **Opción A (actual):** Mantener las 3 corridas y reportar BETO vs. XLM-R en la tesis.<br>**Opción B:** Acotar el alcance a BETO y dejar XLM-R como línea futura (ya no es necesario: las corridas existen). |
-| **4. Conjunto de prueba clínico peruano (`Gold Test Set`)** | **Ausente.** Toda la evaluación de Fase 4 se realizó sobre `test.jsonl` original de MEDDOCAN (España). | **Opción A:** Anotar un mini-corpus clínico peruano (30–50 notas desidentificadas) y evaluarlo con `04_evaluate_ner.py --allow-non-test`.<br>**Opción B:** Mantener la evaluación sobre MEDDOCAN declarando explícitamente que mide retención del dominio fuente y vulnerabilidad al reemplazo sintético, sin medir el recall real en hospitales peruanos. |
-| **5. Versionado de datos `.jsonl` (`data/processed/`, `data/augmented_*/`)** | **Excluidos de Git en `.gitignore`.** Se versionan únicamente `01_summary.json` y `02_summary.json`. | **Opción A (actual):** No versionar los `.jsonl` (~35 MB por carpeta) dado que son 100% reproducibles ejecutando `01_brat_to_bio.py` y `02_augmentation.py` (`seed=42`).<br>**Opción B:** Usar DVC o un archivo comprimido en Releases si el jurado requiere descarga directa sin ejecutar los scripts 01 y 02. |
-| **6. Notebook de Fase 5 (`notebooks/01_resultados.ipynb`)** | **Ejecutado y verificado con 6 corridas (BETO + XLM-R).** Contiene las 6 celdas de código con salidas embebidas (`execution_count` 1..6), una línea de cobertura de modelos/escenarios y exporta todos los artefactos `results/05_*`. | Listo para incluir tablas (`.tex`/`.csv`) y figuras (`.png`) en el manuscrito de tesis. |
-| **7. Hash canónico del test (`test.jsonl`)** | **Dos representaciones del mismo contenido.** BETO registra `8b30b803...` (CRLF, Windows); XLM-R registra `d596b103...` (LF, Linux/Colab). Verificado: 250 docs, 126.093 tokens y 5.661 entidades en ambos casos. | **Opción A (actual):** Documentar `d596b103...` como hash canónico (LF) y `8b30b803...` como variante CRLF.<br>**Opción B:** Añadir `test_file_sha256_normalized` a `04_evaluate_ner.py` para registrar ambos hashes automáticamente. |
+| **3. Conjunto de prueba clínico peruano (`Gold Test Set`)** | **Ausente.** Toda la evaluación de Fase 4 se realizó sobre `test.jsonl` original de MEDDOCAN (España). | **Opción A:** Anotar un mini-corpus clínico peruano (30–50 notas desidentificadas) y evaluarlo con `04_evaluate_ner.py --allow-non-test`.<br>**Opción B:** Mantener la evaluación sobre MEDDOCAN declarando explícitamente que mide retención del dominio fuente y vulnerabilidad al reemplazo sintético, sin medir el recall real en hospitales peruanos. |
+| **4. Versionado de datos `.jsonl` (`data/processed/`, `data/augmented_*/`)** | **Excluidos de Git en `.gitignore`.** Se versionan únicamente `01_summary.json` y `02_summary.json`. | **Opción A (actual):** No versionar los `.jsonl` (~35 MB por carpeta) dado que son 100% reproducibles ejecutando `01_brat_to_bio.py` y `02_augmentation.py` (`seed=42`).<br>**Opción B:** Usar DVC o un archivo comprimido en Releases si el jurado requiere descarga directa sin ejecutar los scripts 01 y 02. |
+| **5. Notebook y artefactos de Fase 5 (`notebooks/01_resultados.ipynb`, `results/figuras_tesis/`, `results/05_fuga_entidades.csv`)** | **Ejecutado y verificado con 6 corridas (BETO + XLM-R).** Las 6 celdas de código tienen salidas embebidas (`execution_count` 1..6); el CSV consolidado tiene 6 filas y 66 valores exactos; las figuras 3-5 y la tabla de fuga están generadas. | Listo para incluir tablas (`.tex`/`.csv`), figuras (`.png`) y la tabla de fuga en el manuscrito de tesis. |
+| **6. Hash canónico del test (`test.jsonl`)** | **Dos representaciones del mismo contenido.** BETO registra `8b30b803...` (CRLF, Windows); XLM-R registra `d596b103...` (LF, Linux/Colab). Verificado: 250 docs, 126.093 tokens y 5.661 entidades en ambos casos. | **Opción A (actual):** Documentar `d596b103...` como hash canónico (LF) y `8b30b803...` como variante CRLF.<br>**Opción B:** Añadir `test_file_sha256_normalized` a `04_evaluate_ner.py` para registrar ambos hashes automáticamente. |
 
 ## 11. Referencias
 

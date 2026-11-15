@@ -1,0 +1,5 @@
+run;fuga_completa;fuga_con_frontera;fuga_completa_directos;fuga_frontera_directos
+beto_baseline__augmented_baseline;1.73 % (98);4.65 %;1.17 % (21);4.67 %
+beto_mixed__augmented_50;1.89 % (107);4.96 %;1.33 % (24);5.34 %
+xlmr_baseline__augmented_baseline;1.01 % (57);3.59 %;0.50 % (9);3.11 %
+xlmr_mixed__augmented_50;1.15 % (65);3.83 %;0.78 % (14);4.45 %
