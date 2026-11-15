@@ -8,7 +8,7 @@ Documento de especificación metodológica y de reproducibilidad para la adaptac
 
 El corpus base proviene de la tarea compartida **MEDDOCAN (Medical Document Anonymization Track — IberLEF 2019)** en formato BRAT (`.txt` y `.ann`), ubicado en `data/raw/corpus/{train,dev,test}/brat/`.
 
-Mediante [01_brat_to_bio.py](file:///c:/Users/kotem/Documents/Universidad/26.2/Tesis/github/proyecto_tesis_nlp/scripts/01_brat_to_bio.py) se tokeniza con `spaCy` (`es_core_news_sm`), se alinea por solapamiento a nivel de carácter (dividiendo tokens con múltiples entidades o espacios internos como `"EE. UU."`) y se exporta a esquema **IOB2 (BIO)** en formato `.jsonl` (`id`, `tokens`, `tags`):
+Mediante [01_brat_to_bio.py](../scripts/01_brat_to_bio.py) se tokeniza con `spaCy` (`es_core_news_sm`), se alinea por solapamiento a nivel de carácter (dividiendo tokens con múltiples entidades o espacios internos como `"EE. UU."`) y se exporta a esquema **IOB2 (BIO)** en formato `.jsonl` (`id`, `tokens`, `tags`):
 
 | Split | Documentos | Tokens (`processed`) | Menciones BRAT (`B-`) | Perdidas | `I-` huérfanas | Ruido de límites (1 entidad parcial) |
 |---|---:|---:|---:|---:|---:|---:|
@@ -23,7 +23,7 @@ Mediante [01_brat_to_bio.py](file:///c:/Users/kotem/Documents/Universidad/26.2/T
 
 ## 2. Escenarios de Aumentación (Fase 2 Congelada)
 
-El script [02_augmentation.py](file:///c:/Users/kotem/Documents/Universidad/26.2/Tesis/github/proyecto_tesis_nlp/scripts/02_augmentation.py) (`--seed 42`) genera tres escenarios experimentales combinando `Faker('es_MX')` y *gazetteers* clínicos peruanos con longitud libre de span:
+El script [02_augmentation.py](../scripts/02_augmentation.py) (`--seed 42`) genera tres escenarios experimentales combinando `Faker('es_MX')` y *gazetteers* clínicos peruanos con longitud libre de span:
 
 | Escenario | Directorio | Tasa (`--rate`) | Splits modificados | Tokens `train` | Entidades `train` reemplazadas | `dev` / `test` |
 |---|---|---:|---|---:|---:|---|
@@ -43,9 +43,11 @@ El script [02_augmentation.py](file:///c:/Users/kotem/Documents/Universidad/26.2
 - El conjunto `test.jsonl` (250 documentos, 126.093 tokens, 5.661 entidades) **jamás es accedido por `03_train_ner.py`** y no recibe aumentación en ninguno de los escenarios.
 - Hash de integridad verificable de `test.jsonl` en las cuatro rutas (`data/processed/test.jsonl`, `data/augmented_baseline/test.jsonl`, `data/augmented_50/test.jsonl`, `data/augmented_100/test.jsonl`):
   ```text
-  SHA256: 8b30b80360cce568a9087b754b9a38b33aa278a6be952107eab3c4ef1bc898e3
+  SHA256 canónico (LF): d596b103e92a38e8d7d45ea8fc9e674632aa3fd85e1a55cfca92368e129a680d
+  SHA256 variante CRLF (Windows): 8b30b80360cce568a9087b754b9a38b33aa278a6be952107eab3c4ef1bc898e3
   ```
-- El script [04_evaluate_ner.py](file:///c:/Users/kotem/Documents/Universidad/26.2/Tesis/github/proyecto_tesis_nlp/scripts/04_evaluate_ner.py) bloquea por defecto cualquier archivo cuyo nombre no sea `test.jsonl` (salvo que se active `--allow-non-test` para evaluar un futuro *gold set* peruano externo) y registra `test_file_sha256` en `04_eval_summary.json`.
+  Ambos hashes corresponden al mismo contenido (250 documentos, 126.093 tokens, 5.661 entidades); la diferencia es el final de línea. Los summaries de BETO registran la variante CRLF y los de XLM-R la variante LF.
+- El script [04_evaluate_ner.py](../scripts/04_evaluate_ner.py) bloquea por defecto cualquier archivo cuyo nombre no sea `test.jsonl` (salvo que se active `--allow-non-test` para evaluar un futuro *gold set* peruano externo) y registra `test_file_sha256` en `04_eval_summary.json`.
 
 ---
 
@@ -53,7 +55,9 @@ El script [02_augmentation.py](file:///c:/Users/kotem/Documents/Universidad/26.2
 
 ### Modelos evaluados
 1. **BETO (Completado — 3/3 escenarios):** `dccuchile/bert-base-spanish-wwm-cased`
-2. **XLM-RoBERTa (Pendiente — 0/3 escenarios):** `xlm-roberta-base` *(decisión humana pendiente sobre ejecución en GPU)*
+2. **XLM-RoBERTa (Completado — 3/3 escenarios):** `xlm-roberta-base`
+
+**Estado de cierre:** la matriz experimental está completa (**6/6 corridas**: 2 modelos × 3 escenarios). Las corridas de XLM-RoBERTa están cerradas. Los pesos finales no se versionan en Git; los metadatos, tokenizer y resultados sí.
 
 ### Hiperparámetros estandarizados (`03_train_ner.py`)
 
@@ -73,23 +77,37 @@ El script [02_augmentation.py](file:///c:/Users/kotem/Documents/Universidad/26.2
 
 ### Alineación sub-token y ventana deslizante
 - Sólo el **primer sub-token** de cada palabra recibe la etiqueta BIO (`label2id[tag]`); los sub-tokens secundarios y tokens especiales (`[CLS]`/`<s>`, `[SEP]`/`</s>`, `[PAD]`) reciben `-100` (`IGNORE_INDEX`).
-- En documentos que exceden 512 sub-tokens y se dividen con `stride=128`, las palabras del contexto solapado ya cubiertas en la ventana previa reciben `-100` durante entrenamiento y validación (`train_windows`: 1.023 en baseline, 1.024 en mixto, 1.032 en full; `dev_windows`: 538).
+- En documentos que exceden 512 sub-tokens y se dividen con `stride=128`, las palabras del contexto solapado ya cubiertas en la ventana previa reciben `-100` durante entrenamiento y validación (BETO: `train_windows` 1.023/1.024/1.032 en baseline/mixto/full y `dev_windows` 538; XLM-R: `train_windows` 1.136/1.142/1.142 y `dev_windows` 599).
 
 ---
 
 ## 5. Evaluación y Bootstrap (Fase 4)
 
-Ejecutada mediante [04_evaluate_ner.py](file:///c:/Users/kotem/Documents/Universidad/26.2/Tesis/github/proyecto_tesis_nlp/scripts/04_evaluate_ner.py):
+Ejecutada mediante [04_evaluate_ner.py](../scripts/04_evaluate_ner.py):
 - **Reconstrucción documental (`--aggregation first`):** Cada palabra del documento recibe la predicción del primer sub-token en la primera ventana que la contiene (idéntico al criterio de `03_train_ner.py`).
-- **Reparación BIO en inferencia:** Si el modelo predice una etiqueta `I-X` huérfana (precedida de `O` o de `I-Y` con $Y \neq X$), se repara a `B-X` y se contabiliza (`bio_repairs`: 119 en baseline, 110 en mixto, 167 en full). Las etiquetas *gold* se validan estrictamente y nunca se alteran.
+- **Reparación BIO en inferencia:** Si el modelo predice una etiqueta `I-X` huérfana (precedida de `O` o de `I-Y` con $Y \neq X$), se repara a `B-X` y se contabiliza (`bio_repairs`: BETO 119/110/167 y XLM-R 87/78/698 en baseline/mixto/full). Las etiquetas *gold* se validan estrictamente y nunca se alteran.
 - **Métricas oficiales (`seqeval`):** Cálculo a nivel de **entidad exacta** (inicio, fin y tipo idénticos). Se reportan `Micro-F1` (métrica primaria), `Macro-F1` (sobre las 21 etiquetas con soporte o predicción en `test.jsonl`) y `Weighted-F1`.
 - **Intervalos de confianza Bootstrap (`--bootstrap 1000 --bootstrap-seed 42`):** Remuestreo con reemplazo a nivel de **documento** ($N=250$ documentos por réplica, $B=1.000$ iteraciones), reportando percentiles $2{,}5\ \%$ y $97{,}5\ \%$ (IC 95 %).
+
+### Fuga de entidades sensibles (Fase 5)
+
+La tabla `results/05_fuga_entidades.csv` se genera con [05_fuga_entidades.py](../scripts/05_fuga_entidades.py) a partir de `04_per_entity.csv` y `04_errors.csv`:
+
+- **Fuga completa:** entidad de referencia sin ningún solapamiento con una predicción (`false_negative`) / total de entidades con soporte.
+- **Fuga con frontera:** fuga completa + errores de límite (`boundary_error`).
+- **Fuga directa:** restringe el cálculo a las categorías directamente identificadoras (`NOMBRE_SUJETO_ASISTENCIA`, `ID_SUJETO_ASISTENCIA`, `ID_ASEGURAMIENTO`, `ID_CONTACTO_ASISTENCIAL`, `NUMERO_TELEFONO`, `NUMERO_FAX`, `CORREO_ELECTRONICO`, `CALLE`, `FAMILIARES_SUJETO_ASISTENCIA`).
+- Las confusiones de tipo **no** cuentan como fuga, porque la entidad se detecta como sensible.
+- Solo se reportan Baseline y Mixto: `04_errors.csv` está limitado a 1.000 filas y los escenarios Full están truncados (ver §8).
+
+### Modelo seleccionado
+
+Se selecciona **BETO, escenario Mixto (50 %)** por su compromiso entre retención del rendimiento y adaptación: Micro-F1 `0.9363` `[0.9274, 0.9448]`, Macro-F1 `0.7091` `[0.6976, 0.7213]` y fuga completa `1.89 %` (107 entidades). Conserva el rendimiento global de BETO Baseline (Micro `0.9382`, Macro `0.7163`), incorpora el 50 % de reemplazo sintético peruano y evita el colapso de Full (Micro `0.7772`, Macro `0.5873`). La fuga completa es 0.16 pp superior a la de BETO Baseline (`1.73 %`), por lo que la adaptación parcial no mejora la privacidad; el criterio es el equilibrio entre retención y adaptación. El test es MEDDOCAN (español peninsular), no texto clínico peruano.
 
 ---
 
 ## 6. Entorno de Ejecución Registrado
 
-### Entorno de entrenamiento y evaluación en GPU (Google Colab — Fase 3 y 4 de BETO)
+### Entorno de entrenamiento y evaluación en GPU (Google Colab — Fase 3 y 4 de BETO y XLM-R)
 - **Plataforma:** `Linux-6.6.159+-x86_64-with-glibc2.39`
 - **GPU:** NVIDIA Tesla T4 (`device: cuda`)
 - **Python:** `3.13.16`
@@ -120,13 +138,23 @@ python scripts/03_train_ner.py --data-dir data/augmented_baseline --output-dir m
 python scripts/03_train_ner.py --data-dir data/augmented_50       --output-dir models/beto_mixed    --model-name dccuchile/bert-base-spanish-wwm-cased --epochs 5 --batch-size 16 --seed 42
 python scripts/03_train_ner.py --data-dir data/augmented_100      --output-dir models/beto_full     --model-name dccuchile/bert-base-spanish-wwm-cased --epochs 5 --batch-size 16 --seed 42
 
+# Fase 3: Entrenamiento XLM-RoBERTa en los 3 escenarios
+python scripts/03_train_ner.py --data-dir data/augmented_baseline --output-dir models/xlmr_baseline --model-name xlm-roberta-base --epochs 5 --batch-size 16 --seed 42
+python scripts/03_train_ner.py --data-dir data/augmented_50       --output-dir models/xlmr_mixed    --model-name xlm-roberta-base --epochs 5 --batch-size 16 --seed 42
+python scripts/03_train_ner.py --data-dir data/augmented_100      --output-dir models/xlmr_full     --model-name xlm-roberta-base --epochs 5 --batch-size 16 --seed 42
+
 # Fase 4: Evaluación estricta sobre test.jsonl con Bootstrap (1000 iteraciones)
 python scripts/04_evaluate_ner.py --model-dir models/beto_baseline --data-dir data/augmented_baseline --output-dir results/beto_baseline__augmented_baseline --bootstrap 1000
 python scripts/04_evaluate_ner.py --model-dir models/beto_mixed    --data-dir data/augmented_50       --output-dir results/beto_mixed__augmented_50       --bootstrap 1000
 python scripts/04_evaluate_ner.py --model-dir models/beto_full     --data-dir data/augmented_100      --output-dir results/beto_full__augmented_100      --bootstrap 1000
+python scripts/04_evaluate_ner.py --model-dir models/xlmr_baseline --data-dir data/augmented_baseline --output-dir results/xlmr_baseline__augmented_baseline --bootstrap 1000
+python scripts/04_evaluate_ner.py --model-dir models/xlmr_mixed    --data-dir data/augmented_50       --output-dir results/xlmr_mixed__augmented_50       --bootstrap 1000
+python scripts/04_evaluate_ner.py --model-dir models/xlmr_full     --data-dir data/augmented_100      --output-dir results/xlmr_full__augmented_100      --bootstrap 1000
 
 # Fase 5: Generación de tablas LaTeX/CSV y figuras en notebooks/01_resultados.ipynb
 jupyter nbconvert --to notebook --execute --inplace notebooks/01_resultados.ipynb
+python scripts/05_figuras_tesis.py
+python scripts/05_fuga_entidades.py > results/05_fuga_entidades.csv
 ```
 
 ---
@@ -134,10 +162,12 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/01_resultados.ipyn
 ## 8. Política de Artefactos y Limitaciones
 
 1. **Política de versionado en Git:**
-   - **Versionados:** `scripts/`, `notebooks/01_resultados.ipynb` (con outputs), `docs/`, resúmenes JSON (`data/processed/01_summary.json`, `data/augmented_*/02_summary.json`, `models/*/03_train_summary.json`), metadatos ligeros del modelo (`config.json`, `labels.json`, `tokenizer*.json`) y todos los reportes/tablas/figuras de `results/`.
+   - **Versionados:** `scripts/`, `notebooks/01_resultados.ipynb` (con outputs), `docs/`, resúmenes JSON (`data/processed/01_summary.json`, `data/augmented_*/02_summary.json`, `models/*/03_train_summary.json`), metadatos ligeros del modelo (`config.json`, `labels.json`, `tokenizer*.json`, `sentencepiece.bpe.model`) y todos los reportes/tablas/figuras de `results/`.
    - **No versionados (`.gitignore`):** archivos `.jsonl` de `data/processed/` y `data/augmented_*/`, respaldos `data/archive/`, corridas de prueba `models/smoke_*/`, checkpoints intermedios `models/**/checkpoints/` y pesos binarios (`model.safetensors`, `pytorch_model.bin`).
 2. **Limitaciones metodológicas clave:**
    - Evaluación realizada sobre `test.jsonl` de MEDDOCAN (español peninsular); no mide rendimiento sobre un *gold set* clínico peruano real.
    - Una sola semilla (`seed=42`) por configuración.
    - Bootstrap a nivel documento ($N=250$); la superposición de intervalos de confianza no reemplaza un test formal de hipótesis pareado.
-   - Cuatro etiquetas de soporte muy bajo en `test` (`CENTRO_SALUD`, `NUMERO_FAX`, `OTROS_SUJETO_ASISTENCIA`, `PROFESION`) presentan $\text{F1}=0.0000$ en todas las corridas, reduciendo el `Macro-F1`.
+   - Cuatro etiquetas de soporte muy bajo en `test` (`CENTRO_SALUD`, `NUMERO_FAX`, `OTROS_SUJETO_ASISTENCIA`, `PROFESION`) presentan $\text{F1}=0.0000$ en las 6 corridas (BETO y XLM-R), reduciendo el `Macro-F1`.
+   - `04_errors.csv` se escribe con `--errors-limit 1000` por defecto. En Full hay 1.989 errores (BETO) y 2.270 (XLM-R), pero el CSV solo conserva las primeras 1.000 filas; los totales y el desglose `error_analysis.by_type` de `04_eval_summary.json` sí son completos. Por ello, la tabla de fuga se limita a Baseline y Mixto.
+   - La fuga completa mide ausencia total de solapamiento (`false_negative`) y no equivale a una auditoría de privacidad: las confusiones de tipo y los errores de frontera no se cuentan como fuga completa. La tabla `05_fuga_entidades.csv` reporta ambas variantes y su restricción a categorías directamente identificadoras.

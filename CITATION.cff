@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+type: software
+title: "Reconocimiento de Entidades Nombradas (NER) en Textos Clínicos: Adaptación al Contexto Peruano"
+abstract: >-
+  Pipeline reproducible de reconocimiento de entidades nombradas (NER) para
+  desidentificación de textos clínicos en español. Compara BETO y XLM-RoBERTa
+  sobre el corpus MEDDOCAN con tres escenarios de aumentación sintética de
+  entidades peruanas (0 %, 50 % y 100 %), evaluación estricta con seqeval,
+  intervalos bootstrap y análisis de fuga de entidades sensibles.
+authors:
+  - family-names: "Avalos Rivera"
+    given-names: "Jose Maria"
+license: MIT
+repository-code: "https://github.com/Josmar321/Tesis_nlp"
+url: "https://github.com/Josmar321/Tesis_nlp"
+date-released: 2026-11-14
+keywords:
+  - NER
+  - clinical NLP
+  - Spanish
+  - MEDDOCAN
+  - de-identification
+  - PHI
+  - BETO
+  - XLM-RoBERTa
